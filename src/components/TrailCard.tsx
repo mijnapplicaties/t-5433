@@ -4,12 +4,15 @@ import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
 import { MapPin, Clock, Mountain, ArrowUpRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 interface TrailCardProps {
   trail: Trail;
 }
 
 const TrailCard: React.FC<TrailCardProps> = ({ trail }) => {
+  const { t } = useLanguage();
+
   const getDifficultyColor = (difficulty: string) => {
     const colors = {
       easy: 'bg-green-500',
@@ -33,7 +36,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail }) => {
             variant={trail.requiresReservation ? "destructive" : "secondary"}
             className="backdrop-blur-sm bg-opacity-90"
           >
-            {trail.requiresReservation ? 'Reservation Required' : 'No Reservation'}
+            {trail.requiresReservation ? t('reservationRequired') : t('noReservation')}
           </Badge>
         </div>
       </div>
@@ -56,12 +59,12 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail }) => {
         <div className="grid grid-cols-3 gap-4 mb-4">
           <div className="flex items-center gap-2">
             <ArrowUpRight className="w-4 h-4 text-forest-light" />
-            <span className="text-sm">{trail.distance} km</span>
+            <span className="text-sm">{trail.distance} {t('km')}</span>
           </div>
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-forest-light" />
             <span className="text-sm">
-              {trail.duration} {trail.type === 'day-hike' ? 'hours' : 'hours'}
+              {trail.duration} {t('hours')}
             </span>
           </div>
           <div className="flex items-center gap-2">
