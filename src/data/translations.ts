@@ -1,4 +1,3 @@
-
 type Translation = {
   [key: string]: {
     en: string;
@@ -7,6 +6,46 @@ type Translation = {
 };
 
 export const translations: Translation = {
+  distance: {
+    en: "Distance",
+    es: "Distancia",
+  },
+  duration: {
+    en: "Duration",
+    es: "Duración",
+  },
+  elevation: {
+    en: "Elevation",
+    es: "Elevación",
+  },
+  description: {
+    en: "Description",
+    es: "Descripción",
+  },
+  highlights: {
+    en: "Highlights",
+    es: "Destacados",
+  },
+  reservationInfo: {
+    en: "Reservation Information",
+    es: "Información de Reserva",
+  },
+  reservationRequired: {
+    en: "Reservation Required",
+    es: "Reserva Requerida",
+  },
+  noReservation: {
+    en: "No Reservation Needed",
+    es: "No Requiere Reserva",
+  },
+  hours: {
+    en: "hours",
+    es: "horas",
+  },
+  km: {
+    en: "km",
+    es: "km",
+  },
   title: {
     en: "Bariloche Trail Guide",
     es: "Guía de Senderos de Bariloche",
@@ -30,21 +69,5 @@ export const translations: Translation = {
   expeditionDuration: {
     en: "2-4 day expeditions",
     es: "Expediciones de 2-4 días",
-  },
-  reservationRequired: {
-    en: "Reservation Required",
-    es: "Reserva Requerida",
-  },
-  noReservation: {
-    en: "No Reservation",
-    es: "Sin Reserva",
-  },
-  hours: {
-    en: "hours",
-    es: "horas",
-  },
-  km: {
-    en: "km",
-    es: "km",
   },
 };
