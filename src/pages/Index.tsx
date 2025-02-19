@@ -2,6 +2,7 @@
 import React from 'react';
 import { trails } from '../data/trails';
 import TrailGrid from '../components/TrailGrid';
+import { Badge } from '../components/ui/badge';
 
 const Index = () => {
   return (
