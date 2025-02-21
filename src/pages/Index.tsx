@@ -19,6 +19,9 @@ const Index = () => {
     return typeMatch && difficultyMatch;
   });
 
+  const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
+  const multiDayHikes = filteredTrails.filter(trail => trail.type === 'multi-day');
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
       <LanguageSwitcher />
@@ -95,11 +98,27 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredTrails.map((trail) => (
-            <TrailCard key={trail.id} trail={trail} />
-          ))}
-        </div>
+        {(selectedType === 'all' || selectedType === 'day-hike') && dayHikes.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-forest mb-6">{t('filterDayHike')}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {dayHikes.map((trail) => (
+                <TrailCard key={trail.id} trail={trail} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {(selectedType === 'all' || selectedType === 'multi-day') && multiDayHikes.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-forest mb-6">{t('filterMultiDay')}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {multiDayHikes.map((trail) => (
+                <TrailCard key={trail.id} trail={trail} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
