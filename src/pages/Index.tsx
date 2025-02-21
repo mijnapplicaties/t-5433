@@ -6,6 +6,7 @@ import { Badge } from '../components/ui/badge';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../context/LanguageContext';
 import { Trail, TrailType, Difficulty } from '../types/trail';
+import TrailCard from '../components/TrailCard';
 
 const Index = () => {
   const { t } = useLanguage();
