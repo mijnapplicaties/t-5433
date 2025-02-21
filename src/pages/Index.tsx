@@ -1,13 +1,22 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import TrailGrid from '../components/TrailGrid';
 import { Badge } from '../components/ui/badge';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../context/LanguageContext';
+import { Trail, TrailType, Difficulty } from '../types/trail';
 
 const Index = () => {
   const { t } = useLanguage();
+  const [selectedType, setSelectedType] = useState<TrailType | 'all'>('all');
+  const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | 'all'>('all');
+
+  const filteredTrails = trails.filter(trail => {
+    const typeMatch = selectedType === 'all' || trail.type === selectedType;
+    const difficultyMatch = selectedDifficulty === 'all' || trail.difficulty === selectedDifficulty;
+    return typeMatch && difficultyMatch;
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
@@ -22,25 +31,74 @@ const Index = () => {
           </p>
         </header>
 
-        <section className="mb-12 animate-fadeIn">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-semibold text-forest">{t('dayHikes')}</h2>
-            <Badge variant="outline" className="text-forest-light">
-              {t('perfectForDayTrips')}
-            </Badge>
+        <div className="mb-8 flex flex-wrap gap-4 justify-center">
+          <div className="space-y-2">
+            <p className="text-sm font-medium text-gray-500">{t('filterByType')}</p>
+            <div className="flex gap-2">
+              <Badge 
+                variant={selectedType === 'all' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedType('all')}
+              >
+                {t('filterAll')}
+              </Badge>
+              <Badge 
+                variant={selectedType === 'day-hike' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedType('day-hike')}
+              >
+                {t('filterDayHike')}
+              </Badge>
+              <Badge 
+                variant={selectedType === 'multi-day' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedType('multi-day')}
+              >
+                {t('filterMultiDay')}
+              </Badge>
+            </div>
           </div>
-          <TrailGrid trails={trails} type="day-hike" />
-        </section>
 
-        <section className="animate-fadeIn">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-semibold text-forest">{t('multiDayAdventures')}</h2>
-            <Badge variant="outline" className="text-forest-light">
-              {t('expeditionDuration')}
-            </Badge>
+          <div className="space-y-2">
+            <p className="text-sm font-medium text-gray-500">{t('filterByDifficulty')}</p>
+            <div className="flex gap-2">
+              <Badge 
+                variant={selectedDifficulty === 'all' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedDifficulty('all')}
+              >
+                {t('filterAll')}
+              </Badge>
+              <Badge 
+                variant={selectedDifficulty === 'easy' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedDifficulty('easy')}
+              >
+                {t('difficultyEasy')}
+              </Badge>
+              <Badge 
+                variant={selectedDifficulty === 'moderate' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedDifficulty('moderate')}
+              >
+                {t('difficultyModerate')}
+              </Badge>
+              <Badge 
+                variant={selectedDifficulty === 'hard' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedDifficulty('hard')}
+              >
+                {t('difficultyHard')}
+              </Badge>
+            </div>
           </div>
-          <TrailGrid trails={trails} type="multi-day" />
-        </section>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredTrails.map((trail) => (
+            <TrailCard key={trail.id} trail={trail} />
+          ))}
+        </div>
       </div>
     </div>
   );

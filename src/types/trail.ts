@@ -11,7 +11,10 @@ export interface Trail {
   duration: number; // in hours
   elevation: number; // in meters
   requiresReservation: boolean;
-  description: string;
+  description: {
+    en: string;
+    es: string;
+  };
   imageUrl: string;
   startingPoint: string;
   highlights: string[];

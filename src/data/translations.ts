@@ -6,6 +6,14 @@ type Translation = {
 };
 
 export const translations: Translation = {
+  title: {
+    en: "Los Coihues Trail Guide",
+    es: "Guía de Senderos Los Coihues",
+  },
+  subtitle: {
+    en: "Discover the best hiking trails around Los Coihues, from lakeside walks to multi-day adventures.",
+    es: "Descubre los mejores senderos alrededor de Los Coihues, desde caminatas junto al lago hasta aventuras de varios días.",
+  },
   distance: {
     en: "Distance",
     es: "Distancia",
@@ -46,28 +54,40 @@ export const translations: Translation = {
     en: "km",
     es: "km",
   },
-  title: {
-    en: "Bariloche Trail Guide",
-    es: "Guía de Senderos de Bariloche",
+  filterAll: {
+    en: "All",
+    es: "Todos",
   },
-  subtitle: {
-    en: "Discover the best hiking trails in Bariloche, from scenic day hikes to challenging multi-day adventures.",
-    es: "Descubre los mejores senderos de Bariloche, desde caminatas escénicas de un día hasta desafiantes aventuras de varios días.",
-  },
-  dayHikes: {
+  filterDayHike: {
     en: "Day Hikes",
     es: "Caminatas de un Día",
   },
-  multiDayAdventures: {
-    en: "Multi-day Adventures",
-    es: "Aventuras de Varios Días",
+  filterMultiDay: {
+    en: "Multi-day",
+    es: "Varios Días",
   },
-  perfectForDayTrips: {
-    en: "Perfect for day trips",
-    es: "Perfecto para excursiones de un día",
+  difficulty: {
+    en: "Difficulty",
+    es: "Dificultad",
   },
-  expeditionDuration: {
-    en: "2-4 day expeditions",
-    es: "Expediciones de 2-4 días",
+  difficultyEasy: {
+    en: "Easy",
+    es: "Fácil",
+  },
+  difficultyModerate: {
+    en: "Moderate",
+    es: "Moderado",
+  },
+  difficultyHard: {
+    en: "Hard",
+    es: "Difícil",
+  },
+  filterByType: {
+    en: "Filter by Type",
+    es: "Filtrar por Tipo",
+  },
+  filterByDifficulty: {
+    en: "Filter by Difficulty",
+    es: "Filtrar por Dificultad",
   },
 };

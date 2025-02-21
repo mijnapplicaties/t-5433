@@ -17,7 +17,7 @@ interface TrailCardProps {
 }
 
 const TrailCard: React.FC<TrailCardProps> = ({ trail }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   const getDifficultyColor = (difficulty: string) => {
@@ -84,7 +84,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail }) => {
             </div>
           </div>
           
-          <p className="text-sm text-gray-600 line-clamp-2">{trail.description}</p>
+          <p className="text-sm text-gray-600 line-clamp-2">{trail.description[language]}</p>
           
           <div className="mt-4 flex flex-wrap gap-2">
             {trail.highlights.map((highlight, index) => (
@@ -144,7 +144,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail }) => {
             <div className="space-y-4">
               <div>
                 <h3 className="text-lg font-semibold mb-2">{t('description')}</h3>
-                <p className="text-gray-700">{trail.description}</p>
+                <p className="text-gray-700">{trail.description[language]}</p>
               </div>
 
               <div>
