@@ -17,6 +17,8 @@ export const trails: Trail[] = [
     imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["Alpine lake", "Mountain refuge", "Rock climbing area"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 8
   },
   {
     id: "2",
@@ -34,6 +36,8 @@ export const trails: Trail[] = [
     imageUrl: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
     startingPoint: "Hotel Llao Llao (45 min by bus from Los Coihues)",
     highlights: ["Panoramic viewpoint", "Native forest", "Lake views"],
+    transportation: ["bus"],
+    distanceFromCampsite: 12
   },
   {
     id: "3",
@@ -51,6 +55,8 @@ export const trails: Trail[] = [
     imageUrl: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
     startingPoint: "Pampa Linda (2h bus ride from Los Coihues)",
     highlights: ["Glacier views", "Mountain refuge", "Tronador peak"],
+    transportation: ["bus", "private-transfer"],
+    distanceFromCampsite: 45
   },
   {
     id: "4",
@@ -68,6 +74,8 @@ export const trails: Trail[] = [
     imageUrl: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
     startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
     highlights: ["Multiple lakes", "Mountain refuges", "Forest trails"],
+    transportation: ["bus", "hitchhiking"],
+    distanceFromCampsite: 15
   },
   {
     id: "5",
@@ -85,6 +93,8 @@ export const trails: Trail[] = [
     imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["Lake views", "Beach access", "Bird watching"],
+    transportation: ["hitchhiking"],
+    distanceFromCampsite: 0
   },
   {
     id: "6",
@@ -102,6 +112,8 @@ export const trails: Trail[] = [
     imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["Two mountain refuges", "Alpine lakes", "High mountain passes"],
+    transportation: ["private-transfer", "taxi"],
+    distanceFromCampsite: 8
   },
   {
     id: "7",
@@ -119,6 +131,8 @@ export const trails: Trail[] = [
     imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
     startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
     highlights: ["Two mountain refuges", "Panoramic views", "Technical terrain"],
+    transportation: ["bus", "private-transfer"],
+    distanceFromCampsite: 15
   },
   {
     id: "8",
