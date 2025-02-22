@@ -1,4 +1,3 @@
-
 import { Trail } from "../types/trail";
 
 export const trails: Trail[] = [
@@ -120,5 +119,62 @@ export const trails: Trail[] = [
     imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
     startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
     highlights: ["Two mountain refuges", "Panoramic views", "Technical terrain"],
+  },
+  {
+    id: "8",
+    name: "Mirador Lago Gutiérrez",
+    type: "day-hike",
+    difficulty: "easy",
+    distance: 3,
+    duration: 1.5,
+    elevation: 200,
+    requiresReservation: false,
+    description: {
+      en: "A short but rewarding hike with panoramic views of Lake Gutiérrez. Easy access from Camping Los Coihues.",
+      es: "Una caminata corta pero gratificante con vistas panorámicas del Lago Gutiérrez. Fácil acceso desde Camping Los Coihues."
+    },
+    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
+    startingPoint: "Camping Los Coihues (direct access)",
+    highlights: ["Lake views", "Easy access", "Family friendly"],
+    transportation: ["hitchhiking", "taxi"],
+    distanceFromCampsite: 0,
+  },
+  {
+    id: "9",
+    name: "Cerro Otto & Piedra de Habsburgo",
+    type: "day-hike",
+    difficulty: "moderate",
+    distance: 12,
+    duration: 5,
+    elevation: 800,
+    requiresReservation: false,
+    description: {
+      en: "A classic hike combining Cerro Otto summit and the historic Piedra de Habsburgo viewpoint.",
+      es: "Una caminata clásica que combina la cumbre del Cerro Otto y el histórico mirador Piedra de Habsburgo."
+    },
+    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
+    startingPoint: "Cerro Otto base (20 min drive)",
+    highlights: ["Panoramic views", "Historic site", "Restaurant at summit"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 8,
+  },
+  {
+    id: "10",
+    name: "Travesía 5 Lagunas",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 45,
+    duration: 72,
+    elevation: 2500,
+    requiresReservation: true,
+    description: {
+      en: "Epic three-day trek visiting five alpine lakes: Negra, CAB, Cretton, Jujuy, and Ilón. Starts from Pampa Linda.",
+      es: "Épica travesía de tres días visitando cinco lagos alpinos: Negra, CAB, Cretton, Jujuy e Ilón. Comienza en Pampa Linda."
+    },
+    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
+    startingPoint: "Pampa Linda (transfer required)",
+    highlights: ["Five alpine lakes", "Remote wilderness", "Technical terrain"],
+    transportation: ["private-transfer"],
+    distanceFromCampsite: 60,
   }
 ];

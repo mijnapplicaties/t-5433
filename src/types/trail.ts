@@ -1,6 +1,7 @@
 
 export type TrailType = "day-hike" | "multi-day";
 export type Difficulty = "easy" | "moderate" | "hard" | "expert";
+export type TransportationType = "bus" | "taxi" | "hitchhiking" | "private-transfer";
 
 export interface Trail {
   id: string;
@@ -18,4 +19,7 @@ export interface Trail {
   imageUrl: string;
   startingPoint: string;
   highlights: string[];
+  transportation: TransportationType[];
+  distanceFromCampsite: number; // in kilometers
 }
+

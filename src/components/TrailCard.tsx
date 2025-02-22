@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { MapPin, Clock, Mountain, ArrowUpRight, X } from 'lucide-react';
+import { MapPin, Clock, Mountain, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import {
   Dialog,
@@ -14,9 +15,10 @@ import {
 
 interface TrailCardProps {
   trail: Trail;
+  transportIcons?: React.ReactNode[];
 }
 
-const TrailCard: React.FC<TrailCardProps> = ({ trail }) => {
+const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   const { t, language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -50,6 +52,15 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail }) => {
               {trail.requiresReservation ? t('reservationRequired') : t('noReservation')}
             </Badge>
           </div>
+          {transportIcons && transportIcons.length > 0 && (
+            <div className="absolute bottom-4 right-4 flex gap-2 bg-white/80 rounded-full px-3 py-1">
+              {transportIcons.map((icon, index) => (
+                <div key={index} className="text-forest-light">
+                  {icon}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
         
         <CardHeader>

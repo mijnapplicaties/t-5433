@@ -1,12 +1,12 @@
 
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
-import TrailGrid from '../components/TrailGrid';
 import { Badge } from '../components/ui/badge';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../context/LanguageContext';
-import { Trail, TrailType, Difficulty } from '../types/trail';
+import { Trail, TrailType, Difficulty, TransportationType } from '../types/trail';
 import TrailCard from '../components/TrailCard';
+import { Bus, Car, ThumbsUp, Users } from 'lucide-react';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -22,14 +22,37 @@ const Index = () => {
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
   const multiDayHikes = filteredTrails.filter(trail => trail.type === 'multi-day');
 
+  const getTransportIcon = (type: TransportationType) => {
+    switch(type) {
+      case 'bus':
+        return <Bus className="w-4 h-4" />;
+      case 'taxi':
+        return <Car className="w-4 h-4" />;
+      case 'hitchhiking':
+        return <ThumbsUp className="w-4 h-4" />;
+      case 'private-transfer':
+        return <Users className="w-4 h-4" />;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
       <LanguageSwitcher />
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-12 animate-fadeIn">
-          <h1 className="text-4xl font-bold text-forest mb-4">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/lovable-uploads/18170e0a-a211-46c5-97e6-3a78c27402e0.png"
+              alt="Camping Los Coihues"
+              className="h-24 w-auto"
+            />
+          </div>
+          <h1 className="text-4xl font-bold text-forest mb-2">
             {t('title')}
           </h1>
+          <p className="text-xl text-stone mb-4">
+            Discover Patagonia's Wonders
+          </p>
           <p className="text-lg text-stone max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
@@ -103,7 +126,11 @@ const Index = () => {
             <h2 className="text-2xl font-bold text-forest mb-6">{t('filterDayHike')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {dayHikes.map((trail) => (
-                <TrailCard key={trail.id} trail={trail} />
+                <TrailCard 
+                  key={trail.id} 
+                  trail={trail} 
+                  transportIcons={trail.transportation.map(t => getTransportIcon(t))}
+                />
               ))}
             </div>
           </div>
@@ -114,7 +141,11 @@ const Index = () => {
             <h2 className="text-2xl font-bold text-forest mb-6">{t('filterMultiDay')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {multiDayHikes.map((trail) => (
-                <TrailCard key={trail.id} trail={trail} />
+                <TrailCard 
+                  key={trail.id} 
+                  trail={trail}
+                  transportIcons={trail.transportation.map(t => getTransportIcon(t))}
+                />
               ))}
             </div>
           </div>
