@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { Badge } from '../components/ui/badge';
@@ -8,15 +7,26 @@ import { Trail, TrailType, Difficulty, TransportationType } from '../types/trail
 import TrailCard from '../components/TrailCard';
 import { Bus, Car, ThumbsUp, Users } from 'lucide-react';
 
+type DistanceCategory = 'all' | 'near' | 'mid' | 'far' | 'very-far';
+
 const Index = () => {
   const { t } = useLanguage();
   const [selectedType, setSelectedType] = useState<TrailType | 'all'>('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | 'all'>('all');
+  const [selectedDistance, setSelectedDistance] = useState<DistanceCategory>('all');
+
+  const getDistanceCategory = (distance: number): DistanceCategory => {
+    if (distance <= 5) return 'near';
+    if (distance <= 15) return 'mid';
+    if (distance <= 30) return 'far';
+    return 'very-far';
+  };
 
   const filteredTrails = trails.filter(trail => {
     const typeMatch = selectedType === 'all' || trail.type === selectedType;
     const difficultyMatch = selectedDifficulty === 'all' || trail.difficulty === selectedDifficulty;
-    return typeMatch && difficultyMatch;
+    const distanceMatch = selectedDistance === 'all' || getDistanceCategory(trail.distanceFromCampsite) === selectedDistance;
+    return typeMatch && difficultyMatch && distanceMatch;
   });
 
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
@@ -58,10 +68,10 @@ const Index = () => {
           </p>
         </header>
 
-        <div className="mb-8 flex flex-wrap gap-4 justify-center">
+        <div className="mb-8 space-y-6">
           <div className="space-y-2">
             <p className="text-sm font-medium text-gray-500">{t('filterByType')}</p>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedType === 'all' ? 'default' : 'outline'}
                 className="cursor-pointer"
@@ -88,7 +98,7 @@ const Index = () => {
 
           <div className="space-y-2">
             <p className="text-sm font-medium text-gray-500">{t('filterByDifficulty')}</p>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedDifficulty === 'all' ? 'default' : 'outline'}
                 className="cursor-pointer"
@@ -116,6 +126,47 @@ const Index = () => {
                 onClick={() => setSelectedDifficulty('hard')}
               >
                 {t('difficultyHard')}
+              </Badge>
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <p className="text-sm font-medium text-gray-500">{t('filterByDistance')}</p>
+            <div className="flex flex-wrap gap-2">
+              <Badge 
+                variant={selectedDistance === 'all' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedDistance('all')}
+              >
+                {t('filterAll')}
+              </Badge>
+              <Badge 
+                variant={selectedDistance === 'near' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedDistance('near')}
+              >
+                {t('distanceNear')} (0-5km)
+              </Badge>
+              <Badge 
+                variant={selectedDistance === 'mid' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedDistance('mid')}
+              >
+                {t('distanceMid')} (5-15km)
+              </Badge>
+              <Badge 
+                variant={selectedDistance === 'far' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedDistance('far')}
+              >
+                {t('distanceFar')} (15-30km)
+              </Badge>
+              <Badge 
+                variant={selectedDistance === 'very-far' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedDistance('very-far')}
+              >
+                {t('distanceVeryFar')} (30km+)
               </Badge>
             </div>
           </div>

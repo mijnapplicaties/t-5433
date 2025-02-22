@@ -1,3 +1,4 @@
+
 import { Trail } from "../types/trail";
 
 export const trails: Trail[] = [
@@ -14,7 +15,7 @@ export const trails: Trail[] = [
       en: "A beautiful day hike to Refugio Frey. From Camping Los Coihues, take a 15-minute drive to Cerro Catedral base, where the trail begins. The path is well-marked with red markers.",
       es: "Una hermosa caminata de un día al Refugio Frey. Desde Camping Los Coihues, tome un viaje de 15 minutos en auto hasta la base del Cerro Catedral, donde comienza el sendero. El camino está bien marcado con señales rojas."
     },
-    imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+    imageUrl: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["Alpine lake", "Mountain refuge", "Rock climbing area"],
     transportation: ["bus", "taxi"],
