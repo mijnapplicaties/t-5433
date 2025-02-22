@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { Badge } from '../components/ui/badge';
@@ -7,26 +8,26 @@ import { Trail, TrailType, Difficulty, TransportationType } from '../types/trail
 import TrailCard from '../components/TrailCard';
 import { Bus, Car, ThumbsUp, Users } from 'lucide-react';
 
-type DistanceCategory = 'all' | 'near' | 'mid' | 'far' | 'very-far';
+type TimeCategory = 'all' | 'short' | 'medium' | 'long' | 'multi-day';
 
 const Index = () => {
   const { t } = useLanguage();
   const [selectedType, setSelectedType] = useState<TrailType | 'all'>('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | 'all'>('all');
-  const [selectedDistance, setSelectedDistance] = useState<DistanceCategory>('all');
+  const [selectedTime, setSelectedTime] = useState<TimeCategory>('all');
 
-  const getDistanceCategory = (distance: number): DistanceCategory => {
-    if (distance <= 5) return 'near';
-    if (distance <= 15) return 'mid';
-    if (distance <= 30) return 'far';
-    return 'very-far';
+  const getTimeCategory = (duration: number): TimeCategory => {
+    if (duration <= 3) return 'short';
+    if (duration <= 6) return 'medium';
+    if (duration <= 12) return 'long';
+    return 'multi-day';
   };
 
   const filteredTrails = trails.filter(trail => {
     const typeMatch = selectedType === 'all' || trail.type === selectedType;
     const difficultyMatch = selectedDifficulty === 'all' || trail.difficulty === selectedDifficulty;
-    const distanceMatch = selectedDistance === 'all' || getDistanceCategory(trail.distanceFromCampsite) === selectedDistance;
-    return typeMatch && difficultyMatch && distanceMatch;
+    const timeMatch = selectedTime === 'all' || getTimeCategory(trail.duration) === selectedTime;
+    return typeMatch && difficultyMatch && timeMatch;
   });
 
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
@@ -68,9 +69,9 @@ const Index = () => {
           </p>
         </header>
 
-        <div className="mb-8 space-y-6">
-          <div className="space-y-2">
-            <p className="text-sm font-medium text-gray-500">{t('filterByType')}</p>
+        <div className="mb-8 flex flex-wrap gap-8 justify-center">
+          <div>
+            <p className="text-sm font-medium text-gray-500 mb-2">{t('filterByType')}</p>
             <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedType === 'all' ? 'default' : 'outline'}
@@ -96,8 +97,8 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="space-y-2">
-            <p className="text-sm font-medium text-gray-500">{t('filterByDifficulty')}</p>
+          <div>
+            <p className="text-sm font-medium text-gray-500 mb-2">{t('filterByDifficulty')}</p>
             <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedDifficulty === 'all' ? 'default' : 'outline'}
@@ -130,43 +131,43 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="space-y-2">
-            <p className="text-sm font-medium text-gray-500">{t('filterByDistance')}</p>
+          <div>
+            <p className="text-sm font-medium text-gray-500 mb-2">{t('filterByTime')}</p>
             <div className="flex flex-wrap gap-2">
               <Badge 
-                variant={selectedDistance === 'all' ? 'default' : 'outline'}
+                variant={selectedTime === 'all' ? 'default' : 'outline'}
                 className="cursor-pointer"
-                onClick={() => setSelectedDistance('all')}
+                onClick={() => setSelectedTime('all')}
               >
                 {t('filterAll')}
               </Badge>
               <Badge 
-                variant={selectedDistance === 'near' ? 'default' : 'outline'}
+                variant={selectedTime === 'short' ? 'default' : 'outline'}
                 className="cursor-pointer"
-                onClick={() => setSelectedDistance('near')}
+                onClick={() => setSelectedTime('short')}
               >
-                {t('distanceNear')} (0-5km)
+                1-3h
               </Badge>
               <Badge 
-                variant={selectedDistance === 'mid' ? 'default' : 'outline'}
+                variant={selectedTime === 'medium' ? 'default' : 'outline'}
                 className="cursor-pointer"
-                onClick={() => setSelectedDistance('mid')}
+                onClick={() => setSelectedTime('medium')}
               >
-                {t('distanceMid')} (5-15km)
+                3-6h
               </Badge>
               <Badge 
-                variant={selectedDistance === 'far' ? 'default' : 'outline'}
+                variant={selectedTime === 'long' ? 'default' : 'outline'}
                 className="cursor-pointer"
-                onClick={() => setSelectedDistance('far')}
+                onClick={() => setSelectedTime('long')}
               >
-                {t('distanceFar')} (15-30km)
+                6-12h
               </Badge>
               <Badge 
-                variant={selectedDistance === 'very-far' ? 'default' : 'outline'}
+                variant={selectedTime === 'multi-day' ? 'default' : 'outline'}
                 className="cursor-pointer"
-                onClick={() => setSelectedDistance('very-far')}
+                onClick={() => setSelectedTime('multi-day')}
               >
-                {t('distanceVeryFar')} (30km+)
+                12h+
               </Badge>
             </div>
           </div>
@@ -207,3 +208,4 @@ const Index = () => {
 };
 
 export default Index;
+
