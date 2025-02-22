@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { translations } from '../data/translations';
 
-type Language = 'en' | 'es';
+type Language = 'en' | 'es' | 'fr' | 'de';
 
 interface LanguageContextType {
   language: Language;
@@ -33,3 +33,4 @@ export const useLanguage = () => {
   }
   return context;
 };
+

@@ -22,8 +22,23 @@ const LanguageSwitcher = () => {
       >
         ES
       </Button>
+      <Button
+        variant={language === 'fr' ? 'default' : 'outline'}
+        onClick={() => setLanguage('fr')}
+        className="text-sm"
+      >
+        FR
+      </Button>
+      <Button
+        variant={language === 'de' ? 'default' : 'outline'}
+        onClick={() => setLanguage('de')}
+        className="text-sm"
+      >
+        DE
+      </Button>
     </div>
   );
 };
 
 export default LanguageSwitcher;
+
