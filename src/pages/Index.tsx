@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { Badge } from '../components/ui/badge';
@@ -7,22 +8,13 @@ import { Trail, TrailType, Difficulty, TransportationType, TravelTimeCategory } 
 import TrailCard from '../components/TrailCard';
 import { Bus, Car, ThumbsUp, Users } from 'lucide-react';
 
-type TimeCategory = 'all' | 'short' | 'medium' | 'long' | 'multi-day';
 type TravelTimeCategoryFilter = 'all' | TravelTimeCategory;
 
 const Index = () => {
   const { t } = useLanguage();
   const [selectedType, setSelectedType] = useState<TrailType | 'all'>('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | 'all'>('all');
-  const [selectedTime, setSelectedTime] = useState<TimeCategory>('all');
   const [selectedTravelTime, setSelectedTravelTime] = useState<TravelTimeCategoryFilter>('all');
-
-  const getTimeCategory = (duration: number): TimeCategory => {
-    if (duration <= 3) return 'short';
-    if (duration <= 6) return 'medium';
-    if (duration <= 12) return 'long';
-    return 'multi-day';
-  };
 
   const getTravelTimeCategory = (minutes: number): TravelTimeCategory => {
     if (minutes < 30) return 'less-than-30min';
@@ -34,9 +26,8 @@ const Index = () => {
   const filteredTrails = trails.filter(trail => {
     const typeMatch = selectedType === 'all' || trail.type === selectedType;
     const difficultyMatch = selectedDifficulty === 'all' || trail.difficulty === selectedDifficulty;
-    const timeMatch = selectedTime === 'all' || getTimeCategory(trail.duration) === selectedTime;
     const travelTimeMatch = selectedTravelTime === 'all' || getTravelTimeCategory(trail.travelTime) === selectedTravelTime;
-    return typeMatch && difficultyMatch && timeMatch && travelTimeMatch;
+    return typeMatch && difficultyMatch && travelTimeMatch;
   });
 
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
@@ -136,47 +127,6 @@ const Index = () => {
                 onClick={() => setSelectedDifficulty('hard')}
               >
                 {t('difficultyHard')}
-              </Badge>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-sm font-medium text-gray-500 mb-2">{t('filterByTime')}</p>
-            <div className="flex flex-wrap gap-2">
-              <Badge 
-                variant={selectedTime === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedTime('all')}
-              >
-                {t('filterAll')}
-              </Badge>
-              <Badge 
-                variant={selectedTime === 'short' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedTime('short')}
-              >
-                1-3h
-              </Badge>
-              <Badge 
-                variant={selectedTime === 'medium' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedTime('medium')}
-              >
-                3-6h
-              </Badge>
-              <Badge 
-                variant={selectedTime === 'long' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedTime('long')}
-              >
-                6-12h
-              </Badge>
-              <Badge 
-                variant={selectedTime === 'multi-day' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedTime('multi-day')}
-              >
-                12h+
               </Badge>
             </div>
           </div>

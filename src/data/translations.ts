@@ -142,10 +142,10 @@ export const translations: Translation = {
     de: "Nach Zeit filtern",
   },
   filterByTravelTime: {
-    en: "Filter by Travel Time",
-    es: "Filtrar por Tiempo de Viaje",
-    fr: "Filtrer par temps de trajet",
-    de: "Nach Anreisezeit filtern",
+    en: "Filter by How Long It Takes to Get There",
+    es: "Filtrar por Tiempo de Viaje al Inicio",
+    fr: "Filtrer par temps de trajet jusqu'au départ",
+    de: "Nach Anreisezeit zum Start filtern",
   },
   travelTimeLessThan30: {
     en: "Less than 30 min",
@@ -172,4 +172,3 @@ export const translations: Translation = {
     de: "Mehr als 2 Stunden",
   }
 };
-
