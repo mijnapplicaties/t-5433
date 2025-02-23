@@ -1,4 +1,3 @@
-
 type Translation = {
   [key: string]: {
     en: string;
@@ -170,5 +169,29 @@ export const translations: Translation = {
     es: "Más de 2 horas",
     fr: "Plus de 2 heures",
     de: "Mehr als 2 Stunden",
+  },
+  filterByAccessibility: {
+    en: "Filter by Accessibility",
+    es: "Filtrar por Accesibilidad",
+    fr: "Filtrer par Accessibilité",
+    de: "Nach Zugänglichkeit filtern",
+  },
+  accessibilityDirect: {
+    en: "Direct Access (Walking Distance)",
+    es: "Acceso Directo (Distancia a pie)",
+    fr: "Accès Direct (Distance de marche)",
+    de: "Direkter Zugang (Gehentfernung)",
+  },
+  accessibilityEasy: {
+    en: "Easy Access (Short travel time)",
+    es: "Acceso Fácil (Poco tiempo de viaje)",
+    fr: "Accès Facile (Temps de trajet court)",
+    de: "Einfacher Zugang (Kurze Anreisezeit)",
+  },
+  accessibilityMedium: {
+    en: "Medium Access (Longer travel)",
+    es: "Acceso Medio (Viaje más largo)",
+    fr: "Accès Moyen (Trajet plus long)",
+    de: "Mittlerer Zugang (Längere Anreise)",
   }
 };

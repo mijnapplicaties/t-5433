@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { Badge } from '../components/ui/badge';
@@ -14,20 +13,21 @@ const Index = () => {
   const { t } = useLanguage();
   const [selectedType, setSelectedType] = useState<TrailType | 'all'>('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | 'all'>('all');
-  const [selectedTravelTime, setSelectedTravelTime] = useState<TravelTimeCategoryFilter>('all');
+  const [selectedTravelTime, setSelectedTravelTime] = useState<TravelTimeCategory | 'all'>('all');
 
-  const getTravelTimeCategory = (minutes: number): TravelTimeCategory => {
-    if (minutes < 30) return 'less-than-30min';
-    if (minutes < 60) return '30min-1hour';
-    if (minutes < 120) return '1-2hours';
-    return 'more-than-2hours';
+  const getAccessibilityCategory = (trail: Trail): TravelTimeCategory => {
+    if (trail.distanceFromCampsite <= 2) return 'direct-access';
+    if (trail.travelTime <= 30 && ['bus', 'taxi'].some(t => trail.transportation.includes(t as TransportationType))) {
+      return 'easy-access';
+    }
+    return 'medium-access';
   };
 
   const filteredTrails = trails.filter(trail => {
     const typeMatch = selectedType === 'all' || trail.type === selectedType;
     const difficultyMatch = selectedDifficulty === 'all' || trail.difficulty === selectedDifficulty;
-    const travelTimeMatch = selectedTravelTime === 'all' || getTravelTimeCategory(trail.travelTime) === selectedTravelTime;
-    return typeMatch && difficultyMatch && travelTimeMatch;
+    const accessibilityMatch = selectedTravelTime === 'all' || getAccessibilityCategory(trail) === selectedTravelTime;
+    return typeMatch && difficultyMatch && accessibilityMatch;
   });
 
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
@@ -132,7 +132,7 @@ const Index = () => {
           </div>
 
           <div>
-            <p className="text-sm font-medium text-gray-500 mb-2">{t('filterByTravelTime')}</p>
+            <p className="text-sm font-medium text-gray-500 mb-2">{t('filterByAccessibility')}</p>
             <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedTravelTime === 'all' ? 'default' : 'outline'}
@@ -142,32 +142,25 @@ const Index = () => {
                 {t('filterAll')}
               </Badge>
               <Badge 
-                variant={selectedTravelTime === 'less-than-30min' ? 'default' : 'outline'}
+                variant={selectedTravelTime === 'direct-access' ? 'default' : 'outline'}
                 className="cursor-pointer"
-                onClick={() => setSelectedTravelTime('less-than-30min')}
+                onClick={() => setSelectedTravelTime('direct-access')}
               >
-                {t('travelTimeLessThan30')}
+                {t('accessibilityDirect')}
               </Badge>
               <Badge 
-                variant={selectedTravelTime === '30min-1hour' ? 'default' : 'outline'}
+                variant={selectedTravelTime === 'easy-access' ? 'default' : 'outline'}
                 className="cursor-pointer"
-                onClick={() => setSelectedTravelTime('30min-1hour')}
+                onClick={() => setSelectedTravelTime('easy-access')}
               >
-                {t('travelTime30To60')}
+                {t('accessibilityEasy')}
               </Badge>
               <Badge 
-                variant={selectedTravelTime === '1-2hours' ? 'default' : 'outline'}
+                variant={selectedTravelTime === 'medium-access' ? 'default' : 'outline'}
                 className="cursor-pointer"
-                onClick={() => setSelectedTravelTime('1-2hours')}
+                onClick={() => setSelectedTravelTime('medium-access')}
               >
-                {t('travelTime1To2')}
-              </Badge>
-              <Badge 
-                variant={selectedTravelTime === 'more-than-2hours' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedTravelTime('more-than-2hours')}
-              >
-                {t('travelTimeMore2')}
+                {t('accessibilityMedium')}
               </Badge>
             </div>
           </div>
