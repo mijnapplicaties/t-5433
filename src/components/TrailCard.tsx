@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { MapPin, Clock, Mountain, ArrowUpRight } from 'lucide-react';
+import { MapPin, Clock, Mountain, ArrowUpRight, Bus, Car, Users } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import {
   Dialog,
@@ -30,6 +29,33 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
       expert: 'bg-red-500',
     };
     return colors[difficulty as keyof typeof colors] || 'bg-gray-500';
+  };
+
+  const getTransportationInfo = (type: string) => {
+    switch (type) {
+      case 'bus':
+        return {
+          icon: <Bus className="w-4 h-4" />,
+          label: "Bus service available"
+        };
+      case 'taxi':
+        return {
+          icon: <Car className="w-4 h-4" />,
+          label: "Taxi/Uber available"
+        };
+      case 'private-transfer':
+        return {
+          icon: <Users className="w-4 h-4" />,
+          label: "Private transfer available"
+        };
+      case 'hitchhiking':
+        return {
+          icon: <ThumbsUp className="w-4 h-4" />,
+          label: "Hitchhiking possible"
+        };
+      default:
+        return null;
+    }
   };
 
   return (
@@ -97,6 +123,25 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
           
           <p className="text-sm text-gray-600 line-clamp-2">{trail.description[language]}</p>
           
+          <div className="mt-4">
+            <h4 className="text-sm font-semibold mb-2">{t('howToGetThere')}</h4>
+            <div className="space-y-2">
+              {trail.transportation.map((type, index) => {
+                const transportInfo = getTransportationInfo(type);
+                if (!transportInfo) return null;
+                return (
+                  <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
+                    {transportInfo.icon}
+                    <span>{transportInfo.label}</span>
+                    {trail.travelTime > 0 && type === 'bus' && (
+                      <span className="ml-1">({trail.travelTime} min)</span>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
           <div className="mt-4 flex flex-wrap gap-2">
             {trail.highlights.map((highlight, index) => (
               <Badge key={index} variant="secondary" className="text-xs">
@@ -152,10 +197,29 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold mb-2">{t('description')}</h3>
                 <p className="text-gray-700">{trail.description[language]}</p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold mb-2">{t('howToGetThere')}</h3>
+                <div className="space-y-2 bg-gray-50 p-4 rounded-lg">
+                  {trail.transportation.map((type, index) => {
+                    const transportInfo = getTransportationInfo(type);
+                    if (!transportInfo) return null;
+                    return (
+                      <div key={index} className="flex items-center gap-2 text-gray-700">
+                        {transportInfo.icon}
+                        <span>{transportInfo.label}</span>
+                        {trail.travelTime > 0 && type === 'bus' && (
+                          <span className="ml-1">({trail.travelTime} min)</span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
 
               <div>

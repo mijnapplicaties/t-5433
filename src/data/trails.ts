@@ -35,7 +35,7 @@ export const trails: Trail[] = [
     description: {
       en: "An accessible hike from Hotel Llao Llao. From Camping Los Coihues, take bus line 20 to Llao Llao (45 min ride). Trail starts behind the hotel.",
       es: "Una caminata accesible desde el Hotel Llao Llao. Desde Camping Los Coihues, tome la línea de bus 20 hasta Llao Llao (45 minutos de viaje). El sendero comienza detrás del hotel.",
-      fr: "Une randonnée accessible depuis le Hotel Llao Llao. Depuis le Camping Los Coihues, prenez la ligne de bus 20 jusqu'à Llao Llao (45 minutes de trajet). Le sentier commence derrière le hôtel.",
+      fr: "Une randonnée accessible desde el Hotel Llao Llao. Depuis le Camping Los Coihues, prenez la ligne de bus 20 jusqu'à Llao Llao (45 minutes de trajet). Le sentier commence derrière le hôtel.",
       de: "Eine zugängliche Wanderung aus dem Hotel Llao Llao. Vom Camping Los Coihues aus nehmen Sie die Linie 20 zu Llao Llao (45 Minuten Reise). Der Wanderweg beginnt hinter dem Hotel."
     },
     imageUrl: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
@@ -64,7 +64,8 @@ export const trails: Trail[] = [
     startingPoint: "Pampa Linda (2h bus ride from Los Coihues)",
     highlights: ["Glacier views", "Mountain refuge", "Tronador peak"],
     transportation: ["bus", "private-transfer"],
-    distanceFromCampsite: 45
+    distanceFromCampsite: 45,
+    travelTime: 120
   },
   {
     id: "4",
@@ -85,7 +86,8 @@ export const trails: Trail[] = [
     startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
     highlights: ["Multiple lakes", "Mountain refuges", "Forest trails"],
     transportation: ["bus", "hitchhiking"],
-    distanceFromCampsite: 15
+    distanceFromCampsite: 15,
+    travelTime: 30
   },
   {
     id: "5",
@@ -106,7 +108,8 @@ export const trails: Trail[] = [
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["Lake views", "Beach access", "Bird watching"],
     transportation: ["hitchhiking"],
-    distanceFromCampsite: 0
+    distanceFromCampsite: 0,
+    travelTime: 0
   },
   {
     id: "6",
@@ -127,7 +130,8 @@ export const trails: Trail[] = [
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["Two mountain refuges", "Alpine lakes", "High mountain passes"],
     transportation: ["private-transfer", "taxi"],
-    distanceFromCampsite: 8
+    distanceFromCampsite: 8,
+    travelTime: 15
   },
   {
     id: "7",
@@ -148,7 +152,8 @@ export const trails: Trail[] = [
     startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
     highlights: ["Two mountain refuges", "Panoramic views", "Technical terrain"],
     transportation: ["bus", "private-transfer"],
-    distanceFromCampsite: 15
+    distanceFromCampsite: 15,
+    travelTime: 30
   },
   {
     id: "8",
@@ -192,7 +197,7 @@ export const trails: Trail[] = [
     highlights: ["Panoramic views", "Historic site", "Restaurant at summit"],
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 8,
-    travelTime: 0
+    travelTime: 20
   },
   {
     id: "10",
@@ -214,7 +219,7 @@ export const trails: Trail[] = [
     highlights: ["Five alpine lakes", "Remote wilderness", "Technical terrain"],
     transportation: ["private-transfer"],
     distanceFromCampsite: 60,
-    travelTime: 0
+    travelTime: 120
   },
   {
     id: "11",
