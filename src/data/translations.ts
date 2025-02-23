@@ -1,3 +1,4 @@
+
 type Translation = {
   [key: string]: {
     en: string;
@@ -145,6 +146,12 @@ export const translations: Translation = {
     es: "Filtrar por Tiempo de Viaje al Inicio",
     fr: "Filtrer par temps de trajet jusqu'au départ",
     de: "Nach Anreisezeit zum Start filtern",
+  },
+  howToGetThere: {
+    en: "How to Get There",
+    es: "Cómo Llegar",
+    fr: "Comment s'y rendre",
+    de: "Anfahrt",
   },
   travelTimeLessThan30: {
     en: "Less than 30 min",
