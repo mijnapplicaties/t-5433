@@ -25,4 +25,6 @@ export interface Trail {
   transportation: TransportationType[];
   distanceFromCampsite: number;
   travelTime: number;
+  busLines?: string; // Added this optional field
 }
+

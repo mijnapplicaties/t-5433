@@ -21,7 +21,8 @@ export const trails: Trail[] = [
     highlights: ["Alpine lake", "Mountain refuge", "Rock climbing area"],
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 8,
-    travelTime: 15
+    travelTime: 15,
+    busLines: "Line 20"
   },
   {
     id: "2",
@@ -43,7 +44,8 @@ export const trails: Trail[] = [
     highlights: ["Panoramic viewpoint", "Native forest", "Lake views"],
     transportation: ["bus"],
     distanceFromCampsite: 12,
-    travelTime: 45
+    travelTime: 45,
+    busLines: "Lines 50 + 20"
   },
   {
     id: "3",

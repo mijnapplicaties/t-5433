@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -36,7 +37,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
       case 'bus':
         return {
           icon: <Bus className="w-4 h-4" />,
-          label: "Bus service available"
+          label: trail.busLines || "Bus service available"
         };
       case 'taxi':
         return {
