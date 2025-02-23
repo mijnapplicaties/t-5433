@@ -42,7 +42,8 @@ export const trails: Trail[] = [
     startingPoint: "Hotel Llao Llao (45 min by bus from Los Coihues)",
     highlights: ["Panoramic viewpoint", "Native forest", "Lake views"],
     transportation: ["bus"],
-    distanceFromCampsite: 12
+    distanceFromCampsite: 12,
+    travelTime: 45
   },
   {
     id: "3",
@@ -169,6 +170,7 @@ export const trails: Trail[] = [
     highlights: ["Lake views", "Easy access", "Family friendly"],
     transportation: ["hitchhiking", "taxi"],
     distanceFromCampsite: 0,
+    travelTime: 0
   },
   {
     id: "9",
@@ -190,6 +192,7 @@ export const trails: Trail[] = [
     highlights: ["Panoramic views", "Historic site", "Restaurant at summit"],
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 8,
+    travelTime: 0
   },
   {
     id: "10",
@@ -211,5 +214,28 @@ export const trails: Trail[] = [
     highlights: ["Five alpine lakes", "Remote wilderness", "Technical terrain"],
     transportation: ["private-transfer"],
     distanceFromCampsite: 60,
+    travelTime: 0
+  },
+  {
+    id: "11",
+    name: "Cascada de los Duendes",
+    type: "day-hike",
+    difficulty: "easy",
+    distance: 3,
+    duration: 1.5,
+    elevation: 100,
+    requiresReservation: false,
+    description: {
+      en: "A charming waterfall trail with access to beautiful Gutiérrez lake beaches. Perfect starter trail directly from the campsite, following a gentle path through the native forest. Great for families and beginners.",
+      es: "Un encantador sendero a la cascada con acceso a hermosas playas del lago Gutiérrez. Sendero perfecto para comenzar, directamente desde el camping, siguiendo un camino suave a través del bosque nativo. Ideal para familias y principiantes.",
+      fr: "Un charmant sentier menant à une cascade avec accès aux belles plages du lac Gutiérrez. Sentier parfait pour débuter, directement depuis le camping, suivant un chemin doux à travers la forêt native. Idéal pour les familles et les débutants.",
+      de: "Ein charmanter Wasserfall-Wanderweg mit Zugang zu schönen Stränden am Gutiérrez-See. Perfekter Anfängerpfad direkt vom Campingplatz aus, der einem sanften Weg durch den heimischen Wald folgt. Ideal für Familien und Anfänger."
+    },
+    imageUrl: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
+    startingPoint: "Camping Los Coihues (direct access)",
+    highlights: ["Waterfall", "Lake beaches", "Native forest", "Family friendly"],
+    transportation: ["hitchhiking"],
+    distanceFromCampsite: 0,
+    travelTime: 0
   }
 ];
