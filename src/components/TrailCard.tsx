@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { MapPin, Clock, Mountain, ArrowUpRight, Bus, Car, Users } from 'lucide-react';
+import { MapPin, Clock, Mountain, ArrowUpRight, Bus, Car, Users, ThumbsUp } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import {
   Dialog,
