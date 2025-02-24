@@ -1,3 +1,4 @@
+
 import { Trail } from "../types/trail";
 
 export const trails: Trail[] = [
@@ -16,7 +17,7 @@ export const trails: Trail[] = [
       fr: "Une belle randonnée d'une journée jusqu'au Refugio Frey. Depuis le Camping Los Coihues, prenez 15 minutes en voiture jusqu'à la base de Cerro Catedral, où commence le sentier. Le chemin est bien balisé avec des marqueurs rouges.",
       de: "Eine schöne Tageswanderung zum Refugio Frey. Vom Camping Los Coihues aus fahren Sie 15 Minuten mit dem Auto zur Basis des Cerro Catedral, wo der Wanderweg beginnt. Der Weg ist gut mit roten Markierungen gekennzeichnet."
     },
-    imageUrl: "/lovable-uploads/dfb2bc9a-aebf-419b-aaa5-8365f4d66ed0.png",
+    imageUrl: "/lovable-uploads/b319c062-05e6-4673-85bb-e653feab11fb.png",
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["Alpine lake", "Mountain refuge", "Rock climbing area"],
     transportation: ["bus", "taxi"],
@@ -106,7 +107,7 @@ export const trails: Trail[] = [
       fr: "Un sentier pittoresque sur la rive du lac qui commence directement du Camping Los Coihues. Idéal pour une promenade matinale avec des vues magnifiques du Lago Gutiérrez et des montagnes circondantes.",
       de: "Ein schöner Wasserweg am Ufer des Lages, der direkt aus dem Camping Los Coihues beginnt. Perfekt für eine morgendliche Wanderung mit schönen Blicken auf den Lago Gutiérrez und die umliegenden Berge."
     },
-    imageUrl: "/lovable-uploads/aa068899-7e0b-4ae3-b341-dd6487162cbe.png",
+    imageUrl: "/lovable-uploads/bdd46388-2e54-44ed-8cb1-f449f800bd97.png",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["Lake views", "Beach access", "Bird watching"],
     transportation: ["walking", "hitchhiking"],
@@ -315,3 +316,4 @@ export const trails: Trail[] = [
     busLines: "Line 10"
   }
 ];
+
