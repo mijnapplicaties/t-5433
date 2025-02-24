@@ -16,7 +16,7 @@ export const trails: Trail[] = [
       fr: "Une belle randonnée d'une journée jusqu'au Refugio Frey. Depuis le Camping Los Coihues, prenez 15 minutes en voiture jusqu'à la base de Cerro Catedral, où commence le sentier. Le chemin est bien balisé avec des marqueurs rouges.",
       de: "Eine schöne Tageswanderung zum Refugio Frey. Vom Camping Los Coihues aus fahren Sie 15 Minuten mit dem Auto zur Basis des Cerro Catedral, wo der Wanderweg beginnt. Der Weg ist gut mit roten Markierungen gekennzeichnet."
     },
-    imageUrl: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
+    imageUrl: "/lovable-uploads/dfb2bc9a-aebf-419b-aaa5-8365f4d66ed0.png",
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["Alpine lake", "Mountain refuge", "Rock climbing area"],
     transportation: ["bus", "taxi"],
@@ -39,7 +39,7 @@ export const trails: Trail[] = [
       fr: "Une randonnée accessible desde el Hotel Llao Llao. Depuis le Camping Los Coihues, prenez la ligne de bus 20 jusqu'à Llao Llao (45 minutes de trajet). Le sentier commence derrière le hôtel.",
       de: "Eine zugängliche Wanderung aus dem Hotel Llao Llao. Vom Camping Los Coihues aus nehmen Sie die Linie 20 zu Llao Llao (45 Minuten Reise). Der Wanderweg beginnt hinter dem Hotel."
     },
-    imageUrl: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
+    imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
     startingPoint: "Hotel Llao Llao (45 min by bus from Los Coihues)",
     highlights: ["Panoramic viewpoint", "Native forest", "Lake views"],
     transportation: ["bus"],
@@ -106,7 +106,7 @@ export const trails: Trail[] = [
       fr: "Un sentier pittoresque sur la rive du lac qui commence directement du Camping Los Coihues. Idéal pour une promenade matinale avec des vues magnifiques du Lago Gutiérrez et des montagnes circondantes.",
       de: "Ein schöner Wasserweg am Ufer des Lages, der direkt aus dem Camping Los Coihues beginnt. Perfekt für eine morgendliche Wanderung mit schönen Blicken auf den Lago Gutiérrez und die umliegenden Berge."
     },
-    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
+    imageUrl: "/lovable-uploads/aa068899-7e0b-4ae3-b341-dd6487162cbe.png",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["Lake views", "Beach access", "Bird watching"],
     transportation: ["walking", "hitchhiking"],
@@ -128,7 +128,7 @@ export const trails: Trail[] = [
       fr: "Une randonnée spectaculaire de trois jours connectant le Refugio Frey et le Refugio Jakob. Commencez à partir de Cerro Catedral (15 minutes en voiture depuis Los Coihues) et terminez à Colonia Suiza. Retournez en bus à Los Coihues.",
       de: "Eine wunderbare drei-Tage-Wanderung, die Refugio Frey und Refugio Jakob verbindet. Beginnen Sie von Cerro Catedral (15 Minuten in Auto aus Los Coihues) und beenden Sie sich in Colonia Suiza. Registrieren Sie sich bei dem Bus zum Rückweg nach Los Coihues."
     },
-    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
+    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["Two mountain refuges", "Alpine lakes", "High mountain passes"],
     transportation: ["private-transfer", "taxi"],
@@ -172,7 +172,7 @@ export const trails: Trail[] = [
       fr: "Une randonnée courte mais récompensante avec des vues panoramiques du Lago Gutiérrez. Accès facile depuis le Camping Los Coihues.",
       de: "Eine kurze aber belohnte Wanderung mit schiczen Blicken auf den Lago Gutiérrez. Einfaches Zugang von Camping Los Coihues."
     },
-    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
+    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["Lake views", "Easy access", "Family friendly"],
     transportation: ["walking", "hitchhiking", "taxi"],
@@ -194,7 +194,7 @@ export const trails: Trail[] = [
       fr: "Une randonnée classique combinant la cime du Cerro Otto et le mirador historique de la Piedra de Habsburgo.",
       de: "Eine klassische Wanderung, die die Spitze des Cerro Otto und den historischen Mirador Piedra de Habsburgo verbindet."
     },
-    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
+    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
     startingPoint: "Cerro Otto base (20 min drive)",
     highlights: ["Panoramic views", "Historic site", "Restaurant at summit"],
     transportation: ["bus", "taxi"],
@@ -260,7 +260,7 @@ export const trails: Trail[] = [
       fr: "Une randonnée courte mais raide offrant l'une des meilleures vues panoramiques de Bariloche. Le sommet offre une vue à 360 degrés sur les lacs et les montagnes.",
       de: "Eine kurze aber steile Wanderung mit einem der besten Panoramablicke auf Bariloche. Der Gipfel bietet einen 360-Grad-Blick auf Seen und Berge."
     },
-    imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
     startingPoint: "Base of Cerro Campanario (25 min bus ride)",
     highlights: ["Panoramic viewpoint", "Chairlift option", "Mountain cafe"],
     transportation: ["bus", "taxi"],
