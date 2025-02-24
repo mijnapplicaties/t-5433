@@ -175,7 +175,7 @@ export const trails: Trail[] = [
     imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["Lake views", "Easy access", "Family friendly"],
-    transportation: ["hitchhiking", "taxi"],
+    transportation: ["walking", "hitchhiking", "taxi"],
     distanceFromCampsite: 0,
     travelTime: 0
   },
@@ -244,5 +244,74 @@ export const trails: Trail[] = [
     transportation: ["hitchhiking"],
     distanceFromCampsite: 0,
     travelTime: 0
+  },
+  {
+    id: "12",
+    name: "Cerro Campanario",
+    type: "day-hike",
+    difficulty: "moderate",
+    distance: 2,
+    duration: 1,
+    elevation: 300,
+    requiresReservation: false,
+    description: {
+      en: "A short but steep hike offering one of the best panoramic views of Bariloche. The summit provides a 360-degree view of lakes and mountains.",
+      es: "Una caminata corta pero empinada que ofrece una de las mejores vistas panorámicas de Bariloche. La cumbre proporciona una vista de 360 grados de lagos y montañas.",
+      fr: "Une randonnée courte mais raide offrant l'une des meilleures vues panoramiques de Bariloche. Le sommet offre une vue à 360 degrés sur les lacs et les montagnes.",
+      de: "Eine kurze aber steile Wanderung mit einem der besten Panoramablicke auf Bariloche. Der Gipfel bietet einen 360-Grad-Blick auf Seen und Berge."
+    },
+    imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+    startingPoint: "Base of Cerro Campanario (25 min bus ride)",
+    highlights: ["Panoramic viewpoint", "Chairlift option", "Mountain cafe"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 10,
+    travelTime: 25,
+    busLines: "Lines 20 + 10"
+  },
+  {
+    id: "13",
+    name: "Circuito Chico - Lago Moreno",
+    type: "day-hike",
+    difficulty: "easy",
+    distance: 8,
+    duration: 3,
+    elevation: 150,
+    requiresReservation: false,
+    description: {
+      en: "A scenic lakeside trail following the famous Circuito Chico route. Beautiful views of Lago Moreno and surrounding mountains.",
+      es: "Un pintoresco sendero junto al lago siguiendo la famosa ruta del Circuito Chico. Hermosas vistas del Lago Moreno y las montañas circundantes.",
+      fr: "Un sentier pittoresque au bord du lac suivant la célèbre route du Circuito Chico. Belles vues sur le Lago Moreno et les montagnes environnantes.",
+      de: "Ein malerischer Seeuferweg entlang der berühmten Circuito Chico Route. Schöne Aussichten auf den Lago Moreno und die umliegenden Berge."
+    },
+    imageUrl: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+    startingPoint: "Circuito Chico entrance (35 min bus ride)",
+    highlights: ["Lake views", "Forest trail", "Photography spots"],
+    transportation: ["bus", "taxi", "private-transfer"],
+    distanceFromCampsite: 15,
+    travelTime: 35,
+    busLines: "Line 20"
+  },
+  {
+    id: "14",
+    name: "Colonia Suiza",
+    type: "day-hike",
+    difficulty: "easy",
+    distance: 6,
+    duration: 2.5,
+    elevation: 100,
+    requiresReservation: false,
+    description: {
+      en: "A pleasant walk through the historic Swiss settlement, combining cultural heritage with natural beauty. Visit the local artisan market and try regional specialties.",
+      es: "Un agradable paseo por el histórico asentamiento suizo, combinando patrimonio cultural con belleza natural. Visite el mercado artesanal local y pruebe las especialidades regionales.",
+      fr: "Une agréable promenade à travers la colonie suisse historique, alliant patrimoine culturel et beauté naturelle. Visitez le marché artisanal local et goûtez aux spécialités régionales.",
+      de: "Ein angenehmer Spaziergang durch die historische Schweizer Siedlung, der kulturelles Erbe mit natürlicher Schönheit verbindet. Besuchen Sie den lokalen Handwerkermarkt und probieren Sie regionale Spezialitäten."
+    },
+    imageUrl: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
+    startingPoint: "Colonia Suiza (30 min bus ride)",
+    highlights: ["Historic settlement", "Artisan market", "Local cuisine", "Lake access"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 12,
+    travelTime: 30,
+    busLines: "Line 10"
   }
 ];
