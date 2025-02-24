@@ -1,4 +1,3 @@
-
 type Translation = {
   [key: string]: {
     en: string;
@@ -153,29 +152,41 @@ export const translations: Translation = {
     fr: "Comment s'y rendre",
     de: "Anfahrt",
   },
-  travelTimeLessThan30: {
-    en: "Less than 30 min",
-    es: "Menos de 30 min",
-    fr: "Moins de 30 min",
-    de: "Weniger als 30 Min",
+  busService: {
+    en: "Bus service",
+    es: "Servicio de bus",
+    fr: "Service de bus",
+    de: "Busverbindung",
   },
-  travelTime30To60: {
-    en: "30 min - 1 hour",
-    es: "30 min - 1 hora",
-    fr: "30 min - 1 heure",
-    de: "30 Min - 1 Stunde",
+  taxiService: {
+    en: "Taxi/Uber available",
+    es: "Taxi/Uber disponible",
+    fr: "Taxi/Uber disponible",
+    de: "Taxi/Uber verfügbar",
   },
-  travelTime1To2: {
-    en: "1 - 2 hours",
-    es: "1 - 2 horas",
-    fr: "1 - 2 heures",
-    de: "1 - 2 Stunden",
+  walkingDistance: {
+    en: "Walking distance",
+    es: "Distancia a pie",
+    fr: "Distance de marche",
+    de: "Zu Fuß erreichbar",
   },
-  travelTimeMore2: {
-    en: "More than 2 hours",
-    es: "Más de 2 horas",
-    fr: "Plus de 2 heures",
-    de: "Mehr als 2 Stunden",
+  privateTransfer: {
+    en: "Private transfer available",
+    es: "Transporte privado disponible",
+    fr: "Transport privé disponible",
+    de: "Privattransfer verfügbar",
+  },
+  hitchhiking: {
+    en: "Hitchhiking possible",
+    es: "Autostop posible",
+    fr: "Auto-stop possible",
+    de: "Trampen möglich",
+  },
+  minutes: {
+    en: "min",
+    es: "min",
+    fr: "min",
+    de: "Min",
   },
   filterByAccessibility: {
     en: "Filter by Accessibility",

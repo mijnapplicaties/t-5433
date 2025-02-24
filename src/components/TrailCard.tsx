@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { MapPin, Clock, Mountain, ArrowUpRight, Bus, Car, Users, ThumbsUp } from 'lucide-react';
+import { MapPin, Clock, Mountain, ArrowUpRight, Bus, Car, Users, ThumbsUp, Walk } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import {
   Dialog,
@@ -33,26 +33,33 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   };
 
   const getTransportationInfo = (type: string) => {
+    const getTimeLabel = (minutes: number) => `(${minutes} ${t('minutes')})`;
+
     switch (type) {
+      case 'walking':
+        return {
+          icon: <Walk className="w-4 h-4" />,
+          label: `${t('walkingDistance')} ${getTimeLabel(Math.round(trail.distanceFromCampsite * 15))}`
+        };
       case 'bus':
         return {
           icon: <Bus className="w-4 h-4" />,
-          label: trail.busLines || "Bus service available"
+          label: `${t('busService')} ${trail.busLines ? `- ${trail.busLines}` : ''} ${getTimeLabel(trail.travelTime)}`
         };
       case 'taxi':
         return {
           icon: <Car className="w-4 h-4" />,
-          label: "Taxi/Uber available"
+          label: `${t('taxiService')} ${getTimeLabel(Math.round(trail.distanceFromCampsite * 2))}`
         };
       case 'private-transfer':
         return {
           icon: <Users className="w-4 h-4" />,
-          label: "Private transfer available"
+          label: `${t('privateTransfer')} ${getTimeLabel(Math.round(trail.distanceFromCampsite * 2))}`
         };
       case 'hitchhiking':
         return {
           icon: <ThumbsUp className="w-4 h-4" />,
-          label: "Hitchhiking possible"
+          label: t('hitchhiking')
         };
       default:
         return null;

@@ -59,7 +59,7 @@ export const trails: Trail[] = [
     description: {
       en: "A challenging two-day trek. From Camping Los Coihues, take the morning bus to Pampa Linda (2-hour journey). Register at the park office before starting the hike.",
       es: "Una desafiante caminata de dos días. Desde Camping Los Coihues, tome el bus de la mañana a Pampa Linda (2 horas de viaje). Regístrese en la oficina del parque antes de comenzar la caminata.",
-      fr: "Une randonnée difficile de deux jours. Depuis le Camping Los Coihues, prenez le bus de la matinée à Pampa Linda (2 heures de trajet). Inscrivez-vous à l'office du parc avant de commencer la randonnée.",
+      fr: "Une randonnée difficile de dos días. Depuis le Camping Los Coihues, prenez le bus de la matinée à Pampa Linda (2 heures de trajet). Inscrivez-vous à l'office du parc avant de commencer la randonnée.",
       de: "Eine schwierige zwei-Tage-Wanderung. Vom Camping Los Coihues aus nehmen Sie den Morgenbus zu Pampa Linda (2 Stunden Reise). Registrieren Sie sich bei der Parkstelle vor dem Beginn der Wanderung."
     },
     imageUrl: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
@@ -109,7 +109,7 @@ export const trails: Trail[] = [
     imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["Lake views", "Beach access", "Bird watching"],
-    transportation: ["hitchhiking"],
+    transportation: ["walking", "hitchhiking"],
     distanceFromCampsite: 0,
     travelTime: 0
   },

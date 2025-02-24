@@ -1,7 +1,7 @@
 
 export type TrailType = "day-hike" | "multi-day";
 export type Difficulty = "easy" | "moderate" | "hard" | "expert";
-export type TransportationType = "bus" | "taxi" | "hitchhiking" | "private-transfer";
+export type TransportationType = "bus" | "taxi" | "hitchhiking" | "private-transfer" | "walking";
 export type TravelTimeCategory = "direct-access" | "easy-access" | "medium-access";
 
 export interface Trail {
@@ -25,6 +25,6 @@ export interface Trail {
   transportation: TransportationType[];
   distanceFromCampsite: number;
   travelTime: number;
-  busLines?: string; // Added this optional field
+  busLines?: string;
 }
 
