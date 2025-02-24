@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { MapPin, Clock, Mountain, ArrowUpRight, Bus, Car, Users, ThumbsUp, Walking } from 'lucide-react';
+import { MapPin, Clock, Mountain, ArrowUpRight, Bus, Car, Users, ThumbsUp, Footprints } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import {
   Dialog,
@@ -38,7 +38,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     switch (type) {
       case 'walking':
         return {
-          icon: <Walking className="w-4 h-4" />,
+          icon: <Footprints className="w-4 h-4" />,
           label: `${t('walkingDistance')} ${getTimeLabel(Math.round(trail.distanceFromCampsite * 15))}`
         };
       case 'bus':
