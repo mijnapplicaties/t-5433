@@ -44,7 +44,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
       case 'bus':
         return {
           icon: <Bus className="w-4 h-4" />,
-          label: `${t('busService')} ${trail.busLines ? `- ${trail.busLines}` : ''} ${getTimeLabel(trail.travelTime)}`
+          label: `${t('busService')} - ${trail.busLines ? `Line 50 + ${trail.busLines}` : 'Line 50'} ${getTimeLabel(trail.travelTime)}`
         };
       case 'taxi':
         return {

@@ -147,10 +147,10 @@ export const translations: Translation = {
     de: "Nach Anreisezeit zum Start filtern",
   },
   howToGetThere: {
-    en: "How to Get There",
-    es: "Cómo Llegar",
-    fr: "Comment s'y rendre",
-    de: "Anfahrt",
+    en: "How To Get There From Camping Los Coihues",
+    es: "Cómo Llegar Desde Camping Los Coihues",
+    fr: "Comment s'y rendre depuis Camping Los Coihues",
+    de: "Anfahrt von Camping Los Coihues",
   },
   busService: {
     en: "Bus service",
