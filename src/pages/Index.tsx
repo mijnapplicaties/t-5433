@@ -1,11 +1,13 @@
 
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
+import { beaches } from '../data/beaches';
 import { Badge } from '../components/ui/badge';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../context/LanguageContext';
 import { Trail, TrailType, Difficulty, TransportationType, TravelTimeCategory } from '../types/trail';
 import TrailCard from '../components/TrailCard';
+import BeachCard from '../components/BeachCard';
 import { Bus, Car, ThumbsUp, Users } from 'lucide-react';
 
 type TravelTimeCategoryFilter = 'all' | TravelTimeCategory;
@@ -196,6 +198,16 @@ const Index = () => {
             </div>
           </div>
         )}
+
+        {/* Beaches and Lakes Section */}
+        <div className="mb-12 mt-16">
+          <h2 className="text-2xl font-bold text-forest mb-6">{t('beaches')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {beaches.map((beach) => (
+              <BeachCard key={beach.id} beach={beach} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

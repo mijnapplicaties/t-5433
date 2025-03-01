@@ -1,3 +1,4 @@
+
 type Translation = {
   [key: string]: {
     en: string;
@@ -223,5 +224,120 @@ export const translations: Translation = {
     es: "Acceso Medio (Viaje más largo)",
     fr: "Accès Moyen (Trajet plus long)",
     de: "Mittlerer Zugang (Längere Anreise)",
+  },
+  // Beach section translations
+  beaches: {
+    en: "Beaches & Lakes",
+    es: "Playas y Lagos",
+    fr: "Plages et Lacs",
+    de: "Strände und Seen",
+  },
+  waterTemp: {
+    en: "Water Temperature",
+    es: "Temperatura del Agua",
+    fr: "Température de l'Eau",
+    de: "Wassertemperatur",
+  },
+  facilities: {
+    en: "Facilities",
+    es: "Instalaciones",
+    fr: "Équipements",
+    de: "Einrichtungen",
+  },
+  beachType: {
+    en: "Beach Type",
+    es: "Tipo de Playa",
+    fr: "Type de Plage",
+    de: "Strandtyp",
+  },
+  activities: {
+    en: "Activities",
+    es: "Actividades",
+    fr: "Activités",
+    de: "Aktivitäten",
+  },
+  swimming: {
+    en: "Swimming",
+    es: "Natación",
+    fr: "Natation",
+    de: "Schwimmen",
+  },
+  kayaking: {
+    en: "Kayaking",
+    es: "Kayak",
+    fr: "Kayak",
+    de: "Kajakfahren",
+  },
+  fishing: {
+    en: "Fishing",
+    es: "Pesca",
+    fr: "Pêche",
+    de: "Angeln",
+  },
+  picnic: {
+    en: "Picnic Area",
+    es: "Área de Picnic",
+    fr: "Aire de Pique-nique",
+    de: "Picknickplatz",
+  },
+  viewpoint: {
+    en: "Scenic Viewpoint",
+    es: "Mirador Escénico",
+    fr: "Point de Vue Panoramique",
+    de: "Aussichtspunkt",
+  },
+  sunbathing: {
+    en: "Sunbathing",
+    es: "Tomar sol",
+    fr: "Bain de soleil",
+    de: "Sonnenbaden",
+  },
+  parkingAvailable: {
+    en: "Parking Available",
+    es: "Estacionamiento Disponible",
+    fr: "Parking Disponible",
+    de: "Parkplatz Verfügbar",
+  },
+  restrooms: {
+    en: "Restrooms",
+    es: "Baños",
+    fr: "Toilettes",
+    de: "Toiletten",
+  },
+  foodVendors: {
+    en: "Food Vendors",
+    es: "Puestos de Comida",
+    fr: "Vendeurs de Nourriture",
+    de: "Essensverkäufer",
+  },
+  sandy: {
+    en: "Sandy",
+    es: "Arenosa",
+    fr: "Sablonneuse",
+    de: "Sandig",
+  },
+  rocky: {
+    en: "Rocky",
+    es: "Rocosa",
+    fr: "Rocheuse",
+    de: "Felsig",
+  },
+  mixed: {
+    en: "Mixed",
+    es: "Mixta",
+    fr: "Mixte",
+    de: "Gemischt",
+  },
+  pebbly: {
+    en: "Pebbly",
+    es: "Guijarros",
+    fr: "Galets",
+    de: "Kieselig",
+  },
+  bestTimeToVisit: {
+    en: "Best Time to Visit",
+    es: "Mejor Época para Visitar",
+    fr: "Meilleure Période pour Visiter",
+    de: "Beste Besuchszeit",
   }
 };
