@@ -235,7 +235,7 @@ export const trails: Trail[] = [
     description: {
       en: "A charming waterfall trail with access to beautiful Gutiérrez lake beaches. Perfect starter trail directly from the campsite, following a gentle path through the native forest. Great for families and beginners.",
       es: "Un encantador sendero a la cascada con acceso a hermosas playas del lago Gutiérrez. Sendero perfecto para comenzar, directamente desde el camping, siguiendo un camino suave a través del bosque nativo. Ideal para familias y principiantes.",
-      fr: "Un charmant sentier menant à une cascade avec accès aux belles plages du lac Gutiérrez. Sentier parfait pour débuter, directement depuis le camping, suivant un chemin doux à travers la forêt native. Idéal pour les familles et les débutants.",
+      fr: "Un charmant sentier menant à una cascade avec accès aux belles plages du lac Gutiérrez. Sentier parfait pour débuter, directement depuis le camping, suivant un chemin doux à travers la forêt native. Idéal pour les familles et les débutants.",
       de: "Ein charmanter Wasserfall-Wanderweg mit Zugang zu schönen Stränden am Gutiérrez-See. Perfekter Anfängerpfad direkt vom Campingplatz aus, der einem sanften Weg durch den heimischen Wald folgt. Ideal für Familien und Anfänger."
     },
     imageUrl: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
@@ -332,6 +332,28 @@ export const trails: Trail[] = [
     imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["Panoramic views", "Native lenga forest", "360° summit viewpoint", "Cerro Catedral views"],
+    transportation: ["walking"],
+    distanceFromCampsite: 0,
+    travelTime: 0
+  },
+  {
+    id: "16",
+    name: "Playa Muñoz",
+    type: "day-hike",
+    difficulty: "easy",
+    distance: 3.5,
+    duration: 1.5,
+    elevation: 80,
+    requiresReservation: false,
+    description: {
+      en: "A short, pleasant walk to a secluded beach on Lago Gutiérrez with crystal clear waters. The trail starts directly from Camping Los Coihues and follows the lakeshore through the native forest. Perfect for a refreshing swim in summer.",
+      es: "Una caminata corta y agradable a una playa aislada en el Lago Gutiérrez con aguas cristalinas. El sendero comienza directamente desde Camping Los Coihues y sigue la costa del lago a través del bosque nativo. Perfecto para un refrescante baño en verano.",
+      fr: "Une promenade courte et agréable vers une plage isolée sur le Lago Gutiérrez aux eaux cristallines. Le sentier commence directement du Camping Los Coihues et suit le rivage à travers la forêt native. Parfait pour une baignade rafraîchissante en été.",
+      de: "Ein kurzer, angenehmer Spaziergang zu einem abgelegenen Strand am Lago Gutiérrez mit kristallklarem Wasser. Der Weg beginnt direkt am Camping Los Coihues und führt am Seeufer durch den heimischen Wald. Perfekt für ein erfrischendes Bad im Sommer."
+    },
+    imageUrl: "/lovable-uploads/bdd46388-2e54-44ed-8cb1-f449f800bd97.png",
+    startingPoint: "Camping Los Coihues (direct access)",
+    highlights: ["Secluded beach", "Crystal clear waters", "Swimming spot", "Forest trail"],
     transportation: ["walking"],
     distanceFromCampsite: 0,
     travelTime: 0

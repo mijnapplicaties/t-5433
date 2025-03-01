@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -35,6 +34,16 @@ const Index = () => {
 
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
   const multiDayHikes = filteredTrails.filter(trail => trail.type === 'multi-day');
+  
+  const directAccessHikes = dayHikes.filter(trail => 
+    trail.distanceFromCampsite === 0 && trail.name === 'Cascada de los Duendes' || 
+    trail.distanceFromCampsite === 0 && trail.name === 'Mirador Lago Gutiérrez' || 
+    trail.distanceFromCampsite === 0 && trail.name === 'Cerro San Martin' || 
+    trail.distanceFromCampsite === 0 && trail.name === 'Playa Muñoz' || 
+    trail.distanceFromCampsite === 0 && trail.name === 'Lago Gutiérrez Circuit'
+  );
+  
+  const otherDayHikes = dayHikes.filter(trail => !directAccessHikes.includes(trail));
 
   const getTransportIcon = (type: TransportationType) => {
     switch(type) {
@@ -169,18 +178,45 @@ const Index = () => {
           </div>
         </div>
 
-        {(selectedType === 'all' || selectedType === 'day-hike') && dayHikes.length > 0 && (
+        {(selectedType === 'all' || selectedType === 'day-hike') && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-forest mb-6">{t('filterDayHike')}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {dayHikes.map((trail) => (
-                <TrailCard 
-                  key={trail.id} 
-                  trail={trail} 
-                  transportIcons={trail.transportation.map(t => getTransportIcon(t))}
-                />
-              ))}
-            </div>
+            
+            {directAccessHikes.length > 0 && (
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+                  {t('accessibilityDirect')}
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {directAccessHikes.map((trail) => (
+                    <TrailCard 
+                      key={trail.id} 
+                      trail={trail} 
+                      transportIcons={trail.transportation.map(t => getTransportIcon(t))}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {otherDayHikes.length > 0 && (
+              <div>
+                {directAccessHikes.length > 0 && (
+                  <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+                    {t('filterByAccessibility')}
+                  </h3>
+                )}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {otherDayHikes.map((trail) => (
+                    <TrailCard 
+                      key={trail.id} 
+                      trail={trail}
+                      transportIcons={trail.transportation.map(t => getTransportIcon(t))}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -199,7 +235,6 @@ const Index = () => {
           </div>
         )}
 
-        {/* Beaches and Lakes Section */}
         <div className="mb-12 mt-16">
           <h2 className="text-2xl font-bold text-forest mb-6">{t('beaches')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

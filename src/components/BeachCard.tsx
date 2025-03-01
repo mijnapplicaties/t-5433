@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Beach } from '../types/beach';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { MapPin, Droplet, Clock, Waves, Utensils, ParkingCircle, Activity } from 'lucide-react';
+import { Thermometer, Droplets, Waves, Map, Clock, ArrowUpRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import {
   Dialog,
@@ -33,22 +33,33 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
 
   const getActivityIcon = (activity: string) => {
     switch (activity) {
-      case 'swimming': return <Waves className="w-4 h-4" title={t('swimming')} />;
-      case 'kayaking': return <Activity className="w-4 h-4" title={t('kayaking')} />;
-      case 'fishing': return <Activity className="w-4 h-4" title={t('fishing')} />;
-      case 'picnic': return <Utensils className="w-4 h-4" title={t('picnic')} />;
-      case 'viewpoint': return <MapPin className="w-4 h-4" title={t('viewpoint')} />;
-      case 'sunbathing': return <Droplet className="w-4 h-4" title={t('sunbathing')} />;
-      default: return <Activity className="w-4 h-4" />;
+      case 'swimming':
+        return <Droplets className="w-4 h-4" />;
+      case 'kayaking':
+        return <Waves className="w-4 h-4" />;
+      case 'fishing':
+        return <ArrowUpRight className="w-4 h-4" />;
+      case 'picnic':
+        return <Map className="w-4 h-4" />;
+      case 'viewpoint':
+        return <Map className="w-4 h-4" />;
+      case 'sunbathing':
+        return <Thermometer className="w-4 h-4" />;
+      default:
+        return <Map className="w-4 h-4" />;
     }
   };
 
   const getFacilityIcon = (facility: string) => {
     switch (facility) {
-      case 'parkingAvailable': return <ParkingCircle className="w-4 h-4" title={t('parkingAvailable')} />;
-      case 'restrooms': return <Activity className="w-4 h-4" title={t('restrooms')} />;
-      case 'foodVendors': return <Utensils className="w-4 h-4" title={t('foodVendors')} />;
-      default: return <Activity className="w-4 h-4" />;
+      case 'parkingAvailable':
+        return <Map className="w-4 h-4" />;
+      case 'restrooms':
+        return <Map className="w-4 h-4" />;
+      case 'foodVendors':
+        return <Map className="w-4 h-4" />;
+      default:
+        return <Map className="w-4 h-4" />;
     }
   };
 
@@ -64,36 +75,27 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
             alt={beach.name}
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
           />
-          <div className="absolute top-4 right-4 flex gap-2">
-            <Badge 
-              variant="secondary"
-              className="backdrop-blur-sm bg-opacity-90"
-            >
-              {getBeachTypeTranslation(beach.beachType)}
-            </Badge>
+          <div className="absolute bottom-4 right-4 flex gap-2 bg-white/80 rounded-full px-3 py-1">
+            <Badge className="bg-blue-500 text-white">{getBeachTypeTranslation(beach.beachType)}</Badge>
           </div>
         </div>
         
         <CardHeader>
-          <div>
-            <CardTitle className="text-xl font-semibold">{beach.name}</CardTitle>
-            <CardDescription className="flex items-center gap-2 mt-1">
-              <MapPin className="w-4 h-4" /> {beach.location}
-            </CardDescription>
-          </div>
+          <CardTitle className="text-xl font-semibold">{beach.name}</CardTitle>
+          <CardDescription className="flex items-center gap-2 mt-1">
+            <Map className="w-4 h-4" /> {beach.location}
+          </CardDescription>
         </CardHeader>
 
         <CardContent>
-          <div className="mb-4">
+          <div className="grid grid-cols-2 gap-4 mb-4">
             <div className="flex items-center gap-2">
-              <Droplet className="w-4 h-4 text-blue-500" />
-              <span className="text-sm">{t('waterTemp')}: {beach.waterTemp.summer}°C ({t('summer')})</span>
+              <Thermometer className="w-4 h-4 text-blue-500" />
+              <span className="text-sm">{t('waterTemp')}: {beach.waterTemp.summer}°C</span>
             </div>
-            <div className="flex items-center gap-2 mt-2">
-              <Clock className="w-4 h-4 text-forest-light" />
-              <span className="text-sm">
-                {beach.travelTime} {t('minutes')} {t('howToGetThere').split(' ').pop()}
-              </span>
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4 text-blue-500" />
+              <span className="text-sm">{beach.travelTime} {t('minutes')}</span>
             </div>
           </div>
           
@@ -110,29 +112,15 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
               ))}
             </div>
           </div>
-
-          <div className="mt-4">
-            <h4 className="text-sm font-semibold mb-2">{t('facilities')}</h4>
-            <div className="flex flex-wrap gap-2">
-              {beach.facilities.map((facility, index) => (
-                <Badge key={index} variant="outline" className="flex items-center gap-1 text-xs">
-                  {getFacilityIcon(facility)}
-                  <span>{t(facility)}</span>
-                </Badge>
-              ))}
-            </div>
-          </div>
         </CardContent>
       </Card>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold">
-              {beach.name}
-            </DialogTitle>
+            <DialogTitle className="text-2xl font-bold">{beach.name}</DialogTitle>
             <DialogDescription className="flex items-center gap-2 text-base">
-              <MapPin className="w-4 h-4" /> {beach.location}
+              <Map className="w-4 h-4" /> {beach.location}
             </DialogDescription>
           </DialogHeader>
           
@@ -143,16 +131,24 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
               className="w-full h-64 object-cover rounded-lg mb-6"
             />
             
-            <div className="grid grid-cols-2 gap-4 mb-6 bg-gray-50 p-4 rounded-lg">
+            <div className="grid grid-cols-3 gap-4 mb-6 bg-gray-50 p-4 rounded-lg">
               <div className="flex items-center gap-2">
-                <Droplet className="w-5 h-5 text-blue-500" />
+                <Thermometer className="w-5 h-5 text-blue-500" />
                 <div>
                   <p className="text-sm font-semibold">{t('waterTemp')}</p>
-                  <p className="text-base">{beach.waterTemp.summer}°C ({t('summer')})</p>
+                  <p className="text-base">{t('summer')}: {beach.waterTemp.summer}°C</p>
+                  <p className="text-base">{t('winter')}: {beach.waterTemp.winter}°C</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <ParkingCircle className="w-5 h-5 text-forest-light" />
+                <Clock className="w-5 h-5 text-blue-500" />
+                <div>
+                  <p className="text-sm font-semibold">{t('duration')}</p>
+                  <p className="text-base">{beach.travelTime} {t('minutes')}</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <Waves className="w-5 h-5 text-blue-500" />
                 <div>
                   <p className="text-sm font-semibold">{t('beachType')}</p>
                   <p className="text-base">{getBeachTypeTranslation(beach.beachType)}</p>
@@ -167,24 +163,10 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-2">{t('howToGetThere')}</h3>
-                <div className="space-y-2 bg-gray-50 p-4 rounded-lg">
-                  <div className="flex items-center gap-2 text-gray-700">
-                    <Clock className="w-4 h-4" />
-                    <span>{beach.travelTime} {t('minutes')} {t('howToGetThere').split(' ').pop()}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-700">
-                    <MapPin className="w-4 h-4" />
-                    <span>{beach.distanceFromCampsite} km</span>
-                  </div>
-                </div>
-              </div>
-
-              <div>
                 <h3 className="text-lg font-semibold mb-2">{t('activities')}</h3>
                 <div className="flex flex-wrap gap-2">
                   {beach.activities.map((activity, index) => (
-                    <Badge key={index} variant="secondary" className="flex items-center gap-1">
+                    <Badge key={index} variant="outline" className="flex items-center gap-1">
                       {getActivityIcon(activity)}
                       <span>{t(activity)}</span>
                     </Badge>
@@ -196,7 +178,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
                 <h3 className="text-lg font-semibold mb-2">{t('facilities')}</h3>
                 <div className="flex flex-wrap gap-2">
                   {beach.facilities.map((facility, index) => (
-                    <Badge key={index} variant="secondary" className="flex items-center gap-1">
+                    <Badge key={index} variant="outline" className="flex items-center gap-1">
                       {getFacilityIcon(facility)}
                       <span>{t(facility)}</span>
                     </Badge>
@@ -206,9 +188,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
 
               <div>
                 <h3 className="text-lg font-semibold mb-2">{t('bestTimeToVisit')}</h3>
-                <Badge variant="outline" className="text-base">
-                  {beach.bestTimeToVisit}
-                </Badge>
+                <p className="text-gray-700">{beach.bestTimeToVisit}</p>
               </div>
             </div>
           </div>
