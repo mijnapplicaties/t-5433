@@ -20,6 +20,12 @@ export const translations: Translation = {
     fr: "Découvrez les meilleurs sentiers de randonnée autour de Los Coihues, des promenades au bord du lac aux aventures de plusieurs jours.",
     de: "Entdecken Sie die schönsten Wanderwege rund um Los Coihues, von Seeuferwanderungen bis hin zu mehrtägigen Abenteuern.",
   },
+  tagline: {
+    en: "Discover Patagonia's Wonders",
+    es: "Descubre las Maravillas de la Patagonia",
+    fr: "Découvrez les Merveilles de la Patagonie",
+    de: "Entdecken Sie die Wunder Patagoniens",
+  },
   distance: {
     en: "Distance",
     es: "Distancia",

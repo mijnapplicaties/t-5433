@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { Badge } from '../components/ui/badge';
@@ -62,7 +63,7 @@ const Index = () => {
             {t('title')}
           </h1>
           <p className="text-xl text-stone mb-4">
-            Discover Patagonia's Wonders
+            {t('tagline')}
           </p>
           <p className="text-lg text-stone max-w-2xl mx-auto">
             {t('subtitle')}
