@@ -122,6 +122,12 @@ export const translations: Translation = {
     fr: "Difficile",
     de: "Schwer",
   },
+  difficultyExpert: {
+    en: "Expert",
+    es: "Experto",
+    fr: "Expert",
+    de: "Experte",
+  },
   filterByType: {
     en: "Filter by Type",
     es: "Filtrar por Tipo",

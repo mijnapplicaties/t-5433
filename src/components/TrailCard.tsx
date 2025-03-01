@@ -32,6 +32,21 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     return colors[difficulty as keyof typeof colors] || 'bg-gray-500';
   };
 
+  const getTranslatedDifficulty = (difficulty: string) => {
+    switch (difficulty) {
+      case 'easy':
+        return t('difficultyEasy');
+      case 'moderate':
+        return t('difficultyModerate');
+      case 'hard':
+        return t('difficultyHard');
+      case 'expert':
+        return t('difficultyExpert');
+      default:
+        return difficulty;
+    }
+  };
+
   const getTransportationInfo = (type: string) => {
     const getTimeLabel = (minutes: number) => `(${minutes} ${t('minutes')})`;
 
@@ -106,7 +121,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
               </CardDescription>
             </div>
             <Badge className={`${getDifficultyColor(trail.difficulty)} text-white`}>
-              {trail.difficulty}
+              {getTranslatedDifficulty(trail.difficulty)}
             </Badge>
           </div>
         </CardHeader>
@@ -166,7 +181,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
             <DialogTitle className="text-2xl font-bold flex items-center justify-between">
               {trail.name}
               <Badge className={`${getDifficultyColor(trail.difficulty)} text-white`}>
-                {trail.difficulty}
+                {getTranslatedDifficulty(trail.difficulty)}
               </Badge>
             </DialogTitle>
             <DialogDescription className="flex items-center gap-2 text-base">
