@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -107,108 +108,13 @@ const Index = () => {
           </p>
         </header>
 
-        <div className="mb-8 flex flex-wrap gap-8 justify-center">
-          <div>
-            <p className="text-sm font-medium text-gray-500 mb-2">{t('filterByType')}</p>
-            <div className="flex flex-wrap gap-2">
-              <Badge 
-                variant={selectedType === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedType('all')}
-              >
-                {t('filterAll')}
-              </Badge>
-              <Badge 
-                variant={selectedType === 'day-hike' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedType('day-hike')}
-              >
-                {t('filterDayHike')}
-              </Badge>
-              <Badge 
-                variant={selectedType === 'multi-day' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedType('multi-day')}
-              >
-                {t('filterMultiDay')}
-              </Badge>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-sm font-medium text-gray-500 mb-2">{t('filterByDifficulty')}</p>
-            <div className="flex flex-wrap gap-2">
-              <Badge 
-                variant={selectedDifficulty === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedDifficulty('all')}
-              >
-                {t('filterAll')}
-              </Badge>
-              <Badge 
-                variant={selectedDifficulty === 'easy' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedDifficulty('easy')}
-              >
-                {t('difficultyEasy')}
-              </Badge>
-              <Badge 
-                variant={selectedDifficulty === 'moderate' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedDifficulty('moderate')}
-              >
-                {t('difficultyModerate')}
-              </Badge>
-              <Badge 
-                variant={selectedDifficulty === 'hard' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedDifficulty('hard')}
-              >
-                {t('difficultyHard')}
-              </Badge>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-sm font-medium text-gray-500 mb-2">{t('filterByAccessibility')}</p>
-            <div className="flex flex-wrap gap-2">
-              <Badge 
-                variant={selectedTravelTime === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedTravelTime('all')}
-              >
-                {t('filterAll')}
-              </Badge>
-              <Badge 
-                variant={selectedTravelTime === 'direct-access' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedTravelTime('direct-access')}
-              >
-                {t('accessibilityDirect')}
-              </Badge>
-              <Badge 
-                variant={selectedTravelTime === 'easy-access' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedTravelTime('easy-access')}
-              >
-                {t('accessibilityEasy')}
-              </Badge>
-              <Badge 
-                variant={selectedTravelTime === 'medium-access' ? 'default' : 'outline'}
-                className="cursor-pointer"
-                onClick={() => setSelectedTravelTime('medium-access')}
-              >
-                {t('accessibilityMedium')}
-              </Badge>
-            </div>
-          </div>
-
-          <div>
-            <p className="text-sm font-medium text-gray-500 mb-2">{t('filterByCategory')}</p>
-            <div className="flex flex-wrap gap-2">
+        <div className="mb-8 flex flex-col gap-6 items-end">
+          <div className="w-full md:w-auto">
+            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByCategory')}</p>
+            <div className="flex flex-wrap gap-2 justify-end">
               <Badge 
                 variant={selectedCategory === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer"
+                className="cursor-pointer text-base"
                 onClick={() => setSelectedCategory('all')}
               >
                 <Map className="w-4 h-4 mr-1" />
@@ -216,7 +122,7 @@ const Index = () => {
               </Badge>
               <Badge 
                 variant={selectedCategory === 'high-mountain' ? 'default' : 'outline'}
-                className="cursor-pointer"
+                className="cursor-pointer text-base"
                 onClick={() => setSelectedCategory('high-mountain')}
               >
                 <Mountain className="w-4 h-4 mr-1" />
@@ -224,7 +130,7 @@ const Index = () => {
               </Badge>
               <Badge 
                 variant={selectedCategory === 'easy-mountain' ? 'default' : 'outline'}
-                className="cursor-pointer"
+                className="cursor-pointer text-base"
                 onClick={() => setSelectedCategory('easy-mountain')}
               >
                 <TreePine className="w-4 h-4 mr-1" />
@@ -232,11 +138,106 @@ const Index = () => {
               </Badge>
               <Badge 
                 variant={selectedCategory === 'walking-path' ? 'default' : 'outline'}
-                className="cursor-pointer"
+                className="cursor-pointer text-base"
                 onClick={() => setSelectedCategory('walking-path')}
               >
                 <FootprintsIcon className="w-4 h-4 mr-1" />
                 {t('categoryWalkingPath')}
+              </Badge>
+            </div>
+          </div>
+
+          <div className="w-full md:w-auto">
+            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByType')}</p>
+            <div className="flex flex-wrap gap-2 justify-end">
+              <Badge 
+                variant={selectedType === 'all' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedType('all')}
+              >
+                {t('filterAll')}
+              </Badge>
+              <Badge 
+                variant={selectedType === 'day-hike' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedType('day-hike')}
+              >
+                {t('filterDayHike')}
+              </Badge>
+              <Badge 
+                variant={selectedType === 'multi-day' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedType('multi-day')}
+              >
+                {t('filterMultiDay')}
+              </Badge>
+            </div>
+          </div>
+
+          <div className="w-full md:w-auto">
+            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByDifficulty')}</p>
+            <div className="flex flex-wrap gap-2 justify-end">
+              <Badge 
+                variant={selectedDifficulty === 'all' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedDifficulty('all')}
+              >
+                {t('filterAll')}
+              </Badge>
+              <Badge 
+                variant={selectedDifficulty === 'easy' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedDifficulty('easy')}
+              >
+                {t('difficultyEasy')}
+              </Badge>
+              <Badge 
+                variant={selectedDifficulty === 'moderate' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedDifficulty('moderate')}
+              >
+                {t('difficultyModerate')}
+              </Badge>
+              <Badge 
+                variant={selectedDifficulty === 'hard' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedDifficulty('hard')}
+              >
+                {t('difficultyHard')}
+              </Badge>
+            </div>
+          </div>
+
+          <div className="w-full md:w-auto">
+            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByAccessibility')}</p>
+            <div className="flex flex-wrap gap-2 justify-end">
+              <Badge 
+                variant={selectedTravelTime === 'all' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedTravelTime('all')}
+              >
+                {t('filterAll')}
+              </Badge>
+              <Badge 
+                variant={selectedTravelTime === 'direct-access' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedTravelTime('direct-access')}
+              >
+                {t('accessibilityDirect')}
+              </Badge>
+              <Badge 
+                variant={selectedTravelTime === 'easy-access' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedTravelTime('easy-access')}
+              >
+                {t('accessibilityEasy')}
+              </Badge>
+              <Badge 
+                variant={selectedTravelTime === 'medium-access' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedTravelTime('medium-access')}
+              >
+                {t('accessibilityMedium')}
               </Badge>
             </div>
           </div>

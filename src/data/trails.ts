@@ -1,5 +1,4 @@
-
-import { Trail } from "../types/trail";
+import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
   {
@@ -334,19 +333,19 @@ export const trails: Trail[] = [
     name: "Cerro San Martín",
     type: "day-hike",
     difficulty: "moderate",
-    distance: 4.5,
+    distance: 5.2,
     duration: 3,
-    elevation: 450,
+    elevation: 350,
     requiresReservation: false,
     description: {
-      en: "A rewarding hike with direct access from Camping Los Coihues. This trail climbs through a beautiful lenga forest to the summit, offering spectacular panoramic views of Cerro Catedral, Cerro Otto, and Lago Gutiérrez. The trail is well-marked with yellow signs.",
-      es: "Una gratificante caminata con acceso directo desde Camping Los Coihues. Este sendero sube a través de un hermoso bosque de lengas hasta la cumbre, ofreciendo espectaculares vistas panorámicas del Cerro Catedral, Cerro Otto y el Lago Gutiérrez. El sendero está bien marcado con señales amarillas.",
-      fr: "Une randonnée gratifiante avec accès direct depuis le Camping Los Coihues. Ce sentier monte à travers une belle forêt de lengas jusqu'au sommet, offrant des vues panoramiques spectaculaires sur le Cerro Catedral, le Cerro Otto et le Lago Gutiérrez. Le sentier est bien balisé avec des panneaux jaunes.",
-      de: "Eine lohnende Wanderung mit direktem Zugang vom Camping Los Coihues. Dieser Weg führt durch einen schönen Lenga-Wald zum Gipfel und bietet spektakuläre Panoramablicke auf den Cerro Catedral, den Cerro Otto und den Lago Gutiérrez. Der Weg ist mit gelben Schildern gut markiert."
+      en: "Cerro San Martin offers a moderate climb with beautiful views of Lago Gutiérrez and the surrounding mountains. It's directly accessible from the campsite.",
+      es: "Cerro San Martín ofrece una subida moderada con hermosas vistas del Lago Gutiérrez y las montañas circundantes. Es accesible directamente desde el camping.",
+      fr: "Cerro San Martin offre une montée modérée avec de belles vues sur le Lago Gutiérrez et les montagnes environnantes. Il est directement accessible depuis le camping.",
+      de: "Cerro San Martin bietet einen moderaten Aufstieg mit schönen Ausblicken auf den Lago Gutiérrez und die umliegenden Berge. Es ist direkt vom Campingplatz aus zugänglich."
     },
-    imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-    startingPoint: "Camping Los Coihues (direct access)",
-    highlights: ["Panoramic views", "Native lenga forest", "360° summit viewpoint", "Cerro Catedral views"],
+    imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
+    startingPoint: "Camping Los Coihues",
+    highlights: ["Mountain views", "Forest trail", "Panoramic vista"],
     transportation: ["walking"],
     distanceFromCampsite: 0,
     travelTime: 0,
