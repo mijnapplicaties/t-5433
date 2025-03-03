@@ -108,7 +108,8 @@ const Index = () => {
           </p>
         </header>
 
-        <div className="mb-8 flex flex-col gap-6">
+        {/* Rearranged filters in two rows for desktop */}
+        <div className="mb-8 flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-4">
           <div className="w-full">
             <p className="text-base font-medium text-gray-500 mb-2">{t('filterByCategory')}</p>
             <div className="flex flex-wrap gap-2">
