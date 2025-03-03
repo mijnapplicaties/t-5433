@@ -108,10 +108,10 @@ const Index = () => {
           </p>
         </header>
 
-        <div className="mb-8 flex flex-col gap-6 items-end">
-          <div className="w-full md:w-auto">
+        <div className="mb-8 flex flex-col gap-6">
+          <div className="w-full">
             <p className="text-base font-medium text-gray-500 mb-2">{t('filterByCategory')}</p>
-            <div className="flex flex-wrap gap-2 justify-end">
+            <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedCategory === 'all' ? 'default' : 'outline'}
                 className="cursor-pointer text-base"
@@ -147,9 +147,9 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-auto">
+          <div className="w-full">
             <p className="text-base font-medium text-gray-500 mb-2">{t('filterByType')}</p>
-            <div className="flex flex-wrap gap-2 justify-end">
+            <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedType === 'all' ? 'default' : 'outline'}
                 className="cursor-pointer text-base"
@@ -174,9 +174,9 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-auto">
+          <div className="w-full">
             <p className="text-base font-medium text-gray-500 mb-2">{t('filterByDifficulty')}</p>
-            <div className="flex flex-wrap gap-2 justify-end">
+            <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedDifficulty === 'all' ? 'default' : 'outline'}
                 className="cursor-pointer text-base"
@@ -208,9 +208,9 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-auto">
+          <div className="w-full">
             <p className="text-base font-medium text-gray-500 mb-2">{t('filterByAccessibility')}</p>
-            <div className="flex flex-wrap gap-2 justify-end">
+            <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedTravelTime === 'all' ? 'default' : 'outline'}
                 className="cursor-pointer text-base"
