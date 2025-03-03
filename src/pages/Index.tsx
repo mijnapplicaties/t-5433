@@ -40,20 +40,21 @@ const Index = () => {
   const dayHikes = selectedCategory === 'all' ? filteredTrails.filter(trail => trail.type === 'day-hike') : [];
   const multiDayHikes = selectedCategory === 'all' ? filteredTrails.filter(trail => trail.type === 'multi-day') : [];
   
+  const directAccessTrailNames = [
+    'Cascada de los Duendes',
+    'Mirador Lago Gutiérrez',
+    'Cerro San Martin',
+    'Playa Muñoz',
+    'Lago Gutiérrez'
+  ];
+  
   const directAccessHikes = dayHikes.filter(trail => 
-    trail.distanceFromCampsite === 0 && trail.name === 'Cascada de los Duendes' || 
-    trail.distanceFromCampsite === 0 && trail.name === 'Mirador Lago Gutiérrez' || 
-    trail.distanceFromCampsite === 0 && trail.name === 'Cerro San Martin' || 
-    trail.distanceFromCampsite === 0 && trail.name === 'Playa Muñoz' || 
-    trail.distanceFromCampsite === 0 && trail.name === 'Lago Gutiérrez'
+    directAccessTrailNames.includes(trail.name)
   );
   
-  const cerroSanMartin = trails.find(trail => trail.name === 'Cerro San Martin');
-  if (cerroSanMartin && !directAccessHikes.includes(cerroSanMartin)) {
-    directAccessHikes.push(cerroSanMartin);
-  }
-  
-  const otherDayHikes = dayHikes.filter(trail => !directAccessHikes.includes(trail));
+  const otherDayHikes = dayHikes.filter(trail => 
+    !directAccessTrailNames.includes(trail.name)
+  );
 
   const getTransportIcon = (type: TransportationType) => {
     switch(type) {
