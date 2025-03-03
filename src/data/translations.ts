@@ -361,5 +361,11 @@ export const translations: Translation = {
     es: "Senderos para Caminar",
     fr: "Sentiers de Promenade",
     de: "Wanderwege",
+  },
+  nearByBusOrUber: {
+    en: "Near by Bus or Uber",
+    es: "Cerca en Bus o Uber",
+    fr: "Proche en Bus ou Uber",
+    de: "Nahe mit Bus oder Uber",
   }
 };

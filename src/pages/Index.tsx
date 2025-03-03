@@ -36,8 +36,12 @@ const Index = () => {
     return typeMatch && difficultyMatch && accessibilityMatch && categoryMatch;
   });
 
-  const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
-  const multiDayHikes = filteredTrails.filter(trail => trail.type === 'multi-day');
+  // Combine all hikes together when filtering by category
+  const allHikes = filteredTrails;
+  
+  // Only separate by type when not filtering by category
+  const dayHikes = selectedCategory === 'all' ? filteredTrails.filter(trail => trail.type === 'day-hike') : [];
+  const multiDayHikes = selectedCategory === 'all' ? filteredTrails.filter(trail => trail.type === 'multi-day') : [];
   
   const directAccessHikes = dayHikes.filter(trail => 
     trail.distanceFromCampsite === 0 && trail.name === 'Cascada de los Duendes' || 
@@ -235,7 +239,24 @@ const Index = () => {
           </div>
         </div>
 
-        {(selectedType === 'all' || selectedType === 'day-hike') && (
+        {/* When category filter is active, show all trails in one section */}
+        {selectedCategory !== 'all' && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-forest mb-6">{t(`category${selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`)}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {allHikes.map((trail) => (
+                <TrailCard 
+                  key={trail.id} 
+                  trail={trail}
+                  transportIcons={trail.transportation.map(t => getTransportIcon(t))}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Only show type-based sections when category filter is not active */}
+        {selectedCategory === 'all' && (selectedType === 'all' || selectedType === 'day-hike') && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-forest mb-6">{t('filterDayHike')}</h2>
             
@@ -260,7 +281,7 @@ const Index = () => {
               <div>
                 {directAccessHikes.length > 0 && (
                   <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
-                    {t('filterByAccessibility')}
+                    {t('nearByBusOrUber')}
                   </h3>
                 )}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -277,7 +298,7 @@ const Index = () => {
           </div>
         )}
 
-        {(selectedType === 'all' || selectedType === 'multi-day') && multiDayHikes.length > 0 && (
+        {selectedCategory === 'all' && (selectedType === 'all' || selectedType === 'multi-day') && multiDayHikes.length > 0 && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-forest mb-6">{t('filterMultiDay')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
