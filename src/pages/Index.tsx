@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -108,7 +107,6 @@ const Index = () => {
           </p>
         </header>
 
-        {/* Rearranged filters in two rows for desktop */}
         <div className="mb-8 flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-4">
           <div className="w-full">
             <p className="text-base font-medium text-gray-500 mb-2">{t('filterByCategory')}</p>
@@ -149,33 +147,6 @@ const Index = () => {
           </div>
 
           <div className="w-full">
-            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByType')}</p>
-            <div className="flex flex-wrap gap-2">
-              <Badge 
-                variant={selectedType === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedType('all')}
-              >
-                {t('filterAll')}
-              </Badge>
-              <Badge 
-                variant={selectedType === 'day-hike' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedType('day-hike')}
-              >
-                {t('filterDayHike')}
-              </Badge>
-              <Badge 
-                variant={selectedType === 'multi-day' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedType('multi-day')}
-              >
-                {t('filterMultiDay')}
-              </Badge>
-            </div>
-          </div>
-
-          <div className="w-full">
             <p className="text-base font-medium text-gray-500 mb-2">{t('filterByDifficulty')}</p>
             <div className="flex flex-wrap gap-2">
               <Badge 
@@ -205,6 +176,33 @@ const Index = () => {
                 onClick={() => setSelectedDifficulty('hard')}
               >
                 {t('difficultyHard')}
+              </Badge>
+            </div>
+          </div>
+
+          <div className="w-full">
+            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByType')}</p>
+            <div className="flex flex-wrap gap-2">
+              <Badge 
+                variant={selectedType === 'all' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedType('all')}
+              >
+                {t('filterAll')}
+              </Badge>
+              <Badge 
+                variant={selectedType === 'day-hike' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedType('day-hike')}
+              >
+                {t('filterDayHike')}
+              </Badge>
+              <Badge 
+                variant={selectedType === 'multi-day' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedType('multi-day')}
+              >
+                {t('filterMultiDay')}
               </Badge>
             </div>
           </div>
