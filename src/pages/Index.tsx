@@ -48,7 +48,7 @@ const Index = () => {
     trail.distanceFromCampsite === 0 && trail.name === 'Mirador Lago Gutiérrez' || 
     trail.distanceFromCampsite === 0 && trail.name === 'Cerro San Martin' || 
     trail.distanceFromCampsite === 0 && trail.name === 'Playa Muñoz' || 
-    trail.distanceFromCampsite === 0 && trail.name === 'Lago Gutiérrez Circuit'
+    trail.distanceFromCampsite === 0 && trail.name === 'Lago Gutiérrez'
   );
   
   const otherDayHikes = dayHikes.filter(trail => !directAccessHikes.includes(trail));

@@ -1,3 +1,4 @@
+
 import { Trail } from "../types/trail";
 
 export const trails: Trail[] = [
@@ -97,7 +98,7 @@ export const trails: Trail[] = [
   },
   {
     id: "5",
-    name: "Lago Gutiérrez Circuit",
+    name: "Lago Gutiérrez",
     type: "day-hike",
     difficulty: "easy",
     distance: 5,
