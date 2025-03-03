@@ -22,7 +22,8 @@ export const trails: Trail[] = [
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 8,
     travelTime: 15,
-    busLines: "Line 20"
+    busLines: "Line 20",
+    category: "high-mountain"
   },
   {
     id: "2",
@@ -45,7 +46,8 @@ export const trails: Trail[] = [
     transportation: ["bus"],
     distanceFromCampsite: 12,
     travelTime: 45,
-    busLines: "Lines 50 + 20"
+    busLines: "Lines 50 + 20",
+    category: "easy-mountain"
   },
   {
     id: "3",
@@ -67,7 +69,8 @@ export const trails: Trail[] = [
     highlights: ["Glacier views", "Mountain refuge", "Tronador peak"],
     transportation: ["bus", "private-transfer"],
     distanceFromCampsite: 45,
-    travelTime: 120
+    travelTime: 120,
+    category: "high-mountain"
   },
   {
     id: "4",
@@ -89,7 +92,8 @@ export const trails: Trail[] = [
     highlights: ["Multiple lakes", "Mountain refuges", "Forest trails"],
     transportation: ["bus", "hitchhiking"],
     distanceFromCampsite: 15,
-    travelTime: 30
+    travelTime: 30,
+    category: "high-mountain"
   },
   {
     id: "5",
@@ -111,7 +115,8 @@ export const trails: Trail[] = [
     highlights: ["Lake views", "Beach access", "Bird watching"],
     transportation: ["walking", "hitchhiking"],
     distanceFromCampsite: 0,
-    travelTime: 0
+    travelTime: 0,
+    category: "walking-path"
   },
   {
     id: "6",
@@ -133,7 +138,8 @@ export const trails: Trail[] = [
     highlights: ["Two mountain refuges", "Alpine lakes", "High mountain passes"],
     transportation: ["private-transfer", "taxi"],
     distanceFromCampsite: 8,
-    travelTime: 15
+    travelTime: 15,
+    category: "high-mountain"
   },
   {
     id: "7",
@@ -155,7 +161,8 @@ export const trails: Trail[] = [
     highlights: ["Two mountain refuges", "Panoramic views", "Technical terrain"],
     transportation: ["bus", "private-transfer"],
     distanceFromCampsite: 15,
-    travelTime: 30
+    travelTime: 30,
+    category: "high-mountain"
   },
   {
     id: "8",
@@ -177,7 +184,8 @@ export const trails: Trail[] = [
     highlights: ["Lake views", "Easy access", "Family friendly"],
     transportation: ["walking", "hitchhiking", "taxi"],
     distanceFromCampsite: 0,
-    travelTime: 0
+    travelTime: 0,
+    category: "easy-mountain"
   },
   {
     id: "9",
@@ -199,7 +207,8 @@ export const trails: Trail[] = [
     highlights: ["Panoramic views", "Historic site", "Restaurant at summit"],
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 8,
-    travelTime: 20
+    travelTime: 20,
+    category: "easy-mountain"
   },
   {
     id: "10",
@@ -221,7 +230,8 @@ export const trails: Trail[] = [
     highlights: ["Five alpine lakes", "Remote wilderness", "Technical terrain"],
     transportation: ["private-transfer"],
     distanceFromCampsite: 60,
-    travelTime: 120
+    travelTime: 120,
+    category: "high-mountain"
   },
   {
     id: "11",
@@ -243,7 +253,8 @@ export const trails: Trail[] = [
     highlights: ["Waterfall", "Lake beaches", "Native forest", "Family friendly"],
     transportation: ["hitchhiking"],
     distanceFromCampsite: 0,
-    travelTime: 0
+    travelTime: 0,
+    category: "walking-path"
   },
   {
     id: "12",
@@ -266,7 +277,8 @@ export const trails: Trail[] = [
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 10,
     travelTime: 25,
-    busLines: "Lines 20 + 10"
+    busLines: "Lines 20 + 10",
+    category: "easy-mountain"
   },
   {
     id: "13",
@@ -289,7 +301,8 @@ export const trails: Trail[] = [
     transportation: ["bus", "taxi", "private-transfer"],
     distanceFromCampsite: 15,
     travelTime: 35,
-    busLines: "Line 20"
+    busLines: "Line 20",
+    category: "walking-path"
   },
   {
     id: "14",
@@ -312,7 +325,8 @@ export const trails: Trail[] = [
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 12,
     travelTime: 30,
-    busLines: "Line 10"
+    busLines: "Line 10",
+    category: "walking-path"
   },
   {
     id: "15",
@@ -334,7 +348,8 @@ export const trails: Trail[] = [
     highlights: ["Panoramic views", "Native lenga forest", "360° summit viewpoint", "Cerro Catedral views"],
     transportation: ["walking"],
     distanceFromCampsite: 0,
-    travelTime: 0
+    travelTime: 0,
+    category: "easy-mountain"
   },
   {
     id: "16",
@@ -356,6 +371,7 @@ export const trails: Trail[] = [
     highlights: ["Secluded beach", "Crystal clear waters", "Swimming spot", "Forest trail"],
     transportation: ["walking"],
     distanceFromCampsite: 0,
-    travelTime: 0
+    travelTime: 0,
+    category: "walking-path"
   }
 ];

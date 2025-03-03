@@ -1,4 +1,3 @@
-
 type Translation = {
   [key: string]: {
     en: string;
@@ -225,7 +224,6 @@ export const translations: Translation = {
     fr: "Accès Moyen (Trajet plus long)",
     de: "Mittlerer Zugang (Längere Anreise)",
   },
-  // Beach section translations
   beaches: {
     en: "Beaches & Lakes",
     es: "Playas y Lagos",
@@ -339,5 +337,29 @@ export const translations: Translation = {
     es: "Mejor Época para Visitar",
     fr: "Meilleure Période pour Visiter",
     de: "Beste Besuchszeit",
+  },
+  filterByCategory: {
+    en: "Filter by Category",
+    es: "Filtrar por Categoría",
+    fr: "Filtrer par Catégorie",
+    de: "Nach Kategorie filtern",
+  },
+  categoryHighMountain: {
+    en: "High Mountain",
+    es: "Alta Montaña",
+    fr: "Haute Montagne",
+    de: "Hochgebirge",
+  },
+  categoryEasyMountain: {
+    en: "Easy Mountains",
+    es: "Montañas Fáciles",
+    fr: "Montagnes Faciles",
+    de: "Einfache Berge",
+  },
+  categoryWalkingPath: {
+    en: "Walking Paths",
+    es: "Senderos para Caminar",
+    fr: "Sentiers de Promenade",
+    de: "Wanderwege",
   }
 };

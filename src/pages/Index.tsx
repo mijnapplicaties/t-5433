@@ -1,21 +1,24 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
 import { Badge } from '../components/ui/badge';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../context/LanguageContext';
-import { Trail, TrailType, Difficulty, TransportationType, TravelTimeCategory } from '../types/trail';
+import { Trail, TrailType, Difficulty, TransportationType, TravelTimeCategory, TrailCategory } from '../types/trail';
 import TrailCard from '../components/TrailCard';
 import BeachCard from '../components/BeachCard';
-import { Bus, Car, ThumbsUp, Users } from 'lucide-react';
+import { Bus, Car, FootprintsIcon, Map, Mountain, ThumbsUp, TreePine, Users } from 'lucide-react';
 
 type TravelTimeCategoryFilter = 'all' | TravelTimeCategory;
+type TrailCategoryFilter = 'all' | TrailCategory;
 
 const Index = () => {
   const { t } = useLanguage();
   const [selectedType, setSelectedType] = useState<TrailType | 'all'>('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | 'all'>('all');
   const [selectedTravelTime, setSelectedTravelTime] = useState<TravelTimeCategory | 'all'>('all');
+  const [selectedCategory, setSelectedCategory] = useState<TrailCategory | 'all'>('all');
 
   const getAccessibilityCategory = (trail: Trail): TravelTimeCategory => {
     if (trail.distanceFromCampsite <= 2) return 'direct-access';
@@ -29,7 +32,8 @@ const Index = () => {
     const typeMatch = selectedType === 'all' || trail.type === selectedType;
     const difficultyMatch = selectedDifficulty === 'all' || trail.difficulty === selectedDifficulty;
     const accessibilityMatch = selectedTravelTime === 'all' || getAccessibilityCategory(trail) === selectedTravelTime;
-    return typeMatch && difficultyMatch && accessibilityMatch;
+    const categoryMatch = selectedCategory === 'all' || trail.category === selectedCategory;
+    return typeMatch && difficultyMatch && accessibilityMatch && categoryMatch;
   });
 
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
@@ -55,6 +59,21 @@ const Index = () => {
         return <ThumbsUp className="w-4 h-4" />;
       case 'private-transfer':
         return <Users className="w-4 h-4" />;
+      case 'walking':
+        return <FootprintsIcon className="w-4 h-4" />;
+    }
+  };
+
+  const getCategoryIcon = (category: TrailCategory | 'all') => {
+    switch(category) {
+      case 'high-mountain':
+        return <Mountain className="w-4 h-4 mr-1" />;
+      case 'easy-mountain':
+        return <Mountain className="w-4 h-4 mr-1" />;
+      case 'walking-path':
+        return <FootprintsIcon className="w-4 h-4 mr-1" />;
+      default:
+        return <Map className="w-4 h-4 mr-1" />;
     }
   };
 
@@ -173,6 +192,44 @@ const Index = () => {
                 onClick={() => setSelectedTravelTime('medium-access')}
               >
                 {t('accessibilityMedium')}
+              </Badge>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-sm font-medium text-gray-500 mb-2">{t('filterByCategory')}</p>
+            <div className="flex flex-wrap gap-2">
+              <Badge 
+                variant={selectedCategory === 'all' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedCategory('all')}
+              >
+                <Map className="w-4 h-4 mr-1" />
+                {t('filterAll')}
+              </Badge>
+              <Badge 
+                variant={selectedCategory === 'high-mountain' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedCategory('high-mountain')}
+              >
+                <Mountain className="w-4 h-4 mr-1" />
+                {t('categoryHighMountain')}
+              </Badge>
+              <Badge 
+                variant={selectedCategory === 'easy-mountain' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedCategory('easy-mountain')}
+              >
+                <TreePine className="w-4 h-4 mr-1" />
+                {t('categoryEasyMountain')}
+              </Badge>
+              <Badge 
+                variant={selectedCategory === 'walking-path' ? 'default' : 'outline'}
+                className="cursor-pointer"
+                onClick={() => setSelectedCategory('walking-path')}
+              >
+                <FootprintsIcon className="w-4 h-4 mr-1" />
+                {t('categoryWalkingPath')}
               </Badge>
             </div>
           </div>
