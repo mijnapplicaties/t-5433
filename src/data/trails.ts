@@ -74,7 +74,7 @@ export const trails: Trail[] = [
   },
   {
     id: "4",
-    name: "Laguna Negra Circuit",
+    name: "Refugio Laguna Negra",
     type: "multi-day",
     difficulty: "moderate",
     distance: 42,
@@ -223,7 +223,7 @@ export const trails: Trail[] = [
       en: "Epic three-day trek visiting five alpine lakes: Negra, CAB, Cretton, Jujuy, and Ilón. Starts from Pampa Linda.",
       es: "Épica travesía de tres días visitando cinco lagos alpinos: Negra, CAB, Cretton, Jujuy e Ilón. Comienza en Pampa Linda.",
       fr: "Épique randonnée de trois jours visitant cinq lacs alpins : Negra, CAB, Cretton, Jujuy et Ilón. Départ de Pampa Linda.",
-      de: "Ein épischer drei-Tage-Wanderung, die fünf alpinen Lakes besucht: Negra, CAB, Cretton, Jujuy und Ilón. Beginnen Sie in Pampa Linda."
+      de: "Ein épischer drei-Tage-Kreislauf, der fünf alpinen Lakes besucht: Negra, CAB, Cretton, Jujuy und Ilón. Beginnen Sie in Pampa Linda."
     },
     imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
     startingPoint: "Pampa Linda (transfer required)",
@@ -373,5 +373,101 @@ export const trails: Trail[] = [
     distanceFromCampsite: 0,
     travelTime: 0,
     category: "walking-path"
+  },
+  {
+    id: "17",
+    name: "Refugio Jakob",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 32,
+    duration: 48,
+    elevation: 1600,
+    requiresReservation: true,
+    description: {
+      en: "A challenging two-day hike to Refugio Jakob. From Camping Los Coihues, take bus line 10 to Villa Catedral (40 min). The trail ascends through dense forests before reaching the alpine refuge with spectacular views of Lago Jakob.",
+      es: "Una exigente caminata de dos días al Refugio Jakob. Desde Camping Los Coihues, tome la línea 10 hasta Villa Catedral (40 min). El sendero asciende a través de densos bosques antes de llegar al refugio alpino con vistas espectaculares del Lago Jakob.",
+      fr: "Une randonnée difficile de deux jours au Refugio Jakob. Depuis le Camping Los Coihues, prenez la ligne 10 à Villa Catedral (40 min). Le sentier monte à travers des forêts denses avant d'atteindre le refuge alpin avec des vues spectaculaires sur le Lago Jakob.",
+      de: "Eine anspruchsvolle zweitägige Wanderung zum Refugio Jakob. Vom Camping Los Coihues aus nehmen Sie die Linie 10 nach Villa Catedral (40 Min.). Der Weg führt durch dichte Wälder, bevor Sie die Berghütte mit spektakulärem Blick auf den Lago Jakob erreichen."
+    },
+    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
+    startingPoint: "Villa Catedral (40 min bus from Los Coihues)",
+    highlights: ["Alpine lake", "Mountain refuge", "Forest trail", "Panoramic views"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 18,
+    travelTime: 40,
+    busLines: "Line 10",
+    category: "high-mountain"
+  },
+  {
+    id: "18",
+    name: "Refugio Lopez",
+    type: "multi-day",
+    difficulty: "moderate",
+    distance: 24,
+    duration: 36,
+    elevation: 1300,
+    requiresReservation: true,
+    description: {
+      en: "A beautiful overnight trek to Refugio Lopez. From Camping Los Coihues, take bus line 20 to Arroyo Lopez (30 min). The trail offers stunning views of lakes Nahuel Huapi and Moreno. The refuge is perched on a rock outcrop with 360° panoramic views.",
+      es: "Una hermosa caminata con pernocte al Refugio Lopez. Desde Camping Los Coihues, tome la línea 20 hasta Arroyo Lopez (30 min). El sendero ofrece impresionantes vistas de los lagos Nahuel Huapi y Moreno. El refugio está situado en un afloramiento rocoso con vistas panorámicas de 360°.",
+      fr: "Un magnifique trek d'une nuit au Refugio Lopez. Depuis le Camping Los Coihues, prenez la ligne 20 à Arroyo Lopez (30 min). Le sentier offre des vues spectaculaires sur les lacs Nahuel Huapi et Moreno. Le refuge est perché sur un affleurement rocheux avec des vues panoramiques à 360°.",
+      de: "Eine schöne Übernachtungswanderung zum Refugio Lopez. Vom Camping Los Coihues aus nehmen Sie die Linie 20 nach Arroyo Lopez (30 Min.). Der Weg bietet atemberaubende Aussichten auf die Seen Nahuel Huapi und Moreno. Die Hütte liegt auf einem Felsvorsprung mit 360°-Panoramablick."
+    },
+    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
+    startingPoint: "Arroyo Lopez (30 min bus from Los Coihues)",
+    highlights: ["Panoramic viewpoint", "Mountain refuge", "Lake views", "Sunset views"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 15,
+    travelTime: 30,
+    busLines: "Line 20",
+    category: "high-mountain"
+  },
+  {
+    id: "19",
+    name: "Cerro Lopez",
+    type: "day-hike",
+    difficulty: "hard",
+    distance: 18,
+    duration: 8,
+    elevation: 1200,
+    requiresReservation: false,
+    description: {
+      en: "A challenging day hike to the summit of Cerro Lopez. From Camping Los Coihues, take bus line 20 to Arroyo Lopez (30 min). The trail ascends steeply through forests before reaching alpine terrain with spectacular views of the surrounding lakes and mountains.",
+      es: "Una desafiante caminata de un día a la cumbre del Cerro Lopez. Desde Camping Los Coihues, tome la línea 20 hasta Arroyo Lopez (30 min). El sendero asciende pronunciadamente a través de bosques antes de alcanzar terreno alpino con vistas espectaculares de los lagos y montañas circundantes.",
+      fr: "Une randonnée difficile d'une journée jusqu'au sommet du Cerro Lopez. Depuis le Camping Los Coihues, prenez la ligne 20 à Arroyo Lopez (30 min). Le sentier monte abruptement à travers des forêts avant d'atteindre un terrain alpin avec des vues spectaculaires sur les lacs et montagnes environnants.",
+      de: "Eine anspruchsvolle Tageswanderung zum Gipfel des Cerro Lopez. Vom Camping Los Coihues aus nehmen Sie die Linie 20 nach Arroyo Lopez (30 Min.). Der Weg führt steil durch Wälder, bevor Sie alpines Gelände mit spektakulärem Blick auf die umliegenden Seen und Berge erreichen."
+    },
+    imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
+    startingPoint: "Arroyo Lopez (30 min bus from Los Coihues)",
+    highlights: ["Summit views", "Alpine terrain", "Panoramic vista", "Technical trail"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 15,
+    travelTime: 30,
+    busLines: "Line 20",
+    category: "high-mountain"
+  },
+  {
+    id: "20",
+    name: "Bahia Lopez & Mirador Tristeza",
+    type: "day-hike",
+    difficulty: "easy",
+    distance: 6,
+    duration: 3,
+    elevation: 200,
+    requiresReservation: false,
+    description: {
+      en: "A scenic trail combining Bahia Lopez bay and the Mirador Tristeza viewpoint. From Camping Los Coihues, take bus line 20 (35 min). The trail offers beautiful views of Nahuel Huapi Lake and the surrounding mountains with minimal elevation gain.",
+      es: "Un pintoresco sendero que combina la bahía de Bahía Lopez y el mirador Tristeza. Desde Camping Los Coihues, tome la línea 20 (35 min). El sendero ofrece hermosas vistas del Lago Nahuel Huapi y las montañas circundantes con un desnivel mínimo.",
+      fr: "Un sentier pittoresque combinant la baie de Bahía Lopez et le point de vue Mirador Tristeza. Depuis le Camping Los Coihues, prenez la ligne 20 (35 min). Le sentier offre de belles vues sur le lac Nahuel Huapi et les montagnes environnantes avec un dénivelé minimal.",
+      de: "Ein malerischer Weg, der die Bucht von Bahía Lopez und den Aussichtspunkt Mirador Tristeza verbindet. Vom Camping Los Coihues nehmen Sie die Linie 20 (35 Min.). Der Weg bietet schöne Ausblicke auf den See Nahuel Huapi und die umliegenden Berge mit minimalem Höhenunterschied."
+    },
+    imageUrl: "/lovable-uploads/bdd46388-2e54-44ed-8cb1-f449f800bd97.png",
+    startingPoint: "Hotel Llao Llao area (35 min bus from Los Coihues)",
+    highlights: ["Lake views", "Bay area", "Viewpoint", "Family friendly"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 16,
+    travelTime: 35,
+    busLines: "Line 20",
+    category: "easy-mountain"
   }
 ];
