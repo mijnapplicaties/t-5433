@@ -17,7 +17,7 @@ export const trails: Trail[] = [
       fr: "Une belle randonnée d'une journée jusqu'au Refugio Frey. Depuis le Camping Los Coihues, prenez 15 minutes en voiture jusqu'à la base de Cerro Catedral, où commence le sentier. Le chemin est bien balisé avec des marqueurs rouges.",
       de: "Eine schöne Tageswanderung zum Refugio Frey. Vom Camping Los Coihues aus fahren Sie 15 Minuten mit dem Auto zur Basis des Cerro Catedral, wo der Wanderweg beginnt. Der Weg ist gut mit roten Markierungen gekennzeichnet."
     },
-    imageUrl: "/lovable-uploads/b319c062-05e6-4673-85bb-e653feab11fb.png",
+    imageUrl: "/lovable-uploads/0a880087-8ded-441c-b362-9e8437aad433.png",
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["Alpine lake", "Mountain refuge", "Rock climbing area"],
     transportation: ["bus", "taxi"],
