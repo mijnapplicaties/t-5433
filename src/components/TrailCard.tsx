@@ -91,7 +91,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
           <img
             src={trail.imageUrl}
             alt={trail.name}
-            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute top-4 right-4 flex gap-2">
             <Badge 
@@ -193,7 +193,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
             <img
               src={trail.imageUrl}
               alt={trail.name}
-              className="w-full h-64 object-cover rounded-lg mb-6"
+              className="w-full h-64 object-cover object-center rounded-lg mb-6"
             />
             
             <div className="grid grid-cols-3 gap-4 mb-6 bg-gray-50 p-4 rounded-lg">
