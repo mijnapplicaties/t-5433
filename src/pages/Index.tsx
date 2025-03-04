@@ -111,10 +111,10 @@ const Index = () => {
           </p>
         </header>
 
-        <div className="mb-8 flex flex-wrap items-center gap-4">
-          <div className="w-full md:flex-1">
-            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByCategory')}</p>
-            <div className="flex flex-wrap gap-2">
+        <div className="mb-8 flex flex-col items-center gap-6">
+          <div className="w-full max-w-3xl text-center">
+            <p className="text-base font-medium text-gray-500 mb-2">{t('category')}</p>
+            <div className="flex flex-wrap justify-center gap-2">
               <Badge 
                 variant={selectedCategory === 'all' ? 'default' : 'outline'}
                 className="cursor-pointer text-base"
@@ -154,9 +154,10 @@ const Index = () => {
             <Button 
               onClick={() => setFiltersOpen(true)}
               variant="outline" 
-              className="flex items-center gap-2"
+              size="lg"
+              className="flex items-center gap-2 rounded-full px-6"
             >
-              <Filter className="w-4 h-4" />
+              <Filter className="w-5 h-5" />
               {t('filters')}
             </Button>
           </div>
