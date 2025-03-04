@@ -248,7 +248,7 @@ export const trails: Trail[] = [
       fr: "Un charmant sentier menant à una cascade avec accès aux belles plages du lac Gutiérrez. Sentier parfait pour débuter, directement depuis le camping, suivant un chemin doux à travers la forêt native. Idéal pour les familles et les débutants.",
       de: "Ein charmanter Wasserfall-Wanderweg mit Zugang zu schönen Stränden am Gutiérrez-See. Perfekter Anfängerpfad direkt vom Campingplatz aus, der einem sanften Weg durch den heimischen Wald folgt. Ideal für Familien und Anfänger."
     },
-    imageUrl: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
+    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["Waterfall", "Lake beaches", "Native forest", "Family friendly"],
     transportation: ["hitchhiking"],
