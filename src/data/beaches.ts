@@ -73,6 +73,29 @@ export const beaches: Beach[] = [
   },
   {
     id: "b4",
+    name: "Playa Muñoz",
+    location: "Lago Nahuel Huapi, Bariloche",
+    description: {
+      en: "A tranquil beach with pristine blue waters surrounded by mountains, perfect for relaxation and enjoying the peaceful atmosphere. The clear waters invite swimming and the beach offers a great spot for photography.",
+      es: "Una playa tranquila con aguas azules prístinas rodeada de montañas, perfecta para relajarse y disfrutar de la atmósfera pacífica. Las aguas cristalinas invitan a nadar y la playa ofrece un gran lugar para la fotografía.",
+      fr: "Une plage tranquille aux eaux bleues cristallines entourée de montagnes, parfaite pour se détendre et profiter de l'atmosphère paisible. Les eaux claires invitent à la baignade et la plage offre un excellent endroit pour la photographie.",
+      de: "Ein ruhiger Strand mit klarem blauen Wasser, umgeben von Bergen, perfekt zum Entspannen und Genießen der friedlichen Atmosphäre. Das klare Wasser lädt zum Schwimmen ein und der Strand bietet einen großartigen Ort für Fotografien."
+    },
+    imageUrl: "/lovable-uploads/a95ff83d-e962-4ca6-8b18-ec0d2608333c.png",
+    beachType: "sandy",
+    waterTemp: {
+      summer: 17,
+      winter: 9
+    },
+    activities: ["swimming", "picnic", "sunbathing", "viewpoint"],
+    facilities: ["parkingAvailable"],
+    distanceFromCampsite: 5,
+    travelTime: 20,
+    transportation: ["bus", "taxi"],
+    bestTimeToVisit: "December-March"
+  },
+  {
+    id: "b5",
     name: "Playa Bonita",
     location: "Lago Nahuel Huapi, Bariloche",
     description: {
@@ -95,7 +118,7 @@ export const beaches: Beach[] = [
     bestTimeToVisit: "December-March"
   },
   {
-    id: "b5",
+    id: "b6",
     name: "Playa Serena",
     location: "Lago Gutierrez, Bariloche",
     description: {
@@ -118,7 +141,7 @@ export const beaches: Beach[] = [
     bestTimeToVisit: "December-February"
   },
   {
-    id: "b6",
+    id: "b7",
     name: "Bahia Lopez",
     location: "Circuito Chico, Bariloche",
     description: {
@@ -141,7 +164,7 @@ export const beaches: Beach[] = [
     bestTimeToVisit: "December-February"
   },
   {
-    id: "b7",
+    id: "b8",
     name: "Villa Tacul",
     location: "Circuito Chico, Bariloche",
     description: {
