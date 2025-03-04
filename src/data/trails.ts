@@ -368,7 +368,7 @@ export const trails: Trail[] = [
       fr: "Épique randonnée de trois jours visitant cinq lacs alpins : Negra, CAB, Cretton, Jujuy et Ilón. Départ de Pampa Linda.",
       de: "Ein épischer drei-Tage-Kreislauf, der fünf alpinen Lakes besucht: Negra, CAB, Cretton, Jujuy und Ilón. Beginnen Sie in Pampa Linda."
     },
-    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
+    imageUrl: "/lovable-uploads/67fa31e5-4160-46c9-92fb-86aad3955a56.png",
     startingPoint: "Pampa Linda (transfer required)",
     highlights: ["Five alpine lakes", "Remote wilderness", "Technical terrain"],
     transportation: ["private-transfer"],
