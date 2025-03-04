@@ -162,7 +162,7 @@ const Index = () => {
                 onClick={() => setFiltersOpen(true)}
                 variant="outline" 
                 size="sm"
-                className="flex items-center gap-2 rounded-full px-4 ml-2 text-xs font-semibold border-black"
+                className="flex items-center gap-2 rounded-full px-4 ml-2 text-base font-semibold border-black"
               >
                 <Filter className="w-4 h-4" />
                 {t('filters')}
