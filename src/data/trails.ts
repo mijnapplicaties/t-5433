@@ -180,7 +180,7 @@ export const trails: Trail[] = [
       fr: "Une randonnée courte mais raide offrant l'une des meilleures vues panoramiques de Bariloche. Le sommet offre une vue à 360 degrés sur les lacs et les montagnes.",
       de: "Eine kurze aber steile Wanderung mit einem der besten Panoramablicke auf Bariloche. Der Gipfel bietet einen 360-Grad-Blick auf Seen und Berge."
     },
-    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
+    imageUrl: "/lovable-uploads/1f6daf6e-7023-4399-9b7b-85dee316066e.png",
     startingPoint: "Base of Cerro Campanario (25 min bus ride)",
     highlights: ["Panoramic viewpoint", "Chairlift option", "Mountain cafe"],
     transportation: ["bus", "taxi"],
