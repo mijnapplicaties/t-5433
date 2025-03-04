@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -46,7 +47,7 @@ const Index = () => {
   const directAccessTrailNames = [
     'Cascada de los Duendes',
     'Mirador Lago Gutiérrez',
-    'Cerro San Martin',
+    'Cerro San Martín',  // Updated to match the exact name with accent mark
     'Playa Muñoz',
     'Lago Gutiérrez'
   ];
