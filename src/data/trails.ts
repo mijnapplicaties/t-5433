@@ -204,7 +204,7 @@ export const trails: Trail[] = [
       fr: "Un sentier pittoresque au bord du lac suivant la célèbre route du Circuito Chico. Belles vues sur le Lago Moreno et les montagnes environnantes.",
       de: "Ein malerischer Seeuferweg entlang der berühmten Circuito Chico Route. Schöne Aussichten auf den Lago Moreno und die umliegenden Berge."
     },
-    imageUrl: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+    imageUrl: "/lovable-uploads/2d1500b3-3ff7-49f4-8523-acf161b6f388.png",
     startingPoint: "Circuito Chico entrance (35 min bus ride)",
     highlights: ["Lake views", "Forest trail", "Photography spots"],
     transportation: ["bus", "taxi", "private-transfer"],
