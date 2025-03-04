@@ -213,7 +213,7 @@ export const trails: Trail[] = [
     busLines: "Line 10",
     category: "walking-path"
   },
-    {
+  {
     id: "15",
     name: "Cerro San Martín",
     type: "day-hike",
@@ -297,7 +297,7 @@ export const trails: Trail[] = [
       fr: "Une randonnée difficile de deux jours au Refugio Jakob. Depuis le Camping Los Coihues, prenez la ligne 10 à Villa Catedral (40 min). Le sentier monte à travers des forêts denses avant d'atteindre le refuge alpin avec des vues spectaculaires sur le Lago Jakob.",
       de: "Eine anspruchsvolle zweitägige Wanderung zum Refugio Jakob. Vom Camping Los Coihues aus nehmen Sie die Linie 10 nach Villa Catedral (40 Min.). Der Weg führt durch dichte Wälder, bevor Sie die Berghütte mit spektakulärem Blick auf den Lago Jakob erreichen."
     },
-    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
+    imageUrl: "/lovable-uploads/6d9b3452-7edd-47fa-a936-024b5bf05aa3.png",
     startingPoint: "Villa Catedral (40 min bus from Los Coihues)",
     highlights: ["Alpine lake", "Mountain refuge", "Forest trail", "Panoramic views"],
     transportation: ["bus", "taxi"],
@@ -411,7 +411,7 @@ export const trails: Trail[] = [
     description: {
       en: "A challenging day hike to the summit of Cerro Lopez. From Camping Los Coihues, take bus line 20 to Arroyo Lopez (30 min). The trail ascends steeply through forests before reaching alpine terrain with spectacular views of the surrounding lakes and mountains.",
       es: "Una desafiante caminata de un día a la cumbre del Cerro Lopez. Desde Camping Los Coihues, tome la línea 20 hasta Arroyo Lopez (30 min). El sendero asciende pronunciadamente a través de bosques antes de alcanzar terreno alpino con vistas espectaculares de los lagos y montañas circundantes.",
-      fr: "Une randonnée difficile d'une journée jusqu'au sommet du Cerro Lopez. Depuis le Camping Los Coihues, prenez la ligne 20 à Arroyo Lopez (30 min). Le sentier monte abruptement à travers des forêts avant d'atteindre un terrain alpin avec des vues spectaculaires sur les lacs et montagnes environnants.",
+      fr: "Una randonnée difficile d'une journée jusqu'au sommet du Cerro Lopez. Depuis le Camping Los Coihues, prenez la ligne 20 à Arroyo Lopez (30 min). Le sentier monte abruptement à travers des forêts avant d'atteindre un terrain alpin avec des vues spectaculaires sur les lacs et montagnes environnants.",
       de: "Eine anspruchsvolle Tageswanderung zum Gipfel des Cerro Lopez. Vom Camping Los Coihues aus nehmen Sie die Linie 20 nach Arroyo Lopez (30 Min.). Der Weg führt steil durch Wälder, bevor Sie alpines Gelände mit spektakulärem Blick auf die umliegenden Seen und Berge erreichen."
     },
     imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
