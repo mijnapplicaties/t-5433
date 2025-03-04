@@ -50,52 +50,6 @@ export const trails: Trail[] = [
     category: "easy-mountain"
   },
   {
-    id: "3",
-    name: "Refugio Otto Meiling",
-    type: "multi-day",
-    difficulty: "hard",
-    distance: 35,
-    duration: 48,
-    elevation: 1800,
-    requiresReservation: true,
-    description: {
-      en: "A challenging two-day trek. From Camping Los Coihues, take the morning bus to Pampa Linda (2-hour journey). Register at the park office before starting the hike.",
-      es: "Una desafiante caminata de dos días. Desde Camping Los Coihues, tome el bus de la mañana a Pampa Linda (2 horas de viaje). Regístrese en la oficina del parque antes de comenzar la caminata.",
-      fr: "Une randonnée difficile de dos días. Depuis le Camping Los Coihues, prenez le bus de la matinée à Pampa Linda (2 heures de trajet). Inscrivez-vous à l'office du parc avant de commencer la randonnée.",
-      de: "Eine schwierige zwei-Tage-Wanderung. Vom Camping Los Coihues aus nehmen Sie den Morgenbus zu Pampa Linda (2 Stunden Reise). Registrieren Sie sich bei der Parkstelle vor dem Beginn der Wanderung."
-    },
-    imageUrl: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
-    startingPoint: "Pampa Linda (2h bus ride from Los Coihues)",
-    highlights: ["Glacier views", "Mountain refuge", "Tronador peak"],
-    transportation: ["bus", "private-transfer"],
-    distanceFromCampsite: 45,
-    travelTime: 120,
-    category: "high-mountain"
-  },
-  {
-    id: "4",
-    name: "Refugio Laguna Negra",
-    type: "multi-day",
-    difficulty: "moderate",
-    distance: 42,
-    duration: 72,
-    elevation: 1500,
-    requiresReservation: true,
-    description: {
-      en: "A three-day circuit. From Camping Los Coihues, take bus line 10 to Colonia Suiza (30 min). Start early as the first section is exposed to sun. Register at the park entrance.",
-      es: "Un circuito de tres días. Desde Camping Los Coihues, tome la línea de bus 10 a Colonia Suiza (30 minutos). Comience temprano ya que la primera sección está expuesta al sol. Regístrese en la entrada del parque.",
-      fr: "Un circuit de trois jours. Depuis le Camping Los Coihues, prenez la ligne de bus 10 à Colonia Suiza (30 minutes). Commencez tôt car la première section est exposée au soleil. Inscrivez-vous à l'entrée du parc.",
-      de: "Ein drei-Tage-Kreislauf. Vom Camping Los Coihues aus nehmen Sie die Linie 10 zu Colonia Suiza (30 Minuten). Beginnen Sie früh, da die erste Section unter Sonne liegt. Registrieren Sie sich bei der Parkeingang."
-    },
-    imageUrl: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
-    startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
-    highlights: ["Multiple lakes", "Mountain refuges", "Forest trails"],
-    transportation: ["bus", "hitchhiking"],
-    distanceFromCampsite: 15,
-    travelTime: 30,
-    category: "high-mountain"
-  },
-  {
     id: "5",
     name: "Lago Gutiérrez",
     type: "day-hike",
@@ -117,52 +71,6 @@ export const trails: Trail[] = [
     distanceFromCampsite: 0,
     travelTime: 0,
     category: "walking-path"
-  },
-  {
-    id: "6",
-    name: "Frey-Jakob Circuit",
-    type: "multi-day",
-    difficulty: "hard",
-    distance: 45,
-    duration: 72,
-    elevation: 2200,
-    requiresReservation: true,
-    description: {
-      en: "A spectacular three-day trek connecting Refugio Frey and Refugio Jakob. Start from Cerro Catedral (15-min drive from Los Coihues) and end at Colonia Suiza. Return by bus to Los Coihues.",
-      es: "Una espectacular travesía de tres días que conecta el Refugio Frey y el Refugio Jakob. Comience desde Cerro Catedral (15 minutos en auto desde Los Coihues) y termine en Colonia Suiza. Regrese en bus a Los Coihues.",
-      fr: "Une randonnée spectaculaire de trois jours connectant le Refugio Frey et le Refugio Jakob. Commencez à partir de Cerro Catedral (15 minutes en voiture depuis Los Coihues) et terminez à Colonia Suiza. Retournez en bus à Los Coihues.",
-      de: "Eine wunderbare drei-Tage-Wanderung, die Refugio Frey und Refugio Jakob verbindet. Beginnen Sie von Cerro Catedral (15 Minuten in Auto aus Los Coihues) und beenden Sie sich in Colonia Suiza. Registrieren Sie sich bei dem Bus zum Rückweg nach Los Coihues."
-    },
-    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
-    startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
-    highlights: ["Two mountain refuges", "Alpine lakes", "High mountain passes"],
-    transportation: ["private-transfer", "taxi"],
-    distanceFromCampsite: 8,
-    travelTime: 15,
-    category: "high-mountain"
-  },
-  {
-    id: "7",
-    name: "López-Laguna Negra Circuit",
-    type: "multi-day",
-    difficulty: "hard",
-    distance: 38,
-    duration: 72,
-    elevation: 2000,
-    requiresReservation: true,
-    description: {
-      en: "A challenging three-day circuit connecting Refugio López and Refugio Laguna Negra. Take bus line 10 from Los Coihues to Colonia Suiza to start the trek.",
-      es: "Un desafiante circuito de tres días que conecta el Refugio López y el Refugio Laguna Negra. Tome la línea de bus 10 desde Los Coihues hasta Colonia Suiza para comenzar la travesía.",
-      fr: "Un circuit difficile de trois jours connectant Refugio López et Refugio Laguna Negra. Prenez la ligne de bus 10 de Los Coihues à Colonia Suiza pour commencer la randonnée.",
-      de: "Ein schwieriger drei-Tage-Kreislauf, der Refugio López und Refugio Laguna Negra verbindet. Nehmen Sie die Linie 10 von Los Coihues zu Colonia Suiza, um die Wanderung zu beginnen."
-    },
-    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
-    startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
-    highlights: ["Two mountain refuges", "Panoramic views", "Technical terrain"],
-    transportation: ["bus", "private-transfer"],
-    distanceFromCampsite: 15,
-    travelTime: 30,
-    category: "high-mountain"
   },
   {
     id: "8",
@@ -209,29 +117,6 @@ export const trails: Trail[] = [
     distanceFromCampsite: 8,
     travelTime: 20,
     category: "easy-mountain"
-  },
-  {
-    id: "10",
-    name: "Travesía 5 Lagunas",
-    type: "multi-day",
-    difficulty: "hard",
-    distance: 45,
-    duration: 72,
-    elevation: 2500,
-    requiresReservation: true,
-    description: {
-      en: "Epic three-day trek visiting five alpine lakes: Negra, CAB, Cretton, Jujuy, and Ilón. Starts from Pampa Linda.",
-      es: "Épica travesía de tres días visitando cinco lagos alpinos: Negra, CAB, Cretton, Jujuy e Ilón. Comienza en Pampa Linda.",
-      fr: "Épique randonnée de trois jours visitant cinq lacs alpins : Negra, CAB, Cretton, Jujuy et Ilón. Départ de Pampa Linda.",
-      de: "Ein épischer drei-Tage-Kreislauf, der fünf alpinen Lakes besucht: Negra, CAB, Cretton, Jujuy und Ilón. Beginnen Sie in Pampa Linda."
-    },
-    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
-    startingPoint: "Pampa Linda (transfer required)",
-    highlights: ["Five alpine lakes", "Remote wilderness", "Technical terrain"],
-    transportation: ["private-transfer"],
-    distanceFromCampsite: 60,
-    travelTime: 120,
-    category: "high-mountain"
   },
   {
     id: "11",
@@ -328,11 +213,11 @@ export const trails: Trail[] = [
     busLines: "Line 10",
     category: "walking-path"
   },
-  {
+    {
     id: "15",
     name: "Cerro San Martín",
     type: "day-hike",
-    difficulty: "moderate",
+    difficulty: "easy",
     distance: 5.2,
     duration: 3,
     elevation: 350,
@@ -373,6 +258,29 @@ export const trails: Trail[] = [
     distanceFromCampsite: 0,
     travelTime: 0,
     category: "walking-path"
+  },
+  {
+    id: "3",
+    name: "Refugio Frey-Jakob Circuit",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 45,
+    duration: 72,
+    elevation: 2200,
+    requiresReservation: true,
+    description: {
+      en: "A spectacular three-day trek connecting Refugio Frey and Refugio Jakob. Start from Cerro Catedral (15-min drive from Los Coihues) and end at Colonia Suiza. Return by bus to Los Coihues.",
+      es: "Una espectacular travesía de tres días que conecta el Refugio Frey y el Refugio Jakob. Comience desde Cerro Catedral (15 minutos en auto desde Los Coihues) y termine en Colonia Suiza. Regrese en bus a Los Coihues.",
+      fr: "Une randonnée spectaculaire de trois jours connectant le Refugio Frey et le Refugio Jakob. Commencez à partir de Cerro Catedral (15 minutes en voiture depuis Los Coihues) et terminez à Colonia Suiza. Retournez en bus à Los Coihues.",
+      de: "Eine wunderbare drei-Tage-Wanderung, die Refugio Frey und Refugio Jakob verbindet. Beginnen Sie von Cerro Catedral (15 Minuten in Auto aus Los Coihues) und beenden Sie sich in Colonia Suiza. Registrieren Sie sich bei dem Bus zum Rückweg nach Los Coihues."
+    },
+    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
+    startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
+    highlights: ["Two mountain refuges", "Alpine lakes", "High mountain passes"],
+    transportation: ["private-transfer", "taxi"],
+    distanceFromCampsite: 8,
+    travelTime: 15,
+    category: "high-mountain"
   },
   {
     id: "17",
@@ -420,6 +328,75 @@ export const trails: Trail[] = [
     distanceFromCampsite: 15,
     travelTime: 30,
     busLines: "Line 20",
+    category: "high-mountain"
+  },
+  {
+    id: "4",
+    name: "Refugio Laguna Negra",
+    type: "multi-day",
+    difficulty: "moderate",
+    distance: 42,
+    duration: 72,
+    elevation: 1500,
+    requiresReservation: true,
+    description: {
+      en: "A three-day circuit. From Camping Los Coihues, take bus line 10 to Colonia Suiza (30 min). Start early as the first section is exposed to sun. Register at the park entrance.",
+      es: "Un circuito de tres días. Desde Camping Los Coihues, tome la línea de bus 10 a Colonia Suiza (30 minutos). Comience temprano ya que la primera sección está expuesta al sol. Regístrese en la entrada del parque.",
+      fr: "Un circuit de trois jours. Depuis le Camping Los Coihues, prenez la ligne de bus 10 à Colonia Suiza (30 minutes). Commencez tôt car la première section est exposée au soleil. Inscrivez-vous à l'entrée du parc.",
+      de: "Ein drei-Tage-Kreislauf. Vom Camping Los Coihues aus nehmen Sie die Linie 10 zu Colonia Suiza (30 Minuten). Beginnen Sie früh, da die erste Section unter Sonne liegt. Registrieren Sie sich bei der Parkeingang."
+    },
+    imageUrl: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
+    startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
+    highlights: ["Multiple lakes", "Mountain refuges", "Forest trails"],
+    transportation: ["bus", "hitchhiking"],
+    distanceFromCampsite: 15,
+    travelTime: 30,
+    category: "high-mountain"
+  },
+  {
+    id: "7",
+    name: "López-Laguna Negra Circuit",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 38,
+    duration: 72,
+    elevation: 2000,
+    requiresReservation: true,
+    description: {
+      en: "A challenging three-day circuit connecting Refugio López and Refugio Laguna Negra. Take bus line 10 from Los Coihues to Colonia Suiza to start the trek.",
+      es: "Un desafiante circuito de tres días que conecta el Refugio López y el Refugio Laguna Negra. Tome la línea de bus 10 desde Los Coihues hasta Colonia Suiza para comenzar la travesía.",
+      fr: "Un circuit difficile de trois jours connectant Refugio López et Refugio Laguna Negra. Prenez la ligne de bus 10 de Los Coihues à Colonia Suiza pour commencer la randonnée.",
+      de: "Ein schwieriger drei-Tage-Kreislauf, der Refugio López und Refugio Laguna Negra verbindet. Nehmen Sie die Linie 10 von Los Coihues zu Colonia Suiza, um die Wanderung zu beginnen."
+    },
+    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
+    startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
+    highlights: ["Two mountain refuges", "Panoramic views", "Technical terrain"],
+    transportation: ["bus", "private-transfer"],
+    distanceFromCampsite: 15,
+    travelTime: 30,
+    category: "high-mountain"
+  },
+  {
+    id: "10",
+    name: "Travesía 5 Lagunas",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 45,
+    duration: 72,
+    elevation: 2500,
+    requiresReservation: true,
+    description: {
+      en: "Epic three-day trek visiting five alpine lakes: Negra, CAB, Cretton, Jujuy, and Ilón. Starts from Pampa Linda.",
+      es: "Épica travesía de tres días visitando cinco lagos alpinos: Negra, CAB, Cretton, Jujuy e Ilón. Comienza en Pampa Linda.",
+      fr: "Épique randonnée de trois jours visitant cinq lacs alpins : Negra, CAB, Cretton, Jujuy et Ilón. Départ de Pampa Linda.",
+      de: "Ein épischer drei-Tage-Kreislauf, der fünf alpinen Lakes besucht: Negra, CAB, Cretton, Jujuy und Ilón. Beginnen Sie in Pampa Linda."
+    },
+    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
+    startingPoint: "Pampa Linda (transfer required)",
+    highlights: ["Five alpine lakes", "Remote wilderness", "Technical terrain"],
+    transportation: ["private-transfer"],
+    distanceFromCampsite: 60,
+    travelTime: 120,
     category: "high-mountain"
   },
   {
