@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -114,7 +113,7 @@ const Index = () => {
         <div className="mb-8 flex flex-col items-center gap-6">
           <div className="w-full max-w-3xl text-center">
             <p className="text-base font-medium text-gray-500 mb-2">{t('category')}</p>
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex flex-wrap justify-center gap-2 items-center">
               <Badge 
                 variant={selectedCategory === 'all' ? 'default' : 'outline'}
                 className="cursor-pointer text-base"
@@ -147,19 +146,17 @@ const Index = () => {
                 <FootprintsIcon className="w-4 h-4 mr-1" />
                 {t('categoryWalkingPath')}
               </Badge>
+              
+              <Button 
+                onClick={() => setFiltersOpen(true)}
+                variant="outline" 
+                size="sm"
+                className="flex items-center gap-2 rounded-full px-4 ml-2 text-xs font-semibold border-black"
+              >
+                <Filter className="w-4 h-4" />
+                {t('filters')}
+              </Button>
             </div>
-          </div>
-          
-          <div className="w-auto">
-            <Button 
-              onClick={() => setFiltersOpen(true)}
-              variant="outline" 
-              size="lg"
-              className="flex items-center gap-2 rounded-full px-6"
-            >
-              <Filter className="w-5 h-5" />
-              {t('filters')}
-            </Button>
           </div>
         </div>
 
