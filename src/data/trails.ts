@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -344,7 +345,7 @@ export const trails: Trail[] = [
       fr: "Un circuit difficile de trois jours connectant Refugio López et Refugio Laguna Negra. Prenez la ligne de bus 10 de Los Coihues à Colonia Suiza pour commencer la randonnée.",
       de: "Ein schwieriger drei-Tage-Kreislauf, der Refugio López und Refugio Laguna Negra verbindet. Nehmen Sie die Linie 10 von Los Coihues zu Colonia Suiza, um die Wanderung zu beginnen."
     },
-    imageUrl: "https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5",
+    imageUrl: "/lovable-uploads/c2cfed37-332c-49bb-8f26-e701a5a11d48.png",
     startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
     highlights: ["Two mountain refuges", "Panoramic views", "Technical terrain"],
     transportation: ["bus", "private-transfer"],
