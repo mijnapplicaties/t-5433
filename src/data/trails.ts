@@ -50,6 +50,52 @@ export const trails: Trail[] = [
     category: "easy-mountain"
   },
   {
+    id: "3",
+    name: "Refugio Frey-Jakob Circuit",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 45,
+    duration: 72,
+    elevation: 2200,
+    requiresReservation: true,
+    description: {
+      en: "A spectacular three-day trek connecting Refugio Frey and Refugio Jakob. Start from Cerro Catedral (15-min drive from Los Coihues) and end at Colonia Suiza. Return by bus to Los Coihues.",
+      es: "Una espectacular travesía de tres días que conecta el Refugio Frey y el Refugio Jakob. Comience desde Cerro Catedral (15 minutos en auto desde Los Coihues) y termine en Colonia Suiza. Regrese en bus a Los Coihues.",
+      fr: "Une randonnée spectaculaire de trois jours connectant le Refugio Frey et le Refugio Jakob. Commencez à partir de Cerro Catedral (15 minutes en voiture depuis Los Coihues) et terminez à Colonia Suiza. Retournez en bus à Los Coihues.",
+      de: "Eine wunderbare drei-Tage-Wanderung, die Refugio Frey und Refugio Jakob verbindet. Beginnen Sie von Cerro Catedral (15 Minuten in Auto aus Los Coihues) und beenden Sie sich in Colonia Suiza. Registrieren Sie sich bei dem Bus zum Rückweg nach Los Coihues."
+    },
+    imageUrl: "/lovable-uploads/3b45435b-d0d0-4fb7-ac3b-73c18e21fd50.png",
+    startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
+    highlights: ["Two mountain refuges", "Alpine lakes", "High mountain passes"],
+    transportation: ["private-transfer", "taxi"],
+    distanceFromCampsite: 8,
+    travelTime: 15,
+    category: "high-mountain"
+  },
+  {
+    id: "4",
+    name: "Cerro Otto & Piedra de Habsburgo",
+    type: "day-hike",
+    difficulty: "moderate",
+    distance: 12,
+    duration: 5,
+    elevation: 800,
+    requiresReservation: false,
+    description: {
+      en: "A classic hike combining Cerro Otto summit and the historic Piedra de Habsburgo viewpoint.",
+      es: "Una caminata clásica que combina la cumbre del Cerro Otto y el histórico mirador Piedra de Habsburgo.",
+      fr: "Une randonnée classique combinant la cime du Cerro Otto et le mirador historique de la Piedra de Habsburgo.",
+      de: "Eine klassische Wanderung, die die Spitze des Cerro Otto und den historischen Mirador Piedra de Habsburgo verbindet."
+    },
+    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
+    startingPoint: "Cerro Otto base (20 min drive)",
+    highlights: ["Panoramic views", "Historic site", "Restaurant at summit"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 8,
+    travelTime: 20,
+    category: "easy-mountain"
+  },
+  {
     id: "5",
     name: "Lago Gutiérrez",
     type: "day-hike",
@@ -73,7 +119,7 @@ export const trails: Trail[] = [
     category: "walking-path"
   },
   {
-    id: "8",
+    id: "6",
     name: "Mirador Lago Gutiérrez",
     type: "day-hike",
     difficulty: "easy",
@@ -96,30 +142,7 @@ export const trails: Trail[] = [
     category: "easy-mountain"
   },
   {
-    id: "9",
-    name: "Cerro Otto & Piedra de Habsburgo",
-    type: "day-hike",
-    difficulty: "moderate",
-    distance: 12,
-    duration: 5,
-    elevation: 800,
-    requiresReservation: false,
-    description: {
-      en: "A classic hike combining Cerro Otto summit and the historic Piedra de Habsburgo viewpoint.",
-      es: "Una caminata clásica que combina la cumbre del Cerro Otto y el histórico mirador Piedra de Habsburgo.",
-      fr: "Une randonnée classique combinant la cime du Cerro Otto et le mirador historique de la Piedra de Habsburgo.",
-      de: "Eine klassische Wanderung, die die Spitze des Cerro Otto und den historischen Mirador Piedra de Habsburgo verbindet."
-    },
-    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
-    startingPoint: "Cerro Otto base (20 min drive)",
-    highlights: ["Panoramic views", "Historic site", "Restaurant at summit"],
-    transportation: ["bus", "taxi"],
-    distanceFromCampsite: 8,
-    travelTime: 20,
-    category: "easy-mountain"
-  },
-  {
-    id: "11",
+    id: "7",
     name: "Cascada de los Duendes",
     type: "day-hike",
     difficulty: "easy",
@@ -142,7 +165,7 @@ export const trails: Trail[] = [
     category: "walking-path"
   },
   {
-    id: "12",
+    id: "8",
     name: "Cerro Campanario",
     type: "day-hike",
     difficulty: "moderate",
@@ -166,7 +189,7 @@ export const trails: Trail[] = [
     category: "easy-mountain"
   },
   {
-    id: "13",
+    id: "9",
     name: "Circuito Chico - Lago Moreno",
     type: "day-hike",
     difficulty: "easy",
@@ -190,7 +213,7 @@ export const trails: Trail[] = [
     category: "walking-path"
   },
   {
-    id: "14",
+    id: "10",
     name: "Colonia Suiza",
     type: "day-hike",
     difficulty: "easy",
@@ -214,7 +237,7 @@ export const trails: Trail[] = [
     category: "walking-path"
   },
   {
-    id: "15",
+    id: "11",
     name: "Cerro San Martín",
     type: "day-hike",
     difficulty: "easy",
@@ -237,7 +260,7 @@ export const trails: Trail[] = [
     category: "easy-mountain"
   },
   {
-    id: "16",
+    id: "12",
     name: "Playa Muñoz",
     type: "day-hike",
     difficulty: "easy",
@@ -260,54 +283,7 @@ export const trails: Trail[] = [
     category: "walking-path"
   },
   {
-    id: "3",
-    name: "Refugio Frey-Jakob Circuit",
-    type: "multi-day",
-    difficulty: "hard",
-    distance: 45,
-    duration: 72,
-    elevation: 2200,
-    requiresReservation: true,
-    description: {
-      en: "A spectacular three-day trek connecting Refugio Frey and Refugio Jakob. Start from Cerro Catedral (15-min drive from Los Coihues) and end at Colonia Suiza. Return by bus to Los Coihues.",
-      es: "Una espectacular travesía de tres días que conecta el Refugio Frey y el Refugio Jakob. Comience desde Cerro Catedral (15 minutos en auto desde Los Coihues) y termine en Colonia Suiza. Regrese en bus a Los Coihues.",
-      fr: "Une randonnée spectaculaire de trois jours connectant le Refugio Frey et le Refugio Jakob. Commencez à partir de Cerro Catedral (15 minutes en voiture depuis Los Coihues) et terminez à Colonia Suiza. Retournez en bus à Los Coihues.",
-      de: "Eine wunderbare drei-Tage-Wanderung, die Refugio Frey und Refugio Jakob verbindet. Beginnen Sie von Cerro Catedral (15 Minuten in Auto aus Los Coihues) und beenden Sie sich in Colonia Suiza. Registrieren Sie sich bei dem Bus zum Rückweg nach Los Coihues."
-    },
-    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
-    startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
-    highlights: ["Two mountain refuges", "Alpine lakes", "High mountain passes"],
-    transportation: ["private-transfer", "taxi"],
-    distanceFromCampsite: 8,
-    travelTime: 15,
-    category: "high-mountain"
-  },
-  {
-    id: "17",
-    name: "Refugio Jakob",
-    type: "multi-day",
-    difficulty: "hard",
-    distance: 32,
-    duration: 48,
-    elevation: 1600,
-    requiresReservation: true,
-    description: {
-      en: "A challenging two-day hike to Refugio Jakob. From Camping Los Coihues, take bus line 10 to Villa Catedral (40 min). The trail ascends through dense forests before reaching the alpine refuge with spectacular views of Lago Jakob.",
-      es: "Una exigente caminata de dos días al Refugio Jakob. Desde Camping Los Coihues, tome la línea 10 hasta Villa Catedral (40 min). El sendero asciende a través de densos bosques antes de llegar al refugio alpino con vistas espectaculares del Lago Jakob.",
-      fr: "Une randonnée difficile de deux jours au Refugio Jakob. Depuis le Camping Los Coihues, prenez la ligne 10 à Villa Catedral (40 min). Le sentier monte à travers des forêts denses avant d'atteindre le refuge alpin avec des vues spectaculaires sur le Lago Jakob.",
-      de: "Eine anspruchsvolle zweitägige Wanderung zum Refugio Jakob. Vom Camping Los Coihues aus nehmen Sie die Linie 10 nach Villa Catedral (40 Min.). Der Weg führt durch dichte Wälder, bevor Sie die Berghütte mit spektakulärem Blick auf den Lago Jakob erreichen."
-    },
-    imageUrl: "/lovable-uploads/6d9b3452-7edd-47fa-a936-024b5bf05aa3.png",
-    startingPoint: "Villa Catedral (40 min bus from Los Coihues)",
-    highlights: ["Alpine lake", "Mountain refuge", "Forest trail", "Panoramic views"],
-    transportation: ["bus", "taxi"],
-    distanceFromCampsite: 18,
-    travelTime: 40,
-    busLines: "Line 10",
-    category: "high-mountain"
-  },
-  {
-    id: "18",
+    id: "13",
     name: "Refugio Lopez",
     type: "multi-day",
     difficulty: "moderate",
@@ -331,7 +307,7 @@ export const trails: Trail[] = [
     category: "high-mountain"
   },
   {
-    id: "4",
+    id: "14",
     name: "Refugio Laguna Negra",
     type: "multi-day",
     difficulty: "moderate",
@@ -354,7 +330,7 @@ export const trails: Trail[] = [
     category: "high-mountain"
   },
   {
-    id: "7",
+    id: "15",
     name: "López-Laguna Negra Circuit",
     type: "multi-day",
     difficulty: "hard",
@@ -377,7 +353,7 @@ export const trails: Trail[] = [
     category: "high-mountain"
   },
   {
-    id: "10",
+    id: "16",
     name: "Travesía 5 Lagunas",
     type: "multi-day",
     difficulty: "hard",
@@ -400,7 +376,7 @@ export const trails: Trail[] = [
     category: "high-mountain"
   },
   {
-    id: "19",
+    id: "17",
     name: "Cerro Lopez",
     type: "day-hike",
     difficulty: "hard",
@@ -424,7 +400,7 @@ export const trails: Trail[] = [
     category: "high-mountain"
   },
   {
-    id: "20",
+    id: "18",
     name: "Bahia Lopez & Mirador Tristeza",
     type: "day-hike",
     difficulty: "easy",
