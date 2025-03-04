@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -322,7 +321,7 @@ export const trails: Trail[] = [
       fr: "Un magnifique trek d'une nuit au Refugio Lopez. Depuis le Camping Los Coihues, prenez la ligne 20 à Arroyo Lopez (30 min). Le sentier offre des vues spectaculaires sur les lacs Nahuel Huapi et Moreno. Le refuge est perché sur un affleurement rocheux avec des vues panoramiques à 360°.",
       de: "Eine schöne Übernachtungswanderung zum Refugio Lopez. Vom Camping Los Coihues aus nehmen Sie die Linie 20 nach Arroyo Lopez (30 Min.). Der Weg bietet atemberaubende Aussichten auf die Seen Nahuel Huapi und Moreno. Die Hütte liegt auf einem Felsvorsprung mit 360°-Panoramablick."
     },
-    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
     startingPoint: "Arroyo Lopez (30 min bus from Los Coihues)",
     highlights: ["Panoramic viewpoint", "Mountain refuge", "Lake views", "Sunset views"],
     transportation: ["bus", "taxi"],
