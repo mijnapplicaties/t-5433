@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -345,7 +346,7 @@ export const trails: Trail[] = [
       fr: "Un circuit de trois jours. Depuis le Camping Los Coihues, prenez la ligne de bus 10 à Colonia Suiza (30 minutes). Commencez tôt car la première section est exposée au soleil. Inscrivez-vous à l'entrée du parc.",
       de: "Ein drei-Tage-Kreislauf. Vom Camping Los Coihues aus nehmen Sie die Linie 10 zu Colonia Suiza (30 Minuten). Beginnen Sie früh, da die erste Section unter Sonne liegt. Registrieren Sie sich bei der Parkeingang."
     },
-    imageUrl: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
+    imageUrl: "/lovable-uploads/5e6c44cc-a8c6-4013-8464-49f82efa40fc.png",
     startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
     highlights: ["Multiple lakes", "Mountain refuges", "Forest trails"],
     transportation: ["bus", "hitchhiking"],
