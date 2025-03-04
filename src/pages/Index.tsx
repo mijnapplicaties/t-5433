@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
 import { Badge } from '../components/ui/badge';
+import { Button } from '../components/ui/button';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../context/LanguageContext';
 import { Trail, TrailType, Difficulty, TransportationType, TravelTimeCategory, TrailCategory } from '../types/trail';
 import TrailCard from '../components/TrailCard';
 import BeachCard from '../components/BeachCard';
-import { Bus, Car, FootprintsIcon, Map, Mountain, ThumbsUp, TreePine, Users } from 'lucide-react';
+import { AdjustmentsHorizontal, Bus, Car, FootprintsIcon, Map, Mountain, ThumbsUp, TreePine, Users } from 'lucide-react';
+import FiltersDialog from '../components/FiltersDialog';
 
 type TravelTimeCategoryFilter = 'all' | TravelTimeCategory;
 type TrailCategoryFilter = 'all' | TrailCategory;
@@ -18,6 +20,7 @@ const Index = () => {
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | 'all'>('all');
   const [selectedTravelTime, setSelectedTravelTime] = useState<TravelTimeCategory | 'all'>('all');
   const [selectedCategory, setSelectedCategory] = useState<TrailCategory | 'all'>('all');
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const getAccessibilityCategory = (trail: Trail): TravelTimeCategory => {
     if (trail.distanceFromCampsite <= 2) return 'direct-access';
@@ -107,8 +110,8 @@ const Index = () => {
           </p>
         </header>
 
-        <div className="mb-8 flex flex-col gap-6 md:grid md:grid-cols-2 md:gap-4">
-          <div className="w-full">
+        <div className="mb-8 flex flex-wrap items-center gap-4">
+          <div className="w-full md:flex-1">
             <p className="text-base font-medium text-gray-500 mb-2">{t('filterByCategory')}</p>
             <div className="flex flex-wrap gap-2">
               <Badge 
@@ -145,102 +148,29 @@ const Index = () => {
               </Badge>
             </div>
           </div>
-
-          <div className="w-full">
-            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByDifficulty')}</p>
-            <div className="flex flex-wrap gap-2">
-              <Badge 
-                variant={selectedDifficulty === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedDifficulty('all')}
-              >
-                {t('filterAll')}
-              </Badge>
-              <Badge 
-                variant={selectedDifficulty === 'easy' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedDifficulty('easy')}
-              >
-                {t('difficultyEasy')}
-              </Badge>
-              <Badge 
-                variant={selectedDifficulty === 'moderate' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedDifficulty('moderate')}
-              >
-                {t('difficultyModerate')}
-              </Badge>
-              <Badge 
-                variant={selectedDifficulty === 'hard' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedDifficulty('hard')}
-              >
-                {t('difficultyHard')}
-              </Badge>
-            </div>
-          </div>
-
-          <div className="w-full">
-            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByType')}</p>
-            <div className="flex flex-wrap gap-2">
-              <Badge 
-                variant={selectedType === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedType('all')}
-              >
-                {t('filterAll')}
-              </Badge>
-              <Badge 
-                variant={selectedType === 'day-hike' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedType('day-hike')}
-              >
-                {t('filterDayHike')}
-              </Badge>
-              <Badge 
-                variant={selectedType === 'multi-day' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedType('multi-day')}
-              >
-                {t('filterMultiDay')}
-              </Badge>
-            </div>
-          </div>
-
-          <div className="w-full">
-            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByAccessibility')}</p>
-            <div className="flex flex-wrap gap-2">
-              <Badge 
-                variant={selectedTravelTime === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedTravelTime('all')}
-              >
-                {t('filterAll')}
-              </Badge>
-              <Badge 
-                variant={selectedTravelTime === 'direct-access' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedTravelTime('direct-access')}
-              >
-                {t('accessibilityDirect')}
-              </Badge>
-              <Badge 
-                variant={selectedTravelTime === 'easy-access' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedTravelTime('easy-access')}
-              >
-                {t('accessibilityEasy')}
-              </Badge>
-              <Badge 
-                variant={selectedTravelTime === 'medium-access' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedTravelTime('medium-access')}
-              >
-                {t('accessibilityMedium')}
-              </Badge>
-            </div>
+          
+          <div className="w-auto">
+            <Button 
+              onClick={() => setFiltersOpen(true)}
+              variant="outline" 
+              className="flex items-center gap-2"
+            >
+              <AdjustmentsHorizontal className="w-4 h-4" />
+              {t('filters')}
+            </Button>
           </div>
         </div>
+
+        <FiltersDialog 
+          open={filtersOpen}
+          onOpenChange={setFiltersOpen}
+          selectedType={selectedType}
+          setSelectedType={setSelectedType}
+          selectedDifficulty={selectedDifficulty}
+          setSelectedDifficulty={setSelectedDifficulty}
+          selectedTravelTime={selectedTravelTime}
+          setSelectedTravelTime={setSelectedTravelTime}
+        />
 
         {selectedCategory !== 'all' && (
           <div className="mb-12">

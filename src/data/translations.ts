@@ -367,5 +367,17 @@ export const translations: Translation = {
     es: "Cerca en Bus o Uber",
     fr: "Proche en Bus ou Uber",
     de: "Nahe mit Bus oder Uber",
+  },
+  filters: {
+    en: "Filters",
+    es: "Filtros",
+    fr: "Filtres",
+    de: "Filter",
+  },
+  apply: {
+    en: "Apply",
+    es: "Aplicar",
+    fr: "Appliquer",
+    de: "Anwenden",
   }
 };
