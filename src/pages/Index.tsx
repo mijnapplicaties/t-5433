@@ -9,7 +9,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { Trail, TrailType, Difficulty, TransportationType, TravelTimeCategory, TrailCategory } from '../types/trail';
 import TrailCard from '../components/TrailCard';
 import BeachCard from '../components/BeachCard';
-import { Bus, Car, Filter, FootprintsIcon, Map, Mountain, ThumbsUp, TreePine, Users } from 'lucide-react';
+import { Bus, Car, Filter, FootprintsIcon, Map, Mountain, ThumbsUp, TreePine, Users, Waves } from 'lucide-react';
 import FiltersDialog from '../components/FiltersDialog';
 
 type TravelTimeCategoryFilter = 'all' | TravelTimeCategory;
@@ -80,9 +80,11 @@ const Index = () => {
       case 'high-mountain':
         return <Mountain className="w-4 h-4 mr-1" />;
       case 'easy-mountain':
-        return <Mountain className="w-4 h-4 mr-1" />;
+        return <TreePine className="w-4 h-4 mr-1" />;
       case 'walking-path':
         return <FootprintsIcon className="w-4 h-4 mr-1" />;
+      case 'beaches-lakes':
+        return <Waves className="w-4 h-4 mr-1" />;
       default:
         return <Map className="w-4 h-4 mr-1" />;
     }
@@ -146,6 +148,14 @@ const Index = () => {
               >
                 <FootprintsIcon className="w-4 h-4 mr-1" />
                 {t('categoryWalkingPath')}
+              </Badge>
+              <Badge 
+                variant={selectedCategory === 'beaches-lakes' ? 'default' : 'outline'}
+                className="cursor-pointer text-base"
+                onClick={() => setSelectedCategory('beaches-lakes')}
+              >
+                <Waves className="w-4 h-4 mr-1" />
+                {t('categoryBeachesLakes')}
               </Badge>
               
               <Button 

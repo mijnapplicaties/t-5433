@@ -362,6 +362,12 @@ export const translations: Translation = {
     fr: "Sentiers de Promenade",
     de: "Wanderwege",
   },
+  categoryBeachesLakes: {
+    en: "Beaches & Lakes",
+    es: "Playas y Lagos",
+    fr: "Plages et Lacs",
+    de: "Strände und Seen",
+  },
   nearByBusOrUber: {
     en: "Near by Bus or Uber",
     es: "Cerca en Bus o Uber",

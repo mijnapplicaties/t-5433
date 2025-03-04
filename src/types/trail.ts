@@ -3,7 +3,7 @@ export type TrailType = "day-hike" | "multi-day";
 export type Difficulty = "easy" | "moderate" | "hard" | "expert";
 export type TransportationType = "bus" | "taxi" | "hitchhiking" | "private-transfer" | "walking";
 export type TravelTimeCategory = "direct-access" | "easy-access" | "medium-access";
-export type TrailCategory = "high-mountain" | "easy-mountain" | "walking-path";
+export type TrailCategory = "high-mountain" | "easy-mountain" | "walking-path" | "beaches-lakes";
 
 export interface Trail {
   id: string;
