@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -47,7 +46,7 @@ const Index = () => {
   const directAccessTrailNames = [
     'Cascada de los Duendes',
     'Mirador Lago Gutiérrez',
-    'Cerro San Martín',  // Updated to match the exact name with accent mark
+    'Cerro San Martín',
     'Playa Muñoz',
     'Lago Gutiérrez'
   ];
@@ -158,15 +157,14 @@ const Index = () => {
                 {t('categoryBeachesLakes')}
               </Badge>
               
-              <Button 
-                onClick={() => setFiltersOpen(true)}
+              <Badge 
                 variant="outline" 
-                size="sm"
-                className="flex items-center gap-2 rounded-full px-4 ml-2 text-base font-semibold border-black"
+                className="cursor-pointer text-base border-black"
+                onClick={() => setFiltersOpen(true)}
               >
-                <Filter className="w-4 h-4" />
+                <Filter className="w-4 h-4 mr-1" />
                 {t('filters')}
-              </Button>
+              </Badge>
             </div>
           </div>
         </div>
