@@ -1,4 +1,3 @@
-
 import { Beach } from "../types/beach";
 
 export const beaches: Beach[] = [
@@ -81,7 +80,7 @@ export const beaches: Beach[] = [
       fr: "Une plage tranquille aux eaux bleues cristallines entourée de montagnes, parfaite pour se détendre et profiter de l'atmosphère paisible. Les eaux claires invitent à la baignade et la plage offre un excellent endroit pour la photographie.",
       de: "Ein ruhiger Strand mit klarem blauen Wasser, umgeben von Bergen, perfekt zum Entspannen und Genießen der friedlichen Atmosphäre. Das klare Wasser lädt zum Schwimmen ein und der Strand bietet einen großartigen Ort für Fotografien."
     },
-    imageUrl: "/lovable-uploads/bbef778a-7d8e-4370-959e-727598c9b33f.png",
+    imageUrl: "/lovable-uploads/d4f29e53-7988-413a-b78f-a574db2195e8.png",
     beachType: "sandy",
     waterTemp: {
       summer: 17,
