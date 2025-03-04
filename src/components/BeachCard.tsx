@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Beach } from '../types/beach';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -69,11 +68,11 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
         className="group hover:shadow-lg transition-all duration-300 animate-fadeIn cursor-pointer"
         onClick={() => setIsOpen(true)}
       >
-        <div className="relative overflow-hidden rounded-t-lg h-56">
+        <div className="relative overflow-hidden rounded-t-lg h-48">
           <img
             src={beach.imageUrl}
             alt={beach.name}
-            className="w-full h-full object-cover object-bottom transform group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute bottom-4 right-4 flex gap-2 bg-white/80 rounded-full px-3 py-1">
             <Badge className="bg-blue-500 text-white">{getBeachTypeTranslation(beach.beachType)}</Badge>
@@ -128,7 +127,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
             <img
               src={beach.imageUrl}
               alt={beach.name}
-              className="w-full h-72 object-cover object-bottom rounded-lg mb-6"
+              className="w-full h-64 object-cover object-center rounded-lg mb-6"
             />
             
             <div className="grid grid-cols-3 gap-4 mb-6 bg-gray-50 p-4 rounded-lg">
