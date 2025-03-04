@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -8,7 +9,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { Trail, TrailType, Difficulty, TransportationType, TravelTimeCategory, TrailCategory } from '../types/trail';
 import TrailCard from '../components/TrailCard';
 import BeachCard from '../components/BeachCard';
-import { AdjustmentsHorizontal, Bus, Car, FootprintsIcon, Map, Mountain, ThumbsUp, TreePine, Users } from 'lucide-react';
+import { Bus, Car, Filter, FootprintsIcon, Map, Mountain, ThumbsUp, TreePine, Users } from 'lucide-react';
 import FiltersDialog from '../components/FiltersDialog';
 
 type TravelTimeCategoryFilter = 'all' | TravelTimeCategory;
@@ -155,7 +156,7 @@ const Index = () => {
               variant="outline" 
               className="flex items-center gap-2"
             >
-              <AdjustmentsHorizontal className="w-4 h-4" />
+              <Filter className="w-4 h-4" />
               {t('filters')}
             </Button>
           </div>
