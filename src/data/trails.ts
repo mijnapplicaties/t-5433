@@ -179,7 +179,7 @@ export const trails: Trail[] = [
       fr: "Une randonnée courte mais récompensante avec des vues panoramiques du Lago Gutiérrez. Accès facile depuis le Camping Los Coihues.",
       de: "Eine kurze aber belohnte Wanderung mit schiczen Blicken auf den Lago Gutiérrez. Einfaches Zugang von Camping Los Coihues."
     },
-    imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
+    imageUrl: "/lovable-uploads/93c2508f-ddf6-4b0b-bf08-0fc63590f9ae.png",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["Lake views", "Easy access", "Family friendly"],
     transportation: ["walking", "hitchhiking", "taxi"],
