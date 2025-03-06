@@ -4,6 +4,7 @@ export type Difficulty = "easy" | "moderate" | "hard" | "expert";
 export type TransportationType = "bus" | "taxi" | "hitchhiking" | "private-transfer" | "walking";
 export type TravelTimeCategory = "direct-access" | "easy-access" | "medium-access";
 export type TrailCategory = "high-mountain" | "easy-mountain" | "walking-path" | "beaches-lakes";
+export type TrailRegion = "pampa-linda" | "bariloche" | "llao-llao";
 
 export interface Trail {
   id: string;
@@ -28,4 +29,5 @@ export interface Trail {
   travelTime: number;
   busLines?: string;
   category?: TrailCategory;
+  region?: TrailRegion;
 }

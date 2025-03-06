@@ -59,6 +59,9 @@ const Index = () => {
     !directAccessTrailNames.includes(trail.name)
   );
 
+  const pampLindaHikes = multiDayHikes.filter(trail => trail.region === 'pampa-linda');
+  const otherMultiDayHikes = multiDayHikes.filter(trail => trail.region !== 'pampa-linda');
+
   const getTransportIcon = (type: TransportationType) => {
     switch(type) {
       case 'bus':
@@ -234,18 +237,45 @@ const Index = () => {
           </div>
         )}
 
-        {selectedCategory === 'all' && (selectedType === 'all' || selectedType === 'multi-day') && multiDayHikes.length > 0 && (
+        {selectedCategory === 'all' && (selectedType === 'all' || selectedType === 'multi-day') && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-forest mb-6">{t('filterMultiDay')}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {multiDayHikes.map((trail) => (
-                <TrailCard 
-                  key={trail.id} 
-                  trail={trail}
-                  transportIcons={trail.transportation.map(t => getTransportIcon(t))}
-                />
-              ))}
-            </div>
+            
+            {pampLindaHikes.length > 0 && (
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+                  Pampa Linda Hikes
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {pampLindaHikes.map((trail) => (
+                    <TrailCard 
+                      key={trail.id} 
+                      trail={trail}
+                      transportIcons={trail.transportation.map(t => getTransportIcon(t))}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {otherMultiDayHikes.length > 0 && (
+              <div>
+                {pampLindaHikes.length > 0 && (
+                  <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+                    {t('otherMultiDayHikes')}
+                  </h3>
+                )}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {otherMultiDayHikes.map((trail) => (
+                    <TrailCard 
+                      key={trail.id} 
+                      trail={trail}
+                      transportIcons={trail.transportation.map(t => getTransportIcon(t))}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
 

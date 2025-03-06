@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -374,7 +373,8 @@ export const trails: Trail[] = [
     transportation: ["private-transfer"],
     distanceFromCampsite: 60,
     travelTime: 120,
-    category: "high-mountain"
+    category: "high-mountain",
+    region: "pampa-linda"
   },
   {
     id: "17",
@@ -423,5 +423,53 @@ export const trails: Trail[] = [
     travelTime: 35,
     busLines: "Line 20",
     category: "easy-mountain"
+  },
+  {
+    id: "19",
+    name: "Laguna Ilón",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 32,
+    duration: 48,
+    elevation: 1800,
+    requiresReservation: true,
+    description: {
+      en: "A spectacular two-day trek to Laguna Ilón, a hidden alpine lake surrounded by towering peaks. Starts from Pampa Linda and requires a transfer from Los Coihues.",
+      es: "Una espectacular caminata de dos días a Laguna Ilón, un lago alpino escondido rodeado de imponentes picos. Comienza en Pampa Linda y requiere un traslado desde Los Coihues.",
+      fr: "Une randonnée spectaculaire de deux jours à Laguna Ilón, un lac alpin caché entouré de hauts sommets. Commence à Pampa Linda et nécessite un transfert depuis Los Coihues.",
+      de: "Eine spektakuläre zweitägige Wanderung zur Laguna Ilón, einem versteckten Alpensee, umgeben von hohen Gipfeln. Beginnt in Pampa Linda und erfordert einen Transfer von Los Coihues."
+    },
+    imageUrl: "/lovable-uploads/5e6c44cc-a8c6-4013-8464-49f82efa40fc.png",
+    startingPoint: "Pampa Linda (transfer required)",
+    highlights: ["Alpine lake", "Remote wilderness", "Overnight camping"],
+    transportation: ["private-transfer"],
+    distanceFromCampsite: 60,
+    travelTime: 120,
+    category: "high-mountain",
+    region: "pampa-linda"
+  },
+  {
+    id: "20",
+    name: "Mirada del Doctor",
+    type: "multi-day",
+    difficulty: "moderate",
+    distance: 28,
+    duration: 36,
+    elevation: 1400,
+    requiresReservation: true,
+    description: {
+      en: "A beautiful two-day hike to a viewpoint offering panoramic views of Mount Tronador and its glaciers. Starts from Pampa Linda and requires a transfer from Los Coihues.",
+      es: "Una hermosa caminata de dos días a un mirador que ofrece vistas panorámicas del Monte Tronador y sus glaciares. Comienza en Pampa Linda y requiere un traslado desde Los Coihues.",
+      fr: "Une belle randonnée de deux jours jusqu'à un point de vue offrant des vues panoramiques sur le Mont Tronador et ses glaciers. Commence à Pampa Linda et nécessite un transfert depuis Los Coihues.",
+      de: "Eine schöne zweitägige Wanderung zu einem Aussichtspunkt mit Panoramablick auf den Mount Tronador und seine Gletscher. Beginnt in Pampa Linda und erfordert einen Transfer von Los Coihues."
+    },
+    imageUrl: "/lovable-uploads/b319c062-05e6-4673-85bb-e653feab11fb.png",
+    startingPoint: "Pampa Linda (transfer required)",
+    highlights: ["Glacier views", "Mount Tronador", "Panoramic viewpoint"],
+    transportation: ["private-transfer"],
+    distanceFromCampsite: 60,
+    travelTime: 120,
+    category: "high-mountain",
+    region: "pampa-linda"
   }
 ];
