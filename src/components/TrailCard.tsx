@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -76,6 +75,43 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
           icon: <ThumbsUp className="w-4 h-4" />,
           label: t('hitchhiking')
         };
+      default:
+        return null;
+    }
+  };
+
+  const getBusInfo = (trail: Trail) => {
+    if (!trail.transportation.includes('bus')) return null;
+    
+    switch(trail.id) {
+      case 't1': // Cerro Llao Llao
+        return "Bus 20";
+      case 't2': // Cerro Lopez
+        return "Bus 20, 21";
+      case 't3': // Refugio Frey
+        return "Bus 55";
+      case 't4': // Cerro Campanario
+        return "Bus 20, 21";
+      case 't5': // Laguna Negra
+        return "Bus 55";
+      case 't6': // Cerro Catedral
+        return "Bus 55";
+      case 't7': // Circuito Chico
+        return "Bus 20";
+      case 't8': // Cascada de los Duendes
+        return "Walking distance";
+      case 't9': // Lago Escondido
+        return "Bus 20";
+      case 't10': // Mirador Lago Gutiérrez
+        return "Walking distance";
+      case 't11': // Cerro San Martín
+        return "Walking distance";
+      case 't12': // Refugio Otto Meiling
+        return "Bus 50 + Pampa Linda Transfer";
+      case 't13': // Refugio San Martín
+        return "Bus 50 + Pampa Linda Transfer";
+      case 't14': // Cerro Tronador
+        return "Bus 50 + Pampa Linda Transfer";
       default:
         return null;
     }
@@ -163,6 +199,13 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                 );
               })}
             </div>
+            
+            {getBusInfo(trail) && (
+              <div className="mt-2 bg-blue-50 p-3 rounded-md">
+                <p className="font-medium">{t('busLines')}: {getBusInfo(trail)}</p>
+                <p className="text-sm mt-1">{t('checkSchedules')}</p>
+              </div>
+            )}
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2">
@@ -242,6 +285,13 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                       </div>
                     );
                   })}
+                  
+                  {getBusInfo(trail) && (
+                    <div className="mt-2 bg-blue-100 p-3 rounded-md">
+                      <p className="font-medium">{t('busLines')}: {getBusInfo(trail)}</p>
+                      <p className="text-sm mt-1">{t('checkSchedules')}</p>
+                    </div>
+                  )}
                 </div>
               </div>
 
