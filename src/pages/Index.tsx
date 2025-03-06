@@ -38,6 +38,18 @@ const Index = () => {
     return typeMatch && difficultyMatch && accessibilityMatch && categoryMatch;
   });
 
+  const filteredBeaches = beaches.filter(beach => {
+    if (selectedCategory === 'beaches-lakes') return true;
+    
+    const showAllCategories = selectedCategory === 'all';
+    const travelTimeMatch = selectedTravelTime === 'all' || 
+      (selectedTravelTime === 'direct-access' && beach.distanceFromCampsite <= 2) ||
+      (selectedTravelTime === 'easy-access' && beach.travelTime <= 30) ||
+      (selectedTravelTime === 'medium-access' && beach.travelTime > 30);
+    
+    return showAllCategories && travelTimeMatch;
+  });
+
   const allHikes = filteredTrails;
   
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
@@ -279,11 +291,15 @@ const Index = () => {
 
         <div className="mb-12 mt-16">
           <h2 className="text-2xl font-bold text-forest mb-6">{t('beaches')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {beaches.map((beach) => (
-              <BeachCard key={beach.id} beach={beach} />
-            ))}
-          </div>
+          {filteredBeaches.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredBeaches.map((beach) => (
+                <BeachCard key={beach.id} beach={beach} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-gray-500 py-8">{t('noBeachesFound')}</p>
+          )}
         </div>
       </div>
     </div>

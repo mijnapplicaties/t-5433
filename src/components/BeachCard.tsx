@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import { Beach } from '../types/beach';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { Thermometer, Droplets, Waves, Map, Clock, ArrowUpRight } from 'lucide-react';
+import { Map, Clock, ArrowUpRight, ThumbsUp, Bus, Car, Users, FootprintsIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import {
   Dialog,
@@ -30,33 +31,18 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
     }
   };
 
-  const getActivityIcon = (activity: string) => {
-    switch (activity) {
-      case 'swimming':
-        return <Droplets className="w-4 h-4" />;
-      case 'kayaking':
-        return <Waves className="w-4 h-4" />;
-      case 'fishing':
-        return <ArrowUpRight className="w-4 h-4" />;
-      case 'picnic':
-        return <Map className="w-4 h-4" />;
-      case 'viewpoint':
-        return <Map className="w-4 h-4" />;
-      case 'sunbathing':
-        return <Thermometer className="w-4 h-4" />;
-      default:
-        return <Map className="w-4 h-4" />;
-    }
-  };
-
-  const getFacilityIcon = (facility: string) => {
-    switch (facility) {
-      case 'parkingAvailable':
-        return <Map className="w-4 h-4" />;
-      case 'restrooms':
-        return <Map className="w-4 h-4" />;
-      case 'foodVendors':
-        return <Map className="w-4 h-4" />;
+  const getTransportIcon = (type: string) => {
+    switch(type) {
+      case 'bus':
+        return <Bus className="w-4 h-4" />;
+      case 'taxi':
+        return <Car className="w-4 h-4" />;
+      case 'hitchhiking':
+        return <ThumbsUp className="w-4 h-4" />;
+      case 'private-transfer':
+        return <Users className="w-4 h-4" />;
+      case 'walking':
+        return <FootprintsIcon className="w-4 h-4" />;
       default:
         return <Map className="w-4 h-4" />;
     }
@@ -87,11 +73,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
         </CardHeader>
 
         <CardContent>
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="flex items-center gap-2">
-              <Thermometer className="w-4 h-4 text-blue-500" />
-              <span className="text-sm">{t('waterTemp')}: {beach.waterTemp.summer}°C</span>
-            </div>
+          <div className="grid grid-cols-1 gap-4 mb-4">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-blue-500" />
               <span className="text-sm">{beach.travelTime} {t('minutes')}</span>
@@ -101,12 +83,12 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
           <p className="text-sm text-gray-600 line-clamp-2">{beach.description[language]}</p>
           
           <div className="mt-4">
-            <h4 className="text-sm font-semibold mb-2">{t('activities')}</h4>
+            <h4 className="text-sm font-semibold mb-2">{t('howToGetThere')}</h4>
             <div className="flex flex-wrap gap-2">
-              {beach.activities.map((activity, index) => (
+              {beach.transportation.map((transport, index) => (
                 <Badge key={index} variant="outline" className="flex items-center gap-1 text-xs">
-                  {getActivityIcon(activity)}
-                  <span>{t(activity)}</span>
+                  {getTransportIcon(transport)}
+                  <span>{t(transport === 'private-transfer' ? 'privateTransfer' : transport)}</span>
                 </Badge>
               ))}
             </div>
@@ -130,15 +112,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
               className="w-full h-64 object-cover object-center rounded-lg mb-6"
             />
             
-            <div className="grid grid-cols-3 gap-4 mb-6 bg-gray-50 p-4 rounded-lg">
-              <div className="flex items-center gap-2">
-                <Thermometer className="w-5 h-5 text-blue-500" />
-                <div>
-                  <p className="text-sm font-semibold">{t('waterTemp')}</p>
-                  <p className="text-base">{t('summer')}: {beach.waterTemp.summer}°C</p>
-                  <p className="text-base">{t('winter')}: {beach.waterTemp.winter}°C</p>
-                </div>
-              </div>
+            <div className="grid grid-cols-2 gap-4 mb-6 bg-gray-50 p-4 rounded-lg">
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5 text-blue-500" />
                 <div>
@@ -147,7 +121,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <Waves className="w-5 h-5 text-blue-500" />
+                <Map className="w-5 h-5 text-blue-500" />
                 <div>
                   <p className="text-sm font-semibold">{t('beachType')}</p>
                   <p className="text-base">{getBeachTypeTranslation(beach.beachType)}</p>
@@ -162,12 +136,12 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-2">{t('activities')}</h3>
+                <h3 className="text-lg font-semibold mb-2">{t('howToGetThere')}</h3>
                 <div className="flex flex-wrap gap-2">
-                  {beach.activities.map((activity, index) => (
+                  {beach.transportation.map((transport, index) => (
                     <Badge key={index} variant="outline" className="flex items-center gap-1">
-                      {getActivityIcon(activity)}
-                      <span>{t(activity)}</span>
+                      {getTransportIcon(transport)}
+                      <span>{t(transport === 'private-transfer' ? 'privateTransfer' : transport)}</span>
                     </Badge>
                   ))}
                 </div>
@@ -178,7 +152,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
                 <div className="flex flex-wrap gap-2">
                   {beach.facilities.map((facility, index) => (
                     <Badge key={index} variant="outline" className="flex items-center gap-1">
-                      {getFacilityIcon(facility)}
+                      <Map className="w-4 h-4" />
                       <span>{t(facility)}</span>
                     </Badge>
                   ))}

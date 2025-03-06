@@ -404,4 +404,10 @@ export const translations: Translation = {
     fr: "Pampa Linda (2h de route)",
     de: "Pampa Linda (2 Std. entfernt)",
   },
+  noBeachesFound: {
+    en: "No beaches found with the current filters",
+    es: "No se encontraron playas con los filtros actuales",
+    fr: "Aucune plage trouvée avec les filtres actuels",
+    de: "Keine Strände mit den aktuellen Filtern gefunden",
+  },
 };
