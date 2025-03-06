@@ -1,3 +1,4 @@
+<lov-code>
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -54,21 +55,22 @@ export const trails: Trail[] = [
     type: "multi-day",
     difficulty: "hard",
     distance: 45,
-    duration: 72,
-    elevation: 2200,
+    duration: 3,
+    elevation: 1080,
     requiresReservation: true,
     description: {
-      en: "A spectacular three-day trek connecting Refugio Frey and Refugio Jakob. Start from Cerro Catedral (15-min drive from Los Coihues) and end at Colonia Suiza. Return by bus to Los Coihues.",
-      es: "Una espectacular travesía de tres días que conecta el Refugio Frey y el Refugio Jakob. Comience desde Cerro Catedral (15 minutos en auto desde Los Coihues) y termine en Colonia Suiza. Regrese en bus a Los Coihues.",
-      fr: "Une randonnée spectaculaire de trois jours connectant le Refugio Frey et le Refugio Jakob. Commencez à partir de Cerro Catedral (15 minutes en voiture depuis Los Coihues) et terminez à Colonia Suiza. Retournez en bus à Los Coihues.",
-      de: "Eine wunderbare drei-Tage-Wanderung, die Refugio Frey und Refugio Jakob verbindet. Beginnen Sie von Cerro Catedral (15 Minuten in Auto aus Los Coihues) und beenden Sie sich in Colonia Suiza. Registrieren Sie sich bei dem Bus zum Rückweg nach Los Coihues."
+      en: "We recommend taking an Uber from Camping to the base of Cerro Catedral. The trip takes approximately 15 minutes. Buses often involve a long wait. This trail starts at a higher point than the one from Lake Gutiérrez, saving about 1 hour of hiking. From the base of Cerro Catedral, you can begin your ascent to Refugio Frey, enjoying spectacular views as you progress through the mountainous landscape. The effort is truly worth it when you reach the panoramic views of Lake Gutiérrez, Bariloche, and the valley that extends to the summit of Frey, an impressive landscape that rewards every step of the ascent.",
+      es: "Recomendamos tomarse un Uber desde el Camping hasta la base del Cerro Catedral. El viaje dura aproximadamente 15 minutos. Los buses muchas veces presentan una gran espera. Este sendero comienza en un punto más alto que el que parte desde el Lago Gutiérrez, lo que permite ahorrar alrededor de 1 hora de caminata. Desde la base del Cerro Catedral, podrás iniciar el ascenso al Refugio Frey, disfrutando de vistas espectaculares mientras avanzas a través del paisaje montañoso. El esfuerzo realmente vale la pena al llegar a las vistas panorámicas del Lago Gutiérrez, Bariloche y el valle que se extiende hasta la cumbre del Frey, un paisaje impresionante que recompensa cada paso del ascenso.",
+      fr: "Nous vous recommandons de prendre un Uber depuis le Camping jusqu'à la base de Cerro Catedral. Le trajet dure environ 15 minutes. Les bus impliquent souvent une longue attente. Ce sentier commence à un point plus élevé que celui du lac Gutiérrez, ce qui permet d'économiser environ 1 heure de marche. Depuis la base de Cerro Catedral, vous pouvez commencer votre ascension vers le Refugio Frey, en profitant de vues spectaculaires tout en progressant à travers le paysage montagneux. L'effort en vaut vraiment la peine lorsque vous atteignez les vues panoramiques du lac Gutiérrez, de Bariloche et de la vallée qui s'étend jusqu'au sommet du Frey, un paysage impressionnant qui récompense chaque pas de l'ascension.",
+      de: "Wir empfehlen, einen Uber vom Camping zur Basis des Cerro Catedral zu nehmen. Die Fahrt dauert etwa 15 Minuten. Busse sind oft mit langen Wartezeiten verbunden. Dieser Weg beginnt an einem höheren Punkt als der vom Lago Gutiérrez, was etwa 1 Stunde Wanderzeit spart. Von der Basis des Cerro Catedral aus können Sie Ihren Aufstieg zum Refugio Frey beginnen und dabei spektakuläre Aussichten genießen, während Sie durch die Berglandschaft wandern. Die Anstrengung lohnt sich wirklich, wenn Sie die Panoramablicke auf den Lago Gutiérrez, Bariloche und das Tal erreichen, das sich bis zum Gipfel des Frey erstreckt, eine beeindruckende Landschaft, die jeden Schritt des Aufstiegs belohnt."
     },
     imageUrl: "/lovable-uploads/3b45435b-d0d0-4fb7-ac3b-73c18e21fd50.png",
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["highlightTwoMountainRefuges", "highlightAlpineLakes", "highlightHighMountainPasses"],
-    transportation: ["private-transfer", "taxi"],
+    transportation: ["private-transfer", "taxi", "bus"],
     distanceFromCampsite: 8,
     travelTime: 15,
+    busLines: "Linea 50 (desde Coihues hasta km 8 ruta 82) + Linea 55 (Ruta 82)",
     category: "high-mountain"
   },
   {
@@ -222,7 +224,7 @@ export const trails: Trail[] = [
     elevation: 850,
     requiresReservation: false,
     description: {
-      en: "To reach Colonia Suiza from Camping Los Coihues, you can take bus 50 to downtown Bariloche and then transfer to bus 10, which takes you directly to Colonia Suiza. If going by car, follow Route 82 until connecting with Provincial Route 79, a gravel road that will take you to your destination in about 7 km. You can also go by bicycle or walking along the Old Road to Colonia Suiza, a forest-surrounded path that crosses the slope of Cerro López. Colonia Suiza is a picturesque village on the shores of Lake Moreno, known for its history, gastronomy, and natural surroundings. Founded by Swiss immigrants in the late 19th century, it preserves rustic architecture and a traditional atmosphere. It's famous for its craft fair and typical gastronomy, especially curanto, an ancestral dish cooked underground.",
+      en: "To reach Colonia Suiza from Camping Los Coihues, you can take bus 50 to downtown Bariloche and then transfer to bus 10, which takes you directly to Colonia Suiza. If going by car, follow Route 82 until connecting with Provincial Route 79, a gravel road that will take you to your destination in about 7 km. You can also go by bicycle or walking along the Old Road to Colonia Suiza, a forest-surrounded path that crosses the slope of Cerro López. Colonia Suiza is a picturesque village on the shores of Lake Moreno, known for its history, its gastronomy and its natural surroundings. Founded by Swiss immigrants in the late 19th century, it preserves rustic architecture and a traditional atmosphere. It's famous for its craft fair and its typical gastronomy, especially curanto, an ancestral dish cooked underground.",
       es: "Para llegar a Colonia Suiza desde Camping Los Coihues, puedes tomar el colectivo bus 50 hacia el centro de Bariloche y luego hacer combinación con el bus 10, que te lleva directamente a Colonia Suiza. Si vas en auto, sigue la Ruta 82 hasta conectar con la Ruta Provincial 79, un camino de ripio que en unos 7 km te llevará a destino. También puedes ir en bicicleta o caminando por el Camino Viejo a Colonia Suiza, un sendero rodeado de bosque que atraviesa el faldeo del Cerro López. Colonia Suiza es un pintoresco poblado a orillas del lago Moreno, conocido por su historia, su gastronomía y su entorno natural. Fundada por inmigrantes suizos a fines del siglo XIX, conserva una arquitectura rústica y un ambiente tradicional. Es famosa por su feria artesanal y su gastronomía típica, especialmente el curanto, un plato ancestral cocinado bajo tierra.",
       fr: "Pour rejoindre Colonia Suiza depuis Camping Los Coihues, vous pouvez prendre le bus 50 vers le centre-ville de Bariloche, puis correspondre avec le bus 10, qui vous mène directement à Colonia Suiza. Si vous y allez en voiture, suivez la Route 82 jusqu'à la connexion avec la Route Provinciale 79, une route de gravier qui vous mènera à destination en environ 7 km. Vous pouvez également y aller à vélo ou à pied par le Vieux Chemin de Colonia Suiza, un sentier entouré de forêt qui traverse le versant du Cerro López. Colonia Suiza est un village pittoresque au bord du lac Moreno, connu pour son histoire, sa gastronomie et son environnement naturel. Fondée par des immigrants suisses à la fin du XIXe siècle, elle conserve une architecture rustique et une atmosphère traditionnelle. Elle est célèbre pour son marché artisanal et sa gastronomie typique, notamment le curanto, un plat ancestral cuit sous terre.",
       de: "Um von Camping Los Coihues nach Colonia Suiza zu gelangen, können Sie den Bus 50 ins Zentrum von Bariloche nehmen und dann auf den Bus 10 umsteigen, der Sie direkt nach Colonia Suiza bringt. Wenn Sie mit dem Auto fahren, folgen Sie der Route 82 bis zur Verbindung mit der Provinzstraße 79, einem Schotterweg, der Sie in etwa 7 km ans Ziel führt. Sie können auch mit dem Fahrrad fahren oder auf dem Alten Weg nach Colonia Suiza wandern, einem von Wald umgebenen Pfad, der den Hang des Cerro López überquert. Colonia Suiza ist ein malerisches Dorf am Ufer des Moreno-Sees, bekannt für seine Geschichte, Gastronomie und natürliche Umgebung. Gegründet von Schweizer Einwanderern im späten 19. Jahrhundert, bewahrt es eine rustikale Architektur und eine traditionelle Atmosphäre. Es ist berühmt für seinen Kunsthandwerksmarkt und typische Gastronomie, insbesondere Curanto, ein uraltes Gericht, das unter der Erde gekocht wird."
@@ -316,64 +318,4 @@ export const trails: Trail[] = [
     elevation: 1500,
     requiresReservation: true,
     description: {
-      en: "A three-day circuit. From Camping Los Coihues, take bus line 10 to Colonia Suiza (30 min). Start early as the first section is exposed to sun. Register at the park entrance.",
-      es: "Un circuito de tres días. Desde Camping Los Coihues, tome la línea de bus 10 a Colonia Suiza (30 minutos). Comience temprano ya que la primera sección está expuesta al sol. Regístrese en la entrada del parque.",
-      fr: "Un circuit de trois jours. Depuis le Camping Los Coihues, prenez la ligne de bus 10 à Colonia Suiza (30 minutes). Commencez tôt car la première section est exposée au soleil. Inscrivez-vous à l'entrée du parc.",
-      de: "Ein drei-Tage-Kreislauf. Vom Camping Los Coihues aus nehmen Sie die Linie 10 zu Colonia Suiza (30 Minuten). Beginnen Sie früh, da die erste Section unter Sonne liegt. Registrieren Sie sich bei der Parkeingang."
-    },
-    imageUrl: "/lovable-uploads/9d067eaf-8ba5-4bf1-a730-0a1f06c0e9c9.png",
-    startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
-    highlights: ["highlightMultipleLakes", "highlightMountainRefuges", "highlightForestTrails"],
-    transportation: ["bus", "hitchhiking"],
-    distanceFromCampsite: 15,
-    travelTime: 30,
-    category: "high-mountain"
-  },
-  {
-    id: "15",
-    name: "López-Laguna Negra Circuit",
-    type: "multi-day",
-    difficulty: "hard",
-    distance: 38,
-    duration: 72,
-    elevation: 2000,
-    requiresReservation: true,
-    description: {
-      en: "A challenging three-day circuit connecting Refugio López and Refugio Laguna Negra. Take bus line 10 from Los Coihues to Colonia Suiza to start the trek.",
-      es: "Un desafiante circuito de tres d��as que conecta el Refugio López y el Refugio Laguna Negra. Tome la línea de bus 10 desde Los Coihues hasta Colonia Suiza para comenzar la travesía.",
-      fr: "Un circuit difficile de trois jours connectant Refugio L��pez et Refugio Laguna Negra. Prenez la ligne de bus 10 de Los Coihues à Colonia Suiza pour commencer la randonnée.",
-      de: "Ein schwieriger drei-Tage-Kreislauf, der Refugio López und Refugio Laguna Negra verbindet. Nehmen Sie die Linie 10 von Los Coihues zu Colonia Suiza, um die Wanderung zu beginnen."
-    },
-    imageUrl: "/lovable-uploads/c2cfed37-332c-49bb-8f26-e701a5a11d48.png",
-    startingPoint: "Colonia Suiza (30 min bus from Los Coihues)",
-    highlights: ["highlightTwoMountainRefuges", "highlightPanoramicViews", "highlightTechnicalTerrain"],
-    transportation: ["bus", "private-transfer"],
-    distanceFromCampsite: 15,
-    travelTime: 30,
-    category: "high-mountain"
-  },
-  {
-    id: "16",
-    name: "Travesía 5 Lagunas",
-    type: "multi-day",
-    difficulty: "hard",
-    distance: 45,
-    duration: 72,
-    elevation: 2500,
-    requiresReservation: true,
-    description: {
-      en: "Epic three-day trek visiting five alpine lakes: Negra, CAB, Cretton, Jujuy, and Ilón. Starts from Pampa Linda.",
-      es: "Épica travesía de tres días visitando cinco lagos alpinos: Negra, CAB, Cretton, Jujuy e Ilón. Comienza en Pampa Linda.",
-      fr: "Épique randonnée de trois jours visitant cinq lacs alpins : Negra, CAB, Cretton, Jujuy et Ilón. Départ de Pampa Linda.",
-      de: "Ein épischer drei-Tage-Kreislauf, der fünf alpinen Lakes besucht: Negra, CAB, Cretton, Jujuy und Ilón. Beginnt in Pampa Linda."
-    },
-    imageUrl: "/lovable-uploads/67fa31e5-4160-46c9-92fb-86aad3955a56.png",
-    startingPoint: "Pampa Linda (transfer required)",
-    highlights: ["highlightFiveAlpineLakes", "highlightRemoteWilderness", "highlightTechnicalTerrain"],
-    transportation: ["private-transfer"],
-    distanceFromCampsite: 60,
-    travelTime: 120,
-    category: "high-mountain",
-    region: "pampa-linda"
-  }
-];
+      en: "A three-day circuit. From Camping Los Coihues, take bus line 10 to Colonia Suiza (30 min). Start
