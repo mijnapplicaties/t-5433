@@ -392,10 +392,4 @@ export const translations: Translation = {
     fr: "Catégories",
     de: "Kategorien",
   },
-  otherMultiDayHikes: {
-    en: "Bariloche Region",
-    es: "Región de Bariloche",
-    fr: "Région de Bariloche",
-    de: "Region Bariloche",
-  },
 };
