@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -126,6 +127,9 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
 
   const formatDuration = (trail: Trail) => {
     if (trail.name === "Lago Gutiérrez") {
+      return `${Math.round(trail.duration * 60)} ${t('minutes')}`;
+    }
+    if (trail.name === "Cascada de los Duendes") {
       return `${Math.round(trail.duration * 60)} ${t('minutes')}`;
     }
     return `${trail.duration} ${t('hours')}`;
