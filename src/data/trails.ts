@@ -406,7 +406,7 @@ export const trails: Trail[] = [
   {
     id: "18",
     name: "Laguna Ilón",
-    type: "day-hike",
+    type: "multi-day", // Changed from "day-hike" to "multi-day"
     difficulty: "moderate",
     distance: 12,
     duration: 5,
@@ -419,12 +419,12 @@ export const trails: Trail[] = [
       de: "Laguna Ilón ist ein wunderschöner Alpensee, der in den Bergen in der Nähe von Bariloche versteckt ist. Der Weg bietet spektakuläre Aussichten auf umliegende Gipfel und Täler. Diese moderate Wanderung führt Sie durch einheimische Wälder, bevor Sie den unberührten See erreichen, perfekt für ein Picknick und eine Rast, bevor Sie zurückkehren."
     },
     imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
-    startingPoint: "Villa Catedral (15 min drive from Los Coihues)",
+    startingPoint: "Pampa Linda (120 min bus + transfer from Los Coihues)", // Updated starting point to indicate Pampa Linda
     highlights: ["highlightAlpineLake", "highlightForestTrail", "highlightPanoramicViews"],
-    transportation: ["private-transfer", "taxi", "bus"],
-    distanceFromCampsite: 8,
-    travelTime: 15,
-    busLines: "Linea 50 (desde Coihues hasta km 8 ruta 82) + Linea 55 (Ruta 82)",
+    transportation: ["private-transfer", "bus"],
+    distanceFromCampsite: 60, // Updated to be similar to other Pampa Linda trails
+    travelTime: 120, // Updated travel time to 120 minutes (2 hours)
+    busLines: "Bus 50 + Pampa Linda Transfer",
     category: "high-mountain"
   },
   {
