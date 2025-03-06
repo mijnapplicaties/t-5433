@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -82,7 +81,6 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   };
 
   const getBusInfo = (trail: Trail) => {
-    // Special case for Refugio Frey from Villa Catedral
     if (trail.name === "Refugio Frey from Villa Catedral") {
       return "Linea 50 (desde Coihues hasta km 8 ruta 82) + Linea 55 (Ruta 82)";
     }
@@ -131,7 +129,6 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   };
 
   const formatDuration = (trail: Trail) => {
-    // Special case for Refugio Frey from Villa Catedral
     if (trail.name === "Refugio Frey from Villa Catedral") {
       return "3 " + t('hours');
     }
@@ -145,7 +142,6 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     return `${trail.duration} ${t('hours')}`;
   };
 
-  // Special case for elevation for Refugio Frey from Villa Catedral
   const getElevation = (trail: Trail) => {
     if (trail.name === "Refugio Frey from Villa Catedral") {
       return 1080;
@@ -153,7 +149,6 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     return trail.elevation;
   };
 
-  // Special case for description for Refugio Frey from Villa Catedral
   const getDescription = (trail: Trail, lang: string) => {
     if (trail.name === "Refugio Frey from Villa Catedral") {
       switch(lang) {
@@ -254,9 +249,12 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
           </div>
           
           {getBusInfo(trail) && (
-            <div className="mt-2 bg-blue-50 p-3 rounded-md">
-              <p className="font-medium">{t('busLines')}: {getBusInfo(trail)}</p>
-              <p className="text-sm mt-1">{t('checkSchedules')}</p>
+            <div className="mt-2 bg-blue-50 p-3 rounded-md shadow-sm border border-blue-100">
+              <div className="flex items-center gap-2 text-blue-700">
+                <Bus className="w-4 h-4" />
+                <p className="font-medium">{t('busLines')}: {getBusInfo(trail)}</p>
+              </div>
+              <p className="text-sm mt-1 text-blue-600">{t('checkSchedules')}</p>
             </div>
           )}
         </div>
