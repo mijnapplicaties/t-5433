@@ -224,7 +224,7 @@ export const trails: Trail[] = [
     requiresReservation: false,
     description: {
       en: "To reach Colonia Suiza from Camping Los Coihues, you can take bus 50 to downtown Bariloche and then transfer to bus 10, which takes you directly to Colonia Suiza. If going by car, follow Route 82 until connecting with Provincial Route 79, a gravel road that will take you to your destination in about 7 km. You can also go by bicycle or walking along the Old Road to Colonia Suiza, a forest-surrounded path that crosses the slope of Cerro López. Colonia Suiza is a picturesque village on the shores of Lake Moreno, known for its history, its gastronomy and its natural surroundings. Founded by Swiss immigrants in the late 19th century, it preserves rustic architecture and a traditional atmosphere. It's famous for its craft fair and its typical gastronomy, especially curanto, an ancestral dish cooked underground.",
-      es: "Para llegar a Colonia Suiza desde Camping Los Coihues, puedes tomar el colectivo bus 50 hacia el centro de Bariloche y luego hacer combinación con el bus 10, que te lleva directamente a Colonia Suiza. Si vas en auto, sigue la Ruta 82 hasta conectar con la Ruta Provincial 79, un camino de ripio que en unos 7 km te llevará a destino. También puedes ir en bicicleta o caminando por el Camino Viejo a Colonia Suiza, un sendero rodeado de bosque que atraviesa el faldeo del Cerro López. Colonia Suiza es un pintoresco poblado a orillas del lago Moreno, conocido por su historia, su gastronomía y su entorno natural. Fundada por inmigrantes suizos a fines del siglo XIX, conserva una arquitectura rústica y un ambiente tradicional. Es famosa por su feria artesanal y su gastronomía típica, especialmente el curanto, un plato ancestral cocinado bajo tierra.",
+      es: "Para llegar a Colonia Suiza desde Camping Los Coihues, puedes tomar el colectivo bus 50 hacia el centro de Bariloche y luego hacer combinación con el bus 10, que te lleva directamente a Colonia Suiza. Si vas en auto, sigue la Ruta 82 hasta conectar con la Ruta Provincial 79, un camino de ripio que en unos 7 km te llevará a destino. También puedes ir en bicicleta o caminando por el Camino Viejo a Colonia Suiza, un sendero rodeado de bosque que atraviesa el faldeo del Cerro López. Colonia Suiza es un pintoresco poblado a orillas del lago Moreno, conocido por su historia, su gastronomía y su entorno natural. Fundada por inmigrantes suizos a fines del siglo XIX, conserva una arquitectura rústica y una atmosphera tradicional. Es famosa por su feria artesanal y su gastronomía típica, especialmente el curanto, un plato ancestral cocinado bajo tierra.",
       fr: "Pour rejoindre Colonia Suiza depuis Camping Los Coihues, vous pouvez prendre le bus 50 vers le centre-ville de Bariloche, puis correspondre avec le bus 10, qui vous mène directement à Colonia Suiza. Si vous y allez en voiture, suivez la Route 82 jusqu'à la connexion avec la Route Provinciale 79, une route de gravier qui vous mènera à destination en environ 7 km. Vous pouvez également y aller à vélo ou à pied par le Vieux Chemin de Colonia Suiza, un sentier entouré de forêt qui traverse le versant du Cerro López. Colonia Suiza est un village pittoresque au bord du lac Moreno, connu pour son histoire, sa gastronomie et son environnement naturel. Fondée par des immigrants suisses à la fin du XIXe siècle, elle conserve une architecture rustique et une atmosphère traditionnelle. Elle est célèbre pour son marché artisanal et sa gastronomie typique, notamment le curanto, un plat ancestral cuit sous terre.",
       de: "Um von Camping Los Coihues nach Colonia Suiza zu gelangen, können Sie den Bus 50 ins Zentrum von Bariloche nehmen und dann auf den Bus 10 umsteigen, der Sie direkt nach Colonia Suiza bringt. Wenn Sie mit dem Auto fahren, folgen Sie der Route 82 bis zur Verbindung mit der Provinzstraße 79, einem Schotterweg, der Sie in etwa 7 km ans Ziel führt. Sie können auch mit dem Fahrrad fahren oder auf dem Alten Weg nach Colonia Suiza wandern, einem von Wald umgebenen Pfad, der den Hang des Cerro López überquert. Colonia Suiza ist ein malerisches Dorf am Ufer des Moreno-Sees, bekannt für seine Geschichte, Gastronomie und natürliche Umgebung. Gegründet von Schweizer Einwanderern im späten 19. Jahrhundert, bewahrt es eine rustikale Architektur und eine traditionelle Atmosphäre. Es ist berühmt für seinen Kunsthandwerksmarkt und typische Gastronomie, insbesondere Curanto, ein uraltes Gericht, das unter der Erde gekocht wird."
     },
@@ -378,5 +378,77 @@ export const trails: Trail[] = [
     travelTime: 90,
     busLines: "Bus 50 + Pampa Linda Transfer",
     category: "high-mountain"
+  },
+  {
+    id: "17",
+    name: "5 Lagunas",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 40,
+    duration: 72, // 3 days
+    elevation: 1600,
+    requiresReservation: true,
+    description: {
+      en: "The 5 Lagunas Circuit is a classic multi-day trek that covers five beautiful alpine lakes. This demanding route takes you through diverse high-mountain landscapes and offers stunning camping spots by pristine lakes. The trek requires good physical condition and basic outdoor experience.",
+      es: "El Circuito de las 5 Lagunas es un clásico trekking de varios días que recorre cinco hermosos lagos alpinos. Esta ruta exigente te lleva a través de diversos paisajes de alta montaña y ofrece impresionantes lugares para acampar junto a lagos prístinos. El trekking requiere buena condición física y experiencia básica en actividades al aire libre.",
+      fr: "Le Circuit des 5 Lagunas est un trek classique de plusieurs jours qui couvre cinq beaux lacs alpins. Cet itinéraire exigeant vous emmène à travers divers paysages de haute montagne et offre de superbes sites de camping au bord de lacs intacts. Le trek nécessite une bonne condition physique et une expérience de base en plein air.",
+      de: "Der 5-Lagunen-Rundweg ist eine klassische mehrtägige Wanderung, die fünf wunderschöne Alpenseen umfasst. Diese anspruchsvolle Route führt durch verschiedene Hochgebirgslandschaften und bietet atemberaubende Campingplätze an unberührten Seen. Die Wanderung erfordert eine gute körperliche Verfassung und grundlegende Outdoor-Erfahrung."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Colonia Suiza (40 min bus from Los Coihues)",
+    highlights: ["highlightAlpineLakes", "highlightMultiDay", "highlightCamping", "highlightHighMountainViews"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 18,
+    travelTime: 40,
+    busLines: "Linea 50 (desde Coihues) + Linea 10 (a Colonia Suiza)",
+    category: "high-mountain"
+  },
+  {
+    id: "18",
+    name: "Laguna Ilón",
+    type: "day-hike",
+    difficulty: "moderate",
+    distance: 12,
+    duration: 5,
+    elevation: 1200,
+    requiresReservation: false,
+    description: {
+      en: "Laguna Ilón is a beautiful alpine lake hidden in the mountains near Bariloche. The trail offers spectacular views of surrounding peaks and valleys. This moderate hike takes you through native forests before reaching the pristine lake, perfect for a picnic and rest before returning.",
+      es: "Laguna Ilón es un hermoso lago alpino escondido en las montañas cerca de Bariloche. El sendero ofrece vistas espectaculares de los picos y valles circundantes. Esta caminata moderada te lleva a través de bosques nativos antes de llegar al prístino lago, perfecto para un picnic y descanso antes de regresar.",
+      fr: "Laguna Ilón est un magnifique lac alpin caché dans les montagnes près de Bariloche. Le sentier offre des vues spectaculaires sur les pics et les vallées environnants. Cette randonnée modérée vous emmène à travers des forêts indigènes avant d'atteindre le lac immaculé, parfait pour un pique-nique et du repos avant de revenir.",
+      de: "Laguna Ilón ist ein wunderschöner Alpensee, der in den Bergen in der Nähe von Bariloche versteckt ist. Der Weg bietet spektakuläre Aussichten auf umliegende Gipfel und Täler. Diese moderate Wanderung führt Sie durch einheimische Wälder, bevor Sie den unberührten See erreichen, perfekt für ein Picknick und eine Rast, bevor Sie zurückkehren."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Villa Catedral (15 min drive from Los Coihues)",
+    highlights: ["highlightAlpineLake", "highlightForestTrail", "highlightPanoramicViews"],
+    transportation: ["private-transfer", "taxi", "bus"],
+    distanceFromCampsite: 8,
+    travelTime: 15,
+    busLines: "Linea 50 (desde Coihues hasta km 8 ruta 82) + Linea 55 (Ruta 82)",
+    category: "high-mountain"
+  },
+  {
+    id: "19",
+    name: "Mirada Del Doctor",
+    type: "day-hike",
+    difficulty: "easy",
+    distance: 4,
+    duration: 2,
+    elevation: 950,
+    requiresReservation: false,
+    description: {
+      en: "Mirada Del Doctor (Doctor's View) is a relatively easy hike that rewards with spectacular panoramic views of Nahuel Huapi Lake and the surrounding mountains. This accessible trail is perfect for beginners or those looking for a shorter hike with maximum scenic reward.",
+      es: "Mirada Del Doctor es una caminata relativamente fácil que recompensa con espectaculares vistas panorámicas del Lago Nahuel Huapi y las montañas circundantes. Este sendero accesible es perfecto para principiantes o aquellos que buscan una caminata más corta con máxima recompensa escénica.",
+      fr: "Mirada Del Doctor (Vue du Docteur) est une randonnée relativement facile qui offre des vues panoramiques spectaculaires sur le lac Nahuel Huapi et les montagnes environnantes. Ce sentier accessible est parfait pour les débutants ou ceux qui recherchent une randonnée plus courte avec une récompense scénique maximale.",
+      de: "Mirada Del Doctor (Blick des Doktors) ist eine relativ einfache Wanderung, die mit spektakulären Panoramablicken auf den Nahuel Huapi See und die umliegenden Berge belohnt. Dieser zugängliche Weg ist perfekt für Anfänger oder diejenigen, die eine kürzere Wanderung mit maximalem landschaftlichem Genuss suchen."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Near Cerro Campanario (30 min bus ride)",
+    highlights: ["highlightPanoramicViews", "highlightLakeViews", "highlightBeginnerFriendly"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 12,
+    travelTime: 30,
+    busLines: "Linea 50 (desde Coihues) + Linea 20 (Av. Bustillo) (40 min)",
+    category: "easy-mountain"
   }
 ];
