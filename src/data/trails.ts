@@ -45,7 +45,7 @@ export const trails: Trail[] = [
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 12,
     travelTime: 45,
-    busLines: "Lines 50 + 20",
+    busLines: "Linea 50 (desde Los Coihues) conectando con Linea 20 (Av. Bustillo)",
     category: "easy-mountain"
   },
   {
