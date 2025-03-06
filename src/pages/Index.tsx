@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -156,6 +157,9 @@ const Index = () => {
         return <Map className="w-4 h-4 mr-1" />;
     }
   };
+
+  // Determine if beaches section should be visible
+  const shouldShowBeaches = selectedCategory === 'all' || selectedCategory === 'beaches-lakes';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
@@ -342,18 +346,20 @@ const Index = () => {
           </div>
         )}
 
-        <div className="mb-12 mt-16">
-          <h2 className="text-2xl font-bold text-forest mb-6">{t('beaches')}</h2>
-          {filteredBeaches.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredBeaches.map((beach) => (
-                <BeachCard key={beach.id} beach={beach} />
-              ))}
-            </div>
-          ) : (
-            <p className="text-center text-gray-500 py-8">{t('noBeachesFound')}</p>
-          )}
-        </div>
+        {shouldShowBeaches && (
+          <div className="mb-12 mt-16">
+            <h2 className="text-2xl font-bold text-forest mb-6">{t('beaches')}</h2>
+            {filteredBeaches.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredBeaches.map((beach) => (
+                  <BeachCard key={beach.id} beach={beach} />
+                ))}
+              </div>
+            ) : (
+              <p className="text-center text-gray-500 py-8">{t('noBeachesFound')}</p>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
