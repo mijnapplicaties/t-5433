@@ -58,7 +58,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
       case 'bus':
         return {
           icon: <Bus className="w-4 h-4 text-blue-500" />,
-          label: `${t('busService')} - ${trail.busLines || 'Line 20'}`
+          label: `${t('busService')}`
         };
       case 'taxi':
         return {
@@ -208,9 +208,6 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                 <div key={index} className="flex items-center gap-2 text-sm font-bold text-blue-600">
                   {transportInfo.icon}
                   <span>{transportInfo.label}</span>
-                  {trail.travelTime > 0 && type === 'bus' && (
-                    <span className="ml-1">({trail.travelTime} min)</span>
-                  )}
                 </div>
               );
             })}
