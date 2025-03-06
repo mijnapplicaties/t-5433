@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -77,15 +76,15 @@ export const trails: Trail[] = [
     name: "Cerro Otto & Piedra de Habsburgo",
     type: "day-hike",
     difficulty: "moderate",
-    distance: 12,
-    duration: 5,
-    elevation: 800,
+    distance: 3,
+    duration: 1,
+    elevation: 85,
     requiresReservation: false,
     description: {
-      en: "A classic hike combining Cerro Otto summit and the historic Piedra de Habsburgo viewpoint.",
-      es: "Una caminata clásica que combina la cumbre del Cerro Otto y el histórico mirador Piedra de Habsburgo.",
-      fr: "Une randonnée classique combinant la cime du Cerro Otto et le mirador historique de la Piedra de Habsburgo.",
-      de: "Eine klassische Wanderung, die die Spitze des Cerro Otto und den historischen Mirador Piedra de Habsburgo verbindet."
+      en: "To reach Cerro Otto from Camping Los Coihues, you can take bus 50 on the main avenue and get off at the stop near the Lower Cable Car Station, at kilometer 5 of Avenida de los Pioneros. From there, you can go up by cable car or walk to the summit. If you go by car, follow Route 82 and then take Avenida de los Pioneros to the cable car access, where you can leave the vehicle or continue to the summit along the gravel road.",
+      es: "Para llegar al Cerro Otto desde Camping Los Coihues, puedes tomar el colectivo 50 en la avenida principal y bajarte en la parada cercana a la Estación Inferior del Teleférico, en el kilómetro 5 de la Avenida de los Pioneros. Desde allí, puedes subir en teleférico o hacer la caminata hasta la cumbre. Si vas en auto, sigue la Ruta 82 y luego toma la Avenida de los Pioneros hasta el acceso al teleférico, donde puedes dejar el vehículo o continuar hasta la cumbre por el camino de ripio.",
+      fr: "Pour rejoindre le Cerro Otto depuis le Camping Los Coihues, vous pouvez prendre le bus 50 sur l'avenue principale et descendre à l'arrêt près de la station inférieure du téléphérique, au kilomètre 5 de l'Avenida de los Pioneros. De là, vous pouvez monter en téléphérique ou marcher jusqu'au sommet. Si vous y allez en voiture, suivez la Route 82 puis prenez l'Avenida de los Pioneros jusqu'à l'accès au téléphérique, où vous pouvez laisser le véhicule ou continuer jusqu'au sommet par la route de gravier.",
+      de: "Um den Cerro Otto vom Camping Los Coihues aus zu erreichen, können Sie den Bus 50 auf der Hauptstraße nehmen und an der Haltestelle in der Nähe der unteren Seilbahnstation am Kilometer 5 der Avenida de los Pioneros aussteigen. Von dort aus können Sie mit der Seilbahn hinauffahren oder zum Gipfel wandern. Wenn Sie mit dem Auto fahren, folgen Sie der Route 82 und nehmen Sie dann die Avenida de los Pioneros bis zum Zugang zur Seilbahn, wo Sie das Fahrzeug abstellen oder auf dem Schotterweg bis zum Gipfel weiterfahren können."
     },
     imageUrl: "/lovable-uploads/291df6e4-5c22-4747-85e4-d706e969db6b.png",
     startingPoint: "Cerro Otto base (20 min drive)",
@@ -93,6 +92,7 @@ export const trails: Trail[] = [
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 8,
     travelTime: 20,
+    busLines: "Line 50",
     category: "easy-mountain"
   },
   {
@@ -341,7 +341,7 @@ export const trails: Trail[] = [
     description: {
       en: "A challenging three-day circuit connecting Refugio López and Refugio Laguna Negra. Take bus line 10 from Los Coihues to Colonia Suiza to start the trek.",
       es: "Un desafiante circuito de tres d��as que conecta el Refugio López y el Refugio Laguna Negra. Tome la línea de bus 10 desde Los Coihues hasta Colonia Suiza para comenzar la travesía.",
-      fr: "Un circuit difficile de trois jours connectant Refugio López et Refugio Laguna Negra. Prenez la ligne de bus 10 de Los Coihues à Colonia Suiza pour commencer la randonnée.",
+      fr: "Un circuit difficile de trois jours connectant Refugio L��pez et Refugio Laguna Negra. Prenez la ligne de bus 10 de Los Coihues à Colonia Suiza pour commencer la randonnée.",
       de: "Ein schwieriger drei-Tage-Kreislauf, der Refugio López und Refugio Laguna Negra verbindet. Nehmen Sie die Linie 10 von Los Coihues zu Colonia Suiza, um die Wanderung zu beginnen."
     },
     imageUrl: "/lovable-uploads/c2cfed37-332c-49bb-8f26-e701a5a11d48.png",
@@ -389,7 +389,7 @@ export const trails: Trail[] = [
       en: "A challenging day hike to the summit of Cerro Lopez. From Camping Los Coihues, take bus line 20 to Arroyo Lopez (30 min). The trail ascends steeply through forests before reaching alpine terrain with spectacular views of the surrounding lakes and mountains.",
       es: "Una desafiante caminata de un día a la cumbre del Cerro Lopez. Desde Camping Los Coihues, tome la línea 20 hasta Arroyo Lopez (30 min). El sendero asciende pronunciadamente a través de bosques antes de alcanzar terreno alpino con vistas espectaculares de los lagos y montañas circundantes.",
       fr: "Una randonnée difficile d'une journée jusqu'au sommet du Cerro Lopez. Depuis le Camping Los Coihues, prenez la ligne 20 à Arroyo Lopez (30 min). Le sentier monte abruptement à travers des forêts avant d'atteindre un terrain alpin avec des vues spectaculaires sur les lacs et montagnes environnantes.",
-      de: "Eine anspruchsvolle Tageswanderung zum Gipfel des Cerro Lopez. Vom Camping Los Coihues aus nehmen Sie die Linie 20 nach Arroyo Lopez (30 Min.). Der Weg führt steil durch Wälder, bevor Sie alpines Gelände mit spektakulärem Blick auf die umliegenden Seen und Berge erreichen."
+      de: "Eine anspruchsvolle Tageswanderung zum Gipfel des Cerro Lopez. Vom Camping Los Coihues aus nehmen Sie die Linie 20 nach Arroyo Lopez (30 Minuten). Der Weg führt steil durch Wälder, bevor Sie alpines Gelände mit spektakulärem Blick auf die umliegenden Seen und Berge erreichen."
     },
     imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
     startingPoint: "Arroyo Lopez (30 min bus from Los Coihues)",
