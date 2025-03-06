@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -320,7 +319,7 @@ export const trails: Trail[] = [
     description: {
       en: "A three-day circuit trek to Laguna Negra. From Camping Los Coihues, take bus 50 to downtown and then transfer to bus 10 to Colonia Suiza. The trail offers stunning alpine views and pristine mountain lakes. One of the classic multiday treks in the region.",
       es: "Un trekking de circuito de tres días a Laguna Negra. Desde Camping Los Coihues, tome el bus 50 al centro y luego transfiera al bus 10 a Colonia Suiza. El sendero ofrece impresionantes vistas alpinas y prístinos lagos de montaña. Uno de los clásicos trekkings de varios días en la región.",
-      fr: "Un trek en circuit de trois jours à Laguna Negra. Depuis le Camping Los Coihues, prenez le bus 50 vers le centre-ville, puis correspondez avec le bus 10 à Colonia Suiza. Le sentier offre de superbes vues alpines et des lacs de montagne immaculés. L'un des classiques treks de plusieurs jours dans la région.",
+      fr: "Un trek en circuit de trois jours à Laguna Negra. Depuis le Camping Los Coihues, prenez le bus 50 vers le centre-ville, puis le service pour Colonia Suiza. Le sentier offre de superbes vues alpines et des lacs de montagne immaculés. L'un des classiques treks de plusieurs jours dans la région.",
       de: "Eine dreitägige Rundwanderung zur Laguna Negra. Vom Camping Los Coihues nehmen Sie den Bus 50 in die Innenstadt und dann den Bus 10 nach Colonia Suiza. Der Weg bietet atemberaubende Alpenblicke und unberührte Bergseen. Eine der klassischen Mehrtageswanderungen in der Region."
     },
     imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
@@ -330,6 +329,54 @@ export const trails: Trail[] = [
     distanceFromCampsite: 18,
     travelTime: 40,
     busLines: "Linea 50 (desde Coihues) + Linea 10 (a Colonia Suiza)",
+    category: "high-mountain"
+  },
+  {
+    id: "15",
+    name: "Refugio Otto Meiling",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 36,
+    duration: 48, // 2 days
+    elevation: 1800,
+    requiresReservation: true,
+    description: {
+      en: "A challenging multi-day trek to Refugio Otto Meiling on Cerro Tronador. From Camping Los Coihues, take bus 50 to downtown and then transfer to the Pampa Linda service. The trail offers stunning glacial views and pristine mountain landscapes. One of the most rewarding treks in the region.",
+      es: "Un desafiante trekking de varios días al Refugio Otto Meiling en el Cerro Tronador. Desde Camping Los Coihues, tome el bus 50 al centro y luego transfiera al servicio a Pampa Linda. El sendero ofrece impresionantes vistas glaciares y paisajes montañosos prístinos. Uno de los trekkings más gratificantes de la región.",
+      fr: "Un trek difficile de plusieurs jours jusqu'au Refugio Otto Meiling sur le Cerro Tronador. Depuis le Camping Los Coihues, prenez le bus 50 vers le centre-ville, puis le service pour Pampa Linda. Le sentier offre des vues glaciaires spectaculaires et des paysages montagneux immaculés. L'un des treks les plus gratifiants de la région.",
+      de: "Eine anspruchsvolle Mehrtageswanderung zum Refugio Otto Meiling am Cerro Tronador. Vom Camping Los Coihues nehmen Sie den Bus 50 in die Innenstadt und dann den Service nach Pampa Linda. Der Weg bietet atemberaubende Gletscherblicke und unberührte Berglandschaften. Eine der lohnendsten Wanderungen in der Region."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Pampa Linda (90 min bus + transfer from Los Coihues)",
+    highlights: ["highlightGlacier", "highlightMountainRefuge", "highlightMultiDay", "highlightAlpineLakes"],
+    transportation: ["bus", "private-transfer"],
+    distanceFromCampsite: 60,
+    travelTime: 90,
+    busLines: "Bus 50 + Pampa Linda Transfer",
+    category: "high-mountain"
+  },
+  {
+    id: "16",
+    name: "Cerro Tronador - Pampa Linda",
+    type: "multi-day",
+    difficulty: "expert",
+    distance: 45,
+    duration: 72, // 3 days
+    elevation: 3470,
+    requiresReservation: true,
+    description: {
+      en: "An expert-level trek to the summit of Cerro Tronador, the highest peak in the region. Starting from Pampa Linda, this challenging multi-day adventure requires proper mountaineering experience and equipment. Spectacular views of surrounding glaciers and alpine landscapes.",
+      es: "Un trekking de nivel experto a la cumbre del Cerro Tronador, el pico más alto de la región. Comenzando desde Pampa Linda, esta desafiante aventura de varios días requiere experiencia y equipo adecuado de montañismo. Vistas espectaculares de los glaciares circundantes y paisajes alpinos.",
+      fr: "Un trek de niveau expert jusqu'au sommet du Cerro Tronador, le plus haut sommet de la région. Partant de Pampa Linda, cette aventure difficile de plusieurs jours nécessite une expérience d'alpinisme et un équipement approprié. Vues spectaculaires sur les glaciers environnants et les paysages alpins.",
+      de: "Eine Wanderung für Experten zum Gipfel des Cerro Tronador, dem höchsten Gipfel der Region. Von Pampa Linda aus erfordert dieses anspruchsvolle Mehrtagesabenteuer Bergerfahrung und entsprechende Ausrüstung. Spektakuläre Ausblicke auf umliegende Gletscher und alpine Landschaften."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Pampa Linda (90 min bus + transfer from Los Coihues)",
+    highlights: ["highlightGlacier", "highlightSummit", "highlightMultiDay", "highlightAlpineLakes"],
+    transportation: ["bus", "private-transfer"],
+    distanceFromCampsite: 60,
+    travelTime: 90,
+    busLines: "Bus 50 + Pampa Linda Transfer",
     category: "high-mountain"
   }
 ];

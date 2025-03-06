@@ -109,10 +109,15 @@ const Index = () => {
 
   const pampLindaHikes = multiDayHikes.filter(trail => 
     trail.name.toLowerCase().includes('pampa linda') || 
+    trail.name.toLowerCase().includes('meiling') ||
+    trail.name.toLowerCase().includes('tronador') ||
     trail.startingPoint.toLowerCase().includes('pampa linda')
   );
+  
   const otherMultiDayHikes = multiDayHikes.filter(trail => 
     !trail.name.toLowerCase().includes('pampa linda') && 
+    !trail.name.toLowerCase().includes('meiling') &&
+    !trail.name.toLowerCase().includes('tronador') &&
     !trail.startingPoint.toLowerCase().includes('pampa linda')
   );
 
@@ -291,7 +296,7 @@ const Index = () => {
           </div>
         )}
 
-        {(selectedType === 'all' || selectedType === 'multi-day') && (
+        {selectedCategory === 'all' && (selectedType === 'all' || selectedType === 'multi-day') && (
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-forest mb-6">{t('filterMultiDay')}</h2>
             
