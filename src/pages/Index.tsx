@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -65,28 +64,40 @@ const Index = () => {
     'Lago Gutiérrez'
   ];
   
-  // Find the Frey trail from the main trail list
   const freyTrail = trails.find(trail => trail.id === "1");
   
-  // Create a modified version of the Frey trail with a different title for direct access section
   const freyTrailForDirectAccess = freyTrail ? {
     ...freyTrail,
     name: "Refugio Frey desde Lago Gutierrez"
   } : null;
   
-  // Get direct access hikes excluding Frey (which we'll add separately with the modified name)
+  const freyTrailForBusAccess = freyTrail ? {
+    ...freyTrail,
+    name: "Refugio Frey from Villa Catedral"
+  } : null;
+  
   const directAccessHikes = dayHikes.filter(trail => 
     directAccessTrailNames.includes(trail.name) && trail.id !== "1"
   );
   
-  // Add the modified Frey trail to direct access hikes if it exists
   if (freyTrailForDirectAccess) {
     directAccessHikes.unshift(freyTrailForDirectAccess);
   }
   
   const otherDayHikes = dayHikes.filter(trail => 
-    !directAccessTrailNames.includes(trail.name) || trail.name === 'Refugio Frey'
+    (!directAccessTrailNames.includes(trail.name) || trail.name === 'Refugio Frey') && trail.id !== "1"
   );
+  
+  const otherDayHikesWithModifiedFrey = [...otherDayHikes];
+  
+  if (freyTrailForBusAccess) {
+    const freyIndex = otherDayHikesWithModifiedFrey.findIndex(trail => trail.name === 'Refugio Frey');
+    if (freyIndex !== -1) {
+      otherDayHikesWithModifiedFrey[freyIndex] = freyTrailForBusAccess;
+    } else {
+      otherDayHikesWithModifiedFrey.push(freyTrailForBusAccess);
+    }
+  }
 
   const pampLindaHikes = multiDayHikes.filter(trail => trail.region === 'pampa-linda');
   const otherMultiDayHikes = multiDayHikes.filter(trail => trail.region !== 'pampa-linda');
@@ -236,7 +247,7 @@ const Index = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {directAccessHikes.map((trail) => (
                     <TrailCard 
-                      key={trail.id} 
+                      key={`direct-${trail.id}`} 
                       trail={trail} 
                       transportIcons={trail.transportation.map(t => getTransportIcon(t))}
                     />
@@ -245,7 +256,7 @@ const Index = () => {
               </div>
             )}
             
-            {otherDayHikes.length > 0 && (
+            {otherDayHikesWithModifiedFrey.length > 0 && (
               <div>
                 {directAccessHikes.length > 0 && (
                   <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
@@ -253,7 +264,7 @@ const Index = () => {
                   </h3>
                 )}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {otherDayHikes.map((trail) => (
+                  {otherDayHikesWithModifiedFrey.map((trail) => (
                     <TrailCard 
                       key={`bus-${trail.id}`} 
                       trail={trail}
