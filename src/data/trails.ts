@@ -40,12 +40,12 @@ export const trails: Trail[] = [
       de: "Nehmen Sie den Bus 20 und steigen Sie an der letzten Haltestelle am Hotel Llao Llao aus. Von dort aus gehen Sie 20 Minuten entlang der Route bis zum Beginn des Wanderwegs. Von dort aus ist es eine einstündige Wanderung mit leichtem Anstieg durch einen Wald aus Coihues und Zypressen auf 2,6 km. Die Anstrengung wird mit einer spektakulären Aussicht vom Gipfel belohnt, wo Sie den Lago Moreno, den Nahuel Huapi und die Anden bewundern können. Nach dem Genießen des Aussichtspunkts führt der Weg bergab und ermöglicht es Ihnen, den Rundweg zu vollenden, wobei Sie weitere Waldstücke und kleine Strände am Seeufer passieren."
     },
     imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
-    startingPoint: "Hotel Llao Llao (45 min by bus from Los Coihues)",
+    startingPoint: "Hotel Llao Llao (50 min by bus from Los Coihues)",
     highlights: ["highlightPanoramicViews", "highlightNativeForest", "highlightLakeViews"],
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 12,
-    travelTime: 45,
-    busLines: "Linea 50 (desde Los Coihues) conectando con Linea 20 (Av. Bustillo)",
+    travelTime: 50,
+    busLines: "Linea 20 (Av. Bustillo)",
     category: "easy-mountain"
   },
   {
