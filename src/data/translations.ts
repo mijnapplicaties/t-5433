@@ -392,4 +392,10 @@ export const translations: Translation = {
     fr: "Catégories",
     de: "Kategorien",
   },
+  bariloche: {
+    en: "Bariloche Region",
+    es: "Región de Bariloche",
+    fr: "Région de Bariloche",
+    de: "Region Bariloche",
+  },
 };
