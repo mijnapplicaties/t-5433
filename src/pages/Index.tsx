@@ -115,7 +115,7 @@ const Index = () => {
             <div className="flex flex-wrap justify-center gap-2 items-center">
               <Badge 
                 variant={selectedCategory === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedCategory('all')}
               >
                 <Map className="w-4 h-4 mr-1" />
@@ -123,7 +123,7 @@ const Index = () => {
               </Badge>
               <Badge 
                 variant={selectedCategory === 'high-mountain' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedCategory('high-mountain')}
               >
                 <Mountain className="w-4 h-4 mr-1" />
@@ -131,7 +131,7 @@ const Index = () => {
               </Badge>
               <Badge 
                 variant={selectedCategory === 'easy-mountain' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedCategory('easy-mountain')}
               >
                 <TreePine className="w-4 h-4 mr-1" />
@@ -139,7 +139,7 @@ const Index = () => {
               </Badge>
               <Badge 
                 variant={selectedCategory === 'walking-path' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedCategory('walking-path')}
               >
                 <FootprintsIcon className="w-4 h-4 mr-1" />
@@ -147,7 +147,7 @@ const Index = () => {
               </Badge>
               <Badge 
                 variant={selectedCategory === 'beaches-lakes' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedCategory('beaches-lakes')}
               >
                 <Waves className="w-4 h-4 mr-1" />
@@ -156,7 +156,7 @@ const Index = () => {
               
               <Badge 
                 variant="outline" 
-                className="cursor-pointer text-base border-black"
+                className="cursor-pointer text-lg border-black"
                 onClick={() => setFiltersOpen(true)}
               >
                 <Filter className="w-4 h-4 mr-1" />

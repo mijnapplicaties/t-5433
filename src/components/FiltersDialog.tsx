@@ -48,21 +48,21 @@ const FiltersDialog: React.FC<FiltersDialogProps> = ({
             <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedType === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedType('all')}
               >
                 {t('filterAll')}
               </Badge>
               <Badge 
                 variant={selectedType === 'day-hike' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedType('day-hike')}
               >
                 {t('filterDayHike')}
               </Badge>
               <Badge 
                 variant={selectedType === 'multi-day' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedType('multi-day')}
               >
                 {t('filterMultiDay')}
@@ -75,28 +75,28 @@ const FiltersDialog: React.FC<FiltersDialogProps> = ({
             <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedDifficulty === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedDifficulty('all')}
               >
                 {t('filterAll')}
               </Badge>
               <Badge 
                 variant={selectedDifficulty === 'easy' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedDifficulty('easy')}
               >
                 {t('difficultyEasy')}
               </Badge>
               <Badge 
                 variant={selectedDifficulty === 'moderate' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedDifficulty('moderate')}
               >
                 {t('difficultyModerate')}
               </Badge>
               <Badge 
                 variant={selectedDifficulty === 'hard' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedDifficulty('hard')}
               >
                 {t('difficultyHard')}
@@ -109,28 +109,28 @@ const FiltersDialog: React.FC<FiltersDialogProps> = ({
             <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedTravelTime === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedTravelTime('all')}
               >
                 {t('filterAll')}
               </Badge>
               <Badge 
                 variant={selectedTravelTime === 'direct-access' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedTravelTime('direct-access')}
               >
                 {t('accessibilityDirect')}
               </Badge>
               <Badge 
                 variant={selectedTravelTime === 'easy-access' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedTravelTime('easy-access')}
               >
                 {t('accessibilityEasy')}
               </Badge>
               <Badge 
                 variant={selectedTravelTime === 'medium-access' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
+                className="cursor-pointer text-lg"
                 onClick={() => setSelectedTravelTime('medium-access')}
               >
                 {t('accessibilityMedium')}
