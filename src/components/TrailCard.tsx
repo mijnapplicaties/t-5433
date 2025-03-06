@@ -117,6 +117,20 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     }
   };
 
+  const formatDistance = (trail: Trail) => {
+    if (trail.name === "Lago Gutiérrez") {
+      return `${trail.distance * 1000} ${t('meters')}`;
+    }
+    return `${trail.distance} ${t('km')}`;
+  };
+
+  const formatDuration = (trail: Trail) => {
+    if (trail.name === "Lago Gutiérrez") {
+      return `${Math.round(trail.duration * 60)} ${t('minutes')}`;
+    }
+    return `${trail.duration} ${t('hours')}`;
+  };
+
   return (
     <Card 
         className="group hover:shadow-lg transition-all duration-300 animate-fadeIn cursor-pointer"
@@ -165,12 +179,12 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
         <div className="grid grid-cols-3 gap-4 mb-4">
           <div className="flex items-center gap-2">
             <ArrowUpRight className="w-4 h-4 text-blue-500" />
-            <span className="text-sm">{trail.distance} {t('km')}</span>
+            <span className="text-sm">{formatDistance(trail)}</span>
           </div>
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-blue-500" />
             <span className="text-sm">
-              {trail.duration} {t('hours')}
+              {formatDuration(trail)}
             </span>
           </div>
           <div className="flex items-center gap-2">
