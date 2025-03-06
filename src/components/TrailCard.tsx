@@ -246,16 +246,17 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                 </div>
               );
             })}
+            
+            {getBusInfo(trail) && (
+              <div className="flex items-center gap-2 text-sm font-bold text-blue-600">
+                <Bus className="w-4 h-4 text-blue-500" />
+                <span>{t('busLines')}: {getBusInfo(trail)}</span>
+              </div>
+            )}
           </div>
           
           {getBusInfo(trail) && (
-            <div className="mt-2 bg-blue-50 p-3 rounded-md shadow-sm border border-blue-100">
-              <div className="flex items-center gap-2 text-blue-700">
-                <Bus className="w-4 h-4" />
-                <p className="font-medium">{t('busLines')}: {getBusInfo(trail)}</p>
-              </div>
-              <p className="text-sm mt-1 text-blue-600">{t('checkSchedules')}</p>
-            </div>
+            <p className="text-xs mt-1 text-blue-600 italic">{t('checkSchedules')}</p>
           )}
         </div>
 
