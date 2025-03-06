@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -209,9 +208,6 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                 <div key={index} className="flex items-center gap-2 text-sm font-bold text-blue-600">
                   {transportInfo.icon}
                   <span>{transportInfo.label}</span>
-                  {trail.travelTime > 0 && type === 'bus' && (
-                    <span className="ml-1">({trail.travelTime} min)</span>
-                  )}
                 </div>
               );
             })}
