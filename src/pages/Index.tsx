@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -64,9 +65,24 @@ const Index = () => {
     'Lago Gutiérrez'
   ];
   
+  // Find the Frey trail from the main trail list
+  const freyTrail = trails.find(trail => trail.id === "1");
+  
+  // Create a modified version of the Frey trail with a different title for direct access section
+  const freyTrailForDirectAccess = freyTrail ? {
+    ...freyTrail,
+    name: "Refugio Frey desde Lago Gutierrez"
+  } : null;
+  
+  // Get direct access hikes excluding Frey (which we'll add separately with the modified name)
   const directAccessHikes = dayHikes.filter(trail => 
-    directAccessTrailNames.includes(trail.name)
+    directAccessTrailNames.includes(trail.name) && trail.id !== "1"
   );
+  
+  // Add the modified Frey trail to direct access hikes if it exists
+  if (freyTrailForDirectAccess) {
+    directAccessHikes.unshift(freyTrailForDirectAccess);
+  }
   
   const otherDayHikes = dayHikes.filter(trail => 
     !directAccessTrailNames.includes(trail.name) || trail.name === 'Refugio Frey'
