@@ -185,7 +185,7 @@ export const trails: Trail[] = [
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 10,
     travelTime: 25,
-    busLines: "Linea 50 (desde Coihues) + Linea 20 (Av. Bustillo)",
+    busLines: "Linea 50 (desde Coihues) + Linea 20 (Av. Bustillo) (40 min)",
     category: "easy-mountain"
   },
   {
@@ -374,102 +374,4 @@ export const trails: Trail[] = [
     distanceFromCampsite: 60,
     travelTime: 120,
     category: "high-mountain",
-    region: "pampa-linda"
-  },
-  {
-    id: "17",
-    name: "Cerro Lopez",
-    type: "day-hike",
-    difficulty: "hard",
-    distance: 18,
-    duration: 8,
-    elevation: 1200,
-    requiresReservation: false,
-    description: {
-      en: "A challenging day hike to the summit of Cerro Lopez. From Camping Los Coihues, take bus line 20 to Arroyo Lopez (30 min). The trail ascends steeply through forests before reaching alpine terrain with spectacular views of the surrounding lakes and mountains.",
-      es: "Una desafiante caminata de un día a la cumbre del Cerro Lopez. Desde Camping Los Coihues, tome la línea 20 hasta Arroyo Lopez (30 min). El sendero asciende pronunciadamente a través de bosques antes de alcanzar terreno alpino con vistas espectaculares de los lagos y montañas circundantes.",
-      fr: "Una randonnée difficile d'une journée jusqu'au sommet du Cerro Lopez. Depuis le Camping Los Coihues, prenez la ligne 20 à Arroyo Lopez (30 min). Le sentier monte abruptement à travers des forêts avant d'atteindre un terrain alpin avec des vues spectaculaires sur les lacs et montagnes environnantes.",
-      de: "Eine anspruchsvolle Tageswanderung zum Gipfel des Cerro Lopez. Vom Camping Los Coihues aus nehmen Sie die Linie 20 nach Arroyo Lopez (30 Minuten). Der Weg führt steil durch Wälder, bevor Sie alpines Gelände mit spektakulärem Blick auf die umliegenden Seen und Berge erreichen."
-    },
-    imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
-    startingPoint: "Arroyo Lopez (30 min bus from Los Coihues)",
-    highlights: ["highlightSummitViews", "highlightAlpineTerrain", "highlightPanoramicVista", "highlightTechnicalTrail"],
-    transportation: ["bus", "taxi"],
-    distanceFromCampsite: 15,
-    travelTime: 30,
-    busLines: "Line 20",
-    category: "high-mountain"
-  },
-  {
-    id: "18",
-    name: "Bahia Lopez & Mirador Tristeza",
-    type: "day-hike",
-    difficulty: "easy",
-    distance: 6,
-    duration: 3,
-    elevation: 200,
-    requiresReservation: false,
-    description: {
-      en: "A scenic trail combining Bahia Lopez bay and the Mirador Tristeza viewpoint. From Camping Los Coihues, take bus line 20 (35 min). The trail offers beautiful views of Nahuel Huapi Lake and the surrounding mountains with minimal elevation gain.",
-      es: "Un pintoresco sendero que combina la bahía de Bahía Lopez y el mirador Tristeza. Desde Camping Los Coihues, tome la línea 20 (35 min). El sendero ofrece hermosas vistas del Lago Nahuel Huapi y las montañas circundantes con un desnivel mínimo.",
-      fr: "Un sentier pittoresque combinant la baie de Bahía Lopez et le point de vue Mirador Tristeza. Depuis le Camping Los Coihues, prenez la ligne 20 (35 min). Le sentier offre de belles vues sur le lac Nahuel Huapi et les montagnes environnantes avec un dénivelé minimal.",
-      de: "Ein malerischer Weg, der die Bucht von Bahía Lopez und den Aussichtspunkt Mirador Tristeza verbindet. Vom Camping Los Coihues nehmen Sie die Linie 20 (35 Min.). Der Weg bietet schöne Ausblicke auf den See Nahuel Huapi und die umliegenden Berge mit minimalem Höhenunterschied."
-    },
-    imageUrl: "/lovable-uploads/bdd46388-2e54-44ed-8cb1-f449f800bd97.png",
-    startingPoint: "Hotel Llao Llao area (35 min bus from Los Coihues)",
-    highlights: ["highlightLakeViews", "highlightBayArea", "highlightViewpoint", "highlightFamilyFriendly"],
-    transportation: ["bus", "taxi"],
-    distanceFromCampsite: 16,
-    travelTime: 35,
-    busLines: "Line 20",
-    category: "easy-mountain"
-  },
-  {
-    id: "19",
-    name: "Laguna Ilón",
-    type: "multi-day",
-    difficulty: "hard",
-    distance: 32,
-    duration: 48,
-    elevation: 1800,
-    requiresReservation: true,
-    description: {
-      en: "A spectacular two-day trek to Laguna Ilón, a hidden alpine lake surrounded by towering peaks. Starts from Pampa Linda and requires a transfer from Los Coihues.",
-      es: "Una espectacular caminata de dos días a Laguna Ilón, un lago alpino escondido rodeado de imponentes picos. Comienza en Pampa Linda y requiere un traslado desde Los Coihues.",
-      fr: "Une randonnée spectaculaire de deux jours à Laguna Ilón, un lac alpin caché entouré de hauts sommets. Commence à Pampa Linda et nécessite un transfert depuis Los Coihues.",
-      de: "Eine spektakuläre zweitägige Wanderung zur Laguna Ilón, einem versteckten Alpensee, umgeben von hohen Gipfeln. Beginnt in Pampa Linda und erfordert einen Transfer von Los Coihues."
-    },
-    imageUrl: "/lovable-uploads/5e6c44cc-a8c6-4013-8464-49f82efa40fc.png",
-    startingPoint: "Pampa Linda (transfer required)",
-    highlights: ["highlightAlpineLake", "highlightRemoteWilderness", "highlightOvernightCamping"],
-    transportation: ["private-transfer"],
-    distanceFromCampsite: 60,
-    travelTime: 120,
-    category: "high-mountain",
-    region: "pampa-linda"
-  },
-  {
-    id: "20",
-    name: "Mirada del Doctor",
-    type: "multi-day",
-    difficulty: "moderate",
-    distance: 28,
-    duration: 36,
-    elevation: 1500,
-    requiresReservation: true,
-    description: {
-      en: "A stunning viewpoint accessed via a two-day trek. The effort is well worth it for the panoramic views.",
-      es: "Un impresionante mirador al que se accede a través de una caminata de dos días. El esfuerzo vale la pena por las vistas panorámicas.",
-      fr: "Un point de vue magnifique accessible via une randonnée de deux jours. L'effort en vaut la peine pour les vues panoramiques.",
-      de: "Ein atemberaubender Aussichtspunkt, der über eine zweitägige Wanderung erreicht wird. Die Anstrengung lohnt sich für die Panoramablicke."
-    },
-    imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
-    startingPoint: "Pampa Linda (transfer required)",
-    highlights: ["highlightPanoramicViews", "highlightRemoteWilderness", "highlightOvernightCamping"],
-    transportation: ["private-transfer"],
-    distanceFromCampsite: 60,
-    travelTime: 120,
-    category: "high-mountain",
-    region: "pampa-linda"
-  }
-];
+    region: "
