@@ -12,7 +12,7 @@ export const beaches: Beach[] = [
       fr: "Une belle plage de sable sur le lac Nahuel Huapi, connue pour ses conditions venteuses qui en font un endroit parfait pour les amateurs de planche à voile et de kitesurf. Située à quelques minutes du Camping Los Coihues.",
       de: "Ein schöner Sandstrand am Nahuel Huapi See, bekannt für windige Bedingungen, die ihn perfekt für Windsurfer und Kitesurfer machen. Nur wenige Minuten vom Camping Los Coihues entfernt."
     },
-    imageUrl: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
+    imageUrl: "/lovable-uploads/7cd264e6-e8b5-4596-afba-7ee9212621d5.png",
     beachType: "sandy",
     waterTemp: {
       summer: 16,
