@@ -434,4 +434,58 @@ export const translations: Translation = {
     fr: "Vérifiez les horaires au terminal de bus ou renseignez-vous à la réception",
     de: "Überprüfen Sie die Fahrpläne am Busterminal oder fragen Sie an der Rezeption",
   },
+  highlightAlpineLake: {
+    en: "Alpine lake",
+    es: "Lago alpino",
+    fr: "Lac alpin",
+    de: "Alpensee",
+  },
+  highlightMountainRefuge: {
+    en: "Mountain refuge",
+    es: "Refugio de montaña",
+    fr: "Refuge de montagne",
+    de: "Berghütte",
+  },
+  highlightClimbingArea: {
+    en: "Rock climbing area",
+    es: "Área de escalada",
+    fr: "Zone d'escalade",
+    de: "Klettergebiet",
+  },
+  highlightSecludedBeach: {
+    en: "Secluded beach",
+    es: "Playa aislada",
+    fr: "Plage isolée",
+    de: "Abgelegener Strand",
+  },
+  highlightCrystalWaters: {
+    en: "Crystal clear waters",
+    es: "Aguas cristalinas",
+    fr: "Eaux cristallines",
+    de: "Kristallklares Wasser",
+  },
+  highlightSwimmingSpot: {
+    en: "Swimming spot",
+    es: "Lugar para nadar",
+    fr: "Lieu de baignade",
+    de: "Schwimmstelle",
+  },
+  highlightForestTrail: {
+    en: "Forest trail",
+    es: "Sendero boscoso",
+    fr: "Sentier forestier",
+    de: "Waldweg",
+  },
+  highlightPanoramicViews: {
+    en: "Panoramic views",
+    es: "Vistas panorámicas",
+    fr: "Vues panoramiques",
+    de: "Panoramablick",
+  },
+  highlightLakeViews: {
+    en: "Lake views",
+    es: "Vistas al lago",
+    fr: "Vues sur le lac",
+    de: "Seeblick",
+  },
 };
