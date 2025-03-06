@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -374,4 +375,6 @@ export const trails: Trail[] = [
     distanceFromCampsite: 60,
     travelTime: 120,
     category: "high-mountain",
-    region: "
+    region: "pampa-linda"
+  }
+];
