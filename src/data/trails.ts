@@ -100,9 +100,9 @@ export const trails: Trail[] = [
     name: "Lago Gutiérrez",
     type: "day-hike",
     difficulty: "easy",
-    distance: 0.3, // Changed from 5 to 0.3 (300m)
-    duration: 0.08, // Changed from 2 to 0.08 (5 minutes is approximately 0.08 hours)
-    elevation: 800, // Changed from 150 to 800
+    distance: 0.3, // 300m
+    duration: 0.08, // 5 minutes (0.08 hours)
+    elevation: 800,
     requiresReservation: false,
     description: {
       en: "A scenic lakeside trail that starts directly from Camping Los Coihues. Perfect for a morning walk with beautiful views of Lago Gutiérrez and surrounding mountains.",
@@ -123,9 +123,9 @@ export const trails: Trail[] = [
     name: "Mirador Lago Gutiérrez",
     type: "day-hike",
     difficulty: "easy",
-    distance: 3,
-    duration: 1.5,
-    elevation: 200,
+    distance: 3.9,
+    duration: 1,
+    elevation: 950,
     requiresReservation: false,
     description: {
       en: "A short but rewarding hike with panoramic views of Lake Gutiérrez. Easy access from Camping Los Coihues.",
@@ -146,9 +146,9 @@ export const trails: Trail[] = [
     name: "Cascada de los Duendes",
     type: "day-hike",
     difficulty: "easy",
-    distance: 3,
-    duration: 1.5,
-    elevation: 100,
+    distance: 3.1,
+    duration: 0.75, // 45 minutes (0.75 hours)
+    elevation: 900,
     requiresReservation: false,
     description: {
       en: "A charming waterfall trail with access to beautiful Gutiérrez lake beaches. Perfect starter trail directly from the campsite, following a gentle path through the native forest. Great for families and beginners.",
@@ -241,15 +241,15 @@ export const trails: Trail[] = [
     name: "Cerro San Martín",
     type: "day-hike",
     difficulty: "easy",
-    distance: 5.2,
-    duration: 3,
-    elevation: 350,
+    distance: 2.6,
+    duration: 1, // 45-60 minutes (approximately 1 hour)
+    elevation: 1275,
     requiresReservation: false,
     description: {
-      en: "Cerro San Martin offers a moderate climb with beautiful views of Lago Gutiérrez and the surrounding mountains. It's directly accessible from the campsite.",
-      es: "Cerro San Martín ofrece una subida moderada con hermosas vistas del Lago Gutiérrez y las montañas circundantes. Es accesible directamente desde el camping.",
-      fr: "Cerro San Martin offre une montée modérée avec de belles vues sur le Lago Gutiérrez et les montagnes environnantes. Il est directement accessible depuis le camping.",
-      de: "Cerro San Martin bietet einen moderaten Aufstieg mit schönen Ausblicken auf den Lago Gutiérrez und die umliegenden Berge. Es ist direkt vom Campingplatz aus zugänglich."
+      en: "El inicio del sendero esta subiendo la Calle Balcón Lopez hasta al fondo. Ahí te chocas con el Camping Ecologico y tienes que seguir caminando 30 m a la izquierda donde vas a encontrar el inicio del sendero de mano derecha. Es empinado pero se sube rápido.",
+      es: "El inicio del sendero esta subiendo la Calle Balcón Lopez hasta al fondo. Ahí te chocas con el Camping Ecologico y tienes que seguir caminando 30 m a la izquierda donde vas a encontrar el inicio del sendero de mano derecha. Es empinado pero se sube rápido.",
+      fr: "El inicio del sendero esta subiendo la Calle Balcón Lopez hasta al fondo. Ahí te chocas con el Camping Ecologico y tienes que seguir caminando 30 m a la izquierda donde vas a encontrar el inicio del sendero de mano derecha. Es empinado pero se sube rápido.",
+      de: "El inicio del sendero esta subiendo la Calle Balcón Lopez hasta al fondo. Ahí te chocas con el Camping Ecologico y tienes que seguir caminando 30 m a la izquierda donde vas a encontrar el inicio del sendero de mano derecha. Es empinado pero se sube rápido."
     },
     imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
     startingPoint: "Camping Los Coihues",
@@ -264,9 +264,9 @@ export const trails: Trail[] = [
     name: "Playa Muñoz",
     type: "day-hike",
     difficulty: "easy",
-    distance: 3.5,
+    distance: 8,
     duration: 1.5,
-    elevation: 80,
+    elevation: 900,
     requiresReservation: false,
     description: {
       en: "A short, pleasant walk to a secluded beach on Lago Gutiérrez with crystal clear waters. The trail starts directly from Camping Los Coihues and follows the lakeshore through the native forest. Perfect for a refreshing swim in summer.",
