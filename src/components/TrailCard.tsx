@@ -83,6 +83,10 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   const getBusInfo = (trail: Trail) => {
     if (!trail.transportation.includes('bus')) return null;
     
+    if (trail.busLines) {
+      return trail.busLines;
+    }
+    
     switch(trail.id) {
       case 't1': // Cerro Llao Llao
         return "Bus 20";
@@ -215,7 +219,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
           
           {getBusInfo(trail) && (
             <div className="mt-2 bg-blue-50 p-3 rounded-md">
-              <p className="font-medium">{t('busLines')}: {getBusInfo(trail)}</p>
+              <p className="font-medium">{getBusInfo(trail)}</p>
               <p className="text-sm mt-1">{t('checkSchedules')}</p>
             </div>
           )}
