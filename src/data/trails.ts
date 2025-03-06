@@ -78,7 +78,7 @@ export const trails: Trail[] = [
     difficulty: "moderate",
     distance: 3,
     duration: 1,
-    elevation: 85,
+    elevation: 1405,
     requiresReservation: false,
     description: {
       en: "To reach Cerro Otto from Camping Los Coihues, you can take bus 50 on the main avenue and get off at the stop near the Lower Cable Car Station, at kilometer 5 of Avenida de los Pioneros. From there, you can go up by cable car or walk to the summit. If you go by car, follow Route 82 and then take Avenida de los Pioneros to the cable car access, where you can leave the vehicle or continue to the summit along the gravel road.",
@@ -92,7 +92,7 @@ export const trails: Trail[] = [
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 8,
     travelTime: 20,
-    busLines: "Line 50",
+    busLines: "Linea 50",
     category: "easy-mountain"
   },
   {
