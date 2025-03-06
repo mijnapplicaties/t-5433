@@ -165,10 +165,10 @@ export const translations: Translation = {
     de: "Anfahrt von Camping Los Coihues",
   },
   busService: {
-    en: "Bus service",
-    es: "Servicio de bus",
-    fr: "Service de bus",
-    de: "Busverbindung",
+    en: "Bus Line",
+    es: "Línea Bus",
+    fr: "Ligne de Bus",
+    de: "Buslinie",
   },
   taxiService: {
     en: "Taxi/Uber available",
