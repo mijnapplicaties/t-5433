@@ -208,18 +208,22 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
             {trail.transportation.map((type, index) => {
               const transportInfo = getTransportationInfo(type);
               if (!transportInfo) return null;
+              
               return (
                 <div key={index} className="flex items-center gap-2 text-sm font-bold text-blue-600">
                   {transportInfo.icon}
                   <span>{transportInfo.label}</span>
+                  {type === 'bus' && getBusInfo(trail) && (
+                    <span className="ml-1 font-medium text-gray-700">: {getBusInfo(trail)}</span>
+                  )}
                 </div>
               );
             })}
           </div>
           
-          {getBusInfo(trail) && (
-            <div className="mt-2 bg-blue-50 p-3 rounded-md">
-              <p className="font-medium">{getBusInfo(trail)}</p>
+          {getBusInfo(trail) && !trail.transportation.includes('bus') && (
+            <div className="mt-2">
+              <p className="text-sm font-medium">{getBusInfo(trail)}</p>
               <p className="text-sm mt-1">{t('checkSchedules')}</p>
             </div>
           )}
