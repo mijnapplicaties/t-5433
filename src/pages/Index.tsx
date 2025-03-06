@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -70,7 +69,7 @@ const Index = () => {
   );
   
   const otherDayHikes = dayHikes.filter(trail => 
-    !directAccessTrailNames.includes(trail.name)
+    !directAccessTrailNames.includes(trail.name) || trail.name === 'Refugio Frey'
   );
 
   const pampLindaHikes = multiDayHikes.filter(trail => trail.region === 'pampa-linda');
@@ -240,7 +239,7 @@ const Index = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {otherDayHikes.map((trail) => (
                     <TrailCard 
-                      key={trail.id} 
+                      key={`bus-${trail.id}`} 
                       trail={trail}
                       transportIcons={trail.transportation.map(t => getTransportIcon(t))}
                     />
