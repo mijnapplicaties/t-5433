@@ -1,12 +1,11 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../context/LanguageContext';
-import { Trail, TrailType, Difficulty, TransportationType, TravelTimeCategory, TrailCategory } from '../types/trail';
+import { Trail, TrailType, Difficulty, TransportationType, TravelTimeCategory, TrailCategory, TrailRegion } from '../types/trail';
 import TrailCard from '../components/TrailCard';
 import BeachCard from '../components/BeachCard';
 import { Bus, Car, Filter, FootprintsIcon, Map, Mountain, ThumbsUp, TreePine, Users, Waves } from 'lucide-react';
@@ -14,6 +13,7 @@ import FiltersDialog from '../components/FiltersDialog';
 
 type TravelTimeCategoryFilter = 'all' | TravelTimeCategory;
 type TrailCategoryFilter = 'all' | TrailCategory;
+type RegionFilter = 'all' | TrailRegion;
 
 const Index = () => {
   const { t } = useLanguage();
@@ -21,6 +21,7 @@ const Index = () => {
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | 'all'>('all');
   const [selectedTravelTime, setSelectedTravelTime] = useState<TravelTimeCategory | 'all'>('all');
   const [selectedCategory, setSelectedCategory] = useState<TrailCategory | 'all'>('all');
+  const [selectedRegion, setSelectedRegion] = useState<RegionFilter>('all');
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const getAccessibilityCategory = (trail: Trail): TravelTimeCategory => {
@@ -51,7 +52,6 @@ const Index = () => {
     return showAllCategories && travelTimeMatch;
   });
 
-  // Get all filtered hikes based on the category
   const allHikes = filteredTrails;
   
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
@@ -159,18 +159,14 @@ const Index = () => {
     }
   };
 
-  // Determine if beaches section should be visible
   const shouldShowBeaches = selectedCategory === 'all' || selectedCategory === 'beaches-lakes';
 
-  // Determine if we should show region subtitles
   const shouldShowRegionSubtitles = selectedCategory !== 'beaches-lakes';
 
-  // Get the correct filtered trails based on category
   const categoryFilteredHikes = allHikes.filter(trail => 
     selectedCategory === 'all' || trail.category === selectedCategory
   );
 
-  // Get Bariloche and Pampa Linda hikes for the specific category
   const categoryBarilochieHikes = categoryFilteredHikes.filter(trail => 
     !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
   );
@@ -178,6 +174,13 @@ const Index = () => {
   const categoryPampLindaHikes = categoryFilteredHikes.filter(trail => 
     pampLindaHikes.some(plTrail => plTrail.id === trail.id)
   );
+
+  const displayBarilochieHikes = (selectedRegion === 'all' || selectedRegion === 'bariloche') && categoryBarilochieHikes.length > 0;
+  const displayPampLindaHikes = (selectedRegion === 'all' || selectedRegion === 'pampa-linda') && categoryPampLindaHikes.length > 0;
+
+  useEffect(() => {
+    setSelectedRegion('all');
+  }, [selectedCategory]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
@@ -271,7 +274,30 @@ const Index = () => {
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-forest mb-6">{t(`category${selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`)}</h2>
             
-            {categoryBarilochieHikes.length > 0 && (
+            {selectedCategory === 'high-mountain' && (
+              <div className="flex justify-center gap-4 mb-6">
+                <Button 
+                  variant={selectedRegion === 'all' ? 'regionSelected' : 'region'} 
+                  onClick={() => setSelectedRegion('all')}
+                >
+                  {t('filterAll')}
+                </Button>
+                <Button 
+                  variant={selectedRegion === 'bariloche' ? 'regionSelected' : 'region'} 
+                  onClick={() => setSelectedRegion('bariloche')}
+                >
+                  {t('bariloche')}
+                </Button>
+                <Button 
+                  variant={selectedRegion === 'pampa-linda' ? 'regionSelected' : 'region'} 
+                  onClick={() => setSelectedRegion('pampa-linda')}
+                >
+                  {t('pampLinda')}
+                </Button>
+              </div>
+            )}
+            
+            {displayBarilochieHikes && (
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
                   {t('bariloche')}
@@ -288,7 +314,7 @@ const Index = () => {
               </div>
             )}
             
-            {categoryPampLindaHikes.length > 0 && (
+            {displayPampLindaHikes && (
               <div>
                 <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
                   {t('pampLinda')}
