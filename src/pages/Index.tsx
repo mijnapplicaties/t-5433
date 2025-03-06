@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -50,6 +51,7 @@ const Index = () => {
     return showAllCategories && travelTimeMatch;
   });
 
+  // Get all filtered hikes based on the category
   const allHikes = filteredTrails;
   
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
@@ -163,6 +165,20 @@ const Index = () => {
   // Determine if we should show region subtitles
   const shouldShowRegionSubtitles = selectedCategory !== 'beaches-lakes';
 
+  // Get the correct filtered trails based on category
+  const categoryFilteredHikes = allHikes.filter(trail => 
+    selectedCategory === 'all' || trail.category === selectedCategory
+  );
+
+  // Get Bariloche and Pampa Linda hikes for the specific category
+  const categoryBarilochieHikes = categoryFilteredHikes.filter(trail => 
+    !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
+  );
+  
+  const categoryPampLindaHikes = categoryFilteredHikes.filter(trail => 
+    pampLindaHikes.some(plTrail => plTrail.id === trail.id)
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
       <LanguageSwitcher />
@@ -255,15 +271,13 @@ const Index = () => {
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-forest mb-6">{t(`category${selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`)}</h2>
             
-            {otherMultiDayHikes.length > 0 && (
+            {categoryBarilochieHikes.length > 0 && (
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
                   {t('bariloche')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {allHikes.filter(trail => (
-                    !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
-                  )).map((trail) => (
+                  {categoryBarilochieHikes.map((trail) => (
                     <TrailCard 
                       key={trail.id} 
                       trail={trail}
@@ -274,15 +288,13 @@ const Index = () => {
               </div>
             )}
             
-            {pampLindaHikes.length > 0 && (
+            {categoryPampLindaHikes.length > 0 && (
               <div>
                 <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
                   {t('pampLinda')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {allHikes.filter(trail => (
-                    pampLindaHikes.some(plTrail => plTrail.id === trail.id)
-                  )).map((trail) => (
+                  {categoryPampLindaHikes.map((trail) => (
                     <TrailCard 
                       key={trail.id} 
                       trail={trail}
