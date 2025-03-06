@@ -29,20 +29,20 @@ export const trails: Trail[] = [
     name: "Cerro Llao Llao",
     type: "day-hike",
     difficulty: "easy",
-    distance: 8,
-    duration: 3,
-    elevation: 400,
+    distance: 2.6,
+    duration: 1,
+    elevation: 1080,
     requiresReservation: false,
     description: {
-      en: "An accessible hike from Hotel Llao Llao. From Camping Los Coihues, take bus line 20 to Llao Llao (45 min ride). Trail starts behind the hotel.",
-      es: "Una caminata accesible desde el Hotel Llao Llao. Desde Camping Los Coihues, tome la línea de bus 20 hasta Llao Llao (45 minutos de viaje). El sendero comienza detrás del hotel.",
-      fr: "Une randonnée accessible desde el Hotel Llao Llao. Depuis le Camping Los Coihues, prenez la ligne de bus 20 jusqu'à Llao Llao (45 minutes de trajet). Le sentier commence derrière le hôtel.",
-      de: "Eine zugängliche Wanderung aus dem Hotel Llao Llao. Vom Camping Los Coihues aus nehmen Sie die Linie 20 zu Llao Llao (45 Minuten Reise). Der Wanderweg beginnt hinter dem Hotel."
+      en: "Taking bus 20, get off at the last stop at Hotel Llao Llao. From there, walk along route 20 for 20 minutes to the beginning of the trail. From there it's a 1-hour hike with gentle climbing through a forest of coihues and cypresses for 2.6 km. The effort is rewarded with a spectacular view from the summit, where you can admire Lake Moreno, Nahuel Huapi, and the Andes Mountains. After enjoying the viewpoint, the trail descends and allows you to complete the circuit in a circular manner, passing through more stretches of forest and small beaches on the shores of the lake.",
+      es: "Tomando el bus 20, bajarse en la última parada en Hotel Llao Llao. De ahí caminas por la ruta 20 minutos hasta el comienzo del sendero. De ahí es 1 hr de caminata de leve subida en bosque de coihues y cipreses de 2,6 km. El esfuerzo se ve recompensado con una vista espectacular desde la cumbre, donde se pueden admirar el Lago Moreno, el Nahuel Huapi y la Cordillera de los Andes. Después de disfrutar del mirador, el sendero desciende y permite completar el circuito de manera circular, pasando por más tramos de bosque y pequeñas playas a orillas del lago.",
+      fr: "Prenez le bus 20 et descendez au dernier arrêt à l'Hôtel Llao Llao. De là, marchez le long de la route pendant 20 minutes jusqu'au début du sentier. Ensuite, c'est une randonnée d'une heure avec une légère montée à travers une forêt de coihues et de cyprès sur 2,6 km. L'effort est récompensé par une vue spectaculaire depuis le sommet, où vous pouvez admirer le lac Moreno, le Nahuel Huapi et la Cordillère des Andes. Après avoir profité du panorama, le sentier descend et vous permet de compléter le circuit de manière circulaire, en passant par d'autres portions de forêt et de petites plages au bord du lac.",
+      de: "Nehmen Sie den Bus 20 und steigen Sie an der letzten Haltestelle am Hotel Llao Llao aus. Von dort aus gehen Sie 20 Minuten entlang der Route bis zum Beginn des Wanderwegs. Von dort aus ist es eine einstündige Wanderung mit leichtem Anstieg durch einen Wald aus Coihues und Zypressen auf 2,6 km. Die Anstrengung wird mit einer spektakulären Aussicht vom Gipfel belohnt, wo Sie den Lago Moreno, den Nahuel Huapi und die Anden bewundern können. Nach dem Genießen des Aussichtspunkts führt der Weg bergab und ermöglicht es Ihnen, den Rundweg zu vollenden, wobei Sie weitere Waldstücke und kleine Strände am Seeufer passieren."
     },
     imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
     startingPoint: "Hotel Llao Llao (45 min by bus from Los Coihues)",
     highlights: ["highlightPanoramicViews", "highlightNativeForest", "highlightLakeViews"],
-    transportation: ["bus"],
+    transportation: ["bus", "taxi"],
     distanceFromCampsite: 12,
     travelTime: 45,
     busLines: "Lines 50 + 20",
@@ -130,7 +130,7 @@ export const trails: Trail[] = [
       en: "A short but rewarding hike with panoramic views of Lake Gutiérrez. Easy access from Camping Los Coihues.",
       es: "Una caminata corta pero gratificante con vistas panorámicas del Lago Gutiérrez. Fácil acceso desde Camping Los Coihues.",
       fr: "Une randonnée courte mais récompensante avec des vues panoramiques du Lago Gutiérrez. Accès facile depuis le Camping Los Coihues.",
-      de: "Eine kurze aber belohnte Wanderung mit schiczen Blicken auf den Lago Gutiérrez. Einfaches Zugang von Camping Los Coihues."
+      de: "Une kurze aber belohnte Wanderung mit schiczen Blicken auf den Lago Gutiérrez. Einfaches Zugang von Camping Los Coihues."
     },
     imageUrl: "/lovable-uploads/93c2508f-ddf6-4b0b-bf08-0fc63590f9ae.png",
     startingPoint: "Camping Los Coihues (direct access)",
