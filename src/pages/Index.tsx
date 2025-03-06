@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -56,6 +57,7 @@ const Index = () => {
   const multiDayHikes = filteredTrails.filter(trail => trail.type === 'multi-day');
   
   const directAccessTrailNames = [
+    'Refugio Frey',
     'Cascada de los Duendes',
     'Mirador Lago Gutiérrez',
     'Cerro San Martín',

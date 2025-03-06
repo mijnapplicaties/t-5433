@@ -19,10 +19,10 @@ export const trails: Trail[] = [
     imageUrl: "/lovable-uploads/0a880087-8ded-441c-b362-9e8437aad433.png",
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["Alpine lake", "Mountain refuge", "Rock climbing area"],
-    transportation: ["bus", "taxi"],
-    distanceFromCampsite: 8,
-    travelTime: 15,
-    busLines: "Line 20",
+    transportation: ["bus", "taxi", "walking"],
+    distanceFromCampsite: 0,
+    travelTime: 0,
+    busLines: "Line 55",
     category: "high-mountain"
   },
   {
@@ -295,7 +295,7 @@ export const trails: Trail[] = [
       en: "A beautiful overnight trek to Refugio Lopez. From Camping Los Coihues, take bus line 20 to Arroyo Lopez (30 min). The trail offers stunning views of lakes Nahuel Huapi and Moreno. The refuge is perched on a rock outcrop with 360° panoramic views.",
       es: "Una hermosa caminata con pernocte al Refugio Lopez. Desde Camping Los Coihues, tome la línea 20 hasta Arroyo Lopez (30 min). El sendero ofrece impresionantes vistas de los lagos Nahuel Huapi y Moreno. El refugio está situado en un afloramiento rocoso con vistas panorámicas de 360°.",
       fr: "Un magnifique trek d'une nuit au Refugio Lopez. Depuis le Camping Los Coihues, prenez la ligne 20 à Arroyo Lopez (30 min). Le sentier offre des vues spectaculaires sur les lacs Nahuel Huapi et Moreno. Le refuge est perché sur un affleurement rocheux avec des vues panoramiques à 360°.",
-      de: "Eine schöne Übernachtungswanderung zum Refugio Lopez. Vom Camping Los Coihues aus nehmen Sie die Linie 20 nach Arroyo Lopez (30 Min.). Der Weg bietet atemberaubende Aussichten auf die Seen Nahuel Huapi und Moreno. Die Hütte liegt auf einem Felsvorsprung mit 360°-Panoramablick."
+      de: "Eine schöne Übernachtungswanderung zum Refugio Lopez. Vom Camping Los Coihues aus nehmen Sie die Linie 20 nach Arroyo Lopez (30 Minuten). Der Weg bietet atemberaubende Aussichten auf die Seen Nahuel Huapi und Moreno. Die Hütte liegt auf einem Felsvorsprung mit 360°-Panoramablick."
     },
     imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
     startingPoint: "Arroyo Lopez (30 min bus from Los Coihues)",
