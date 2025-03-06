@@ -58,7 +58,7 @@ export const beaches: Beach[] = [
       fr: "Une plage abritée ('Plage sans vent') offrant des eaux calmes, idéale pour les familles avec enfants et la baignade. Située dans une zone de baie protégée avec un bel environnement.",
       de: "Ein geschützter Strand ('Strand ohne Wind'), der ruhiges Wasser bietet, ideal für Familien mit Kindern und zum Schwimmen. Liegt in einer geschützten Bucht mit wunderschöner Umgebung."
     },
-    imageUrl: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
+    imageUrl: "/lovable-uploads/11f6c604-dd7e-4971-8d55-a247159bc234.png",
     beachType: "sandy",
     waterTemp: {
       summer: 18,
