@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -430,7 +431,7 @@ export const trails: Trail[] = [
   {
     id: "19",
     name: "Mirada Del Doctor",
-    type: "day-hike",
+    type: "multi-day", // Changed from "day-hike" to "multi-day"
     difficulty: "easy",
     distance: 4,
     duration: 2,
@@ -443,13 +444,13 @@ export const trails: Trail[] = [
       de: "Mirada Del Doctor (Blick des Doktors) ist eine relativ einfache Wanderung, die mit spektakulären Panoramablicken auf den Nahuel Huapi See und die umliegenden Berge belohnt. Dieser zugängliche Weg ist perfekt für Anfänger oder diejenigen, die eine kürzere Wanderung mit maximalem landschaftlichem Genuss suchen."
     },
     imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
-    startingPoint: "Near Circuito Chico (45 min bus ride)", // Updated starting point
+    startingPoint: "Pampa Linda (120 min bus + transfer from Los Coihues)", // Updated starting point to Pampa Linda
     highlights: ["highlightPanoramicViews", "highlightLakeViews", "highlightBeginnerFriendly"],
-    transportation: ["bus", "taxi"],
-    distanceFromCampsite: 15, // Updated distance
-    travelTime: 45, // Updated travel time to 45 minutes
-    busLines: "Linea 50 (desde Coihues) + Linea 20 (Av. Bustillo) (45 min)", // Updated bus information
-    category: "easy-mountain"
+    transportation: ["bus", "private-transfer"], // Added private-transfer as typical for Pampa Linda
+    distanceFromCampsite: 60, // Updated distance to match other Pampa Linda trails
+    travelTime: 120, // Updated travel time to 2 hours (120 minutes)
+    busLines: "Bus 50 + Pampa Linda Transfer", // Updated bus information to match other Pampa Linda trails
+    category: "high-mountain" // Updated category to high-mountain to match other Pampa Linda trails
   }
 ];
 
