@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -274,7 +273,7 @@ export const trails: Trail[] = [
       fr: "Une promenade courte et agréable vers une plage isolée sur le Lago Gutiérrez aux eaux cristallines. Le sentier commence directement du Camping Los Coihues et suit le rivage à travers la forêt native. Parfait pour une baignade rafraîchissante en été.",
       de: "Ein kurzer, angenehmer Spaziergang zu einem abgelegenen Strand am Lago Gutiérrez mit kristallklarem Wasser. Der Weg beginnt direkt am Camping Los Coihues und führt am Seeufer durch den heimischen Wald. Perfekt für ein erfrischendes Bad im Sommer."
     },
-    imageUrl: "/lovable-uploads/c6ad3c8c-4f1b-4a31-aede-0d658eab6fee.png",
+    imageUrl: "/lovable-uploads/dbccf672-671f-4a74-866b-6bacf864626e.png",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["highlightSecludedBeach", "highlightCrystalWaters", "highlightSwimmingSpot", "highlightForestTrail"],
     transportation: ["walking"],
