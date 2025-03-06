@@ -398,4 +398,10 @@ export const translations: Translation = {
     fr: "Région de Bariloche",
     de: "Region Bariloche",
   },
+  pampLinda: {
+    en: "Pampa Linda (2hs away)",
+    es: "Pampa Linda (2hs de viaje)",
+    fr: "Pampa Linda (2h de route)",
+    de: "Pampa Linda (2 Std. entfernt)",
+  },
 };

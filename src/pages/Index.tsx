@@ -261,7 +261,7 @@ const Index = () => {
             {pampLindaHikes.length > 0 && (
               <div>
                 <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
-                  Pampa Linda Hikes
+                  {t('pampLinda')}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {pampLindaHikes.map((trail) => (
