@@ -1,4 +1,4 @@
-
+<lov-code>
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -113,7 +113,7 @@ export const trails: Trail[] = [
     imageUrl: "/lovable-uploads/bdd46388-2e54-44ed-8cb1-f449f800bd97.png",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["highlightLakeViews", "highlightBeachAccess", "highlightBirdWatching"],
-    transportation: ["walking", "hitchhiking"],
+    transportation: ["walking"],
     distanceFromCampsite: 0,
     travelTime: 0,
     category: "walking-path"
@@ -136,7 +136,7 @@ export const trails: Trail[] = [
     imageUrl: "/lovable-uploads/93c2508f-ddf6-4b0b-bf08-0fc63590f9ae.png",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["highlightLakeViews", "highlightEasyAccess", "highlightFamilyFriendly"],
-    transportation: ["walking", "hitchhiking", "taxi"],
+    transportation: ["walking"],
     distanceFromCampsite: 0,
     travelTime: 0,
     category: "easy-mountain"
@@ -159,7 +159,7 @@ export const trails: Trail[] = [
     imageUrl: "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["highlightWaterfall", "highlightLakeBeaches", "highlightNativeForest", "highlightFamilyFriendly"],
-    transportation: ["hitchhiking"],
+    transportation: ["walking"],
     distanceFromCampsite: 0,
     travelTime: 0,
     category: "walking-path"
@@ -456,20 +456,4 @@ export const trails: Trail[] = [
     distance: 28,
     duration: 36,
     elevation: 1500,
-    requiresReservation: true,
-    description: {
-      en: "A stunning viewpoint accessed via a two-day trek. The effort is well worth it for the panoramic views.",
-      es: "Un impresionante mirador al que se accede a través de una caminata de dos días. El esfuerzo vale la pena por las vistas panorámicas.",
-      fr: "Un point de vue magnifique accessible via une randonnée de deux jours. L'effort en vaut la peine pour les vues panoramiques.",
-      de: "Ein atemberaubender Aussichtspunkt, der über eine zweitägige Wanderung erreicht wird. Die Anstrengung lohnt sich für die Panoramablicke."
-    },
-    imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
-    startingPoint: "Pampa Linda (transfer required)",
-    highlights: ["highlightPanoramicViews", "highlightRemoteWilderness", "highlightOvernightCamping"],
-    transportation: ["private-transfer"],
-    distanceFromCampsite: 60,
-    travelTime: 120,
-    category: "high-mountain",
-    region: "pampa-linda"
-  }
-];
+    requiresReservation
