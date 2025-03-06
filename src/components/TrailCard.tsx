@@ -58,7 +58,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
       case 'bus':
         return {
           icon: <Bus className="w-4 h-4 text-blue-500" />,
-          label: `${t('busService')}`
+          label: `${t('busService')} - ${trail.busLines || 'Line 20'}`
         };
       case 'taxi':
         return {
@@ -82,10 +82,6 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
 
   const getBusInfo = (trail: Trail) => {
     if (!trail.transportation.includes('bus')) return null;
-    
-    if (trail.busLines) {
-      return trail.busLines;
-    }
     
     switch(trail.id) {
       case 't1': // Cerro Llao Llao
@@ -208,22 +204,21 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
             {trail.transportation.map((type, index) => {
               const transportInfo = getTransportationInfo(type);
               if (!transportInfo) return null;
-              
               return (
                 <div key={index} className="flex items-center gap-2 text-sm font-bold text-blue-600">
                   {transportInfo.icon}
                   <span>{transportInfo.label}</span>
-                  {type === 'bus' && getBusInfo(trail) && (
-                    <span className="ml-1 font-medium text-gray-700">: {getBusInfo(trail)}</span>
+                  {trail.travelTime > 0 && type === 'bus' && (
+                    <span className="ml-1">({trail.travelTime} min)</span>
                   )}
                 </div>
               );
             })}
           </div>
           
-          {getBusInfo(trail) && !trail.transportation.includes('bus') && (
-            <div className="mt-2">
-              <p className="text-sm font-medium">{getBusInfo(trail)}</p>
+          {getBusInfo(trail) && (
+            <div className="mt-2 bg-blue-50 p-3 rounded-md">
+              <p className="font-medium">{t('busLines')}: {getBusInfo(trail)}</p>
               <p className="text-sm mt-1">{t('checkSchedules')}</p>
             </div>
           )}
