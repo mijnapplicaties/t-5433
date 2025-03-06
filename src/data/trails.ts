@@ -1,4 +1,4 @@
-<lov-code>
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -318,4 +318,18 @@ export const trails: Trail[] = [
     elevation: 1500,
     requiresReservation: true,
     description: {
-      en: "A three-day circuit. From Camping Los Coihues, take bus line 10 to Colonia Suiza (30 min). Start
+      en: "A three-day circuit trek to Laguna Negra. From Camping Los Coihues, take bus 50 to downtown and then transfer to bus 10 to Colonia Suiza. The trail offers stunning alpine views and pristine mountain lakes. One of the classic multiday treks in the region.",
+      es: "Un trekking de circuito de tres días a Laguna Negra. Desde Camping Los Coihues, tome el bus 50 al centro y luego transfiera al bus 10 a Colonia Suiza. El sendero ofrece impresionantes vistas alpinas y prístinos lagos de montaña. Uno de los clásicos trekkings de varios días en la región.",
+      fr: "Un trek en circuit de trois jours à Laguna Negra. Depuis le Camping Los Coihues, prenez le bus 50 vers le centre-ville, puis correspondez avec le bus 10 à Colonia Suiza. Le sentier offre de superbes vues alpines et des lacs de montagne immaculés. L'un des classiques treks de plusieurs jours dans la région.",
+      de: "Eine dreitägige Rundwanderung zur Laguna Negra. Vom Camping Los Coihues nehmen Sie den Bus 50 in die Innenstadt und dann den Bus 10 nach Colonia Suiza. Der Weg bietet atemberaubende Alpenblicke und unberührte Bergseen. Eine der klassischen Mehrtageswanderungen in der Region."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Colonia Suiza (40 min bus from Los Coihues)",
+    highlights: ["highlightAlpineLakes", "highlightMountainRefuge", "highlightForestTrail", "highlightMultiDay"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 18,
+    travelTime: 40,
+    busLines: "Linea 50 (desde Coihues) + Linea 10 (a Colonia Suiza)",
+    category: "high-mountain"
+  }
+];
