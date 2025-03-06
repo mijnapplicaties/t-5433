@@ -100,9 +100,9 @@ export const trails: Trail[] = [
     name: "Lago Gutiérrez",
     type: "day-hike",
     difficulty: "easy",
-    distance: 5,
-    duration: 2,
-    elevation: 150,
+    distance: 0.3, // Changed from 5 to 0.3 (300m)
+    duration: 0.08, // Changed from 2 to 0.08 (5 minutes is approximately 0.08 hours)
+    elevation: 800, // Changed from 150 to 800
     requiresReservation: false,
     description: {
       en: "A scenic lakeside trail that starts directly from Camping Los Coihues. Perfect for a morning walk with beautiful views of Lago Gutiérrez and surrounding mountains.",
