@@ -35,7 +35,7 @@ export const beaches: Beach[] = [
       fr: "Fidèle à son nom ('Plage avec vent'), cette plage offre des vents constants parfaits pour les activités de voile et de planche à voile. Elle présente un mélange de sable et de galets avec des vues spectaculaires sur la montagne.",
       de: "Getreu seinem Namen ('Strand mit Wind') bietet dieser Strand konstante Winde, die perfekt für Segel- und Windsurfaktivitäten sind. Er hat eine Mischung aus Sand und Kieseln mit spektakulärer Bergkulisse."
     },
-    imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+    imageUrl: "/lovable-uploads/3dda568d-50dc-4f15-af17-7744f417603c.png",
     beachType: "mixed",
     waterTemp: {
       summer: 17,
