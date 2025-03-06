@@ -3,7 +3,7 @@ import { Trail } from '../types/trail';
 export const trails: Trail[] = [
   {
     id: "1",
-    name: "Refugio Frey",
+    name: "Refugio Frey desde Lago Gutierrez",
     type: "day-hike",
     difficulty: "moderate",
     distance: 20,
@@ -365,7 +365,7 @@ export const trails: Trail[] = [
       en: "Epic three-day trek visiting five alpine lakes: Negra, CAB, Cretton, Jujuy, and Ilón. Starts from Pampa Linda.",
       es: "Épica travesía de tres días visitando cinco lagos alpinos: Negra, CAB, Cretton, Jujuy e Ilón. Comienza en Pampa Linda.",
       fr: "Épique randonnée de trois jours visitant cinq lacs alpins : Negra, CAB, Cretton, Jujuy et Ilón. Départ de Pampa Linda.",
-      de: "Ein épischer drei-Tage-Kreislauf, der fünf alpinen Lakes besucht: Negra, CAB, Cretton, Jujuy und Ilón. Beginnen Sie in Pampa Linda."
+      de: "Ein épischer drei-Tage-Kreislauf, der fünf alpinen Lakes besucht: Negra, CAB, Cretton, Jujuy und Ilón. Beginnt in Pampa Linda."
     },
     imageUrl: "/lovable-uploads/67fa31e5-4160-46c9-92fb-86aad3955a56.png",
     startingPoint: "Pampa Linda (transfer required)",
