@@ -117,6 +117,16 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     }
   };
 
+  const formatDistance = (distance: number) => {
+    const meters = Math.round(distance * 1000);
+    return `${meters} m`;
+  };
+
+  const formatDuration = (hours: number) => {
+    const minutes = Math.round(hours * 60);
+    return `${minutes} min`;
+  };
+
   return (
     <Card 
         className="group hover:shadow-lg transition-all duration-300 animate-fadeIn cursor-pointer"
@@ -165,12 +175,12 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
         <div className="grid grid-cols-3 gap-4 mb-4">
           <div className="flex items-center gap-2">
             <ArrowUpRight className="w-4 h-4 text-blue-500" />
-            <span className="text-sm">{trail.distance} {t('km')}</span>
+            <span className="text-sm">{formatDistance(trail.distance)}</span>
           </div>
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-blue-500" />
             <span className="text-sm">
-              {trail.duration} {t('hours')}
+              {formatDuration(trail.duration)}
             </span>
           </div>
           <div className="flex items-center gap-2">
