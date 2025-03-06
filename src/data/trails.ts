@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -6,9 +7,9 @@ export const trails: Trail[] = [
     name: "Refugio Frey desde Lago Gutierrez",
     type: "day-hike",
     difficulty: "moderate",
-    distance: 20,
-    duration: 6,
-    elevation: 1000,
+    distance: 10,
+    duration: 5,
+    elevation: 1800,
     requiresReservation: true,
     description: {
       en: "The trail starts in Villa Los Coihues and takes approximately 1 hour longer than starting from Cerro Catedral. It shares the same route with the trails to Playa Muñoz and Cascada de los Duendes, before continuing to the refuge. It's a trail surrounded by forest, with panoramic views of Lake Gutiérrez, which then ascends through the valley until reaching Refugio Frey. Distance: 10 km. Estimated duration: 4-5 hours. How to get there from Camping Los Coihues: On foot: You can access it by walking from the camping, following the marked trail.",
