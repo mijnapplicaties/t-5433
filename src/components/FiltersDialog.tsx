@@ -9,6 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogFooter,
+  DialogDescription,
 } from './ui/dialog';
 import { Button } from './ui/button';
 
@@ -40,29 +41,30 @@ const FiltersDialog: React.FC<FiltersDialogProps> = ({
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>{t('filters')}</DialogTitle>
+          <DialogDescription>{t('filterByCategory')}</DialogDescription>
         </DialogHeader>
         
         <div className="grid gap-6 py-4">
           <div>
-            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByType')}</p>
+            <p className="text-lg font-medium text-gray-500 mb-2">{t('filterByType')}</p>
             <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedType === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
+                className="cursor-pointer text-lg px-3 py-1"
                 onClick={() => setSelectedType('all')}
               >
                 {t('filterAll')}
               </Badge>
               <Badge 
                 variant={selectedType === 'day-hike' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
+                className="cursor-pointer text-lg px-3 py-1"
                 onClick={() => setSelectedType('day-hike')}
               >
                 {t('filterDayHike')}
               </Badge>
               <Badge 
                 variant={selectedType === 'multi-day' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
+                className="cursor-pointer text-lg px-3 py-1"
                 onClick={() => setSelectedType('multi-day')}
               >
                 {t('filterMultiDay')}
@@ -71,32 +73,32 @@ const FiltersDialog: React.FC<FiltersDialogProps> = ({
           </div>
 
           <div>
-            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByDifficulty')}</p>
+            <p className="text-lg font-medium text-gray-500 mb-2">{t('filterByDifficulty')}</p>
             <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedDifficulty === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
+                className="cursor-pointer text-lg px-3 py-1"
                 onClick={() => setSelectedDifficulty('all')}
               >
                 {t('filterAll')}
               </Badge>
               <Badge 
                 variant={selectedDifficulty === 'easy' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
+                className="cursor-pointer text-lg px-3 py-1"
                 onClick={() => setSelectedDifficulty('easy')}
               >
                 {t('difficultyEasy')}
               </Badge>
               <Badge 
                 variant={selectedDifficulty === 'moderate' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
+                className="cursor-pointer text-lg px-3 py-1"
                 onClick={() => setSelectedDifficulty('moderate')}
               >
                 {t('difficultyModerate')}
               </Badge>
               <Badge 
                 variant={selectedDifficulty === 'hard' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
+                className="cursor-pointer text-lg px-3 py-1"
                 onClick={() => setSelectedDifficulty('hard')}
               >
                 {t('difficultyHard')}
@@ -105,32 +107,32 @@ const FiltersDialog: React.FC<FiltersDialogProps> = ({
           </div>
 
           <div>
-            <p className="text-base font-medium text-gray-500 mb-2">{t('filterByAccessibility')}</p>
+            <p className="text-lg font-medium text-gray-500 mb-2">{t('filterByAccessibility')}</p>
             <div className="flex flex-wrap gap-2">
               <Badge 
                 variant={selectedTravelTime === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
+                className="cursor-pointer text-lg px-3 py-1"
                 onClick={() => setSelectedTravelTime('all')}
               >
                 {t('filterAll')}
               </Badge>
               <Badge 
                 variant={selectedTravelTime === 'direct-access' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
+                className="cursor-pointer text-lg px-3 py-1"
                 onClick={() => setSelectedTravelTime('direct-access')}
               >
                 {t('accessibilityDirect')}
               </Badge>
               <Badge 
                 variant={selectedTravelTime === 'easy-access' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
+                className="cursor-pointer text-lg px-3 py-1"
                 onClick={() => setSelectedTravelTime('easy-access')}
               >
                 {t('accessibilityEasy')}
               </Badge>
               <Badge 
                 variant={selectedTravelTime === 'medium-access' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
+                className="cursor-pointer text-lg px-3 py-1"
                 onClick={() => setSelectedTravelTime('medium-access')}
               >
                 {t('accessibilityMedium')}

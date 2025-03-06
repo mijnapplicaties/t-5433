@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -111,57 +112,62 @@ const Index = () => {
 
         <div className="mb-8 flex flex-col items-center gap-6">
           <div className="w-full max-w-4xl text-center">
-            <p className="text-xl font-semibold text-gray-600 mb-2">{t('category')}</p>
+            <p className="text-2xl font-bold text-gray-700 mb-4">{t('category')}</p>
             <div className="flex flex-wrap justify-center gap-2 items-center">
-              <Badge 
-                variant={selectedCategory === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
-                onClick={() => setSelectedCategory('all')}
-              >
-                <Map className="w-4 h-4 mr-1" />
-                {t('filterAll')}
-              </Badge>
-              <Badge 
-                variant={selectedCategory === 'high-mountain' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
-                onClick={() => setSelectedCategory('high-mountain')}
-              >
-                <Mountain className="w-4 h-4 mr-1" />
-                {t('categoryHighMountain')}
-              </Badge>
-              <Badge 
-                variant={selectedCategory === 'easy-mountain' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
-                onClick={() => setSelectedCategory('easy-mountain')}
-              >
-                <TreePine className="w-4 h-4 mr-1" />
-                {t('categoryEasyMountain')}
-              </Badge>
-              <Badge 
-                variant={selectedCategory === 'walking-path' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
-                onClick={() => setSelectedCategory('walking-path')}
-              >
-                <FootprintsIcon className="w-4 h-4 mr-1" />
-                {t('categoryWalkingPath')}
-              </Badge>
-              <Badge 
-                variant={selectedCategory === 'beaches-lakes' ? 'default' : 'outline'}
-                className="cursor-pointer text-lg"
-                onClick={() => setSelectedCategory('beaches-lakes')}
-              >
-                <Waves className="w-4 h-4 mr-1" />
-                {t('categoryBeachesLakes')}
-              </Badge>
+              <div className="flex flex-wrap justify-center gap-2 items-center w-full mb-2">
+                <Badge 
+                  variant={selectedCategory === 'all' ? 'default' : 'outline'}
+                  className="cursor-pointer text-lg px-3 py-1"
+                  onClick={() => setSelectedCategory('all')}
+                >
+                  <Map className="w-4 h-4 mr-1" />
+                  {t('filterAll')}
+                </Badge>
+                <Badge 
+                  variant={selectedCategory === 'high-mountain' ? 'default' : 'outline'}
+                  className="cursor-pointer text-lg px-3 py-1"
+                  onClick={() => setSelectedCategory('high-mountain')}
+                >
+                  <Mountain className="w-4 h-4 mr-1" />
+                  {t('categoryHighMountain')}
+                </Badge>
+                <Badge 
+                  variant={selectedCategory === 'easy-mountain' ? 'default' : 'outline'}
+                  className="cursor-pointer text-lg px-3 py-1"
+                  onClick={() => setSelectedCategory('easy-mountain')}
+                >
+                  <TreePine className="w-4 h-4 mr-1" />
+                  {t('categoryEasyMountain')}
+                </Badge>
+                <Badge 
+                  variant={selectedCategory === 'walking-path' ? 'default' : 'outline'}
+                  className="cursor-pointer text-lg px-3 py-1"
+                  onClick={() => setSelectedCategory('walking-path')}
+                >
+                  <FootprintsIcon className="w-4 h-4 mr-1" />
+                  {t('categoryWalkingPath')}
+                </Badge>
+              </div>
               
-              <Badge 
-                variant="outline" 
-                className="cursor-pointer text-lg border-black"
-                onClick={() => setFiltersOpen(true)}
-              >
-                <Filter className="w-4 h-4 mr-1" />
-                {t('filters')}
-              </Badge>
+              <div className="flex flex-wrap justify-center gap-2 items-center">
+                <Badge 
+                  variant={selectedCategory === 'beaches-lakes' ? 'default' : 'outline'}
+                  className="cursor-pointer text-lg px-3 py-1"
+                  onClick={() => setSelectedCategory('beaches-lakes')}
+                >
+                  <Waves className="w-4 h-4 mr-1" />
+                  {t('categoryBeachesLakes')}
+                </Badge>
+                
+                <Badge 
+                  variant="outline" 
+                  className="cursor-pointer text-lg px-3 py-1 border-black ml-2"
+                  onClick={() => setFiltersOpen(true)}
+                >
+                  <Filter className="w-4 h-4 mr-1" />
+                  {t('filters')}
+                </Badge>
+              </div>
             </div>
           </div>
         </div>
