@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -39,7 +40,7 @@ export const trails: Trail[] = [
       fr: "Prenez le bus 20 et descendez au dernier arrêt à l'Hôtel Llao Llao. De là, marchez le long de la route pendant 20 minutes jusqu'au début du sentier. Ensuite, c'est une randonnée d'une heure avec une légère montée à travers une forêt de coihues et de cyprès sur 2,6 km. L'effort est récompensé par une vue spectaculaire depuis le sommet, où vous pouvez admirer le lac Moreno, le Nahuel Huapi et la Cordillère des Andes. Après avoir profité du panorama, le sentier descend et vous permet de compléter le circuit de manière circulaire, en passant par d'autres portions de forêt et de petites plages au bord du lac.",
       de: "Nehmen Sie den Bus 20 und steigen Sie an der letzten Haltestelle am Hotel Llao Llao aus. Von dort aus gehen Sie 20 Minuten entlang der Route bis zum Beginn des Wanderwegs. Von dort aus ist es eine einstündige Wanderung mit leichtem Anstieg durch einen Wald aus Coihues und Zypressen auf 2,6 km. Die Anstrengung wird mit einer spektakulären Aussicht vom Gipfel belohnt, wo Sie den Lago Moreno, den Nahuel Huapi und die Anden bewundern können. Nach dem Genießen des Aussichtspunkts führt der Weg bergab und ermöglicht es Ihnen, den Rundweg zu vollenden, wobei Sie weitere Waldstücke und kleine Strände am Seeufer passieren."
     },
-    imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
+    imageUrl: "/lovable-uploads/a210f1ff-a5c5-4288-a37a-33d461911db7.png",
     startingPoint: "Hotel Llao Llao (50 min by bus from Los Coihues)",
     highlights: ["highlightPanoramicViews", "highlightNativeForest", "highlightLakeViews"],
     transportation: ["bus", "taxi"],
