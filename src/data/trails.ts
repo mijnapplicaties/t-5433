@@ -178,7 +178,7 @@ export const trails: Trail[] = [
       en: "Tienes que tomar el bus 50 desde los Coihues hasta la rotonda de Av. Pioneros y luego, conectar con el bus 20 en Av. Bustillo en el km 8. Luego, bajate en el km 17.5 donde se encuentra la aerosilla al cerro campanario. En la cumbre hay una confitería, sanitarios, y un mirador desde el cual se pueden observar los lagos Nahuel Huapi y Moreno, la laguna El Trébol, la península San Pedro, la Isla Victoria, los cerros Otto, López, Goye, Bella Vista, Catedral, Capilla, el Hotel Llao Llao y las arboledas de Colonia Suiza.",
       es: "Tienes que tomar el bus 50 desde los Coihues hasta la rotonda de Av. Pioneros y luego, conectar con el bus 20 en Av. Bustillo en el km 8. Luego, bajate en el km 17.5 donde se encuentra la aerosilla al cerro campanario. En la cumbre hay una confitería, sanitarios, y un mirador desde el cual se pueden observar los lagos Nahuel Huapi y Moreno, la laguna El Trébol, la península San Pedro, la Isla Victoria, los cerros Otto, López, Goye, Bella Vista, Catedral, Capilla, el Hotel Llao Llao y las arboledas de Colonia Suiza.",
       fr: "Tienes que tomar el bus 50 desde los Coihues hasta la rotonda de Av. Pioneros y luego, conectar con el bus 20 en Av. Bustillo en el km 8. Luego, bajate en el km 17.5 donde se encuentra la aerosilla al cerro campanario. En la cumbre hay una confitería, sanitarios, y un mirador desde el cual se pueden observar los lagos Nahuel Huapi y Moreno, la laguna El Trébol, la península San Pedro, la Isla Victoria, los cerros Otto, López, Goye, Bella Vista, Catedral, Capilla, el Hotel Llao Llao y las arboledas de Colonia Suiza.",
-      de: "Tienes que tomar el bus 50 desde los Coihues hasta la rotonda de Av. Pioneros y luego, conectar con el bus 20 en Av. Bustillo en el km 8. Luego, bajate en el km 17.5 donde se encuentra la aerosilla al cerro campanario. En la cumbre hay una confitería, sanitarios, y un mirador desde el cual se pueden observar los lagos Nahuel Huapi y Moreno, la laguna El Trébol, la península San Pedro, la Isla Victoria, los cerros Otto, López, Goye, Bella Vista, Catedral, Capilla, el Hotel Llao Llao y las arboledas de Colonia Suiza."
+      de: "Tienes que tomar el bus 50 desde los Coihues hasta la rotonda de Av. Pioneros y luego, conectar con el bus 20 en Av. Bustillo en el km 8. Luego, bajate en el km 17.5 donde se encuentra la aerosilla al cerro campanario. En la cumbre hay una confitería, sanitarios, y un mirador desde el cual se pueden observar los lagos Nahuel Huapi und Moreno, la laguna El Trébol, la península San Pedro, la Isla Victoria, los cerros Otto, López, Goye, Bella Vista, Catedral, Capilla, el Hotel Llao Llao y las arboledas de Colonia Suiza."
     },
     imageUrl: "/lovable-uploads/1f6daf6e-7023-4399-9b7b-85dee316066e.png",
     startingPoint: "Base of Cerro Campanario (25 min bus ride)",
@@ -443,12 +443,13 @@ export const trails: Trail[] = [
       de: "Mirada Del Doctor (Blick des Doktors) ist eine relativ einfache Wanderung, die mit spektakulären Panoramablicken auf den Nahuel Huapi See und die umliegenden Berge belohnt. Dieser zugängliche Weg ist perfekt für Anfänger oder diejenigen, die eine kürzere Wanderung mit maximalem landschaftlichem Genuss suchen."
     },
     imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
-    startingPoint: "Near Cerro Campanario (30 min bus ride)",
+    startingPoint: "Near Circuito Chico (45 min bus ride)", // Updated starting point
     highlights: ["highlightPanoramicViews", "highlightLakeViews", "highlightBeginnerFriendly"],
     transportation: ["bus", "taxi"],
-    distanceFromCampsite: 12,
-    travelTime: 30,
-    busLines: "Linea 50 (desde Coihues) + Linea 20 (Av. Bustillo) (40 min)",
+    distanceFromCampsite: 15, // Updated distance
+    travelTime: 45, // Updated travel time to 45 minutes
+    busLines: "Linea 50 (desde Coihues) + Linea 20 (Av. Bustillo) (45 min)", // Updated bus information
     category: "easy-mountain"
   }
 ];
+
