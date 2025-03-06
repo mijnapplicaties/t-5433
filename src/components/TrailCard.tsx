@@ -260,10 +260,6 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
               })
             )}
           </div>
-          
-          {getBusInfo(trail) && (
-            <p className="text-xs mt-1 text-blue-600 italic">{t('checkSchedules')}</p>
-          )}
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
