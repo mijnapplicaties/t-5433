@@ -92,7 +92,7 @@ export const trails: Trail[] = [
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 8,
     travelTime: 20,
-    busLines: "Linea 50",
+    busLines: "Linea 50 (25 min)",
     category: "easy-mountain"
   },
   {
