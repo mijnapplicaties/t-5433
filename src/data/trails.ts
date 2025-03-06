@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -296,7 +295,7 @@ export const trails: Trail[] = [
     description: {
       en: "A beautiful overnight trek to Refugio Lopez. From Camping Los Coihues, take bus line 20 to Arroyo Lopez (30 min). The trail offers stunning views of lakes Nahuel Huapi and Moreno. The refuge is perched on a rock outcrop with 360° panoramic views.",
       es: "Una hermosa caminata con pernocte al Refugio Lopez. Desde Camping Los Coihues, tome la línea 20 hasta Arroyo Lopez (30 min). El sendero ofrece impresionantes vistas de los lagos Nahuel Huapi y Moreno. El refugio está situado en un afloramiento rocoso con vistas panorámicas de 360°.",
-      fr: "Un magnifique trek d'une nuit au Refugio Lopez. Depuis le Camping Los Coihues, prenez la ligne 20 à Arroyo Lopez (30 min). Le sentier offre des vues spectaculaires sur les lacs Nahuel Huapi et Moreno. Le refuge est perché sur un affleurement rocheux avec des vues panoramiques à 360°.",
+      fr: "Un trek d'une nuit au Refugio Lopez. Depuis le Camping Los Coihues, prenez la ligne 20 à Arroyo Lopez (30 min). Le sentier offre des vues spectaculaires sur les lacs Nahuel Huapi et Moreno. Le refuge est perché sur un affleurement rocheux avec des vues panoramiques à 360°.",
       de: "Eine schöne Übernachtungswanderung zum Refugio Lopez. Vom Camping Los Coihues aus nehmen Sie die Linie 20 nach Arroyo Lopez (30 Minuten). Der Weg bietet atemberaubende Aussichten auf die Seen Nahuel Huapi und Moreno. Die Hütte liegt auf einem Felsvorsprung mit 360°-Panoramablick."
     },
     imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
@@ -321,7 +320,7 @@ export const trails: Trail[] = [
       en: "A three-day circuit trek to Laguna Negra. From Camping Los Coihues, take bus 50 to downtown and then transfer to bus 10 to Colonia Suiza. The trail offers stunning alpine views and pristine mountain lakes. One of the classic multiday treks in the region.",
       es: "Un trekking de circuito de tres días a Laguna Negra. Desde Camping Los Coihues, tome el bus 50 al centro y luego transfiera al bus 10 a Colonia Suiza. El sendero ofrece impresionantes vistas alpinas y prístinos lagos de montaña. Uno de los clásicos trekkings de varios días en la región.",
       fr: "Un trek en circuit de trois jours à Laguna Negra. Depuis le Camping Los Coihues, prenez le bus 50 vers le centre-ville, puis le service pour Colonia Suiza. Le sentier offre de superbes vues alpines et des lacs de montagne immaculés. L'un des classiques treks de plusieurs jours dans la région.",
-      de: "Eine dreitägige Rundwanderung zur Laguna Negra. Vom Camping Los Coihues nehmen Sie den Bus 50 in die Innenstadt und dann den Bus 10 nach Colonia Suiza. Der Weg bietet atemberaubende Alpenblicke und unberührte Bergseen. Eine der klassischen Mehrtageswanderungen in der Region."
+      de: "Eine dreitägige Rundwanderung zur Laguna Negra. Vom Camping Los Coihues nehmen Sie den Bus 50 in die Innenstadt und dann den Bus 10 nach Colonia Suiza. Der Weg bietet atemberaubende Alpenseen und unberührte Bergseen. Eine der klassischen Mehrtageswanderungen in der Region."
     },
     imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
     startingPoint: "Colonia Suiza (40 min bus from Los Coihues)",
@@ -390,10 +389,10 @@ export const trails: Trail[] = [
     elevation: 1600,
     requiresReservation: true,
     description: {
-      en: "The 5 Lagunas Circuit is a classic multi-day trek that covers five beautiful alpine lakes. This demanding route takes you through diverse high-mountain landscapes and offers stunning camping spots by pristine lakes. The trek requires good physical condition and basic outdoor experience.",
-      es: "El Circuito de las 5 Lagunas es un clásico trekking de varios días que recorre cinco hermosos lagos alpinos. Esta ruta exigente te lleva a través de diversos paisajes de alta montaña y ofrece impresionantes lugares para acampar junto a lagos prístinos. El trekking requiere buena condición física y experiencia básica en actividades al aire libre.",
-      fr: "Le Circuit des 5 Lagunas est un trek classique de plusieurs jours qui couvre cinq beaux lacs alpins. Cet itinéraire exigeant vous emmène à travers divers paysages de haute montagne et offre de superbes sites de camping au bord de lacs intacts. Le trek nécessite une bonne condition physique et une expérience de base en plein air.",
-      de: "Der 5-Lagunen-Rundweg ist eine klassische mehrtägige Wanderung, die fünf wunderschöne Alpenseen umfasst. Diese anspruchsvolle Route führt durch verschiedene Hochgebirgslandschaften und bietet atemberaubende Campingplätze an unberührten Seen. Die Wanderung erfordert eine gute körperliche Verfassung und grundlegende Outdoor-Erfahrung."
+      en: "The 5 Lagunas Circuit is a challenging 3-day trek visiting five alpine lakes. Starting from Colonia Suiza, the route passes through breathtaking high-mountain landscapes including forests, rocky terrain, and pristine lakes with incredible camping spots. This demanding trek requires good physical condition and previous hiking experience. The effort is rewarded with some of the most spectacular scenery in the region, away from crowds.",
+      es: "El Circuito de 5 Lagunas es un exigente trekking de 3 días que visita cinco lagos alpinos. Partiendo desde Colonia Suiza, la ruta pasa por impresionantes paisajes de alta montaña incluyendo bosques, terreno rocoso y lagos prístinos con increíbles lugares para acampar. Este trekking demandante requiere buena condición física y experiencia previa en montaña. El esfuerzo es recompensado con algunos de los paisajes más espectaculares de la región, lejos de las multitudes.",
+      fr: "Le Circuit des 5 Lagunas est une randonnée exigeante de 3 jours visitant cinq lacs alpins. Partant de Colonia Suiza, l'itinéraire traverse des paysages époustouflants de haute montagne, comprenant des forêts, des terrains rocheux et des lacs immaculés avec d'incroyables sites de camping. Cette randonnée difficile nécessite une bonne condition physique et une expérience préalable de la randonnée. L'effort est récompensé par certains des paysages les plus spectaculaires de la région, loin des foules.",
+      de: "Der 5-Lagunen-Rundweg ist eine anspruchsvolle 3-tägige Wanderung zu fünf Alpenseen. Von Colonia Suiza aus führt die Route durch atemberaubende Hochgebirgslandschaften mit Wäldern, felsigem Gelände und unberührten Seen mit unglaublichen Campingplätzen. Diese anspruchsvolle Wanderung erfordert eine gute körperliche Verfassung und vorherige Wandererfahrung. Die Anstrengung wird mit einigen der spektakulärsten Landschaften der Region belohnt, fernab von Menschenmassen."
     },
     imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
     startingPoint: "Colonia Suiza (40 min bus from Los Coihues)",
@@ -423,10 +422,10 @@ export const trails: Trail[] = [
     startingPoint: "Pampa Linda (120 min bus + transfer from Los Coihues)", // Updated starting point to indicate Pampa Linda
     highlights: ["highlightAlpineLake", "highlightForestTrail", "highlightPanoramicViews"],
     transportation: ["private-transfer", "bus"],
-    distanceFromCampsite: 60, // Updated to be similar to other Pampa Linda trails
+    distanceFromCampsite: 60, // Updated distance to match other Pampa Linda trails
     travelTime: 120, // Updated travel time to 120 minutes (2 hours)
     busLines: "Bus 50 + Pampa Linda Transfer",
-    category: "high-mountain"
+    category: "high-mountain" // Updated category to high-mountain to match other Pampa Linda trails
   },
   {
     id: "19",
@@ -453,4 +452,3 @@ export const trails: Trail[] = [
     category: "high-mountain" // Updated category to high-mountain to match other Pampa Linda trails
   }
 ];
-
