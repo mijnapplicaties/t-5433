@@ -80,8 +80,14 @@ const Index = () => {
     directAccessTrailNames.includes(trail.name) && trail.id !== "1"
   );
   
+  const llaoLlaoIndex = directAccessHikes.findIndex(trail => trail.name === 'Cerro Llao Llao');
+  
   if (freyTrailForDirectAccess) {
-    directAccessHikes.unshift(freyTrailForDirectAccess);
+    if (llaoLlaoIndex !== -1) {
+      directAccessHikes.splice(llaoLlaoIndex, 0, freyTrailForDirectAccess);
+    } else {
+      directAccessHikes.unshift(freyTrailForDirectAccess);
+    }
   }
   
   const otherDayHikes = dayHikes.filter(trail => 
