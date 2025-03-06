@@ -63,7 +63,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
       case 'taxi':
         return {
           icon: <Car className="w-4 h-4 text-blue-500" />,
-          label: `${t('taxiService')} ${getTimeLabel(Math.round(trail.distanceFromCampsite * 2))}`
+          label: `${t('taxiService')} ${getTimeLabel(15)}`
         };
       case 'private-transfer':
         return {
@@ -236,22 +236,28 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
         <div className="mt-4">
           <h4 className="text-sm font-semibold mb-2">{t('howToGetThere')}</h4>
           <div className="space-y-2">
-            {trail.transportation.map((type, index) => {
-              const transportInfo = getTransportationInfo(type);
-              if (!transportInfo) return null;
-              return (
-                <div key={index} className="flex items-center gap-2 text-sm font-bold text-blue-600">
-                  {transportInfo.icon}
-                  <span>{transportInfo.label}</span>
+            {trail.name === "Refugio Frey from Villa Catedral" ? (
+              <>
+                <div className="flex items-center gap-2 text-sm font-bold text-blue-600">
+                  <Car className="w-4 h-4 text-blue-500" />
+                  <span>{t('taxiService')} (15 {t('minutes')})</span>
                 </div>
-              );
-            })}
-            
-            {getBusInfo(trail) && (
-              <div className="flex items-center gap-2 text-sm font-bold text-blue-600">
-                <Bus className="w-4 h-4 text-blue-500" />
-                <span>{t('busLines')}: {getBusInfo(trail)}</span>
-              </div>
+                <div className="flex items-center gap-2 text-sm font-bold text-blue-600">
+                  <Bus className="w-4 h-4 text-blue-500" />
+                  <span>{t('busLines')}: {getBusInfo(trail)}</span>
+                </div>
+              </>
+            ) : (
+              trail.transportation.map((type, index) => {
+                const transportInfo = getTransportationInfo(type);
+                if (!transportInfo) return null;
+                return (
+                  <div key={index} className="flex items-center gap-2 text-sm font-bold text-blue-600">
+                    {transportInfo.icon}
+                    <span>{transportInfo.label}</span>
+                  </div>
+                );
+              })
             )}
           </div>
           
