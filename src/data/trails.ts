@@ -17,7 +17,7 @@ export const trails: Trail[] = [
       fr: "Le sentier commence à Villa Los Coihues et prend environ 1 heure de plus que si l'on part de Cerro Catedral. Il partage le même itinéraire que les sentiers vers Playa Muñoz et Cascada de los Duendes, avant de continuer vers le refuge. C'est un sentier entouré de forêt, avec des vues panoramiques sur le lac Gutiérrez, qui monte ensuite par la vallée jusqu'au Refugio Frey. Distance: 10 km. Durée estimée: 4-5 heures. Comment s'y rendre depuis Camping Los Coihues: À pied: On peut y accéder en marchant depuis le camping, en suivant le sentier balisé.",
       de: "Der Weg beginnt in Villa Los Coihues und dauert etwa 1 Stunde länger als wenn man von Cerro Catedral startet. Er teilt die gleiche Route mit den Wegen nach Playa Muñoz und Cascada de los Duendes, bevor es zum Refugio weitergeht. Es ist ein Weg umgeben von Wald, mit Panoramablick auf den Lago Gutiérrez, der dann durch das Tal bis zum Refugio Frey aufsteigt. Entfernung: 10 km. Geschätzte Dauer: 4-5 Stunden. Anfahrt vom Camping Los Coihues: Zu Fuß: Sie können zu Fuß vom Camping aus zugreifen, indem Sie dem markierten Weg folgen."
     },
-    imageUrl: "/lovable-uploads/0a880087-8ded-441c-b362-9e8437aad433.png",
+    imageUrl: "/lovable-uploads/5fd20688-6816-43ff-87bc-fb5b01ab43eb.png",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["highlightAlpineLake", "highlightMountainRefuge", "highlightClimbingArea"],
     transportation: ["walking"],

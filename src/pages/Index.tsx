@@ -68,12 +68,14 @@ const Index = () => {
   
   const freyTrailForDirectAccess = freyTrail ? {
     ...freyTrail,
-    name: "Refugio Frey desde Lago Gutierrez"
+    name: "Refugio Frey desde Lago Gutierrez",
+    imageUrl: "/lovable-uploads/5fd20688-6816-43ff-87bc-fb5b01ab43eb.png"
   } : null;
   
   const freyTrailForBusAccess = freyTrail ? {
     ...freyTrail,
-    name: "Refugio Frey from Villa Catedral"
+    name: "Refugio Frey from Villa Catedral",
+    imageUrl: "/lovable-uploads/5fd20688-6816-43ff-87bc-fb5b01ab43eb.png"
   } : null;
   
   const directAccessHikes = dayHikes.filter(trail => 
