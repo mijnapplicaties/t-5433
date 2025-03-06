@@ -107,8 +107,14 @@ const Index = () => {
     }
   }
 
-  const pampLindaHikes = multiDayHikes.filter(trail => trail.region === 'pampa-linda');
-  const otherMultiDayHikes = multiDayHikes.filter(trail => trail.region !== 'pampa-linda');
+  const pampLindaHikes = multiDayHikes.filter(trail => 
+    trail.name.toLowerCase().includes('pampa linda') || 
+    trail.startingPoint.toLowerCase().includes('pampa linda')
+  );
+  const otherMultiDayHikes = multiDayHikes.filter(trail => 
+    !trail.name.toLowerCase().includes('pampa linda') && 
+    !trail.startingPoint.toLowerCase().includes('pampa linda')
+  );
 
   const getTransportIcon = (type: TransportationType) => {
     switch(type) {
