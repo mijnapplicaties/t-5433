@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -180,10 +181,12 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
 
       <CardContent>
         <div className="grid grid-cols-3 gap-4 mb-4">
-          <div className="flex items-center gap-2">
-            <ArrowUpRight className="w-4 h-4 text-blue-500" />
-            <span className="text-sm">{formatDistance(trail)}</span>
-          </div>
+          {trail.distance > 0 && (
+            <div className="flex items-center gap-2">
+              <ArrowUpRight className="w-4 h-4 text-blue-500" />
+              <span className="text-sm">{formatDistance(trail)}</span>
+            </div>
+          )}
           <div className="flex items-center gap-2">
             <Clock className="w-4 h-4 text-blue-500" />
             <span className="text-sm">

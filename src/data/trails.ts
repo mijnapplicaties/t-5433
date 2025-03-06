@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -217,7 +218,7 @@ export const trails: Trail[] = [
     name: "Colonia Suiza",
     type: "day-hike",
     difficulty: "easy",
-    distance: 6,
+    distance: 0, // Changed from 6 to 0 to hide distance information
     duration: 1,
     elevation: 850,
     requiresReservation: false,
