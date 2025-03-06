@@ -1,4 +1,4 @@
-<lov-code>
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -456,4 +456,20 @@ export const trails: Trail[] = [
     distance: 28,
     duration: 36,
     elevation: 1500,
-    requiresReservation
+    requiresReservation: true,
+    description: {
+      en: "A stunning viewpoint accessed via a two-day trek. The effort is well worth it for the panoramic views.",
+      es: "Un impresionante mirador al que se accede a través de una caminata de dos días. El esfuerzo vale la pena por las vistas panorámicas.",
+      fr: "Un point de vue magnifique accessible via une randonnée de deux jours. L'effort en vaut la peine pour les vues panoramiques.",
+      de: "Ein atemberaubender Aussichtspunkt, der über eine zweitägige Wanderung erreicht wird. Die Anstrengung lohnt sich für die Panoramablicke."
+    },
+    imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
+    startingPoint: "Pampa Linda (transfer required)",
+    highlights: ["highlightPanoramicViews", "highlightRemoteWilderness", "highlightOvernightCamping"],
+    transportation: ["private-transfer"],
+    distanceFromCampsite: 60,
+    travelTime: 120,
+    category: "high-mountain",
+    region: "pampa-linda"
+  }
+];
