@@ -111,7 +111,7 @@ const Index = () => {
 
         <div className="mb-8 flex flex-col items-center gap-6">
           <div className="w-full max-w-4xl text-center">
-            <p className="text-base font-medium text-gray-500 mb-2">{t('category')}</p>
+            <p className="text-xl font-semibold text-gray-600 mb-2">{t('category')}</p>
             <div className="flex flex-wrap justify-center gap-2 items-center">
               <Badge 
                 variant={selectedCategory === 'all' ? 'default' : 'outline'}

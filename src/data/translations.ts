@@ -385,5 +385,11 @@ export const translations: Translation = {
     es: "Aplicar",
     fr: "Appliquer",
     de: "Anwenden",
-  }
+  },
+  category: {
+    en: "Categories",
+    es: "Categorías de Búsqueda",
+    fr: "Catégories",
+    de: "Kategorien",
+  },
 };
