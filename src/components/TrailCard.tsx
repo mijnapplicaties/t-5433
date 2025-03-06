@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -52,27 +53,27 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     switch (type) {
       case 'walking':
         return {
-          icon: <Footprints className="w-4 h-4" />,
-          label: `${t('walkingDistance')} ${getTimeLabel(Math.round(trail.distanceFromCampsite * 15))}`
+          icon: <Footprints className="w-4 h-4 text-blue-500" />,
+          label: `${t('walkingDistance')}`
         };
       case 'bus':
         return {
-          icon: <Bus className="w-4 h-4" />,
+          icon: <Bus className="w-4 h-4 text-blue-500" />,
           label: `${t('busService')} - ${trail.busLines ? `Line 50 + ${trail.busLines}` : 'Line 50'} ${getTimeLabel(trail.travelTime)}`
         };
       case 'taxi':
         return {
-          icon: <Car className="w-4 h-4" />,
+          icon: <Car className="w-4 h-4 text-blue-500" />,
           label: `${t('taxiService')} ${getTimeLabel(Math.round(trail.distanceFromCampsite * 2))}`
         };
       case 'private-transfer':
         return {
-          icon: <Users className="w-4 h-4" />,
+          icon: <Users className="w-4 h-4 text-blue-500" />,
           label: `${t('privateTransfer')} ${getTimeLabel(Math.round(trail.distanceFromCampsite * 2))}`
         };
       case 'hitchhiking':
         return {
-          icon: <ThumbsUp className="w-4 h-4" />,
+          icon: <ThumbsUp className="w-4 h-4 text-blue-500" />,
           label: t('hitchhiking')
         };
       default:
@@ -140,7 +141,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
           {transportIcons && transportIcons.length > 0 && (
             <div className="absolute bottom-4 right-4 flex gap-2 bg-white/80 rounded-full px-3 py-1">
               {transportIcons.map((icon, index) => (
-                <div key={index} className="text-forest-light">
+                <div key={index} className="text-blue-500">
                   {icon}
                 </div>
               ))}
@@ -165,17 +166,17 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
         <CardContent>
           <div className="grid grid-cols-3 gap-4 mb-4">
             <div className="flex items-center gap-2">
-              <ArrowUpRight className="w-4 h-4 text-forest-light" />
+              <ArrowUpRight className="w-4 h-4 text-blue-500" />
               <span className="text-sm">{trail.distance} {t('km')}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-forest-light" />
+              <Clock className="w-4 h-4 text-blue-500" />
               <span className="text-sm">
                 {trail.duration} {t('hours')}
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <Mountain className="w-4 h-4 text-forest-light" />
+              <Mountain className="w-4 h-4 text-blue-500" />
               <span className="text-sm">{trail.elevation}m</span>
             </div>
           </div>
@@ -189,7 +190,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                 const transportInfo = getTransportationInfo(type);
                 if (!transportInfo) return null;
                 return (
-                  <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
+                  <div key={index} className="flex items-center gap-2 text-sm font-bold text-blue-600">
                     {transportInfo.icon}
                     <span>{transportInfo.label}</span>
                     {trail.travelTime > 0 && type === 'bus' && (
@@ -241,21 +242,21 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
             
             <div className="grid grid-cols-3 gap-4 mb-6 bg-gray-50 p-4 rounded-lg">
               <div className="flex items-center gap-2">
-                <ArrowUpRight className="w-5 h-5 text-forest-light" />
+                <ArrowUpRight className="w-5 h-5 text-blue-500" />
                 <div>
                   <p className="text-sm font-semibold">{t('distance')}</p>
                   <p className="text-base">{trail.distance} {t('km')}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-forest-light" />
+                <Clock className="w-5 h-5 text-blue-500" />
                 <div>
                   <p className="text-sm font-semibold">{t('duration')}</p>
                   <p className="text-base">{trail.duration} {t('hours')}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <Mountain className="w-5 h-5 text-forest-light" />
+                <Mountain className="w-5 h-5 text-blue-500" />
                 <div>
                   <p className="text-sm font-semibold">{t('elevation')}</p>
                   <p className="text-base">{trail.elevation}m</p>
@@ -276,7 +277,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                     const transportInfo = getTransportationInfo(type);
                     if (!transportInfo) return null;
                     return (
-                      <div key={index} className="flex items-center gap-2 text-gray-700">
+                      <div key={index} className="flex items-center gap-2 font-bold text-blue-600">
                         {transportInfo.icon}
                         <span>{transportInfo.label}</span>
                         {trail.travelTime > 0 && type === 'bus' && (
