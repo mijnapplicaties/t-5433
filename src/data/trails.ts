@@ -169,7 +169,7 @@ export const trails: Trail[] = [
     id: "8",
     name: "Cerro Campanario",
     type: "day-hike",
-    difficulty: "moderate",
+    difficulty: "easy", // Changed from "moderate" to "easy"
     distance: 1,
     duration: 1,
     elevation: 1080,
