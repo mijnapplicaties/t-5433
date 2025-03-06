@@ -410,4 +410,28 @@ export const translations: Translation = {
     fr: "Aucune plage trouvée avec les filtres actuels",
     de: "Keine Strände mit den aktuellen Filtern gefunden",
   },
+  fromCampsite: {
+    en: "from Camping Los Coihues",
+    es: "desde Camping Los Coihues",
+    fr: "depuis Camping Los Coihues",
+    de: "von Camping Los Coihues",
+  },
+  travelTime: {
+    en: "Travel Time",
+    es: "Tiempo de Viaje",
+    fr: "Temps de Trajet",
+    de: "Reisezeit",
+  },
+  busLines: {
+    en: "Bus Lines",
+    es: "Líneas de Bus",
+    fr: "Lignes de Bus",
+    de: "Buslinien",
+  },
+  checkSchedules: {
+    en: "Check schedules at the bus terminal or ask at reception",
+    es: "Consulta los horarios en la terminal o pregunta en recepción",
+    fr: "Vérifiez les horaires au terminal de bus ou renseignez-vous à la réception",
+    de: "Überprüfen Sie die Fahrpläne am Busterminal oder fragen Sie an der Rezeption",
+  },
 };

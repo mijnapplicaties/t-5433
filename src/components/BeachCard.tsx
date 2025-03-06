@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Beach } from '../types/beach';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { Map, Clock, ArrowUpRight, ThumbsUp, Bus, Car, Users, FootprintsIcon } from 'lucide-react';
+import { Map, Clock, ThumbsUp, Bus, Car, Users, FootprintsIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import {
   Dialog,
@@ -48,6 +48,32 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
     }
   };
 
+  const getBusInfo = (beach: Beach) => {
+    if (!beach.transportation.includes('bus')) return null;
+    
+    // Map beaches to specific bus lines and info
+    switch(beach.id) {
+      case 'b1': // Playa Del Viento
+        return "Bus 50";
+      case 'b2': // Playa Con Viento
+        return "Bus 20, 21";
+      case 'b3': // Playa Sin Viento
+        return "Bus 20";
+      case 'b4': // Playa Muñoz
+        return "Bus 20, 21";
+      case 'b5': // Playa Bonita
+        return "Bus 20";
+      case 'b6': // Playa Serena
+        return "Bus 50, 51";
+      case 'b7': // Bahia Lopez
+        return "Bus 20, 21";
+      case 'b8': // Villa Tacul
+        return "Bus 20, 21";
+      default:
+        return null;
+    }
+  };
+
   return (
     <>
       <Card 
@@ -76,7 +102,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
           <div className="grid grid-cols-1 gap-4 mb-4">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-blue-500" />
-              <span className="text-sm">{beach.travelTime} {t('minutes')}</span>
+              <span className="text-sm">{beach.travelTime} {t('minutes')} {t('fromCampsite')}</span>
             </div>
           </div>
           
@@ -92,6 +118,13 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
                 </Badge>
               ))}
             </div>
+            
+            {getBusInfo(beach) && (
+              <div className="mt-2 text-sm text-blue-600">
+                <span className="font-medium">{t('busLines')}: </span>
+                {getBusInfo(beach)}
+              </div>
+            )}
           </div>
         </CardContent>
       </Card>
@@ -116,8 +149,8 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5 text-blue-500" />
                 <div>
-                  <p className="text-sm font-semibold">{t('duration')}</p>
-                  <p className="text-base">{beach.travelTime} {t('minutes')}</p>
+                  <p className="text-sm font-semibold">{t('travelTime')}</p>
+                  <p className="text-base">{beach.travelTime} {t('minutes')} {t('fromCampsite')}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -137,7 +170,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
 
               <div>
                 <h3 className="text-lg font-semibold mb-2">{t('howToGetThere')}</h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-3">
                   {beach.transportation.map((transport, index) => (
                     <Badge key={index} variant="outline" className="flex items-center gap-1">
                       {getTransportIcon(transport)}
@@ -145,6 +178,13 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
                     </Badge>
                   ))}
                 </div>
+                
+                {getBusInfo(beach) && (
+                  <div className="mt-2 bg-blue-50 p-3 rounded-md">
+                    <p className="font-medium">{t('busLines')}: {getBusInfo(beach)}</p>
+                    <p className="text-sm mt-1">{t('checkSchedules')}</p>
+                  </div>
+                )}
               </div>
 
               <div>
