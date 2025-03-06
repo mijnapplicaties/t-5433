@@ -111,14 +111,20 @@ const Index = () => {
     trail.name.toLowerCase().includes('pampa linda') || 
     trail.name.toLowerCase().includes('meiling') ||
     trail.name.toLowerCase().includes('tronador') ||
-    trail.startingPoint.toLowerCase().includes('pampa linda')
+    trail.startingPoint.toLowerCase().includes('pampa linda') ||
+    trail.name.toLowerCase().includes('5 lagunas') ||
+    trail.name.toLowerCase().includes('laguna ilón') ||
+    trail.name.toLowerCase().includes('mirada del doctor')
   );
   
   const otherMultiDayHikes = multiDayHikes.filter(trail => 
     !trail.name.toLowerCase().includes('pampa linda') && 
     !trail.name.toLowerCase().includes('meiling') &&
     !trail.name.toLowerCase().includes('tronador') &&
-    !trail.startingPoint.toLowerCase().includes('pampa linda')
+    !trail.startingPoint.toLowerCase().includes('pampa linda') &&
+    !trail.name.toLowerCase().includes('5 lagunas') &&
+    !trail.name.toLowerCase().includes('laguna ilón') &&
+    !trail.name.toLowerCase().includes('mirada del doctor')
   );
 
   const getTransportIcon = (type: TransportationType) => {
