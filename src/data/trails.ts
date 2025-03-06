@@ -228,7 +228,7 @@ export const trails: Trail[] = [
       fr: "Une agréable promenade à travers la colonie suisse historique, alliant patrimoine culturel et beauté naturelle. Visitez le marché artisanal local et goûtez aux spécialités régionales.",
       de: "Ein angenehmer Spaziergang durch die historische Schweizer Siedlung, der kulturelles Erbe mit natürlicher Schönheit verbindet. Besuchen Sie den lokalen Handwerkermarkt und probieren Sie regionale Spezialitäten."
     },
-    imageUrl: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
+    imageUrl: "/lovable-uploads/964a6f6b-ae4d-469a-833a-a5f5c4aad336.png",
     startingPoint: "Colonia Suiza (30 min bus ride)",
     highlights: ["highlightHistoricSettlement", "highlightArtisanMarket", "highlightLocalCuisine", "highlightLakeAccess"],
     transportation: ["bus", "taxi"],
