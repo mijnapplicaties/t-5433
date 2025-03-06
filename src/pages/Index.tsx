@@ -107,9 +107,6 @@ const Index = () => {
           <p className="text-xl text-stone mb-4">
             {t('tagline')}
           </p>
-          <p className="text-lg text-stone max-w-2xl mx-auto">
-            {t('subtitle')}
-          </p>
         </header>
 
         <div className="mb-8 flex flex-col items-center gap-6">
