@@ -16,6 +16,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('es');
 
   const t = (key: string): string => {
+    if (!key) return '';
     return translations[key]?.[language] || key;
   };
 
