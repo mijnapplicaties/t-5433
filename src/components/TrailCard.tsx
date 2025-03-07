@@ -11,6 +11,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
+  DialogTrigger,
 } from "./ui/dialog";
 
 interface TrailCardProps {
@@ -169,109 +170,233 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   };
 
   return (
-    <Card 
-        className="group hover:shadow-lg transition-all duration-300 animate-fadeIn cursor-pointer"
-        onClick={() => setIsOpen(true)}
-      >
-      <div className="relative overflow-hidden rounded-t-lg h-48">
-        <img
-          src={trail.imageUrl}
-          alt={trail.name}
-          className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute top-4 right-4 flex gap-2">
-          <Badge 
-            variant={trail.requiresReservation ? "destructive" : "secondary"}
-            className="backdrop-blur-sm bg-opacity-90"
-          >
-            {trail.requiresReservation ? t('reservationRequired') : t('noReservation')}
-          </Badge>
-        </div>
-        {transportIcons && transportIcons.length > 0 && (
-          <div className="absolute bottom-4 right-4 flex gap-2 bg-white/80 rounded-full px-3 py-1">
-            {transportIcons.map((icon, index) => (
-              <div key={index} className="text-blue-500">
-                {icon}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-      
-      <CardHeader>
-        <div className="flex justify-between items-start">
-          <div>
-            <CardTitle className="text-xl font-semibold">{trail.name}</CardTitle>
-            <CardDescription className="flex items-center gap-2 mt-1">
-              <MapPin className="w-4 h-4 flex-shrink-0" /> {trail.startingPoint}
-            </CardDescription>
-          </div>
-          <Badge className={`${getDifficultyColor(trail.difficulty)} text-white`}>
-            {getTranslatedDifficulty(trail.difficulty)}
-          </Badge>
-        </div>
-      </CardHeader>
-
-      <CardContent>
-        <div className="grid grid-cols-3 gap-4 mb-4">
-          {trail.distance > 0 && (
-            <div className="flex items-center gap-2">
-              <ArrowUpRight className="w-4 h-4 flex-shrink-0 text-blue-500" />
-              <span className="text-sm">{formatDistance(trail)}</span>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <DialogTrigger asChild>
+        <Card 
+          className="group hover:shadow-lg transition-all duration-300 animate-fadeIn cursor-pointer"
+        >
+          <div className="relative overflow-hidden rounded-t-lg h-48">
+            <img
+              src={trail.imageUrl}
+              alt={trail.name}
+              className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute top-4 right-4 flex gap-2">
+              <Badge 
+                variant={trail.requiresReservation ? "destructive" : "secondary"}
+                className="backdrop-blur-sm bg-opacity-90"
+              >
+                {trail.requiresReservation ? t('reservationRequired') : t('noReservation')}
+              </Badge>
             </div>
-          )}
-          <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4 flex-shrink-0 text-blue-500" />
-            <span className="text-sm">
-              {formatDuration(trail)}
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Mountain className="w-4 h-4 flex-shrink-0 text-blue-500" />
-            <span className="text-sm">{getElevation(trail)}m</span>
-          </div>
-        </div>
-        
-        <p className="text-sm text-gray-600 line-clamp-2">{getDescription(trail, language)}</p>
-        
-        <div className="mt-4">
-          <h4 className="text-sm font-semibold mb-2">{t('howToGetThere')}</h4>
-          <div className="space-y-2">
-            {trail.name === "Refugio Frey from Villa Catedral" ? (
-              <>
-                <div className="flex items-start gap-2 text-sm font-bold text-blue-600">
-                  <Car className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
-                  <span>{t('taxiService')} (15 {t('minutes')})</span>
-                </div>
-                <div className="flex items-start gap-2 text-sm font-bold text-blue-600">
-                  <Bus className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
-                  <span>{t('busLines')}: {getBusInfo(trail)}</span>
-                </div>
-              </>
-            ) : (
-              trail.transportation.map((type, index) => {
-                const transportInfo = getTransportationInfo(type);
-                if (!transportInfo) return null;
-                return (
-                  <div key={index} className="flex items-start gap-2 text-sm font-bold text-blue-600">
-                    <div className="mt-0.5 flex-shrink-0">{transportInfo.icon}</div>
-                    <span>{transportInfo.label}</span>
+            {transportIcons && transportIcons.length > 0 && (
+              <div className="absolute bottom-4 right-4 flex gap-2 bg-white/80 rounded-full px-3 py-1">
+                {transportIcons.map((icon, index) => (
+                  <div key={index} className="text-blue-500">
+                    {icon}
                   </div>
-                );
-              })
+                ))}
+              </div>
             )}
           </div>
-        </div>
+          
+          <CardHeader>
+            <div className="flex justify-between items-start">
+              <div>
+                <CardTitle className="text-xl font-semibold">{trail.name}</CardTitle>
+                <CardDescription className="flex items-center gap-2 mt-1">
+                  <MapPin className="w-4 h-4 flex-shrink-0" /> {trail.startingPoint}
+                </CardDescription>
+              </div>
+              <Badge className={`${getDifficultyColor(trail.difficulty)} text-white`}>
+                {getTranslatedDifficulty(trail.difficulty)}
+              </Badge>
+            </div>
+          </CardHeader>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {trail.highlights.map((highlight, index) => (
-            <Badge key={index} variant="secondary" className="text-xs">
-              {t(highlight)}
+          <CardContent>
+            <div className="grid grid-cols-3 gap-4 mb-4">
+              {trail.distance > 0 && (
+                <div className="flex items-center gap-2">
+                  <ArrowUpRight className="w-4 h-4 flex-shrink-0 text-blue-500" />
+                  <span className="text-sm">{formatDistance(trail)}</span>
+                </div>
+              )}
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4 flex-shrink-0 text-blue-500" />
+                <span className="text-sm">
+                  {formatDuration(trail)}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mountain className="w-4 h-4 flex-shrink-0 text-blue-500" />
+                <span className="text-sm">{getElevation(trail)}m</span>
+              </div>
+            </div>
+            
+            <p className="text-sm text-gray-600 line-clamp-2">{getDescription(trail, language)}</p>
+            
+            <div className="mt-4">
+              <h4 className="text-sm font-semibold mb-2">{t('howToGetThere')}</h4>
+              <div className="space-y-2">
+                {trail.name === "Refugio Frey from Villa Catedral" ? (
+                  <>
+                    <div className="flex items-start gap-2 text-sm font-bold text-blue-600">
+                      <Car className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
+                      <span>{t('taxiService')} (15 {t('minutes')})</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-sm font-bold text-blue-600">
+                      <Bus className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
+                      <span>{t('busLines')}: {getBusInfo(trail)}</span>
+                    </div>
+                  </>
+                ) : (
+                  trail.transportation.map((type, index) => {
+                    const transportInfo = getTransportationInfo(type);
+                    if (!transportInfo) return null;
+                    return (
+                      <div key={index} className="flex items-start gap-2 text-sm font-bold text-blue-600">
+                        <div className="mt-0.5 flex-shrink-0">{transportInfo.icon}</div>
+                        <span>{transportInfo.label}</span>
+                      </div>
+                    );
+                  })
+                )}
+              </div>
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {trail.highlights.map((highlight, index) => (
+                <Badge key={index} variant="secondary" className="text-xs">
+                  {t(highlight)}
+                </Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </DialogTrigger>
+      
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="text-2xl">{trail.name}</DialogTitle>
+          <DialogDescription className="flex items-center gap-2">
+            <MapPin className="w-4 h-4" /> {trail.startingPoint}
+          </DialogDescription>
+        </DialogHeader>
+        
+        <div className="mt-4">
+          <div className="mb-6 relative h-60 sm:h-80 overflow-hidden rounded-lg">
+            <img 
+              src={trail.imageUrl} 
+              alt={trail.name} 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-4 right-4">
+              <Badge 
+                variant={trail.requiresReservation ? "destructive" : "secondary"}
+                className="backdrop-blur-sm"
+              >
+                {trail.requiresReservation ? t('reservationRequired') : t('noReservation')}
+              </Badge>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
+              <ArrowUpRight className="w-6 h-6 text-blue-500 mb-1" />
+              <span className="text-sm font-medium">{t('distance')}</span>
+              <span className="text-lg font-bold">{formatDistance(trail)}</span>
+            </div>
+            
+            <div className="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
+              <Clock className="w-6 h-6 text-blue-500 mb-1" />
+              <span className="text-sm font-medium">{t('duration')}</span>
+              <span className="text-lg font-bold">{formatDuration(trail)}</span>
+            </div>
+            
+            <div className="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
+              <Mountain className="w-6 h-6 text-blue-500 mb-1" />
+              <span className="text-sm font-medium">{t('elevation')}</span>
+              <span className="text-lg font-bold">{getElevation(trail)}m</span>
+            </div>
+          </div>
+          
+          <div className="mb-6">
+            <h4 className="text-lg font-semibold mb-2">{t('difficulty')}</h4>
+            <Badge className={`${getDifficultyColor(trail.difficulty)} text-white px-3 py-1`}>
+              {getTranslatedDifficulty(trail.difficulty)}
             </Badge>
-          ))}
+            <p className="mt-2 text-gray-600">
+              {(() => {
+                switch(trail.difficulty) {
+                  case 'easy': return t('difficultyEasyDescription');
+                  case 'moderate': return t('difficultyModerateDescription');
+                  case 'hard': return t('difficultyHardDescription');
+                  case 'expert': return t('difficultyExpertDescription');
+                  default: return '';
+                }
+              })()}
+            </p>
+          </div>
+          
+          <div className="mb-6">
+            <h4 className="text-lg font-semibold mb-2">{t('description')}</h4>
+            <p className="text-gray-600 whitespace-pre-line">
+              {getDescription(trail, language)}
+            </p>
+          </div>
+          
+          <div className="mb-6">
+            <h4 className="text-lg font-semibold mb-2">{t('howToGetThere')}</h4>
+            <div className="space-y-3 bg-gray-50 p-4 rounded-lg">
+              {trail.name === "Refugio Frey from Villa Catedral" ? (
+                <>
+                  <div className="flex items-start gap-3">
+                    <Car className="w-5 h-5 flex-shrink-0 text-blue-500 mt-0.5" />
+                    <div>
+                      <span className="font-bold block">{t('taxiService')} (15 {t('minutes')})</span>
+                      <span className="text-gray-600">{t('taxiRecommendation')}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Bus className="w-5 h-5 flex-shrink-0 text-blue-500 mt-0.5" />
+                    <div>
+                      <span className="font-bold block">{t('busLines')}: {getBusInfo(trail)}</span>
+                      <span className="text-gray-600">{t('busScheduleWarning')}</span>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                trail.transportation.map((type, index) => {
+                  const transportInfo = getTransportationInfo(type);
+                  if (!transportInfo) return null;
+                  return (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="mt-0.5 flex-shrink-0">{transportInfo.icon}</div>
+                      <div>
+                        <span className="font-bold block">{transportInfo.label}</span>
+                        {type === 'bus' && <span className="text-gray-600">{t('busLines')}: {getBusInfo(trail)}</span>}
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-2">{t('highlights')}</h4>
+            <div className="flex flex-wrap gap-2">
+              {trail.highlights.map((highlight, index) => (
+                <Badge key={index} variant="secondary">
+                  {t(highlight)}
+                </Badge>
+              ))}
+            </div>
+          </div>
         </div>
-      </CardContent>
-    </Card>
+      </DialogContent>
+    </Dialog>
   );
 };
 
