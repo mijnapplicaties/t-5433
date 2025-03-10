@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -54,9 +53,9 @@ export const trails: Trail[] = [
     name: "Refugio Frey-Jakob Circuit",
     type: "multi-day",
     difficulty: "hard",
-    distance: 45,
-    duration: 3,
-    elevation: 1600, // Updated from 1080 to 1600
+    distance: 9,
+    duration: 6,
+    elevation: 1600,
     requiresReservation: true,
     description: {
       en: "We recommend taking an Uber from Camping to the base of Cerro Catedral. The trip takes approximately 15 minutes. Buses often involve a long wait. This trail starts at a higher point than the one from Lake Gutiérrez, saving about 1 hour of hiking. From the base of Cerro Catedral, you can begin your ascent to Refugio Frey, enjoying spectacular views as you progress through the mountainous landscape.\n\nFrom the Refugio Frey area, the trail skirts Laguna Toncek to the south, towards the ascent to Laguna Schmoll. This rocky slope is well marked and follows some twists and turns along the stream that descends from Schmoll to Toncek. This climb is significant and has many steps between rocks.\n\nEfforts have been made to protect the lagoon's wetland (mallín). A stone path was built to cross the wetland along a delineated trail without increasing erosion. Please use it carefully and stay on the marked path.\nFrom Laguna Schmoll begins another important step. This section has slightly larger rocks to climb and ends in the \"soccer field\". A few steps later, you reach the edge of Cerro Catedral with panoramic views of the Rucaco valley and Cerro Tronador in the background.\n\nThe descent down the Cathedral slope to the valley must be done with great care. At first, each step is like a large step, and then begins a section of loose stones and sand where your foot sinks and slides.\nAfter four hours of leaving Frey, stepping on firm ground in the forest along the valley's contour is a relief. Shade, water, shelter, rest.\n\nLeaving the Rucaco forest behind is like closing a storybook. Upon leaving the wooded area, you leave the protection from sun and wind, and the trail begins to climb with increasing slope. This is the ascent to Black Breach, and from its edge begins another particular descent.\n\nWith the same care as the previous descent, paying attention to each step and taking into account the paint signals, you re-enter a forest of lengas and then cross the stream that originates in Laguna Jakob. Add four more hours to the journey.\n\nFrom the Jakob area, the Laguna de los Témpanos is only 40 minutes away.\n\nReturning from Laguna Jakob, skirting the Casa de Piedra stream to Tambo Báez near Colonia Suiza usually takes 5 hours.\n\nHours: 6-8 hours.",
@@ -67,10 +66,10 @@ export const trails: Trail[] = [
     imageUrl: "/lovable-uploads/3b45435b-d0d0-4fb7-ac3b-73c18e21fd50.png",
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["highlightTwoMountainRefuges", "highlightAlpineLakes", "highlightHighMountainPasses"],
-    transportation: ["private-transfer", "taxi"], // Removed bus from transportation options
+    transportation: ["private-transfer", "taxi"],
     distanceFromCampsite: 8,
-    travelTime: 16, // Updated from 15 to 16 minutes
-    busLines: "", // Removed bus lines information
+    travelTime: 16,
+    busLines: "",
     category: "high-mountain"
   },
   {
@@ -102,8 +101,8 @@ export const trails: Trail[] = [
     name: "Lago Gutiérrez",
     type: "day-hike",
     difficulty: "easy",
-    distance: 0.3, // 300m
-    duration: 0.08, // 5 minutes (0.08 hours)
+    distance: 0.3,
+    duration: 0.08,
     elevation: 800,
     requiresReservation: false,
     description: {
@@ -149,7 +148,7 @@ export const trails: Trail[] = [
     type: "day-hike",
     difficulty: "easy",
     distance: 3.1,
-    duration: 0.75, // 45 minutes (0.75 hours)
+    duration: 0.75,
     elevation: 900,
     requiresReservation: false,
     description: {
@@ -170,7 +169,7 @@ export const trails: Trail[] = [
     id: "8",
     name: "Cerro Campanario",
     type: "day-hike",
-    difficulty: "easy", // Changed from "moderate" to "easy"
+    difficulty: "easy",
     distance: 1,
     duration: 1,
     elevation: 1080,
@@ -219,7 +218,7 @@ export const trails: Trail[] = [
     name: "Colonia Suiza",
     type: "day-hike",
     difficulty: "easy",
-    distance: 0, // Changed from 6 to 0 to hide distance information
+    distance: 0,
     duration: 1,
     elevation: 850,
     requiresReservation: false,
@@ -244,7 +243,7 @@ export const trails: Trail[] = [
     type: "day-hike",
     difficulty: "easy",
     distance: 2.6,
-    duration: 1, // 45-60 minutes (approximately 1 hour)
+    duration: 1,
     elevation: 1275,
     requiresReservation: false,
     description: {
