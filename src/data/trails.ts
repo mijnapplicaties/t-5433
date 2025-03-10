@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -217,11 +218,118 @@ export const trails: Trail[] = [
     name: "Colonia Suiza",
     type: "day-hike",
     difficulty: "easy",
-    distance: 0, // Changed from 6 to 0 to hide distance information
+    distance: 0,
     duration: 1,
     elevation: 850,
     requiresReservation: false,
     description: {
       en: "To reach Colonia Suiza from Camping Los Coihues, you can take bus 50 to downtown Bariloche and then transfer to bus 10, which takes you directly to Colonia Suiza. If going by car, follow Route 82 until connecting with Provincial Route 79, a gravel road that will take you to your destination in about 7 km. You can also go by bicycle or walking along the Old Road to Colonia Suiza, a forest-surrounded path that crosses the slope of Cerro López. Colonia Suiza is a picturesque village on the shores of Lake Moreno, known for its history, its gastronomy and its natural surroundings. Founded by Swiss immigrants in the late 19th century, it preserves rustic architecture and a traditional atmosphere. It's famous for its craft fair and its typical gastronomy, especially curanto, an ancestral dish cooked underground.",
       es: "Para llegar a Colonia Suiza desde Camping Los Coihues, puedes tomar el colectivo bus 50 hacia el centro de Bariloche y luego hacer combinación con el bus 10, que te lleva directamente a Colonia Suiza. Si vas en auto, sigue la Ruta 82 hasta conectar con la Ruta Provincial 79, un camino de ripio que en unos 7 km te llevará a destino. También puedes ir en bicicleta o caminando por el Camino Viejo a Colonia Suiza, un sendero rodeado de bosque que atraviesa el faldeo del Cerro López. Colonia Suiza es un pintoresco poblado a orillas del lago Moreno, conocido por su historia, su gastronomía y su entorno natural. Fundada por inmigrantes suizos a fines del siglo XIX, conserva una arquitectura rústica y una atmosphera tradicional. Es famosa por su feria artesanal y su gastronomía típica, especialmente el curanto, un plato ancestral cocinado bajo tierra.",
-      fr: "Pour rejoindre Colonia Suiza depuis Camping Los Coihues, vous pouvez prendre le bus 50 vers le centre-ville de Bariloche, puis correspondre avec le bus 10, qui vous mène directement à Colonia Suiza. Si vous y allez en voiture, suivez la Route 82 jusqu'à la connexion avec la Route Provinciale 79, une route de gravier qui vous mènera à destination en environ 7 km. Vous pouvez également y aller à vélo ou à pied par le Vieux Chemin de Colonia Suiza, un sentier entouré de forêt qui traverse
+      fr: "Pour rejoindre Colonia Suiza depuis Camping Los Coihues, vous pouvez prendre le bus 50 vers le centre-ville de Bariloche, puis correspondre avec le bus 10, qui vous mène directement à Colonia Suiza. Si vous y allez en voiture, suivez la Route 82 jusqu'à la connexion avec la Route Provinciale 79, une route de gravier qui vous mènera à destination en environ 7 km. Vous pouvez également y aller à vélo ou à pied par le Vieux Chemin de Colonia Suiza, un sentier entouré de forêt qui traverse la pente du Cerro López. Colonia Suiza est un village pittoresque sur les rives du lac Moreno, connu pour son histoire, sa gastronomie et son environnement naturel.",
+      de: "Um von Camping Los Coihues nach Colonia Suiza zu gelangen, können Sie den Bus 50 in die Innenstadt von Bariloche nehmen und dann in den Bus 10 umsteigen, der Sie direkt nach Colonia Suiza bringt. Wenn Sie mit dem Auto fahren, folgen Sie der Route 82 bis zur Verbindung mit der Provinzstraße 79, einer Schotterstraße, die Sie in etwa 7 km an Ihr Ziel führt. Sie können auch mit dem Fahrrad oder zu Fuß entlang des alten Weges nach Colonia Suiza fahren, einem waldumgebenen Pfad, der den Hang des Cerro López überquert."
+    },
+    imageUrl: "/lovable-uploads/2d1500b3-3ff7-49f4-8523-acf161b6f388.png",
+    startingPoint: "Colonia Suiza (30 min by bus from Los Coihues)",
+    highlights: ["highlightLakeViews", "highlightCulturalHeritage", "highlightGastronomy"],
+    transportation: ["bus", "taxi", "private-transfer"],
+    distanceFromCampsite: 12,
+    travelTime: 30,
+    busLines: "Linea 50 (Desde Coihues) + Linea 10 (desde Centro) (45 min)",
+    category: "walking-path"
+  },
+  {
+    id: "11",
+    name: "Refugio Lopez",
+    type: "day-hike",
+    difficulty: "moderate",
+    distance: 9.5,
+    duration: 2,
+    elevation: 1614,
+    requiresReservation: false,
+    description: {
+      en: "Tenes que tomarte la línea 10 desde Av. Bustillo o el centro porque a veces viene lleno. Sino, tomate el 20 o cualquiera que te deje en el km 18 de Av. Bustillo y desde ahí, compartir un Uber es barato. El sendero comienza donde está el puestito de 'la Panchería' en el Circuito Chico. Sendero con muy lindas vistas panorámicas al Nahuel Huapi. El sendero es fácil de seguir pero empinado de una. Un poco después de pasar por el refugio Roca Negra el sendero se une a un camino y ya no tiene ninguna exigencia física hasta un poquito antes del refugio donde se ve una vista increíble.",
+      es: "Tenes que tomarte la línea 10 desde Av. Bustillo o el centro porque a veces viene lleno. Sino, tomate el 20 o cualquiera que te deje en el km 18 de Av. Bustillo y desde ahí, compartir un Uber es barato. El sendero comienza donde está el puestito de 'la Panchería' en el Circuito Chico. Sendero con muy lindas vistas panorámicas al Nahuel Huapi. El sendero es fácil de seguir pero empinado de una. Un poco después de pasar por el refugio Roca Negra el sendero se une a un camino y ya no tiene ninguna exigencia física hasta un poquito antes del refugio donde se ve una vista increíble.",
+      fr: "Vous devez prendre la ligne 10 depuis l'Avenue Bustillo ou le centre car elle est parfois pleine. Sinon, prenez la ligne 20 ou toute autre ligne qui vous dépose au km 18 de l'Avenue Bustillo, et de là, partager un Uber est bon marché. Le sentier commence où se trouve le petit stand de 'la Panchería' dans le Circuito Chico. Sentier avec de très belles vues panoramiques sur le lac Nahuel Huapi. Le sentier est facile à suivre mais raide dès le début. Peu après avoir passé le refuge Roca Negra, le sentier rejoint un chemin et n'a plus aucune exigence physique jusqu'à un peu avant le refuge où l'on voit une vue incroyable.",
+      de: "Sie müssen die Linie 10 von der Bustillo Avenue oder dem Zentrum nehmen, da sie manchmal voll ist. Andernfalls nehmen Sie die Linie 20 oder eine beliebige Linie, die Sie am km 18 der Bustillo Avenue absetzt, und von dort aus ist das Teilen eines Ubers günstig. Der Weg beginnt an dem kleinen Stand 'la Panchería' im Circuito Chico. Weg mit sehr schönen Panoramablicken auf den Nahuel Huapi. Der Weg ist leicht zu folgen, aber von Anfang an steil. Kurz nach dem Passieren der Roca Negra Schutzhütte trifft der Weg auf einen Weg und hat keine körperlichen Anforderungen mehr bis kurz vor der Schutzhütte, wo man eine unglaubliche Aussicht hat."
+    },
+    imageUrl: "/lovable-uploads/d4f29e53-7988-413a-b78f-a574db2195e8.png",
+    startingPoint: "Circuito Chico - La Pancheria (40 min by bus from Los Coihues)",
+    highlights: ["highlightPanoramicViews", "highlightMountainRefuge", "highlightNahuelHuapiLake"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 15,
+    travelTime: 40,
+    busLines: "Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8)",
+    category: "high-mountain"
+  },
+  {
+    id: "12",
+    name: "Travesia Cerro Lopez – Laguna Negra",
+    type: "day-hike",
+    difficulty: "hard",
+    distance: 12,
+    duration: 8,
+    elevation: 2056,
+    requiresReservation: false,
+    description: {
+      en: "La travesía comienza en el cruce de Circuito Chico con el arroyo López, donde se inicia un ascenso empinado pero relativamente corto de menos de 5 km hasta el Refugio López. En el trayecto se pasa por el Refugio Roca Negra antes de llegar, tras aproximadamente 1 hora y 40 minutos, al refugio. Desde allí, es necesario registrarse para continuar hacia Pico Turista o Laguna Negra. El ascenso continúa por la pared del López hasta el filo, en un tramo exigente y rocoso que lleva más de una hora. Es un sendero vertical donde se avanza entre piedras, por lo que es imprescindible contar con buen calzado y estado físico. Una vez alcanzado el paso, se abre una vista panorámica hacia el oeste, donde se pueden ver el Tronador, el Osorno, el Puntiagudo, el Capilla y el Brazo Tristeza del lago Nahuel Huapi. Desde allí, el sendero desciende abruptamente por un pedrero suelto, siendo este el tramo más técnico de la ruta. El descenso debe hacerse con precaución, ya que las piedras pueden moverse y provocar caídas. Tras 40 minutos, se alcanza un terreno más estable en el valle.",
+      es: "La travesía comienza en el cruce de Circuito Chico con el arroyo López, donde se inicia un ascenso empinado pero relativamente corto de menos de 5 km hasta el Refugio López. En el trayecto se pasa por el Refugio Roca Negra antes de llegar, tras aproximadamente 1 hora y 40 minutos, al refugio. Desde allí, es necesario registrarse para continuar hacia Pico Turista o Laguna Negra. El ascenso continúa por la pared del López hasta el filo, en un tramo exigente y rocoso que lleva más de una hora. Es un sendero vertical donde se avanza entre piedras, por lo que es imprescindible contar con buen calzado y estado físico. Una vez alcanzado el paso, se abre una vista panorámica hacia el oeste, donde se pueden ver el Tronador, el Osorno, el Puntiagudo, el Capilla y el Brazo Tristeza del lago Nahuel Huapi. Desde allí, el sendero desciende abruptamente por un pedrero suelto, siendo este el tramo más técnico de la ruta. El descenso debe hacerse con precaución, ya que las piedras pueden moverse y provocar caídas. Tras 40 minutos, se alcanza un terreno más estable en el valle.",
+      fr: "La traversée commence au croisement du Circuito Chico avec le ruisseau López, où commence une montée abrupte mais relativement courte de moins de 5 km jusqu'au Refuge López. En chemin, on passe par le Refuge Roca Negra avant d'arriver, après environ 1 heure et 40 minutes, au refuge. De là, il est nécessaire de s'enregistrer pour continuer vers Pico Turista ou Laguna Negra. L'ascension continue le long de la paroi du López jusqu'à l'arête, dans une section exigeante et rocheuse qui prend plus d'une heure. C'est un sentier vertical où l'on avance entre les pierres, il est donc essentiel d'avoir de bonnes chaussures et une bonne condition physique. Une fois le col atteint, une vue panoramique s'ouvre vers l'ouest, où l'on peut voir le Tronador, l'Osorno, le Puntiagudo, le Capilla et le Bras Tristeza du lac Nahuel Huapi. De là, le sentier descend brusquement par un pierrier meuble, c'est la section la plus technique de la route. La descente doit être faite avec précaution, car les pierres peuvent bouger et provoquer des chutes. Après 40 minutes, on atteint un terrain plus stable dans la vallée.",
+      de: "Die Überquerung beginnt an der Kreuzung des Circuito Chico mit dem López-Bach, wo ein steiler, aber relativ kurzer Aufstieg von weniger als 5 km zur López-Schutzhütte beginnt. Unterwegs passiert man die Roca Negra-Schutzhütte, bevor man nach etwa 1 Stunde und 40 Minuten die Schutzhütte erreicht. Von dort aus muss man sich registrieren, um zum Pico Turista oder zur Laguna Negra weiterzugehen. Der Aufstieg setzt sich entlang der López-Wand bis zur Kante fort, in einem anspruchsvollen und felsigen Abschnitt, der mehr als eine Stunde dauert. Es ist ein vertikaler Pfad, auf dem man zwischen Steinen voranschreitet, daher ist es unerlässlich, gute Schuhe und eine gute körperliche Verfassung zu haben. Sobald der Pass erreicht ist, öffnet sich ein Panoramablick nach Westen, wo man den Tronador, den Osorno, den Puntiagudo, den Capilla und den Arm Tristeza des Nahuel Huapi-Sees sehen kann. Von dort steigt der Pfad abrupt über ein loses Geröllfeld ab, dies ist der technischste Abschnitt der Route. Der Abstieg muss mit Vorsicht erfolgen, da sich die Steine bewegen und Stürze verursachen können. Nach 40 Minuten erreicht man ein stabileres Gelände im Tal."
+    },
+    imageUrl: "/lovable-uploads/6d9b3452-7edd-47fa-a936-024b5bf05aa3.png",
+    startingPoint: "Circuito Chico - López Stream (40 min by bus from Los Coihues)",
+    highlights: ["highlightHighMountainCrossing", "highlightTwoMountainRefuges", "highlightAlpineLakes"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 15,
+    travelTime: 40,
+    busLines: "Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8)",
+    category: "high-mountain"
+  },
+  {
+    id: "13",
+    name: "Refugio Jakob desde Tambo Baez",
+    type: "day-hike",
+    difficulty: "moderate",
+    distance: 14,
+    duration: 5,
+    elevation: 1600,
+    requiresReservation: false,
+    description: {
+      en: "El sendero comienza en una estancia llamada tambo Baez, un lugar muy cercano a Colonia Suiza. Se puede llegar desde Bariloche en auto o transporte público. En Tambo Baez hay un estacionamiento, se paga al dueño de la estancia y se puede dejar el auto ahí sin problemas. El sendero no presenta mayores complicaciones, es un sendero tranquilo, y largo. Recorre al arroyo casa de piedra en casi todo su recorrido, hay bastante sombra y se disfruta mucho. La ultima hora camino al refugio la pendiente se hace bastante empinada. Una vez terminado este 'caracol' se recorren algunos metros mas o menos horizontales y se llega al refugio. El refugio es de los mas nuevos, cuenta Se puede acampar o dormir dentro del refugio. También se puede cenar, almorzar, y comprar algunos alimentos.",
+      es: "El sendero comienza en una estancia llamada tambo Baez, un lugar muy cercano a Colonia Suiza. Se puede llegar desde Bariloche en auto o transporte público. En Tambo Baez hay un estacionamiento, se paga al dueño de la estancia y se puede dejar el auto ahí sin problemas. El sendero no presenta mayores complicaciones, es un sendero tranquilo, y largo. Recorre al arroyo casa de piedra en casi todo su recorrido, hay bastante sombra y se disfruta mucho. La ultima hora camino al refugio la pendiente se hace bastante empinada. Una vez terminado este 'caracol' se recorren algunos metros mas o menos horizontales y se llega al refugio. El refugio es de los mas nuevos, cuenta Se puede acampar o dormir dentro del refugio. También se puede cenar, almorzar, y comprar algunos alimentos.",
+      fr: "Le sentier commence dans une estancia appelée tambo Baez, un endroit très proche de Colonia Suiza. On peut y arriver depuis Bariloche en voiture ou en transport public. À Tambo Baez, il y a un parking, on paie au propriétaire de l'estancia et on peut y laisser la voiture sans problème. Le sentier ne présente pas de complications majeures, c'est un sentier calme et long. Il suit le ruisseau casa de piedra sur presque tout son parcours, il y a beaucoup d'ombre et on en profite beaucoup. La dernière heure de marche vers le refuge, la pente devient assez raide. Une fois ce 'caracol' terminé, on parcourt quelques mètres plus ou moins horizontaux et on arrive au refuge. Le refuge est l'un des plus récents, on peut y camper ou dormir à l'intérieur. On peut également y dîner, déjeuner et acheter certains aliments.",
+      de: "Der Weg beginnt in einer Estancia namens tambo Baez, einem Ort sehr nahe bei Colonia Suiza. Man kann von Bariloche mit dem Auto oder öffentlichen Verkehrsmitteln dorthin gelangen. In Tambo Baez gibt es einen Parkplatz, man zahlt an den Besitzer der Estancia und kann das Auto problemlos dort stehen lassen. Der Weg weist keine größeren Komplikationen auf, es ist ein ruhiger und langer Weg. Er folgt dem Bach casa de piedra auf fast seinem gesamten Verlauf, es gibt viel Schatten und man genießt es sehr. In der letzten Stunde des Weges zum Refugio wird die Steigung ziemlich steil. Sobald diese 'Schnecke' beendet ist, legt man einige mehr oder weniger horizontale Meter zurück und erreicht das Refugio. Das Refugio ist eines der neuesten, man kann dort zelten oder im Refugio schlafen. Man kann auch zu Abend essen, zu Mittag essen und einige Lebensmittel kaufen."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png", 
+    startingPoint: "Tambo Baez (16 min by car from Los Coihues)",
+    highlights: ["highlightMountainRefuge", "highlightForestTrail", "highlightRiverViews"],
+    transportation: ["taxi", "private-transfer"],
+    distanceFromCampsite: 7,
+    travelTime: 16,
+    category: "high-mountain"
+  },
+  {
+    id: "14",
+    name: "Refugio Laguna Negra desde Colonia Suiza",
+    type: "day-hike",
+    difficulty: "hard",
+    distance: 11,
+    duration: 5,
+    elevation: 1640,
+    requiresReservation: false,
+    description: {
+      en: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines. Luego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados 'caracoles'. Al final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche.",
+      es: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines. Luego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados 'caracoles'. Al final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche.",
+      fr: "Le sentier part de Colonia Suiza, avec une montée légère et constante, longeant le ruisseau Goye. Il continue le long de la vallée qui présente certains secteurs avec des zones humides. Après 3 heures, on traverse deux ruisseaux, d'abord le Navidad puis le Negro ou Goye. Ici, le chemin en forme de zigzag devient très raide, ce sont les fameux 'caracoles'. À la fin de la montée, il y a une vue panoramique impressionnante sur la Laguna Negra, le Cerro Negro (qui se distingue par être le plus haut) et le Refuge Manfredo Segre (également connu sous le nom d'Italia) du Club Andin Bariloche.",
+      de: "Der Weg beginnt in Colonia Suiza, mit einem leichten und konstanten Anstieg, entlang des Baches Goye. Er führt weiter durch das Tal, das einige Bereiche mit Feuchtgebieten aufweist. Nach 3 Stunden überquert man zwei Bäche, zuerst den Navidad und dann den Negro oder Goye. Hier wird der Weg in Form von Zickzack sehr steil, es sind die sogenannten 'caracoles'. Am Ende des Aufstiegs gibt es eine beeindruckende Panoramaaussicht auf die Laguna Negra, den Cerro Negro (der sich dadurch auszeichnet, dass er der höchste ist) und die Schutzhütte Manfredo Segre (auch bekannt als Italia) des Andinen Clubs Bariloche."
+    },
+    imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
+    startingPoint: "Colonia Suiza (30 min by bus from Los Coihues)",
+    highlights: ["highlightAlpineLake", "highlightMountainRefuge", "highlightForestTrail"],
+    transportation: ["bus", "taxi", "private-transfer"],
+    distanceFromCampsite: 15,
+    travelTime: 30,
+    busLines: "Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8)",
+    category: "high-mountain"
+  }
+];
