@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -54,22 +53,23 @@ export const trails: Trail[] = [
     name: "Refugio Frey-Jakob Circuit",
     type: "multi-day",
     difficulty: "hard",
-    distance: 35,
+    distance: 45,
     duration: 3,
-    elevation: 1600,
+    elevation: 1080,
     requiresReservation: true,
     description: {
-      en: "Recomendamos tomarse un Uber desde el Camping hasta la base del Cerro Catedral. El viaje dura aproximadamente 15 minutos. Los buses muchas veces presentan una gran espera. Este sendero comienza en un punto más alto que el que parte desde el Lago Gutiérrez, lo que permite ahorrar alrededor de 1 hora de caminata. Desde la base del Cerro Catedral, podrás iniciar el ascenso al Refugio Frey, disfrutando de vistas espectaculares mientras avanzas a través del paisaje montañoso. Desde la zona del refugio Frey, se bordea la laguna Toncek hacia el sur, hacia la subida de la laguna Schmoll. Esta pendiente de rocas está bien señalizada y sigue con algunas idas y vueltas el arroyo que baja desde Schmoll a Toncek. Esta subida es importante y tiene muchos escalones entre rocas. Desde hace un tiempo se está trabajando en proteger el humedal (mallín) de la laguna. Para eso se hizo un trayecto de piedras para atravesar el humedal por un sendero delineado sin aumentar la erosión. Por favor usálo prestando atención a no desviarte. Desde laguna Schmoll comienza otro escalón importante. Este sector tiene rocas un poco más grandes para trepar y finaliza en \"cancha de fútbol\". Unos pocos pasos después se llega al filo del cerro Catedral con vistas panorámicas hacia el valle del Rucaco y de fondo el cerro Tronador. La bajada por la ladera del Catedral hacia el valle debe hacerse con mucho cuidado. Al principio cada paso es como un gran escalón y después empieza una parte de piedras y arena suelta donde el pie se hunde y se desliza. Después de cuatro horas de haber salido del Frey, pisar el suelo firme en el bosque sobre el contorno del valle es un respiro. Sombra, agua, resguardo, descanso. Dejar el bosque del Rucaco atrás significa cerrar un libro de cuentos. Al salir de la zona boscosa se deja la protección del sol y del viento y el sendero empieza a subir cada vez con más pendiente. Se trata de la subida a Brecha Negra y desde su filo comienza otra bajada algo particular. Con los mismos cuidados que el descenso anterior, prestando atención a cada paso y teniendo en cuenta las señales de pintura, se vuelve a entrar en un bosque de lengas y después se cruza el arroyo que nace en la laguna Jakob. Sumale cuatro horas más al recorrido. Desde la zona de Jakob, a sólo 40 minutos está la laguna de los Témpanos. Regresar desde laguna Jakob, bordeando el arroyo Casa de Piedra hasta el Tambo Báez cerca de Colonia Suiza suele hacerse en 5 horas. Recorrido total, desde Villa Catedral hasta Tambo Báez: 35km. Solamente desde el refugio Frey al refugio San Martín - Jakob: 9km. ¿Qué vas a ver? Laguna Toncek, Laguna Schmoll, Panorámicas hacia el valle del Rucaco con vista al al cerro Tronador, Panorámicas desde el filo de Brecha Negra, Valles, lagunas y filos.",
-      es: "Recomendamos tomarse un Uber desde el Camping hasta la base del Cerro Catedral. El viaje dura aproximadamente 15 minutos. Los buses muchas veces presentan una gran espera. Este sendero comienza en un punto más alto que el que parte desde el Lago Gutiérrez, lo que permite ahorrar alrededor de 1 hora de caminata. Desde la base del Cerro Catedral, podrás iniciar el ascenso al Refugio Frey, disfrutando de vistas espectaculares mientras avanzas a través del paisaje montañoso. Desde la zona del refugio Frey, se bordea la laguna Toncek hacia el sur, hacia la subida de la laguna Schmoll. Esta pendiente de rocas está bien señalizada y sigue con algunas idas y vueltas el arroyo que baja desde Schmoll a Toncek. Esta subida es importante y tiene muchos escalones entre rocas. Desde hace un tiempo se está trabajando en proteger el humedal (mallín) de la laguna. Para eso se hizo un trayecto de piedras para atravesar el humedal por un sendero delineado sin aumentar la erosión. Por favor usálo prestando atención a no desviarte. Desde laguna Schmoll comienza otro escalón importante. Este sector tiene rocas un poco más grandes para trepar y finaliza en \"cancha de fútbol\". Unos pocos pasos después se llega al filo del cerro Catedral con vistas panorámicas hacia el valle del Rucaco y de fondo el cerro Tronador. La bajada por la ladera del Catedral hacia el valle debe hacerse con mucho cuidado. Al principio cada paso es como un gran escalón y después empieza una parte de piedras y arena suelta donde el pie se hunde y se desliza. Después de cuatro horas de haber salido del Frey, pisar el suelo firme en el bosque sobre el contorno del valle es un respiro. Sombra, agua, resguardo, descanso. Dejar el bosque del Rucaco atrás significa cerrar un libro de cuentos. Al salir de la zona boscosa se deja la protección del sol y del viento y el sendero empieza a subir cada vez con más pendiente. Se trata de la subida a Brecha Negra y desde su filo comienza otra bajada algo particular. Con los mismos cuidados que el descenso anterior, prestando atención a cada paso y teniendo en cuenta las señales de pintura, se vuelve a entrar en un bosque de lengas y después se cruza el arroyo que nace en la laguna Jakob. Sumale cuatro horas más al recorrido. Desde la zona de Jakob, a sólo 40 minutos está la laguna de los Témpanos. Regresar desde laguna Jakob, bordeando el arroyo Casa de Piedra hasta el Tambo Báez cerca de Colonia Suiza suele hacerse en 5 horas. Recorrido total, desde Villa Catedral hasta Tambo Báez: 35km. Solamente desde el refugio Frey al refugio San Martín - Jakob: 9km. ¿Qué vas a ver? Laguna Toncek, Laguna Schmoll, Panorámicas hacia el valle del Rucaco con vista al al cerro Tronador, Panorámicas desde el filo de Brecha Negra, Valles, lagunas y filos.",
-      fr: "Recomendamos tomarse un Uber desde el Camping hasta la base del Cerro Catedral. El viaje dura aproximadamente 15 minutos. Los buses muchas veces presentan una gran espera. Este sendero comienza en un punto más alto que el que parte desde el Lago Gutiérrez, lo que permite ahorrar alrededor de 1 hora de caminata. Desde la base del Cerro Catedral, podrás iniciar el ascenso al Refugio Frey, disfrutando de vistas espectaculares mientras avanzas a través del paisaje montañoso. Desde la zona del refugio Frey, se bordea la laguna Toncek hacia el sur, hacia la subida de la laguna Schmoll. Esta pendiente de rocas está bien señalizada y sigue con algunas idas y vueltas el arroyo que baja desde Schmoll a Toncek. Esta subida es importante y tiene muchos escalones entre rocas. Desde hace un tiempo se está trabajando en proteger el humedal (mallín) de la laguna. Para eso se hizo un trayecto de piedras para atravesar el humedal por un sendero delineado sin aumentar la erosión. Por favor usálo prestando atención a no desviarte. Desde laguna Schmoll comienza otro escalón importante. Este sector tiene rocas un poco más grandes para trepar y finaliza en \"cancha de fútbol\". Unos pocos pasos después se llega al filo del cerro Catedral con vistas panorámicas hacia el valle del Rucaco y de fondo el cerro Tronador. La bajada por la ladera del Catedral hacia el valle debe hacerse con mucho cuidado. Al principio cada paso es como un gran escalón y después empieza una parte de piedras y arena suelta donde el pie se hunde y se desliza. Después de cuatro horas de haber salido del Frey, pisar el suelo firme en el bosque sobre el contorno del valle es un respiro. Sombra, agua, resguardo, descanso. Dejar el bosque del Rucaco atrás significa cerrar un libro de cuentos. Al salir de la zona boscosa se deja la protección del sol y del viento y el sendero empieza a subir cada vez con más pendiente. Se trata de la subida a Brecha Negra y desde su filo comienza otra bajada algo particular. Con los mismos cuidados que el descenso anterior, prestando atención a cada paso y teniendo en cuenta las señales de pintura, se vuelve a entrar en un bosque de lengas y después se cruza el arroyo que nace en la laguna Jakob. Sumale cuatro horas más al recorrido. Desde la zona de Jakob, a sólo 40 minutos está la laguna de los Témpanos. Regresar desde laguna Jakob, bordeando el arroyo Casa de Piedra hasta el Tambo Báez cerca de Colonia Suiza suele hacerse en 5 horas. Recorrido total, desde Villa Catedral hasta Tambo Báez: 35km. Solamente desde el refugio Frey al refugio San Martín - Jakob: 9km. ¿Qué vas a ver? Laguna Toncek, Laguna Schmoll, Panorámicas hacia el valle del Rucaco con vista al al cerro Tronador, Panorámicas desde el filo de Brecha Negra, Valles, lagunas y filos.",
-      de: "Recomendamos tomarse un Uber desde el Camping hasta la base del Cerro Catedral. El viaje dura aproximadamente 15 minutos. Los buses muchas veces presentan una gran espera. Este sendero comienza en un punto más alto que el que parte desde el Lago Gutiérrez, lo que permite ahorrar alrededor de 1 hora de caminata. Desde la base del Cerro Catedral, podrás iniciar el ascenso al Refugio Frey, disfrutando de vistas espectaculares mientras avanzas a través del paisaje montañoso. Desde la zona del refugio Frey, se bordea la laguna Toncek hacia el sur, hacia la subida de la laguna Schmoll. Esta pendiente de rocas está bien señalizada y sigue con algunas idas y vueltas el arroyo que baja desde Schmoll a Toncek. Esta subida es importante y tiene muchos escalones entre rocas. Desde hace un tiempo se está trabajando en proteger el humedal (mallín) de la laguna. Para eso se hizo un trayecto de piedras para atravesar el humedal por un sendero delineado sin aumentar la erosión. Por favor usálo prestando atención a no desviarte. Desde laguna Schmoll comienza otro escalón importante. Este sector tiene rocas un poco más grandes para trepar y finaliza en \"cancha de fútbol\". Unos pocos pasos después se llega al filo del cerro Catedral con vistas panorámicas hacia el valle del Rucaco y de fondo el cerro Tronador. La bajada por la ladera del Catedral hacia el valle debe hacerse con mucho cuidado. Al principio cada paso es como un gran escalón y después empieza una parte de piedras y arena suelta donde el pie se hunde y se desliza. Después de cuatro horas de haber salido del Frey, pisar el suelo firme en el bosque sobre el contorno del valle es un respiro. Sombra, agua, resguardo, descanso. Dejar el bosque del Rucaco atrás significa cerrar un libro de cuentos. Al salir de la zona boscosa se deja la protección del sol y del viento y el sendero empieza a subir cada vez con más pendiente. Se trata de la subida a Brecha Negra y desde su filo comienza otra bajada algo particular. Con los mismos cuidados que el descenso anterior, prestando atención a cada paso y teniendo en cuenta las señales de pintura, se vuelve a entrar en un bosque de lengas y después se cruza el arroyo que nace en la laguna Jakob. Sumale cuatro horas más al recorrido. Desde la zona de Jakob, a sólo 40 minutos está la laguna de los Témpanos. Regresar desde laguna Jakob, bordeando el arroyo Casa de Piedra hasta el Tambo Báez cerca de Colonia Suiza suele hacerse en 5 horas. Recorrido total, desde Villa Catedral hasta Tambo Báez: 35km. Solamente desde el refugio Frey al refugio San Martín - Jakob: 9km. ¿Qué vas a ver? Laguna Toncek, Laguna Schmoll, Panorámicas hacia el valle del Rucaco con vista al al cerro Tronador, Panorámicas desde el filo de Brecha Negra, Valles, lagunas y filos."
+      en: "We recommend taking an Uber from Camping to the base of Cerro Catedral. The trip takes approximately 15 minutes. Buses often involve a long wait. This trail starts at a higher point than the one from Lake Gutiérrez, saving about 1 hour of hiking. From the base of Cerro Catedral, you can begin your ascent to Refugio Frey, enjoying spectacular views as you progress through the mountainous landscape. The effort is truly worth it when you reach the panoramic views of Lake Gutiérrez, Bariloche, and the valley that extends to the summit of Frey, an impressive landscape that rewards every step of the ascent.",
+      es: "Recomendamos tomarse un Uber desde el Camping hasta la base del Cerro Catedral. El viaje dura aproximadamente 15 minutos. Los buses muchas veces presentan una gran espera. Este sendero comienza en un punto más alto que el que parte desde el Lago Gutiérrez, lo que permite ahorrar alrededor de 1 hora de caminata. Desde la base del Cerro Catedral, podrás iniciar el ascenso al Refugio Frey, disfrutando de vistas espectaculares mientras avanzas a través del paisaje montañoso. El esfuerzo realmente vale la pena al llegar a las vistas panorámicas del Lago Gutiérrez, Bariloche y el valle que se extiende hasta la cumbre del Frey, un paisaje impresionante que recompensa cada paso del ascenso.",
+      fr: "Nous vous recommandons de prendre un Uber depuis le Camping jusqu'à la base de Cerro Catedral. Le trajet dure environ 15 minutes. Les bus impliquent souvent une longue attente. Ce sentier commence à un point plus élevé que celui du lac Gutiérrez, ce qui permet d'économiser environ 1 heure de marche. Depuis la base de Cerro Catedral, vous pouvez commencer votre ascension vers le Refugio Frey, en profitant de vues spectaculaires tout en progressant à travers le paysage montagneux. L'effort en vaut vraiment la peine lorsque vous atteignez les vues panoramiques du lac Gutiérrez, de Bariloche et de la vallée qui s'étend jusqu'au sommet du Frey, un paysage impressionnant qui récompense chaque pas de l'ascension.",
+      de: "Wir empfehlen, einen Uber vom Camping zur Basis des Cerro Catedral zu nehmen. Die Fahrt dauert etwa 15 Minuten. Busse sind oft mit langen Wartezeiten verbunden. Dieser Weg beginnt an einem höheren Punkt als der vom Lago Gutiérrez, was etwa 1 Stunde Wanderzeit spart. Von der Basis des Cerro Catedral aus können Sie Ihren Aufstieg zum Refugio Frey beginnen und dabei spektakuläre Aussichten genießen, während Sie durch die Berglandschaft wandern. Die Anstrengung lohnt sich wirklich, wenn Sie die Panoramablicke auf den Lago Gutiérrez, Bariloche und das Tal erreichen, das sich bis zum Gipfel des Frey erstreckt, eine beeindruckende Landschaft, die jeden Schritt des Aufstiegs belohnt."
     },
     imageUrl: "/lovable-uploads/3b45435b-d0d0-4fb7-ac3b-73c18e21fd50.png",
     startingPoint: "Cerro Catedral (15 min drive from Los Coihues)",
     highlights: ["highlightTwoMountainRefuges", "highlightAlpineLakes", "highlightHighMountainPasses"],
-    transportation: ["private-transfer", "taxi"],
+    transportation: ["private-transfer", "taxi", "bus"],
     distanceFromCampsite: 8,
     travelTime: 15,
+    busLines: "Linea 50 (desde Coihues hasta km 8 ruta 82) + Linea 55 (Ruta 82)",
     category: "high-mountain"
   },
   {
@@ -218,118 +218,237 @@ export const trails: Trail[] = [
     name: "Colonia Suiza",
     type: "day-hike",
     difficulty: "easy",
-    distance: 0,
+    distance: 0, // Changed from 6 to 0 to hide distance information
     duration: 1,
     elevation: 850,
     requiresReservation: false,
     description: {
       en: "To reach Colonia Suiza from Camping Los Coihues, you can take bus 50 to downtown Bariloche and then transfer to bus 10, which takes you directly to Colonia Suiza. If going by car, follow Route 82 until connecting with Provincial Route 79, a gravel road that will take you to your destination in about 7 km. You can also go by bicycle or walking along the Old Road to Colonia Suiza, a forest-surrounded path that crosses the slope of Cerro López. Colonia Suiza is a picturesque village on the shores of Lake Moreno, known for its history, its gastronomy and its natural surroundings. Founded by Swiss immigrants in the late 19th century, it preserves rustic architecture and a traditional atmosphere. It's famous for its craft fair and its typical gastronomy, especially curanto, an ancestral dish cooked underground.",
       es: "Para llegar a Colonia Suiza desde Camping Los Coihues, puedes tomar el colectivo bus 50 hacia el centro de Bariloche y luego hacer combinación con el bus 10, que te lleva directamente a Colonia Suiza. Si vas en auto, sigue la Ruta 82 hasta conectar con la Ruta Provincial 79, un camino de ripio que en unos 7 km te llevará a destino. También puedes ir en bicicleta o caminando por el Camino Viejo a Colonia Suiza, un sendero rodeado de bosque que atraviesa el faldeo del Cerro López. Colonia Suiza es un pintoresco poblado a orillas del lago Moreno, conocido por su historia, su gastronomía y su entorno natural. Fundada por inmigrantes suizos a fines del siglo XIX, conserva una arquitectura rústica y una atmosphera tradicional. Es famosa por su feria artesanal y su gastronomía típica, especialmente el curanto, un plato ancestral cocinado bajo tierra.",
-      fr: "Pour rejoindre Colonia Suiza depuis Camping Los Coihues, vous pouvez prendre le bus 50 vers le centre-ville de Bariloche, puis correspondre avec le bus 10, qui vous mène directement à Colonia Suiza. Si vous y allez en voiture, suivez la Route 82 jusqu'à la connexion avec la Route Provinciale 79, une route de gravier qui vous mènera à destination en environ 7 km. Vous pouvez également y aller à vélo ou à pied par le Vieux Chemin de Colonia Suiza, un sentier entouré de forêt qui traverse la pente du Cerro López. Colonia Suiza est un village pittoresque sur les rives du lac Moreno, connu pour son histoire, sa gastronomie et son environnement naturel.",
-      de: "Um von Camping Los Coihues nach Colonia Suiza zu gelangen, können Sie den Bus 50 in die Innenstadt von Bariloche nehmen und dann in den Bus 10 umsteigen, der Sie direkt nach Colonia Suiza bringt. Wenn Sie mit dem Auto fahren, folgen Sie der Route 82 bis zur Verbindung mit der Provinzstraße 79, einer Schotterstraße, die Sie in etwa 7 km an Ihr Ziel führt. Sie können auch mit dem Fahrrad oder zu Fuß entlang des alten Weges nach Colonia Suiza fahren, einem waldumgebenen Pfad, der den Hang des Cerro López überquert."
+      fr: "Pour rejoindre Colonia Suiza depuis Camping Los Coihues, vous pouvez prendre le bus 50 vers le centre-ville de Bariloche, puis correspondre avec le bus 10, qui vous mène directement à Colonia Suiza. Si vous y allez en voiture, suivez la Route 82 jusqu'à la connexion avec la Route Provinciale 79, une route de gravier qui vous mènera à destination en environ 7 km. Vous pouvez également y aller à vélo ou à pied par le Vieux Chemin de Colonia Suiza, un sentier entouré de forêt qui traverse le versant du Cerro López. Colonia Suiza est un village pittoresque au bord du lac Moreno, connu pour son histoire, sa gastronomie et son environnement naturel. Fondée par des immigrants suisses à la fin du XIXe siècle, elle conserve une architecture rustique et une atmosphère traditionnelle. Elle est célèbre pour son marché artisanal et sa gastronomie typique, notamment le curanto, un plat ancestral cuit sous terre.",
+      de: "Um von Camping Los Coihues nach Colonia Suiza zu gelangen, können Sie den Bus 50 ins Zentrum von Bariloche nehmen und dann auf den Bus 10 umsteigen, der Sie direkt nach Colonia Suiza bringt. Wenn Sie mit dem Auto fahren, folgen Sie der Route 82 bis zur Verbindung mit der Provinzstraße 79, einem Schotterweg, der Sie in etwa 7 km ans Ziel führt. Sie können auch mit dem Fahrrad fahren oder auf dem Alten Weg nach Colonia Suiza wandern, einem von Wald umgebenen Pfad, der den Hang des Cerro López überquert. Colonia Suiza ist ein malerisches Dorf am Ufer des Moreno-Sees, bekannt für seine Geschichte, Gastronomie und natürliche Umgebung. Gegründet von Schweizer Einwanderern im späten 19. Jahrhundert, bewahrt es eine rustikale Architektur und eine traditionelle Atmosphäre. Es ist berühmt für seinen Kunsthandwerksmarkt und typische Gastronomie, insbesondere Curanto, ein uraltes Gericht, das unter der Erde gekocht wird."
     },
-    imageUrl: "/lovable-uploads/2d1500b3-3ff7-49f4-8523-acf161b6f388.png",
-    startingPoint: "Colonia Suiza (30 min by bus from Los Coihues)",
-    highlights: ["highlightLakeViews", "highlightCulturalHeritage", "highlightGastronomy"],
-    transportation: ["bus", "taxi", "private-transfer"],
+    imageUrl: "/lovable-uploads/964a6f6b-ae4d-469a-833a-a5f5c4aad336.png",
+    startingPoint: "Colonia Suiza (30 min bus ride)",
+    highlights: ["highlightHistoricSettlement", "highlightArtisanMarket", "highlightLocalCuisine", "highlightLakeAccess"],
+    transportation: ["bus", "taxi"],
     distanceFromCampsite: 12,
     travelTime: 30,
-    busLines: "Linea 50 (Desde Coihues) + Linea 10 (desde Centro) (45 min)",
+    busLines: "Linea 50 (desde Coihues) + Linea 20 (Av. Bustillo) (1 hr)",
     category: "walking-path"
   },
   {
     id: "11",
-    name: "Refugio Lopez",
+    name: "Cerro San Martín",
     type: "day-hike",
-    difficulty: "moderate",
-    distance: 9.5,
-    duration: 2,
-    elevation: 1614,
+    difficulty: "easy",
+    distance: 2.6,
+    duration: 1, // 45-60 minutes (approximately 1 hour)
+    elevation: 1275,
     requiresReservation: false,
     description: {
-      en: "Tenes que tomarte la línea 10 desde Av. Bustillo o el centro porque a veces viene lleno. Sino, tomate el 20 o cualquiera que te deje en el km 18 de Av. Bustillo y desde ahí, compartir un Uber es barato. El sendero comienza donde está el puestito de 'la Panchería' en el Circuito Chico. Sendero con muy lindas vistas panorámicas al Nahuel Huapi. El sendero es fácil de seguir pero empinado de una. Un poco después de pasar por el refugio Roca Negra el sendero se une a un camino y ya no tiene ninguna exigencia física hasta un poquito antes del refugio donde se ve una vista increíble.",
-      es: "Tenes que tomarte la línea 10 desde Av. Bustillo o el centro porque a veces viene lleno. Sino, tomate el 20 o cualquiera que te deje en el km 18 de Av. Bustillo y desde ahí, compartir un Uber es barato. El sendero comienza donde está el puestito de 'la Panchería' en el Circuito Chico. Sendero con muy lindas vistas panorámicas al Nahuel Huapi. El sendero es fácil de seguir pero empinado de una. Un poco después de pasar por el refugio Roca Negra el sendero se une a un camino y ya no tiene ninguna exigencia física hasta un poquito antes del refugio donde se ve una vista increíble.",
-      fr: "Vous devez prendre la ligne 10 depuis l'Avenue Bustillo ou le centre car elle est parfois pleine. Sinon, prenez la ligne 20 ou toute autre ligne qui vous dépose au km 18 de l'Avenue Bustillo, et de là, partager un Uber est bon marché. Le sentier commence où se trouve le petit stand de 'la Panchería' dans le Circuito Chico. Sentier avec de très belles vues panoramiques sur le lac Nahuel Huapi. Le sentier est facile à suivre mais raide dès le début. Peu après avoir passé le refuge Roca Negra, le sentier rejoint un chemin et n'a plus aucune exigence physique jusqu'à un peu avant le refuge où l'on voit une vue incroyable.",
-      de: "Sie müssen die Linie 10 von der Bustillo Avenue oder dem Zentrum nehmen, da sie manchmal voll ist. Andernfalls nehmen Sie die Linie 20 oder eine beliebige Linie, die Sie am km 18 der Bustillo Avenue absetzt, und von dort aus ist das Teilen eines Ubers günstig. Der Weg beginnt an dem kleinen Stand 'la Panchería' im Circuito Chico. Weg mit sehr schönen Panoramablicken auf den Nahuel Huapi. Der Weg ist leicht zu folgen, aber von Anfang an steil. Kurz nach dem Passieren der Roca Negra Schutzhütte trifft der Weg auf einen Weg und hat keine körperlichen Anforderungen mehr bis kurz vor der Schutzhütte, wo man eine unglaubliche Aussicht hat."
+      en: "El inicio del sendero esta subiendo la Calle Balcón Lopez hasta al fondo. Ahí te chocas con el Camping Ecologico y tienes que seguir caminando 30 m a la izquierda donde vas a encontrar el inicio del sendero de mano derecha. Es empinado pero se sube rápido.",
+      es: "El inicio del sendero esta subiendo la Calle Balcón Lopez hasta al fondo. Ahí te chocas con el Camping Ecologico y tienes que seguir caminando 30 m a la izquierda donde vas a encontrar el inicio del sendero de mano derecha. Es empinado pero se sube rápido.",
+      fr: "El inicio del sendero esta subiendo la Calle Balcón Lopez hasta al fondo. Ahí te chocas con el Camping Ecologico y tienes que seguir caminando 30 m a la izquierda donde vas a encontrar el inicio del sendero de mano derecha. Es empinado pero se sube rápido.",
+      de: "El inicio del sendero esta subiendo la Calle Balcón Lopez hasta al fondo. Ahí te chocas con el Camping Ecologico y tienes que seguir caminando 30 m a la izquierda donde vas a encontrar el inicio del sendero de mano derecha. Es empinado pero se sube rápido."
     },
-    imageUrl: "/lovable-uploads/d4f29e53-7988-413a-b78f-a574db2195e8.png",
-    startingPoint: "Circuito Chico - La Pancheria (40 min by bus from Los Coihues)",
-    highlights: ["highlightPanoramicViews", "highlightMountainRefuge", "highlightNahuelHuapiLake"],
-    transportation: ["bus", "taxi"],
-    distanceFromCampsite: 15,
-    travelTime: 40,
-    busLines: "Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8)",
-    category: "high-mountain"
+    imageUrl: "/lovable-uploads/5e7df03e-d176-4498-a3f7-bc5afac27381.png",
+    startingPoint: "Camping Los Coihues",
+    highlights: ["highlightMountainViews", "highlightForestTrail", "highlightPanoramicVista"],
+    transportation: ["walking"],
+    distanceFromCampsite: 0,
+    travelTime: 0,
+    category: "easy-mountain"
   },
   {
     id: "12",
-    name: "Travesia Cerro Lopez – Laguna Negra",
+    name: "Playa Muñoz",
     type: "day-hike",
-    difficulty: "hard",
-    distance: 12,
-    duration: 8,
-    elevation: 2056,
+    difficulty: "easy",
+    distance: 8,
+    duration: 1.5,
+    elevation: 900,
     requiresReservation: false,
     description: {
-      en: "La travesía comienza en el cruce de Circuito Chico con el arroyo López, donde se inicia un ascenso empinado pero relativamente corto de menos de 5 km hasta el Refugio López. En el trayecto se pasa por el Refugio Roca Negra antes de llegar, tras aproximadamente 1 hora y 40 minutos, al refugio. Desde allí, es necesario registrarse para continuar hacia Pico Turista o Laguna Negra. El ascenso continúa por la pared del López hasta el filo, en un tramo exigente y rocoso que lleva más de una hora. Es un sendero vertical donde se avanza entre piedras, por lo que es imprescindible contar con buen calzado y estado físico. Una vez alcanzado el paso, se abre una vista panorámica hacia el oeste, donde se pueden ver el Tronador, el Osorno, el Puntiagudo, el Capilla y el Brazo Tristeza del lago Nahuel Huapi. Desde allí, el sendero desciende abruptamente por un pedrero suelto, siendo este el tramo más técnico de la ruta. El descenso debe hacerse con precaución, ya que las piedras pueden moverse y provocar caídas. Tras 40 minutos, se alcanza un terreno más estable en el valle.",
-      es: "La travesía comienza en el cruce de Circuito Chico con el arroyo López, donde se inicia un ascenso empinado pero relativamente corto de menos de 5 km hasta el Refugio López. En el trayecto se pasa por el Refugio Roca Negra antes de llegar, tras aproximadamente 1 hora y 40 minutos, al refugio. Desde allí, es necesario registrarse para continuar hacia Pico Turista o Laguna Negra. El ascenso continúa por la pared del López hasta el filo, en un tramo exigente y rocoso que lleva más de una hora. Es un sendero vertical donde se avanza entre piedras, por lo que es imprescindible contar con buen calzado y estado físico. Una vez alcanzado el paso, se abre una vista panorámica hacia el oeste, donde se pueden ver el Tronador, el Osorno, el Puntiagudo, el Capilla y el Brazo Tristeza del lago Nahuel Huapi. Desde allí, el sendero desciende abruptamente por un pedrero suelto, siendo este el tramo más técnico de la ruta. El descenso debe hacerse con precaución, ya que las piedras pueden moverse y provocar caídas. Tras 40 minutos, se alcanza un terreno más estable en el valle.",
-      fr: "La traversée commence au croisement du Circuito Chico avec le ruisseau López, où commence une montée abrupte mais relativement courte de moins de 5 km jusqu'au Refuge López. En chemin, on passe par le Refuge Roca Negra avant d'arriver, après environ 1 heure et 40 minutes, au refuge. De là, il est nécessaire de s'enregistrer pour continuer vers Pico Turista ou Laguna Negra. L'ascension continue le long de la paroi du López jusqu'à l'arête, dans une section exigeante et rocheuse qui prend plus d'une heure. C'est un sentier vertical où l'on avance entre les pierres, il est donc essentiel d'avoir de bonnes chaussures et une bonne condition physique. Une fois le col atteint, une vue panoramique s'ouvre vers l'ouest, où l'on peut voir le Tronador, l'Osorno, le Puntiagudo, le Capilla et le Bras Tristeza du lac Nahuel Huapi. De là, le sentier descend brusquement par un pierrier meuble, c'est la section la plus technique de la route. La descente doit être faite avec précaution, car les pierres peuvent bouger et provoquer des chutes. Après 40 minutes, on atteint un terrain plus stable dans la vallée.",
-      de: "Die Überquerung beginnt an der Kreuzung des Circuito Chico mit dem López-Bach, wo ein steiler, aber relativ kurzer Aufstieg von weniger als 5 km zur López-Schutzhütte beginnt. Unterwegs passiert man die Roca Negra-Schutzhütte, bevor man nach etwa 1 Stunde und 40 Minuten die Schutzhütte erreicht. Von dort aus muss man sich registrieren, um zum Pico Turista oder zur Laguna Negra weiterzugehen. Der Aufstieg setzt sich entlang der López-Wand bis zur Kante fort, in einem anspruchsvollen und felsigen Abschnitt, der mehr als eine Stunde dauert. Es ist ein vertikaler Pfad, auf dem man zwischen Steinen voranschreitet, daher ist es unerlässlich, gute Schuhe und eine gute körperliche Verfassung zu haben. Sobald der Pass erreicht ist, öffnet sich ein Panoramablick nach Westen, wo man den Tronador, den Osorno, den Puntiagudo, den Capilla und den Arm Tristeza des Nahuel Huapi-Sees sehen kann. Von dort steigt der Pfad abrupt über ein loses Geröllfeld ab, dies ist der technischste Abschnitt der Route. Der Abstieg muss mit Vorsicht erfolgen, da sich die Steine bewegen und Stürze verursachen können. Nach 40 Minuten erreicht man ein stabileres Gelände im Tal."
+      en: "A short, pleasant walk to a secluded beach on Lago Gutiérrez with crystal clear waters. The trail starts directly from Camping Los Coihues and follows the lakeshore through the native forest. Perfect for a refreshing swim in summer.",
+      es: "Una caminata corta y agradable a una playa aislada en el Lago Gutiérrez con aguas cristalinas. El sendero comienza directamente desde Camping Los Coihues y sigue la costa del lago a través del bosque nativo. Perfecto para un refrescante baño en verano.",
+      fr: "Une promenade courte et agréable vers une plage isolée sur le Lago Gutiérrez aux eaux cristallines. Le sentier commence directement du Camping Los Coihues et suit le rivage à travers la forêt native. Parfait pour une baignade rafraîchissante en été.",
+      de: "Ein kurzer, angenehmer Spaziergang zu einem abgelegenen Strand am Lago Gutiérrez mit kristallklarem Wasser. Der Weg beginnt direkt am Camping Los Coihues und führt am Seeufer durch den heimischen Wald. Perfekt für ein erfrischendes Bad im Sommer."
     },
-    imageUrl: "/lovable-uploads/6d9b3452-7edd-47fa-a936-024b5bf05aa3.png",
-    startingPoint: "Circuito Chico - López Stream (40 min by bus from Los Coihues)",
-    highlights: ["highlightHighMountainCrossing", "highlightTwoMountainRefuges", "highlightAlpineLakes"],
-    transportation: ["bus", "taxi"],
-    distanceFromCampsite: 15,
-    travelTime: 40,
-    busLines: "Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8)",
-    category: "high-mountain"
+    imageUrl: "/lovable-uploads/dbccf672-671f-4a74-866b-6bacf864626e.png",
+    startingPoint: "Camping Los Coihues (direct access)",
+    highlights: ["highlightSecludedBeach", "highlightCrystalWaters", "highlightSwimmingSpot", "highlightForestTrail"],
+    transportation: ["walking"],
+    distanceFromCampsite: 0,
+    travelTime: 0,
+    category: "walking-path"
   },
   {
     id: "13",
-    name: "Refugio Jakob desde Tambo Baez",
-    type: "day-hike",
+    name: "Refugio Lopez",
+    type: "multi-day",
     difficulty: "moderate",
-    distance: 14,
-    duration: 5,
-    elevation: 1600,
-    requiresReservation: false,
+    distance: 24,
+    duration: 36,
+    elevation: 1300,
+    requiresReservation: true,
     description: {
-      en: "El sendero comienza en una estancia llamada tambo Baez, un lugar muy cercano a Colonia Suiza. Se puede llegar desde Bariloche en auto o transporte público. En Tambo Baez hay un estacionamiento, se paga al dueño de la estancia y se puede dejar el auto ahí sin problemas. El sendero no presenta mayores complicaciones, es un sendero tranquilo, y largo. Recorre al arroyo casa de piedra en casi todo su recorrido, hay bastante sombra y se disfruta mucho. La ultima hora camino al refugio la pendiente se hace bastante empinada. Una vez terminado este 'caracol' se recorren algunos metros mas o menos horizontales y se llega al refugio. El refugio es de los mas nuevos, cuenta Se puede acampar o dormir dentro del refugio. También se puede cenar, almorzar, y comprar algunos alimentos.",
-      es: "El sendero comienza en una estancia llamada tambo Baez, un lugar muy cercano a Colonia Suiza. Se puede llegar desde Bariloche en auto o transporte público. En Tambo Baez hay un estacionamiento, se paga al dueño de la estancia y se puede dejar el auto ahí sin problemas. El sendero no presenta mayores complicaciones, es un sendero tranquilo, y largo. Recorre al arroyo casa de piedra en casi todo su recorrido, hay bastante sombra y se disfruta mucho. La ultima hora camino al refugio la pendiente se hace bastante empinada. Una vez terminado este 'caracol' se recorren algunos metros mas o menos horizontales y se llega al refugio. El refugio es de los mas nuevos, cuenta Se puede acampar o dormir dentro del refugio. También se puede cenar, almorzar, y comprar algunos alimentos.",
-      fr: "Le sentier commence dans une estancia appelée tambo Baez, un endroit très proche de Colonia Suiza. On peut y arriver depuis Bariloche en voiture ou en transport public. À Tambo Baez, il y a un parking, on paie au propriétaire de l'estancia et on peut y laisser la voiture sans problème. Le sentier ne présente pas de complications majeures, c'est un sentier calme et long. Il suit le ruisseau casa de piedra sur presque tout son parcours, il y a beaucoup d'ombre et on en profite beaucoup. La dernière heure de marche vers le refuge, la pente devient assez raide. Une fois ce 'caracol' terminé, on parcourt quelques mètres plus ou moins horizontaux et on arrive au refuge. Le refuge est l'un des plus récents, on peut y camper ou dormir à l'intérieur. On peut également y dîner, déjeuner et acheter certains aliments.",
-      de: "Der Weg beginnt in einer Estancia namens tambo Baez, einem Ort sehr nahe bei Colonia Suiza. Man kann von Bariloche mit dem Auto oder öffentlichen Verkehrsmitteln dorthin gelangen. In Tambo Baez gibt es einen Parkplatz, man zahlt an den Besitzer der Estancia und kann das Auto problemlos dort stehen lassen. Der Weg weist keine größeren Komplikationen auf, es ist ein ruhiger und langer Weg. Er folgt dem Bach casa de piedra auf fast seinem gesamten Verlauf, es gibt viel Schatten und man genießt es sehr. In der letzten Stunde des Weges zum Refugio wird die Steigung ziemlich steil. Sobald diese 'Schnecke' beendet ist, legt man einige mehr oder weniger horizontale Meter zurück und erreicht das Refugio. Das Refugio ist eines der neuesten, man kann dort zelten oder im Refugio schlafen. Man kann auch zu Abend essen, zu Mittag essen und einige Lebensmittel kaufen."
+      en: "A beautiful overnight trek to Refugio Lopez. From Camping Los Coihues, take bus line 20 to Arroyo Lopez (30 min). The trail offers stunning views of lakes Nahuel Huapi and Moreno. The refuge is perched on a rock outcrop with 360° panoramic views.",
+      es: "Una hermosa caminata con pernocte al Refugio Lopez. Desde Camping Los Coihues, tome la línea 20 hasta Arroyo Lopez (30 min). El sendero ofrece impresionantes vistas de los lagos Nahuel Huapi y Moreno. El refugio está situado en un afloramiento rocoso con vistas panorámicas de 360°.",
+      fr: "Un trek d'une nuit au Refugio Lopez. Depuis le Camping Los Coihues, prenez la ligne 20 à Arroyo Lopez (30 min). Le sentier offre des vues spectaculaires sur les lacs Nahuel Huapi et Moreno. Le refuge est perché sur un affleurement rocheux avec des vues panoramiques à 360°.",
+      de: "Eine schöne Übernachtungswanderung zum Refugio Lopez. Vom Camping Los Coihues aus nehmen Sie die Linie 20 nach Arroyo Lopez (30 Minuten). Der Weg bietet atemberaubende Aussichten auf die Seen Nahuel Huapi und Moreno. Die Hütte liegt auf einem Felsvorsprung mit 360°-Panoramablick."
     },
-    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png", 
-    startingPoint: "Tambo Baez (16 min by car from Los Coihues)",
-    highlights: ["highlightMountainRefuge", "highlightForestTrail", "highlightRiverViews"],
-    transportation: ["taxi", "private-transfer"],
-    distanceFromCampsite: 7,
-    travelTime: 16,
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Arroyo Lopez (30 min bus from Los Coihues)",
+    highlights: ["highlightPanoramicViewpoint", "highlightMountainRefuge", "highlightLakeViews", "highlightSunsetViews"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 15,
+    travelTime: 30,
+    busLines: "Line 20",
     category: "high-mountain"
   },
   {
     id: "14",
-    name: "Refugio Laguna Negra desde Colonia Suiza",
-    type: "day-hike",
+    name: "Refugio Laguna Negra",
+    type: "multi-day",
+    difficulty: "moderate",
+    distance: 42,
+    duration: 72,
+    elevation: 1500,
+    requiresReservation: true,
+    description: {
+      en: "A three-day circuit trek to Laguna Negra. From Camping Los Coihues, take bus 50 to downtown and then transfer to bus 10 to Colonia Suiza. The trail offers stunning alpine views and pristine mountain lakes. One of the classic multiday treks in the region.",
+      es: "Un trekking de circuito de tres días a Laguna Negra. Desde Camping Los Coihues, tome el bus 50 al centro y luego transfiera al bus 10 a Colonia Suiza. El sendero ofrece impresionantes vistas alpinas y prístinos lagos de montaña. Uno de los clásicos trekkings de varios días en la región.",
+      fr: "Un trek en circuit de trois jours à Laguna Negra. Depuis le Camping Los Coihues, prenez le bus 50 vers le centre-ville, puis le service pour Colonia Suiza. Le sentier offre de superbes vues alpines et des lacs de montagne immaculés. L'un des classiques treks de plusieurs jours dans la région.",
+      de: "Eine dreitägige Rundwanderung zur Laguna Negra. Vom Camping Los Coihues nehmen Sie den Bus 50 in die Innenstadt und dann den Bus 10 nach Colonia Suiza. Der Weg bietet atemberaubende Alpenseen und unberührte Bergseen. Eine der klassischen Mehrtageswanderungen in der Region."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Colonia Suiza (40 min bus from Los Coihues)",
+    highlights: ["highlightAlpineLakes", "highlightMountainRefuge", "highlightForestTrail", "highlightMultiDay"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 18,
+    travelTime: 40,
+    busLines: "Linea 50 (desde Coihues) + Linea 10 (a Colonia Suiza)",
+    category: "high-mountain"
+  },
+  {
+    id: "15",
+    name: "Refugio Otto Meiling",
+    type: "multi-day",
     difficulty: "hard",
-    distance: 11,
+    distance: 36,
+    duration: 48, // 2 days
+    elevation: 1800,
+    requiresReservation: true,
+    description: {
+      en: "A challenging multi-day trek to Refugio Otto Meiling on Cerro Tronador. From Camping Los Coihues, take bus 50 to downtown and then transfer to the Pampa Linda service. The trail offers stunning glacial views and pristine mountain landscapes. One of the most rewarding treks in the region.",
+      es: "Un desafiante trekking de varios días al Refugio Otto Meiling en el Cerro Tronador. Desde Camping Los Coihues, tome el bus 50 al centro y luego transfiera al servicio a Pampa Linda. El sendero ofrece impresionantes vistas glaciares y paisajes montañosos prístinos. Uno de los trekkings más gratificantes de la región.",
+      fr: "Un trek difficile de plusieurs jours jusqu'au Refugio Otto Meiling sur le Cerro Tronador. Depuis le Camping Los Coihues, prenez le bus 50 vers le centre-ville, puis le service pour Pampa Linda. Le sentier offre des vues glaciaires spectaculaires et des paysages montagneux immaculés. L'un des treks les plus gratifiants de la région.",
+      de: "Eine anspruchsvolle Mehrtageswanderung zum Refugio Otto Meiling am Cerro Tronador. Vom Camping Los Coihues nehmen Sie den Bus 50 in die Innenstadt und dann den Service nach Pampa Linda. Der Weg bietet atemberaubende Gletscherblicke und unberührte Berglandschaften. Eine der lohnendsten Wanderungen in der Region."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Pampa Linda (90 min bus + transfer from Los Coihues)",
+    highlights: ["highlightGlacier", "highlightMountainRefuge", "highlightMultiDay", "highlightAlpineLakes"],
+    transportation: ["bus", "private-transfer"],
+    distanceFromCampsite: 60,
+    travelTime: 90,
+    busLines: "Bus 50 + Pampa Linda Transfer",
+    category: "high-mountain"
+  },
+  {
+    id: "16",
+    name: "Cerro Tronador - Pampa Linda",
+    type: "multi-day",
+    difficulty: "expert",
+    distance: 45,
+    duration: 72, // 3 days
+    elevation: 3470,
+    requiresReservation: true,
+    description: {
+      en: "An expert-level trek to the summit of Cerro Tronador, the highest peak in the region. Starting from Pampa Linda, this challenging multi-day adventure requires proper mountaineering experience and equipment. Spectacular views of surrounding glaciers and alpine landscapes.",
+      es: "Un trekking de nivel experto a la cumbre del Cerro Tronador, el pico más alto de la región. Comenzando desde Pampa Linda, esta desafiante aventura de varios días requiere experiencia y equipo adecuado de montañismo. Vistas espectaculares de los glaciares circundantes y paisajes alpinos.",
+      fr: "Un trek de niveau expert jusqu'au sommet du Cerro Tronador, le plus haut sommet de la région. Partant de Pampa Linda, cette aventure difficile de plusieurs jours nécessite une expérience d'alpinisme et un équipement approprié. Vues spectaculaires sur les glaciers environnants et les paysages alpins.",
+      de: "Eine Wanderung für Experten zum Gipfel des Cerro Tronador, dem höchsten Gipfel der Region. Von Pampa Linda aus erfordert dieses anspruchsvolle Mehrtagesabenteuer Bergerfahrung und entsprechende Ausrüstung. Spektakuläre Ausblicke auf umliegende Gletscher und alpine Landschaften."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Pampa Linda (90 min bus + transfer from Los Coihues)",
+    highlights: ["highlightGlacier", "highlightSummit", "highlightMultiDay", "highlightAlpineLakes"],
+    transportation: ["bus", "private-transfer"],
+    distanceFromCampsite: 60,
+    travelTime: 90,
+    busLines: "Bus 50 + Pampa Linda Transfer",
+    category: "high-mountain"
+  },
+  {
+    id: "17",
+    name: "5 Lagunas",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 40,
+    duration: 72, // 3 days
+    elevation: 1600,
+    requiresReservation: true,
+    description: {
+      en: "The 5 Lagunas Circuit is a challenging 3-day trek visiting five alpine lakes. Starting from Colonia Suiza, the route passes through breathtaking high-mountain landscapes including forests, rocky terrain, and pristine lakes with incredible camping spots. This demanding trek requires good physical condition and previous hiking experience. The effort is rewarded with some of the most spectacular scenery in the region, away from crowds.",
+      es: "El Circuito de 5 Lagunas es un exigente trekking de 3 días que visita cinco lagos alpinos. Partiendo desde Colonia Suiza, la ruta pasa por impresionantes paisajes de alta montaña incluyendo bosques, terreno rocoso y lagos prístinos con increíbles lugares para acampar. Este trekking demandante requiere buena condición física y experiencia previa en montaña. El esfuerzo es recompensado con algunos de los paisajes más espectaculares de la región, lejos de las multitudes.",
+      fr: "Le Circuit des 5 Lagunas est une randonnée exigeante de 3 jours visitant cinq lacs alpins. Partant de Colonia Suiza, l'itinéraire traverse des paysages époustouflants de haute montagne, comprenant des forêts, des terrains rocheux et des lacs immaculés avec d'incroyables sites de camping. Cette randonnée difficile nécessite une bonne condition physique et une expérience préalable de la randonnée. L'effort est récompensé par certains des paysages les plus spectaculaires de la région, loin des foules.",
+      de: "Der 5-Lagunen-Rundweg ist eine anspruchsvolle 3-tägige Wanderung zu fünf Alpenseen. Von Colonia Suiza aus führt die Route durch atemberaubende Hochgebirgslandschaften mit Wäldern, felsigem Gelände und unberührten Seen mit unglaublichen Campingplätzen. Diese anspruchsvolle Wanderung erfordert eine gute körperliche Verfassung und vorherige Wandererfahrung. Die Anstrengung wird mit einigen der spektakulärsten Landschaften der Region belohnt, fernab von Menschenmassen."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Colonia Suiza (40 min bus from Los Coihues)",
+    highlights: ["highlightAlpineLakes", "highlightMultiDay", "highlightCamping", "highlightHighMountainViews"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 18,
+    travelTime: 40,
+    busLines: "Linea 50 (desde Coihues) + Linea 10 (a Colonia Suiza)",
+    category: "high-mountain"
+  },
+  {
+    id: "18",
+    name: "Laguna Ilón",
+    type: "multi-day", // Changed from "day-hike" to "multi-day"
+    difficulty: "moderate",
+    distance: 12,
     duration: 5,
-    elevation: 1640,
+    elevation: 1200,
     requiresReservation: false,
     description: {
-      en: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines. Luego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados 'caracoles'. Al final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche.",
-      es: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines. Luego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados 'caracoles'. Al final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche.",
-      fr: "Le sentier part de Colonia Suiza, avec une montée légère et constante, longeant le ruisseau Goye. Il continue le long de la vallée qui présente certains secteurs avec des zones humides. Après 3 heures, on traverse deux ruisseaux, d'abord le Navidad puis le Negro ou Goye. Ici, le chemin en forme de zigzag devient très raide, ce sont les fameux 'caracoles'. À la fin de la montée, il y a une vue panoramique impressionnante sur la Laguna Negra, le Cerro Negro (qui se distingue par être le plus haut) et le Refuge Manfredo Segre (également connu sous le nom d'Italia) du Club Andin Bariloche.",
-      de: "Der Weg beginnt in Colonia Suiza, mit einem leichten und konstanten Anstieg, entlang des Baches Goye. Er führt weiter durch das Tal, das einige Bereiche mit Feuchtgebieten aufweist. Nach 3 Stunden überquert man zwei Bäche, zuerst den Navidad und dann den Negro oder Goye. Hier wird der Weg in Form von Zickzack sehr steil, es sind die sogenannten 'caracoles'. Am Ende des Aufstiegs gibt es eine beeindruckende Panoramaaussicht auf die Laguna Negra, den Cerro Negro (der sich dadurch auszeichnet, dass er der höchste ist) und die Schutzhütte Manfredo Segre (auch bekannt als Italia) des Andinen Clubs Bariloche."
+      en: "Laguna Ilón is a beautiful alpine lake hidden in the mountains near Bariloche. The trail offers spectacular views of surrounding peaks and valleys. This moderate hike takes you through native forests before reaching the pristine lake, perfect for a picnic and rest before returning.",
+      es: "Laguna Ilón es un hermoso lago alpino escondido en las montañas cerca de Bariloche. El sendero ofrece vistas espectaculares de los picos y valles circundantes. Esta caminata moderada te lleva a través de bosques nativos antes de llegar al prístino lago, perfecto para un picnic y descanso antes de regresar.",
+      fr: "Laguna Ilón est un magnifique lac alpin caché dans les montagnes près de Bariloche. Le sentier offre des vues spectaculaires sur les pics et les vallées environnants. Cette randonnée modérée vous emmène à travers des forêts indigènes avant d'atteindre le lac immaculé, parfait pour un pique-nique et du repos avant de revenir.",
+      de: "Laguna Ilón ist ein wunderschöner Alpensee, der in den Bergen in der Nähe von Bariloche versteckt ist. Der Weg bietet spektakuläre Aussichten auf umliegende Gipfel und Täler. Diese moderate Wanderung führt Sie durch einheimische Wälder, bevor Sie den unberührten See erreichen, perfekt für ein Picknick und eine Rast, bevor Sie zurückkehren."
     },
-    imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
-    startingPoint: "Colonia Suiza (30 min by bus from Los Coihues)",
-    highlights: ["highlightAlpineLake", "highlightMountainRefuge", "highlightForestTrail"],
-    transportation: ["bus", "taxi", "private-transfer"],
-    distanceFromCampsite: 15,
-    travelTime: 30,
-    busLines: "Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8)",
-    category: "high-mountain"
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Pampa Linda (120 min bus + transfer from Los Coihues)", // Updated starting point to indicate Pampa Linda
+    highlights: ["highlightAlpineLake", "highlightForestTrail", "highlightPanoramicViews"],
+    transportation: ["private-transfer", "bus"],
+    distanceFromCampsite: 60, // Updated distance to match other Pampa Linda trails
+    travelTime: 120, // Updated travel time to 120 minutes (2 hours)
+    busLines: "Bus 50 + Pampa Linda Transfer",
+    category: "high-mountain" // Updated category to high-mountain to match other Pampa Linda trails
+  },
+  {
+    id: "19",
+    name: "Mirada Del Doctor",
+    type: "multi-day", // Changed from "day-hike" to "multi-day"
+    difficulty: "easy",
+    distance: 4,
+    duration: 2,
+    elevation: 950,
+    requiresReservation: false,
+    description: {
+      en: "Mirada Del Doctor (Doctor's View) is a relatively easy hike that rewards with spectacular panoramic views of Nahuel Huapi Lake and the surrounding mountains. This accessible trail is perfect for beginners or those looking for a shorter hike with maximum scenic reward.",
+      es: "Mirada Del Doctor es una caminata relativamente fácil que recompensa con espectaculares vistas panorámicas del Lago Nahuel Huapi y las montañas circundantes. Este sendero accesible es perfecto para principiantes o aquellos que buscan una caminata más corta con máxima recompensa escénica.",
+      fr: "Mirada Del Doctor (Vue du Docteur) est une randonnée relativement facile qui offre des vues panoramiques spectaculaires sur le lac Nahuel Huapi et les montagnes environnantes. Ce sentier accessible est parfait pour les débutants ou ceux qui recherchent une randonnée plus courte avec une récompense scénique maximale.",
+      de: "Mirada Del Doctor (Blick des Doktors) ist eine relativ einfache Wanderung, die mit spektakulären Panoramablicken auf den Nahuel Huapi See und die umliegenden Berge belohnt. Dieser zugängliche Weg ist perfekt für Anfänger oder diejenigen, die eine kürzere Wanderung mit maximalem landschaftlichem Genuss suchen."
+    },
+    imageUrl: "/lovable-uploads/af70a74d-bb6d-488b-990d-9526e92d4eae.png",
+    startingPoint: "Pampa Linda (120 min bus + transfer from Los Coihues)", // Updated starting point to Pampa Linda
+    highlights: ["highlightPanoramicViews", "highlightLakeViews", "highlightBeginnerFriendly"],
+    transportation: ["bus", "private-transfer"], // Added private-transfer as typical for Pampa Linda
+    distanceFromCampsite: 60, // Updated distance to match other Pampa Linda trails
+    travelTime: 120, // Updated travel time to 2 hours (120 minutes)
+    busLines: "Bus 50 + Pampa Linda Transfer", // Updated bus information to match other Pampa Linda trails
+    category: "high-mountain" // Updated category to high-mountain to match other Pampa Linda trails
   }
 ];
