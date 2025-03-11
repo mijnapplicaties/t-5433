@@ -114,24 +114,36 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       transportation: ["private-transfer", "taxi"],
       distanceFromCampsite: 16,
       travelTime: 25,
-      region: "bariloche"
+      region: "bariloche",
+      category: "high-mountain"
     };
   }, [allTrails]);
   
   const otherMultiDayHikes = useMemo(() => {
+    // First create a copy of multi-day hikes excluding Pampa Linda hikes
     const hikes = multiDayHikes.filter(trail => 
       !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
     );
     
-    if (jakobTrail && !hikes.some(trail => trail.id === jakobTrail.id || trail.name.toLowerCase().includes('jakob'))) {
+    // Force add Jakob trail to the beginning of the list
+    const hasJakob = hikes.some(trail => 
+      trail.id === "11" || trail.name.toLowerCase().includes('jakob')
+    );
+    
+    if (!hasJakob) {
       hikes.unshift(jakobTrail);
     }
     
+    // Add any additional trails from barilochieMultiDayTrailIds that might be missing
     barilochieMultiDayTrailIds.forEach(id => {
-      if (id === "11") return;
-      const trail = allTrails.find(t => t.id === id);
-      if (trail && !hikes.some(t => t.id === id)) {
-        hikes.push(trail);
+      if (id === "11") return; // Skip Jakob as we've already handled it
+      
+      const alreadyIncluded = hikes.some(t => t.id === id);
+      if (!alreadyIncluded) {
+        const trail = allTrails.find(t => t.id === id);
+        if (trail) {
+          hikes.push(trail);
+        }
       }
     });
     
