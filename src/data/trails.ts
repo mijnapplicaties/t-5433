@@ -275,4 +275,61 @@ export const trails: Trail[] = [
       fr: "Une promenade courte et agréable vers une plage isolée sur le Lago Gutiérrez aux eaux cristallines. Le sentier commence directement du Camping Los Coihues et suit le rivage à travers la forêt native. Parfait pour une baignade rafraîchissante en été.",
       de: "Ein kurzer, angenehmer Spaziergang zu einem abgelegenen Strand am Lago Gutiérrez mit kristallklarem Wasser. Der Weg beginnt direkt vom Camping Los Coihues und folgt dem Seeufer durch den heimischen Wald. Perfekt für ein erfrischendes Bad im Sommer."
     },
-    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f
+    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png",
+    startingPoint: "Camping Los Coihues (direct access)",
+    highlights: ["highlightLakeViews", "highlightSecludedBeach", "highlightNativeForest"],
+    transportation: ["walking"],
+    distanceFromCampsite: 0,
+    travelTime: 0,
+    category: "walking-path"
+  },
+  {
+    id: "13",
+    name: "Refugio Laguna Negra desde Colonia Suiza",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 11,
+    duration: 5,
+    elevation: 1640,
+    requiresReservation: true,
+    description: {
+      en: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines.\n\nLuego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados \"caracoles\".\n\nAl final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche.",
+      es: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines.\n\nLuego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados \"caracoles\".\n\nAl final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche.",
+      fr: "La senda parte desde Colonia Suiza",
+      de: "La senda parte desde Colonia Suiza"
+    },
+    imageUrl: "/lovable-uploads/67fa31e5-4160-46c9-92fb-86aad3955a56.png",
+    startingPoint: "Colonia Suiza (1 hr from Los Coihues)",
+    highlights: ["highlightAlpineLake", "highlightMountainRefuge", "highlightHighMountainPasses"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 15,
+    travelTime: 60,
+    busLines: "Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8) hasta la Panchería del Circuito Chico (1 hr)",
+    category: "high-mountain",
+    region: "bariloche"
+  },
+  {
+    id: "14",
+    name: "Refugio Otto Meiling",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 14,
+    duration: 6,
+    elevation: 1900,
+    requiresReservation: true,
+    description: {
+      en: "El inicio del sendero está a pocos metros de la parada de autobuses en Pampa Linda, donde también comienza el camino hacia el Refugio Agostino Rocca. Un cartel en la bifurcación indica la dirección de ambos senderos, señalizando claramente el desvío hacia el Refugio Meiling.\n\nLa primera parte de la caminata es tranquila, con muy poco desnivel y completamente señalizada. Atraviesa un bosque nativo de imponentes coihues hasta cruzar el arroyo Castaño Overa. A partir de allí, el sendero comienza a ganar altura de manera progresiva durante un par de horas, ofreciendo las primeras vistas del Cerro Tronador.\n\nEl tramo más exigente inicia en el sector conocido como \"Caracol\", donde la pendiente se vuelve más pronunciada. Al llegar a La Almohadilla, la vegetación comienza a desaparecer y da paso a un paisaje dominado por roca volcánica y, fuera del verano, nieve. Esta última parte del ascenso es la más demandante y puede llevar entre 1 y 2 horas, dependiendo de nuestro estado físico.\n\nFinalmente, alcanzamos el Refugio Meiling, ubicado a 1.900 metros de altitud. Desde allí, se pueden admirar impresionantes vistas de los glaciares Castaño Overa (a la izquierda) y Alerce (a la derecha). El refugio se encuentra sobre el último peñón de roca que Otto Meiling identificó en la década de 1950 antes del inicio del glaciar.\nActividades desde el refugio\n\nDesde el refugio Otto Meiling se pueden realizar varias excursiones, la más popular es la caminata al Filo de la Motte 2400 mts. s.n.m., por la suave pendiente nevada del filo glaciar que divide las cuencas de los glaciares Castaño Overo y Alerce.\n\nLa caminata es de dos horas aprox. hasta el Filo de la Motte, dónde, se puede apreciar la pared Norte del Pico Argentino del Tronador, de 3300 mts de altura. Esta pared consiste en un glaciar colgante de unos 500 mts de desnivel y 50° de inclinación.\n\nEs una de las rutas clásicas de escalada al Pico Argentino. La parte inferior del Glaciar colgante se precipita a la cuenca del Glaciar Casa Pangue, casi mil metros más abajo.",
+      es: "El inicio del sendero está a pocos metros de la parada de autobuses en Pampa Linda, donde también comienza el camino hacia el Refugio Agostino Rocca. Un cartel en la bifurcación indica la dirección de ambos senderos, señalizando claramente el desvío hacia el Refugio Meiling.\n\nLa primera parte de la caminata es tranquila, con muy poco desnivel y completamente señalizada. Atraviesa un bosque nativo de imponentes coihues hasta cruzar el arroyo Castaño Overa. A partir de allí, el sendero comienza a ganar altura de manera progresiva durante un par de horas, ofreciendo las primeras vistas del Cerro Tronador.\n\nEl tramo más exigente inicia en el sector conocido como \"Caracol\", donde la pendiente se vuelve más pronunciada. Al llegar a La Almohadilla, la vegetación comienza a desaparecer y da paso a un paisaje dominado por roca volcánica y, fuera del verano, nieve. Esta última parte del ascenso es la más demandante y puede llevar entre 1 y 2 horas, dependiendo de nuestro estado físico.\n\nFinalmente, alcanzamos el Refugio Meiling, ubicado a 1.900 metros de altitud. Desde allí, se pueden admirar impresionantes vistas de los glaciares Castaño Overa (a la izquierda) y Alerce (a la derecha). El refugio se encuentra sobre el último peñón de roca que Otto Meiling identificó en la década de 1950 antes del inicio del glaciar.\nActividades desde el refugio\n\nDesde el refugio Otto Meiling se pueden realizar varias excursiones, la más popular es la caminata al Filo de la Motte 2400 mts. s.n.m., por la suave pendiente nevada del filo glaciar que divide las cuencas de los glaciares Castaño Overo y Alerce.\n\nLa caminata es de dos horas aprox. hasta el Filo de la Motte, dónde, se puede apreciar la pared Norte del Pico Argentino del Tronador, de 3300 mts de altura. Esta pared consiste en un glaciar colgante de unos 500 mts de desnivel y 50° de inclinación.\n\nEs una de las rutas clásicas de escalada al Pico Argentino. La parte inferior del Glaciar colgante se precipita a la cuenca del Glaciar Casa Pangue, casi mil metros más abajo.",
+      fr: "El inicio del sendero está a pocos metros de la parada",
+      de: "El inicio del sendero está a pocos metros de la parada"
+    },
+    imageUrl: "/lovable-uploads/c2cfed37-332c-49bb-8f26-e701a5a11d48.png",
+    startingPoint: "Pampa Linda (2 hrs drive from Los Coihues)",
+    highlights: ["highlightGlacier", "highlightMountainRefuge", "highlightTronadorMountain"],
+    transportation: ["private-transfer", "taxi"],
+    distanceFromCampsite: 80,
+    travelTime: 120,
+    category: "high-mountain",
+    region: "pampa-linda"
+  }
+];
