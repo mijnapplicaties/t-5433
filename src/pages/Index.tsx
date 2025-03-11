@@ -174,11 +174,19 @@ const Index = () => {
   );
 
   const refugioLopezTrail = trails.find(trail => trail.id === "13");
+  const travesiaCerroLopezTrail = trails.find(trail => trail.id === "14");
   
   if (refugioLopezTrail) {
     const refugioLopezIndex = otherMultiDayHikes.findIndex(trail => trail.id === "13");
     if (refugioLopezIndex === -1) {
       otherMultiDayHikes.push(refugioLopezTrail);
+    }
+  }
+  
+  if (travesiaCerroLopezTrail) {
+    const travesiaIndex = otherMultiDayHikes.findIndex(trail => trail.id === "14");
+    if (travesiaIndex === -1) {
+      otherMultiDayHikes.push(travesiaCerroLopezTrail);
     }
   }
 
