@@ -15,7 +15,7 @@ const TrailStats: React.FC<TrailStatsProps> = ({
   layout = 'grid',
   size = 'sm'
 }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const formatDistance = (trail: Trail) => {
     if (trail.name === "Lago Gutiérrez") {
@@ -26,19 +26,22 @@ const TrailStats: React.FC<TrailStatsProps> = ({
 
   const formatDuration = (trail: Trail) => {
     if (trail.name === "Refugio Frey from Villa Catedral") {
-      return "3 " + t('hours');
+      return language === 'es' ? "3 horas" : "3 " + t('hours');
     }
     
     if (trail.name.includes("Jakob")) {
-      return "5-6 " + t('hours');
+      return language === 'es' ? "5-6 horas" : "5-6 " + t('hours');
     }
     
-    if (trail.name === "Lago Gutiérrez") {
+    if (trail.name === "Lago Gutiérrez" || trail.name === "Cascada de los Duendes") {
       return `${Math.round(trail.duration * 60)} ${t('minutes')}`;
     }
-    if (trail.name === "Cascada de los Duendes") {
-      return `${Math.round(trail.duration * 60)} ${t('minutes')}`;
+
+    // Special handling for Spanish singular/plural
+    if (language === 'es') {
+      return `${trail.duration} ${trail.duration === 1 ? 'hora' : 'horas'}`;
     }
+    
     return `${trail.duration} ${t('hours')}`;
   };
 
