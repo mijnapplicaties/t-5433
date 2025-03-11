@@ -9,7 +9,6 @@ import ReservationBadge from './trail/ReservationBadge';
 import TrailStats from './trail/TrailStats';
 import TrailDescription from './trail/TrailDescription';
 import TransportationInfo from './trail/TransportationInfo';
-import TrailHighlights from './trail/TrailHighlights';
 import TrailDetailDialog from './trail/TrailDetailDialog';
 
 interface TrailCardProps {
@@ -89,10 +88,6 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
           <div className="mt-4">
             <h4 className="text-sm font-semibold mb-2">{t('howToGetThere')}</h4>
             <TransportationInfo trail={trail} compact />
-          </div>
-
-          <div className="mt-4">
-            <TrailHighlights highlights={trail.highlights} />
           </div>
         </CardContent>
       </Card>
