@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -402,6 +403,31 @@ export const trails: Trail[] = [
     distanceFromCampsite: 15,
     travelTime: 60,
     busLines: "Linea 50 (Los Coihues) + Linea 10 (desde Centro) hasta Colonia Suiza (1 hr)",
+    category: "high-mountain",
+    region: "bariloche"
+  },
+  {
+    id: "18",
+    name: "Refugio Cerro López",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 8,
+    duration: 4,
+    elevation: 1620,
+    requiresReservation: true,
+    description: {
+      en: "This challenging high mountain hike offers stunning panoramic views of the Nahuel Huapi National Park and the surrounding lakes. The trail starts at Villa Tacul and climbs steeply through native forest before reaching more exposed rocky terrain at higher elevations. The refuge is perched at 1,620 meters above sea level, providing shelter for overnight hikers and spectacular sunrise views over the Andean landscape.",
+      es: "Esta exigente caminata de alta montaña ofrece impresionantes vistas panorámicas del Parque Nacional Nahuel Huapi y los lagos circundantes. El sendero comienza en Villa Tacul y asciende empinadamente a través del bosque nativo antes de alcanzar un terreno rocoso más expuesto en altitudes más elevadas. El refugio está ubicado a 1.620 metros sobre el nivel del mar, proporcionando refugio para excursionistas que pernoctan y espectaculares vistas del amanecer sobre el paisaje andino.",
+      fr: "Cette randonnée exigeante de haute montagne offre des vues panoramiques impressionnantes du Parc National Nahuel Huapi et des lacs environnants. Le sentier commence à Villa Tacul et monte abruptement à travers la forêt native avant d'atteindre un terrain rocheux plus exposé à des altitudes plus élevées. Le refuge est perché à 1 620 mètres d'altitude, offrant un abri pour les randonneurs qui passent la nuit et des vues spectaculaires du lever du soleil sur le paysage andin.",
+      de: "Diese anspruchsvolle Hochgebirgswanderung bietet atemberaubende Panoramablicke auf den Nahuel Huapi Nationalpark und die umliegenden Seen. Der Weg beginnt in Villa Tacul und steigt steil durch einheimischen Wald an, bevor er in höheren Lagen felsigeres, exponiertes Gelände erreicht. Die Schutzhütte liegt auf 1.620 Metern Höhe und bietet Unterkunft für Übernachtungswanderer und spektakuläre Sonnenaufgangsblicke über die Andenlandschaft."
+    },
+    imageUrl: "/lovable-uploads/6d9b3452-7edd-47fa-a936-024b5bf05aa3.png",
+    startingPoint: "Villa Tacul (30 min drive from Los Coihues)",
+    highlights: ["highlightPanoramicViews", "highlightMountainRefuge", "highlightHighMountainPasses", "highlightNativeForest"],
+    transportation: ["bus", "taxi", "private-transfer"],
+    distanceFromCampsite: 18,
+    travelTime: 30,
+    busLines: "Linea 50 (Los Coihues) + Linea 20 (Av. Bustillo) (45 min)",
     category: "high-mountain",
     region: "bariloche"
   }
