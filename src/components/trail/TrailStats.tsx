@@ -29,6 +29,10 @@ const TrailStats: React.FC<TrailStatsProps> = ({
       return "3 " + t('hours');
     }
     
+    if (trail.name.includes("Jakob")) {
+      return "5-6 " + t('hours');
+    }
+    
     if (trail.name === "Lago Gutiérrez") {
       return `${Math.round(trail.duration * 60)} ${t('minutes')}`;
     }
@@ -41,6 +45,9 @@ const TrailStats: React.FC<TrailStatsProps> = ({
   const getElevation = (trail: Trail) => {
     if (trail.name === "Refugio Frey from Villa Catedral") {
       return 1080;
+    }
+    if (trail.name.includes("Jakob")) {
+      return 1600;
     }
     return trail.elevation;
   };

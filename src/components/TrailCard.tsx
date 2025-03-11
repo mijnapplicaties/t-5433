@@ -21,6 +21,9 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
+  // Special handling for Jakob trail to ensure it's displayed correctly
+  const isJakobTrail = trail.id === "11" || trail.name.toLowerCase().includes('jakob');
+  
   return (
     <>
       <Card 
@@ -29,9 +32,17 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
       >
         <div className="relative overflow-hidden rounded-t-lg h-48">
           <img
-            src={trail.imageUrl}
+            src={trail.imageUrl || (isJakobTrail ? "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png" : "/placeholder.svg")}
             alt={trail.name}
             className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              if (isJakobTrail) {
+                target.src = "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png";
+              } else {
+                target.src = "/placeholder.svg";
+              }
+            }}
           />
           <div className="absolute top-4 right-4 flex gap-2">
             <ReservationBadge requiresReservation={trail.requiresReservation} />

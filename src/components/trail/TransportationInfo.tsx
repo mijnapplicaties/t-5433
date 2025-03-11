@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Bus, Car, Footprints, ThumbsUp, Users } from 'lucide-react';
 import { Trail, TransportationType } from '../../types/trail';
@@ -11,6 +10,28 @@ interface TransportationInfoProps {
 
 const TransportationInfo: React.FC<TransportationInfoProps> = ({ trail, compact = false }) => {
   const { t } = useLanguage();
+
+  // Special handling for Jakob trail
+  if (trail.id === "11" || trail.name.toLowerCase().includes("jakob")) {
+    return (
+      <div className={compact ? "space-y-2" : "space-y-3 bg-gray-50 p-4 rounded-lg"}>
+        <div className="flex items-start gap-2">
+          <Car className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
+          <div>
+            <span className="font-bold block">{t('taxiService')} (16 {t('minutes')})</span>
+            {!compact && <span className="text-gray-600">{t('taxiRecommendation')}</span>}
+          </div>
+        </div>
+        <div className="flex items-start gap-2">
+          <Bus className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
+          <div>
+            <span className="font-bold block">{t('busLines')}: Bus to Colonia Suiza</span>
+            {!compact && <span className="text-gray-600">{t('busScheduleWarning')}</span>}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const getTransportationInfo = (type: string) => {
     const getTimeLabel = (minutes: number) => `(${minutes} ${t('minutes')})`;
