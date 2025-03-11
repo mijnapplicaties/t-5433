@@ -65,9 +65,16 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     return result;
   }, [dayHikes, freyTrailForBusAccess]);
   
+  const pampLindaTrailNames = [
+    'Refugio Otto Meiling',
+    'Laguna Ilón',
+    'Refugio Agostino Rocca'
+  ];
+
   const pampLindaHikes = useMemo(() => {
     return multiDayHikes.filter(trail => 
       trail.name.toLowerCase().includes('pampa linda') || 
+      pampLindaTrailNames.includes(trail.name) ||
       trail.name.toLowerCase().includes('meiling') ||
       trail.name.toLowerCase().includes('tronador') ||
       trail.name.toLowerCase().includes('laguna negra') ||
@@ -75,8 +82,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       trail.name.toLowerCase().includes('5 lagunas') ||
       trail.name.toLowerCase().includes('laguna ilón') ||
       trail.name.toLowerCase().includes('mirada del doctor') ||
-      pampLindaTrailIds.includes(trail.id) ||
-      (trail.region && trail.region === 'pampa-linda')
+      trail.region === 'pampa-linda'
     );
   }, [multiDayHikes]);
   
