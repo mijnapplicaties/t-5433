@@ -1,4 +1,3 @@
-
 import { useMemo } from 'react';
 import { Trail, TrailType } from '../types/trail';
 
@@ -15,7 +14,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   // Update the Pampa Linda trail IDs, making sure to exclude Laguna Negra
   const pampLindaTrailIds = ['13', '14', '15', '16'];
 
-  const barilochieMultiDayTrailIds = ['17', '11', '7', '18'];
+  const barilochieMultiDayTrailIds = ['17', '11', '7', '18', '1'];
 
   const excludedFromBarilochieMultiDay = ['Playa Muñoz', 'Cascada de los Duendes'];
   const excludedTrailIds = ['7', '12'];
@@ -36,6 +35,24 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     return {
       ...freyTrail,
       name: "Refugio Frey from Villa Catedral",
+      imageUrl: "/lovable-uploads/5fd20688-6816-43ff-87bc-fb5b01ab43eb.png"
+    };
+  }, [freyTrail]);
+  
+  const freyTrailForMultiDay = useMemo(() => {
+    if (!freyTrail) return null;
+    return {
+      ...freyTrail,
+      id: "1-multi",
+      type: "multi-day" as TrailType,
+      name: "Refugio Frey Multi-Day",
+      description: {
+        ...freyTrail.description,
+        en: freyTrail.description.en + "\n\nThis version is designed as a multi-day experience, allowing you to stay at the refuge overnight and explore the surrounding areas.",
+        es: freyTrail.description.es + "\n\nEsta versión está diseñada como una experiencia de varios días, lo que le permite alojarse en el refugio durante la noche y explorar las áreas circundantes.",
+        fr: freyTrail.description.fr + "\n\nCette version est conçue comme une expérience de plusieurs jours, vous permettant de séjourner au refuge pour la nuit et d'explorer les environs.",
+        de: freyTrail.description.de + "\n\nDiese Version ist als mehrtägige Erfahrung konzipiert, die es Ihnen ermöglicht, im Refuge zu übernachten und die umliegenden Gebiete zu erkunden."
+      },
       imageUrl: "/lovable-uploads/5fd20688-6816-43ff-87bc-fb5b01ab43eb.png"
     };
   }, [freyTrail]);
@@ -228,8 +245,13 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       }
     });
     
+    // Add the multi-day version of Frey to the result set if not already present
+    if (freyTrailForMultiDay && !result.some(trail => trail.id === "1-multi" || trail.name === "Refugio Frey Multi-Day")) {
+      result.unshift(freyTrailForMultiDay);
+    }
+    
     return result.filter(trail => trail.id !== "12" && trail.name !== "Playa Muñoz");
-  }, [multiDayHikes, pampLindaHikes, allTrails, jakobCircuitTrail, jakobTamboTrail, excludedTrailIds]);
+  }, [multiDayHikes, pampLindaHikes, allTrails, jakobCircuitTrail, jakobTamboTrail, excludedTrailIds, freyTrailForMultiDay]);
 
   const categoryBarilochieHikes = useMemo(() => {
     return allTrails.filter(trail => {
