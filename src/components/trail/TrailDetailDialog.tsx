@@ -30,16 +30,6 @@ const TrailDetailDialog: React.FC<TrailDetailDialogProps> = ({
 }) => {
   const { t } = useLanguage();
 
-  const getDifficultyDescription = (difficulty: string): string => {
-    switch(difficulty) {
-      case 'easy': return t('difficultyEasyDescription');
-      case 'moderate': return t('difficultyModerateDescription');
-      case 'hard': return t('difficultyHardDescription');
-      case 'expert': return t('difficultyExpertDescription');
-      default: return '';
-    }
-  };
-
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">

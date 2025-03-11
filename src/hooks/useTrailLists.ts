@@ -13,7 +13,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
 
   const pampLindaTrailIds = ['12', '13a', '14a'];
   
-  const barilochieMultiDayTrailIds = ['15', '16', '17', '13', '14', '11', '7'];
+  const barilochieMultiDayTrailIds = ['15', '16', '17', '13', '14', '11', '7', '17'];
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
   

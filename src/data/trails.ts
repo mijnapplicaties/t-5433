@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -379,5 +380,30 @@ export const trails: Trail[] = [
     travelTime: 120,
     category: "high-mountain",
     region: "pampa-linda"
+  },
+  {
+    id: "17",
+    name: "Refugio San Martin Jakob",
+    type: "multi-day",
+    difficulty: "moderate",
+    distance: 16,
+    duration: 6,
+    elevation: 1550,
+    requiresReservation: true,
+    description: {
+      en: "The trail to Refugio Jakob starts at Colonia Suiza and follows a beautiful path through native forests along the Casa de Piedra Stream. The initial section is an easy walk, gradually increasing in difficulty as you ascend. After about 3 hours of hiking, you'll reach a more demanding section with steeper terrain known as 'Los Caracoles' (The Snails) due to its zigzagging pattern.\n\nAfter completing this more challenging part, you'll be rewarded with stunning views of the surrounding mountains and valleys. The refuge itself is situated at 1,550 meters above sea level, on the shores of the beautiful Laguna Jakob, surrounded by impressive granite walls and native lenga forests.\n\nRefugio San Martin Jakob offers overnight accommodations with dorm-style beds, meals, and basic amenities. It's one of the most comfortable mountain refuges in the area, making it perfect for both experienced hikers and beginners looking to experience their first mountain overnight adventure.",
+      es: "El sendero al Refugio Jakob comienza en Colonia Suiza y sigue un hermoso camino a través de bosques nativos a lo largo del Arroyo Casa de Piedra. La sección inicial es una caminata fácil, que aumenta gradualmente en dificultad a medida que asciendes. Después de aproximadamente 3 horas de caminata, llegarás a una sección más exigente con terreno más empinado conocido como 'Los Caracoles' debido a su patrón zigzagueante.\n\nDespués de completar esta parte más desafiante, serás recompensado con impresionantes vistas de las montañas y valles circundantes. El refugio está situado a 1,550 metros sobre el nivel del mar, a orillas de la hermosa Laguna Jakob, rodeado de impresionantes paredes de granito y bosques nativos de lengas.\n\nEl Refugio San Martín Jakob ofrece alojamiento con camas tipo dormitorio, comidas y servicios básicos. Es uno de los refugios de montaña más cómodos de la zona, lo que lo hace perfecto tanto para excursionistas experimentados como para principiantes que buscan experimentar su primera aventura nocturna en la montaña.",
+      fr: "Le sentier menant au Refugio Jakob commence à Colonia Suiza et suit un beau chemin à travers des forêts indigènes le long du ruisseau Casa de Piedra. La section initiale est une promenade facile, dont la difficulté augmente progressivement au fur et à mesure que vous montez. Après environ 3 heures de randonnée, vous atteindrez une section plus exigeante avec un terrain plus escarpé connu sous le nom de 'Los Caracoles' (Les Escargots) en raison de son motif en zigzag.\n\nAprès avoir terminé cette partie plus difficile, vous serez récompensé par des vues magnifiques sur les montagnes et les vallées environnantes. Le refuge lui-même est situé à 1 550 mètres d'altitude, sur les rives de la belle Laguna Jakob, entourée d'impressionnantes parois de granit et de forêts indigènes de lengas.\n\nLe Refugio San Martin Jakob propose des hébergements de nuit avec des lits de style dortoir, des repas et des équipements de base. C'est l'un des refuges de montagne les plus confortables de la région, ce qui le rend parfait pour les randonneurs expérimentés et les débutants qui souhaitent vivre leur première aventure nocturne en montagne.",
+      de: "Der Weg zum Refugio Jakob beginnt in Colonia Suiza und folgt einem schönen Pfad durch einheimische Wälder entlang des Casa de Piedra-Baches. Der erste Abschnitt ist eine leichte Wanderung, deren Schwierigkeitsgrad allmählich zunimmt, wenn Sie aufsteigen. Nach etwa 3 Stunden Wanderung erreichen Sie einen anspruchsvolleren Abschnitt mit steilerem Gelände, der aufgrund seines Zickzackmusters als 'Los Caracoles' (Die Schnecken) bekannt ist.\n\nNachdem Sie diesen schwierigeren Teil absolviert haben, werden Sie mit atemberaubenden Ausblicken auf die umliegenden Berge und Täler belohnt. Die Schutzhütte selbst liegt auf 1.550 Metern über dem Meeresspiegel, am Ufer der wunderschönen Laguna Jakob, umgeben von beeindruckenden Granitwänden und einheimischen Lenga-Wäldern.\n\nDas Refugio San Martin Jakob bietet Übernachtungsmöglichkeiten mit Schlafsälen, Mahlzeiten und grundlegenden Annehmlichkeiten. Es ist eine der komfortabelsten Berghütten in der Gegend und damit perfekt für erfahrene Wanderer und Anfänger, die ihr erstes Übernachtungsabenteuer in den Bergen erleben möchten."
+    },
+    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png",
+    startingPoint: "Colonia Suiza (1 hr from Los Coihues)",
+    highlights: ["highlightAlpineLake", "highlightMountainRefuge", "highlightGraniteWalls", "highlightNativeForest"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 15,
+    travelTime: 60,
+    busLines: "Linea 50 (Los Coihues) + Linea 10 (desde Centro) hasta Colonia Suiza (1 hr)",
+    category: "high-mountain",
+    region: "bariloche"
   }
 ];
