@@ -348,7 +348,7 @@ export const trails: Trail[] = [
       fr: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda.",
       de: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda."
     },
-    imageUrl: "/lovable-uploads/433086966358-54859d0ed716.png",
+    imageUrl: "/lovable-uploads/ce14ff50-5572-4532-bef3-f198b4593918.png",
     startingPoint: "Pampa Linda (2 hrs drive from Los Coihues)",
     highlights: ["highlightAlpineLake", "highlightTronadorMountain", "highlightSuspensionBridge"],
     transportation: ["private-transfer", "taxi"],
