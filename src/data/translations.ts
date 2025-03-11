@@ -10,7 +10,7 @@ type Translation = {
 export const translations: Translation = {
   title: {
     en: "Los Coihues Trail Guide",
-    es: "Guía de Senderos",
+    es: "Guía de Senderos Los Coihues",
     fr: "Guide des Sentiers Los Coihues",
     de: "Los Coihues Wanderführer",
   },
