@@ -12,7 +12,8 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     'Playa Muñoz'
   ];
 
-  const pampLindaTrailIds = ['12', '13', '14', '15', '16'];
+  // Update the Pampa Linda trail IDs, making sure to exclude Laguna Negra
+  const pampLindaTrailIds = ['13', '14', '15', '16'];
 
   const barilochieMultiDayTrailIds = ['17', '11', '7', '18'];
 
@@ -78,7 +79,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   
   const pampLindaHikes = useMemo(() => {
     return multiDayHikes.filter(trail => 
-      trail.name.toLowerCase().includes('pampa linda') || 
+      (trail.name.toLowerCase().includes('pampa linda') || 
       trail.name.toLowerCase().includes('meiling') ||
       trail.name.toLowerCase().includes('tronador') ||
       trail.startingPoint.toLowerCase().includes('pampa linda') ||
@@ -86,10 +87,9 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       trail.name.toLowerCase().includes('laguna ilón') ||
       trail.name.toLowerCase().includes('mirada del doctor') ||
       trail.name.toLowerCase().includes('agostino rocca') ||
-      pampLindaTrailIds.includes(trail.id) ||
-      trail.id === "14" ||
-      trail.id === "15" ||
-      trail.id === "16"    
+      pampLindaTrailIds.includes(trail.id)) &&
+      // Make sure Refugio Laguna Negra is not included here
+      !trail.name.toLowerCase().includes('laguna negra')
     );
   }, [multiDayHikes]);
   
@@ -186,6 +186,11 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       
       if (excludedTrailIds.includes(trail.id)) {
         return false;
+      }
+      
+      // Explicitly include Refugio Laguna Negra in Bariloche region
+      if (trail.name.toLowerCase().includes('laguna negra')) {
+        return true;
       }
       
       return true;
