@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Badge } from './ui/badge';
 import { Map, Mountain, FootprintsIcon, TreePine, Waves, Filter } from 'lucide-react';
 import { TrailCategory } from '../types/trail';
 import { useLanguage } from '../context/LanguageContext';
 import { Button } from './ui/button';
-import { useMobile } from '../hooks/use-mobile';
+import { useIsMobile } from '../hooks/use-mobile';
 
 interface CategoryFilterProps {
   selectedCategory: TrailCategory | 'all';
@@ -19,7 +18,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
   setFiltersOpen
 }) => {
   const { t } = useLanguage();
-  const isMobile = useMobile();
+  const isMobile = useIsMobile();
 
   const getCategoryIcon = (category: TrailCategory | 'all') => {
     switch(category) {
@@ -98,3 +97,4 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
 };
 
 export default CategoryFilter;
+
