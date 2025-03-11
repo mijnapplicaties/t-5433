@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Trail } from '../types/trail';
 import { useLanguage } from '../context/LanguageContext';
 import TrailCard from './TrailCard';
@@ -18,16 +18,25 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
 }) => {
   const { t } = useLanguage();
 
+  useEffect(() => {
+    // Enhanced debug logs to track all multi-day hikes
+    console.log('MultiDayHikesSection - Bariloche Multi-day Hikes:', {
+      count: otherMultiDayHikes.length,
+      names: otherMultiDayHikes.map(t => t.name),
+      ids: otherMultiDayHikes.map(t => t.id),
+      trails: otherMultiDayHikes
+    });
+    console.log('MultiDayHikesSection - Pampa Linda Hikes:', {
+      count: pampLindaHikes.length,
+      names: pampLindaHikes.map(t => t.name),
+      ids: pampLindaHikes.map(t => t.id),
+      trails: pampLindaHikes
+    });
+  }, [otherMultiDayHikes, pampLindaHikes]);
+
   if (!showSection) {
     return null;
   }
-
-  // Debug logs
-  console.log('MultiDayHikesSection - Pampa Linda Hikes:', {
-    count: pampLindaHikes.length,
-    names: pampLindaHikes.map(t => t.name),
-    trails: pampLindaHikes
-  });
   
   return (
     <div className="mb-12">

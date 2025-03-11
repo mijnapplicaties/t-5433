@@ -1,3 +1,4 @@
+
 import { useMemo } from 'react';
 import { Trail, TrailType } from '../types/trail';
 
@@ -19,6 +20,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   ];
   
   const barilochieMultiDayTrailIds = ['15', '16', '17', '3', '11', '7'];
+  const jakobTrailIds = ['11', '12'];
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
   
@@ -172,32 +174,40 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   }, [allTrails]);
   
   const otherMultiDayHikes = useMemo(() => {
+    // First, get all multi-day hikes that are not in Pampa Linda
     const hikes = multiDayHikes.filter(trail => 
       !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
     );
     
+    // Start with the filtered hikes
     const result = [...hikes];
     
+    // Check if Jakob Circuit trail already exists
     const hasJakobCircuit = result.some(trail => 
       trail.id === "11" || 
       (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('frey'))
     );
     
+    // Add Jakob Circuit trail if it doesn't exist
+    if (!hasJakobCircuit) {
+      result.unshift(jakobCircuitTrail);
+    }
+    
+    // Check if Jakob Tambo trail already exists
     const hasJakobTambo = result.some(trail => 
       trail.id === "12" || 
       (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('tambo'))
     );
     
-    if (!hasJakobCircuit) {
-      result.unshift(jakobCircuitTrail);
-    }
-    
+    // Add Jakob Tambo trail if it doesn't exist
     if (!hasJakobTambo) {
       result.push(jakobTamboTrail);
     }
     
+    // Ensure other Bariloche multi-day trails are included
     barilochieMultiDayTrailIds.forEach(id => {
-      if (id === "11" || id === "12") return;
+      // Skip Jakob trails that were already added above
+      if (jakobTrailIds.includes(id)) return;
       
       const alreadyIncluded = result.some(t => t.id === id);
       if (!alreadyIncluded) {
@@ -208,8 +218,23 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       }
     });
     
+    // Log for debugging
+    console.log('otherMultiDayHikes calculation:', {
+      total: result.length,
+      names: result.map(t => t.name),
+      ids: result.map(t => t.id)
+    });
+    
     return result;
-  }, [multiDayHikes, pampLindaHikes, allTrails, jakobCircuitTrail, jakobTamboTrail]);
+  }, [
+    multiDayHikes, 
+    pampLindaHikes, 
+    allTrails, 
+    jakobCircuitTrail, 
+    jakobTamboTrail, 
+    barilochieMultiDayTrailIds,
+    jakobTrailIds
+  ]);
 
   const categoryBarilochieHikes = useMemo(() => {
     return allTrails.filter(trail => 
