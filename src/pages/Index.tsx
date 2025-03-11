@@ -118,30 +118,23 @@ const Index = () => {
   );
   
   const otherMultiDayHikes = multiDayHikes.filter(trail => 
-    !trail.name.toLowerCase().includes('pampa linda') && 
-    !trail.name.toLowerCase().includes('meiling') &&
-    !trail.name.toLowerCase().includes('tronador') &&
-    !trail.startingPoint.toLowerCase().includes('pampa linda') &&
-    !trail.name.toLowerCase().includes('5 lagunas') &&
-    !trail.name.toLowerCase().includes('laguna ilón') &&
-    !trail.name.toLowerCase().includes('mirada del doctor')
+    !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
   );
 
   const refugioJakobTrail = trails.find(trail => trail.id === "15");
   const travesiaCerroLopezTrail = trails.find(trail => trail.id === "14");
+  const refugioLopezTrail = trails.find(trail => trail.id === "13");
   
-  if (refugioJakobTrail) {
-    const jakobIndex = otherMultiDayHikes.findIndex(trail => trail.id === "15");
-    if (jakobIndex === -1) {
-      otherMultiDayHikes.push(refugioJakobTrail);
-    }
+  if (refugioLopezTrail && !otherMultiDayHikes.some(t => t.id === "13")) {
+    otherMultiDayHikes.push(refugioLopezTrail);
   }
   
-  if (travesiaCerroLopezTrail) {
-    const travesiaIndex = otherMultiDayHikes.findIndex(trail => trail.id === "14");
-    if (travesiaIndex === -1) {
-      otherMultiDayHikes.push(travesiaCerroLopezTrail);
-    }
+  if (travesiaCerroLopezTrail && !otherMultiDayHikes.some(t => t.id === "14")) {
+    otherMultiDayHikes.push(travesiaCerroLopezTrail);
+  }
+  
+  if (refugioJakobTrail && !otherMultiDayHikes.some(t => t.id === "15")) {
+    otherMultiDayHikes.push(refugioJakobTrail);
   }
 
   const getTransportIcon = (type: TransportationType) => {
@@ -189,15 +182,6 @@ const Index = () => {
   const categoryPampLindaHikes = categoryFilteredHikes.filter(trail => 
     pampLindaHikes.some(plTrail => plTrail.id === trail.id)
   );
-
-  const refugioLopezTrail = trails.find(trail => trail.id === "13");
-  
-  if (refugioLopezTrail) {
-    const refugioLopezIndex = otherMultiDayHikes.findIndex(trail => trail.id === "13");
-    if (refugioLopezIndex === -1) {
-      otherMultiDayHikes.push(refugioLopezTrail);
-    }
-  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
