@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -271,4 +272,18 @@ export const trails: Trail[] = [
     requiresReservation: false,
     description: {
       en: "This hike starts at Pampa Linda, a beautiful valley at the base of Mount Tronador. From there, you'll follow a well-marked trail through lenga forests, crossing streams and gradually gaining elevation. As you climb, the forest gives way to alpine meadows with spectacular views of glaciers and the surrounding mountains. The refuge is situated at the edge of the Otto Meiling glacier, offering a unique opportunity to observe the ice field up close. The trail is moderately challenging but well worth the effort for the extraordinary views and experience of staying in a mountain refuge surrounded by glaciers.",
-      es: "Esta caminata comienza en Pampa Linda, un hermoso valle al pie del Monte Tronador. Desde allí, seguirás un sendero bien marcado a través de bosques de lengas, cruzando arroyos y ganando elevación gradualmente. A medida que asciendes, el bosque da paso a praderas alpinas con vistas espectaculares de glaciares y las montañas circundantes. El refugio está situado al borde del glaciar Otto Meiling, ofreciendo una oportunidad única para observar el campo de hielo de cerca. El sendero es moderadamente desafiante pero vale la pena el esfuerzo por las vistas extraordinarias
+      es: "Esta caminata comienza en Pampa Linda, un hermoso valle al pie del Monte Tronador. Desde allí, seguirás un sendero bien marcado a través de bosques de lengas, cruzando arroyos y ganando elevación gradualmente. A medida que asciendes, el bosque da paso a praderas alpinas con vistas espectaculares de glaciares y las montañas circundantes. El refugio está situado al borde del glaciar Otto Meiling, ofreciendo una oportunidad única para observar el campo de hielo de cerca. El sendero es moderadamente desafiante pero vale la pena el esfuerzo por las vistas extraordinarias y la experiencia de alojarse en un refugio de montaña rodeado de glaciares.",
+      fr: "Cette randonnée commence à Pampa Linda, une belle vallée au pied du Mont Tronador. De là, vous suivrez un sentier bien balisé à travers des forêts de lengas, traversant des ruisseaux et gagnant progressivement de l'altitude. En montant, la forêt cède la place à des prairies alpines avec des vues spectaculaires sur les glaciers et les montagnes environnantes. Le refuge est situé au bord du glacier Otto Meiling, offrant une occasion unique d'observer le champ de glace de près. Le sentier est modérément difficile mais vaut vraiment la peine pour les vues extraordinaires et l'expérience de séjourner dans un refuge de montagne entouré de glaciers.",
+      de: "Diese Wanderung beginnt in Pampa Linda, einem wunderschönen Tal am Fuße des Berges Tronador. Von dort aus folgen Sie einem gut markierten Pfad durch Lenga-Wälder, überqueren Bäche und gewinnen allmählich an Höhe. Während des Aufstiegs weicht der Wald alpinen Wiesen mit spektakulären Ausblicken auf Gletscher und die umliegenden Berge. Die Schutzhütte liegt am Rande des Otto-Meiling-Gletschers und bietet eine einzigartige Gelegenheit, das Eisfeld aus nächster Nähe zu beobachten. Der Weg ist mäßig anspruchsvoll, aber die außergewöhnlichen Ausblicke und die Erfahrung, in einer Berghütte umgeben von Gletschern zu übernachten, sind die Mühe wert."
+    },
+    imageUrl: "/lovable-uploads/3dda568d-50dc-4f15-af17-7744f417603c.png",
+    startingPoint: "Pampa Linda",
+    highlights: ["highlightGlaciers", "highlightMountainRefuge", "highlightAlpineLandscape"],
+    transportation: ["private-transfer"],
+    distanceFromCampsite: 120,
+    travelTime: 120,
+    busLines: "",
+    category: "high-mountain",
+    region: "pampa-linda"
+  }
+];
