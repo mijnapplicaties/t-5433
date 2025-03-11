@@ -1,4 +1,3 @@
-
 import { useMemo } from 'react';
 import { Trail, TrailType } from '../types/trail';
 
@@ -14,8 +13,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
 
   const pampLindaTrailIds = ['12', '13a', '14a'];
   
-  // Add specific IDs for trails that should be included in Bariloche multi-day hikes
-  // Adding "Jakob" to make sure the Refugio Jakob trail is included
+  // Ensure Jakob (id: 11) is included in multi-day hikes
   const barilochieMultiDayTrailIds = ['15', '16', '17', '13', '14', '11', '7'];
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
@@ -88,49 +86,27 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   }, [multiDayHikes]);
   
   const otherMultiDayHikes = useMemo(() => {
-    // Include the specific Bariloche multi-day trails by ID
-    const specificTrailsToInclude = barilochieMultiDayTrailIds;
-    
     // Filter out the trails that are already in pampLindaHikes
     const hikes = multiDayHikes.filter(trail => 
       !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
     );
     
-    // Make sure we include specific multi-day trails that might be missing
-    // especially Refugio López, Travesía Cerro López - Laguna Negra, Refugio Jakob
-    const allHikes = [...hikes];
-    
-    specificTrailsToInclude.forEach(id => {
+    // Add specific trails from allTrails if they're not already included
+    barilochieMultiDayTrailIds.forEach(id => {
       const trail = allTrails.find(t => t.id === id);
-      if (trail && !allHikes.some(t => t.id === id) && 
-          (trail.type === 'multi-day' || id === "11" || id === "7" || 
-           trail.name.toLowerCase().includes('lópez') || 
-           trail.name.toLowerCase().includes('lopez') ||
-           trail.name.toLowerCase().includes('jakob'))) {
-        allHikes.push(trail);
+      if (trail && !hikes.some(t => t.id === id)) {
+        hikes.push(trail);
       }
     });
     
-    // Add missing trails by name if they're not already included
-    const missingTrailNames = [
-      'Refugio López', 
-      'Travesía Cerro López - Laguna Negra',
-      'Refugio Jakob',
-      'Jakob'
-    ];
+    // Add any trails with Jakob in the name that might be missing
+    const jakobTrails = allTrails.filter(t => 
+      t.name.toLowerCase().includes('jakob') && 
+      !hikes.some(h => h.id === t.id)
+    );
+    hikes.push(...jakobTrails);
     
-    missingTrailNames.forEach(name => {
-      const trail = allTrails.find(t => 
-        t.name === name || 
-        t.name.toLowerCase().includes(name.toLowerCase())
-      );
-      
-      if (trail && !allHikes.some(t => t.id === trail.id)) {
-        allHikes.push(trail);
-      }
-    });
-    
-    return allHikes;
+    return hikes;
   }, [multiDayHikes, pampLindaHikes, allTrails]);
 
   const categoryBarilochieHikes = useMemo(() => {
