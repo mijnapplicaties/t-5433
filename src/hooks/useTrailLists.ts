@@ -1,3 +1,4 @@
+
 import { useMemo } from 'react';
 import { Trail, TrailType } from '../types/trail';
 
@@ -166,19 +167,29 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   }, [allTrails]);
   
   const otherMultiDayHikes = useMemo(() => {
+    // First, strictly filter out Playa Muñoz by ID
     const hikes = multiDayHikes.filter(trail => {
+      // Explicitly exclude Playa Muñoz by ID
+      if (trail.id === "12") {
+        return false;
+      }
+      
+      // Exclude Pampa Linda trails
       if (trail.id === "14" || trail.id === "15" || trail.id === "16") {
         return false;
       }
       
+      // Exclude trails that are in pampLindaHikes
       if (pampLindaHikes.some(plTrail => plTrail.id === trail.id)) {
         return false;
       }
       
+      // Exclude specific trails by name
       if (excludedFromBarilochieMultiDay.includes(trail.name)) {
         return false;
       }
       
+      // Exclude specific trails by ID (most reliable method)
       if (excludedTrailIds.includes(trail.id)) {
         return false;
       }
@@ -186,6 +197,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       return true;
     });
     
+    // Check if Jakob trails already exist
     const hasJakobCircuit = hikes.some(trail => 
       trail.id === "11" || 
       (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('frey'))
@@ -212,13 +224,14 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       const alreadyIncluded = result.some(t => t.id === id);
       if (!alreadyIncluded) {
         const trail = allTrails.find(t => t.id === id);
-        if (trail) {
+        if (trail && !excludedTrailIds.includes(trail.id)) {
           result.push(trail);
         }
       }
     });
     
-    return result;
+    // Final check to make absolutely sure Playa Muñoz is filtered out
+    return result.filter(trail => trail.id !== "12" && trail.name !== "Playa Muñoz");
   }, [multiDayHikes, pampLindaHikes, allTrails, jakobCircuitTrail, jakobTamboTrail, excludedTrailIds]);
 
   const categoryBarilochieHikes = useMemo(() => {
