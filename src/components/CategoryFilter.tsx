@@ -52,7 +52,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
             onClick={() => setSelectedCategory('high-mountain')}
           >
             <Mountain className="w-4 h-4 mr-1" />
-            {t('categoryHighMountain')}
+            {t('refugios')}
           </Badge>
           <Badge 
             variant={selectedCategory === 'easy-mountain' ? 'default' : 'outline'}

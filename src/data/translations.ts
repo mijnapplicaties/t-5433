@@ -1,3 +1,4 @@
+
 type Translation = {
   [key: string]: {
     en: string;
@@ -349,6 +350,12 @@ export const translations: Translation = {
     es: "Alta Montaña",
     fr: "Haute Montagne",
     de: "Hochgebirge",
+  },
+  refugios: {
+    en: "Mountain Huts",
+    es: "Refugios",
+    fr: "Refuges",
+    de: "Berghütten",
   },
   categoryEasyMountain: {
     en: "Easy Mountains",
