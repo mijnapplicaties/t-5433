@@ -1,3 +1,4 @@
+
 import { useMemo } from 'react';
 import { Trail, TrailType } from '../types/trail';
 
@@ -57,6 +58,39 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       imageUrl: "/lovable-uploads/5fd20688-6816-43ff-87bc-fb5b01ab43eb.png"
     };
   }, [freyTrail]);
+  
+  // New trail for Cerro López to Laguna Negra
+  const cerroLopezLagunaNegra = useMemo(() => {
+    return {
+      id: "19",
+      name: "Travesía Cerro López-Laguna Negra",
+      type: "multi-day" as TrailType,
+      difficulty: "hard",
+      distance: 18,
+      duration: 12,
+      elevation: 1800,
+      requiresReservation: true,
+      description: {
+        en: "This impressive traverse connects two of Bariloche's iconic mountain areas: Cerro López and Laguna Negra. The trail begins at the base of Cerro López, climbing steeply through ancient forests to reach Refugio López. From there, it follows a challenging alpine route across high mountain passes and dramatic landscapes before descending to the beautiful Laguna Negra and its refuge. This is a demanding multi-day adventure that requires good physical condition and prior mountain experience.",
+        es: "Esta impresionante travesía conecta dos de las áreas montañosas icónicas de Bariloche: Cerro López y Laguna Negra. El sendero comienza en la base del Cerro López, ascendiendo empinadamente a través de bosques antiguos hasta llegar al Refugio López. Desde allí, sigue una ruta alpina desafiante a través de pasos de montaña altos y paisajes dramáticos antes de descender a la hermosa Laguna Negra y su refugio. Esta es una aventura de varios días exigente que requiere buena condición física y experiencia previa en montaña.",
+        fr: "Cette impressionnante traversée relie deux des zones montagneuses emblématiques de Bariloche : Cerro López et Laguna Negra. Le sentier commence à la base du Cerro López, montant abruptement à travers des forêts anciennes pour atteindre le Refugio López. De là, il suit un itinéraire alpin exigeant à travers des cols de haute montagne et des paysages spectaculaires avant de descendre vers la magnifique Laguna Negra et son refuge. C'est une aventure de plusieurs jours qui demande une bonne condition physique et une expérience préalable en montagne.",
+        de: "Diese beeindruckende Durchquerung verbindet zwei der ikonischen Berggebiete von Bariloche: Cerro López und Laguna Negra. Der Weg beginnt am Fuße des Cerro López und steigt steil durch alte Wälder zum Refugio López auf. Von dort folgt er einer anspruchsvollen alpinen Route über hohe Bergpässe und dramatische Landschaften, bevor er zum wunderschönen Laguna Negra und seinem Refugium absteigt. Dies ist ein anspruchsvolles mehrtägiges Abenteuer, das gute körperliche Verfassung und Bergerfahrung erfordert."
+      },
+      imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
+      startingPoint: "Cerro López Trailhead (25 km from Bariloche)",
+      highlights: [
+        "highlightTwoMountainRefuges",
+        "highlightAlpineLakes",
+        "highlightHighMountainPasses",
+        "highlightPanoramicViews"
+      ],
+      transportation: ["private-transfer", "taxi"],
+      distanceFromCampsite: 22,
+      travelTime: 45,
+      category: "high-mountain",
+      region: "bariloche"
+    } as Trail;
+  }, []);
   
   const directAccessHikes = useMemo(() => {
     const hikes = dayHikes.filter(trail => 
@@ -234,6 +268,9 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       result.push(jakobTamboTrail);
     }
     
+    // Add the Cerro López-Laguna Negra trail to the Bariloche multi-day hikes
+    result.unshift(cerroLopezLagunaNegra);
+    
     barilochieMultiDayTrailIds.forEach(id => {
       if (id === "11" || id === "12" || excludedTrailIds.includes(id)) return;
       
@@ -247,7 +284,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     });
     
     return result.filter(trail => trail.id !== "12" && trail.name !== "Playa Muñoz");
-  }, [multiDayHikes, pampLindaHikes, allTrails, jakobCircuitTrail, jakobTamboTrail, excludedTrailIds]);
+  }, [multiDayHikes, pampLindaHikes, allTrails, jakobCircuitTrail, jakobTamboTrail, excludedTrailIds, cerroLopezLagunaNegra]);
   
   const categoryBarilochieHikes = useMemo(() => {
     return allTrails.filter(trail => {
@@ -286,6 +323,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     categoryBarilochieHikes,
     categoryPampLindaHikes,
     jakobCircuitTrail,
-    jakobTamboTrail
+    jakobTamboTrail,
+    cerroLopezLagunaNegra
   };
 };
