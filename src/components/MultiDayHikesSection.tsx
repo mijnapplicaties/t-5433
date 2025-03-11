@@ -77,6 +77,7 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
               <p>Debug - Pampa Linda multi-day hikes:</p>
               <p>Total trails: {pampLindaHikes.length}</p>
               <p>Trail IDs: {pampLindaHikes.map(t => t.id).join(', ')}</p>
+              <p>Trail names: {pampLindaHikes.map(t => t.name).join(', ')}</p>
             </div>
           )}
         </div>

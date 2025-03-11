@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -278,7 +277,32 @@ export const trails: Trail[] = [
     },
     imageUrl: "/lovable-uploads/3dda568d-50dc-4f15-af17-7744f417603c.png",
     startingPoint: "Pampa Linda",
-    highlights: ["highlightGlaciers", "highlightMountainRefuge", "highlightAlpineLandscape"],
+    highlights: ["highlightMountainRefuge", "highlightGlaciers", "highlightAlpineLandscape", "highlightRiverTrail"],
+    transportation: ["private-transfer"],
+    distanceFromCampsite: 120,
+    travelTime: 120,
+    busLines: "",
+    category: "high-mountain",
+    region: "pampa-linda"
+  },
+  {
+    id: "13",
+    name: "Refugio Agostino Rocca",
+    type: "multi-day",
+    difficulty: "moderate",
+    distance: 12,
+    duration: 5,
+    elevation: 1700,
+    requiresReservation: true,
+    description: {
+      en: "This beautiful trail starts at Pampa Linda and takes you through a diverse landscape to Refugio Agostino Rocca. The path follows the Río Manso valley, traversing ancient forests of coihues and lengas, with stunning views of Cerro Tronador and its glaciers. After crossing several streams, you'll reach the magnificent Refugio Agostino Rocca, nestled in a scenic high mountain valley with views of the surrounding peaks and glaciers. This hike offers a perfect combination of forest immersion and high alpine landscapes.",
+      es: "Este hermoso sendero comienza en Pampa Linda y te lleva a través de un paisaje diverso hasta el Refugio Agostino Rocca. El camino sigue el valle del Río Manso, atravesando antiguos bosques de coihues y lengas, con impresionantes vistas del Cerro Tronador y sus glaciares. Después de cruzar varios arroyos, llegarás al magnífico Refugio Agostino Rocca, ubicado en un pintoresco valle de alta montaña con vistas a los picos y glaciares circundantes. Esta caminata ofrece una combinación perfecta de inmersión en el bosque y paisajes alpinos.",
+      fr: "Ce magnifique sentier commence à Pampa Linda et vous emmène à travers un paysage diversifié jusqu'au Refugio Agostino Rocca. Le chemin suit la vallée du Río Manso, traversant d'anciennes forêts de coihues et de lengas, avec des vues impressionnantes sur le Cerro Tronador et ses glaciers. Après avoir traversé plusieurs ruisseaux, vous atteindrez le magnifique Refugio Agostino Rocca, niché dans une vallée pittoresque de haute montagne avec des vues sur les pics et glaciers environnants. Cette randonnée offre une combinaison parfaite d'immersion en forêt et de paysages alpins.",
+      de: "Dieser schöne Wanderweg beginnt in Pampa Linda und führt Sie durch eine abwechslungsreiche Landschaft zum Refugio Agostino Rocca. Der Weg folgt dem Tal des Río Manso, durchquert alte Wälder aus Coihues und Lengas und bietet beeindruckende Ausblicke auf den Cerro Tronador und seine Gletscher. Nach der Überquerung mehrerer Bäche erreichen Sie das wunderschöne Refugio Agostino Rocca, das in einem malerischen Hochgebirgstal mit Blick auf die umliegenden Gipfel und Gletscher liegt. Diese Wanderung bietet eine perfekte Kombination aus Waldeintauchen und hochalpinen Landschaften."
+    },
+    imageUrl: "/lovable-uploads/3dda568d-50dc-4f15-af17-7744f417603c.png",
+    startingPoint: "Pampa Linda",
+    highlights: ["highlightMountainRefuge", "highlightGlaciers", "highlightAlpineLandscape", "highlightRiverTrail"],
     transportation: ["private-transfer"],
     distanceFromCampsite: 120,
     travelTime: 120,

@@ -12,6 +12,12 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
 
   const pampLindaTrailIds = ['12', '13', '14'];
   
+  const pampLindaTrailNames = [
+    'Refugio Otto Meiling',
+    'Refugio Agostino Rocca',
+    'Laguna Ilón'
+  ];
+  
   const barilochieMultiDayTrailIds = ['15', '16', '17', '3', '11', '7'];
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
@@ -65,12 +71,6 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     
     return result;
   }, [dayHikes, freyTrailForBusAccess]);
-  
-  const pampLindaTrailNames = [
-    'Refugio Otto Meiling',
-    'Laguna Ilón',
-    'Refugio Agostino Rocca'
-  ];
 
   const pampLindaHikes = useMemo(() => {
     console.log('Filtering for Pampa Linda trails from:', multiDayHikes.length, 'multi-day hikes');
@@ -81,8 +81,8 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
         pampLindaTrailNames.includes(trail.name) ||
         pampLindaTrailIds.includes(trail.id) ||
         trail.name.toLowerCase().includes('pampa linda') ||
-
         trail.name.toLowerCase().includes('meiling') ||
+        trail.name.toLowerCase().includes('rocca') ||
         trail.name.toLowerCase().includes('tronador') ||
         trail.name.toLowerCase().includes('laguna negra') ||
         (trail.startingPoint && trail.startingPoint.toLowerCase().includes('pampa linda')) ||
@@ -96,7 +96,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       
       return isPampLinda;
     });
-  }, [multiDayHikes, pampLindaTrailIds]);
+  }, [multiDayHikes, pampLindaTrailIds, pampLindaTrailNames]);
   
   const jakobCircuitTrail: Trail = useMemo(() => {
     const existingCircuit = allTrails.find(t => 
