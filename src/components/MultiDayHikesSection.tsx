@@ -33,7 +33,13 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
     (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('tambo'))
   );
 
+  // Debug for Pampa Linda trails
+  const hasPampLindaTrails = pampLindaHikes && pampLindaHikes.length > 0;
+  const pampLindaTrailNames = pampLindaHikes.map(t => t.name).join(', ');
+  
   console.log('Jakob Tambo trail:', hasJakobTambo);
+  console.log('Pampa Linda trails available:', hasPampLindaTrails, pampLindaHikes.length);
+  console.log('Pampa Linda trail names:', pampLindaTrailNames);
   
   return (
     <div className="mb-12">
@@ -85,6 +91,7 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
               <p>Debug - Pampa Linda trails:</p>
               <p>Total trails: {pampLindaHikes.length}</p>
               <p>Trail IDs: {pampLindaHikes.map(t => t.id).join(', ')}</p>
+              <p>Trail names: {pampLindaHikes.map(t => t.name).join(', ')}</p>
             </div>
           )}
         </div>
