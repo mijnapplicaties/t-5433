@@ -127,6 +127,23 @@ const Index = () => {
     !trail.name.toLowerCase().includes('mirada del doctor')
   );
 
+  const refugioJakobTrail = trails.find(trail => trail.id === "15");
+  const travesiaCerroLopezTrail = trails.find(trail => trail.id === "14");
+  
+  if (refugioJakobTrail) {
+    const jakobIndex = otherMultiDayHikes.findIndex(trail => trail.id === "15");
+    if (jakobIndex === -1) {
+      otherMultiDayHikes.push(refugioJakobTrail);
+    }
+  }
+  
+  if (travesiaCerroLopezTrail) {
+    const travesiaIndex = otherMultiDayHikes.findIndex(trail => trail.id === "14");
+    if (travesiaIndex === -1) {
+      otherMultiDayHikes.push(travesiaCerroLopezTrail);
+    }
+  }
+
   const getTransportIcon = (type: TransportationType) => {
     switch(type) {
       case 'bus':
@@ -174,19 +191,11 @@ const Index = () => {
   );
 
   const refugioLopezTrail = trails.find(trail => trail.id === "13");
-  const travesiaCerroLopezTrail = trails.find(trail => trail.id === "14");
   
   if (refugioLopezTrail) {
     const refugioLopezIndex = otherMultiDayHikes.findIndex(trail => trail.id === "13");
     if (refugioLopezIndex === -1) {
       otherMultiDayHikes.push(refugioLopezTrail);
-    }
-  }
-  
-  if (travesiaCerroLopezTrail) {
-    const travesiaIndex = otherMultiDayHikes.findIndex(trail => trail.id === "14");
-    if (travesiaIndex === -1) {
-      otherMultiDayHikes.push(travesiaCerroLopezTrail);
     }
   }
 
