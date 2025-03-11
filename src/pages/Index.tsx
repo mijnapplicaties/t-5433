@@ -107,6 +107,8 @@ const Index = () => {
     }
   }
 
+  const pampLindaTrailIds = ['12', '13a', '14a'];
+  
   const pampLindaHikes = multiDayHikes.filter(trail => 
     trail.name.toLowerCase().includes('pampa linda') || 
     trail.name.toLowerCase().includes('meiling') ||
@@ -114,28 +116,22 @@ const Index = () => {
     trail.startingPoint.toLowerCase().includes('pampa linda') ||
     trail.name.toLowerCase().includes('5 lagunas') ||
     trail.name.toLowerCase().includes('laguna ilón') ||
-    trail.name.toLowerCase().includes('mirada del doctor')
+    trail.name.toLowerCase().includes('mirada del doctor') ||
+    pampLindaTrailIds.includes(trail.id)
   );
   
   const otherMultiDayHikes = multiDayHikes.filter(trail => 
     !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
   );
 
-  const refugioJakobTrail = trails.find(trail => trail.id === "15");
-  const travesiaCerroLopezTrail = trails.find(trail => trail.id === "14");
-  const refugioLopezTrail = trails.find(trail => trail.id === "13");
+  const trailIdsToInclude = ["13", "14", "15"];
   
-  if (refugioLopezTrail && !otherMultiDayHikes.some(t => t.id === "13")) {
-    otherMultiDayHikes.push(refugioLopezTrail);
-  }
-  
-  if (travesiaCerroLopezTrail && !otherMultiDayHikes.some(t => t.id === "14")) {
-    otherMultiDayHikes.push(travesiaCerroLopezTrail);
-  }
-  
-  if (refugioJakobTrail && !otherMultiDayHikes.some(t => t.id === "15")) {
-    otherMultiDayHikes.push(refugioJakobTrail);
-  }
+  trailIdsToInclude.forEach(id => {
+    const trail = trails.find(t => t.id === id);
+    if (trail && !otherMultiDayHikes.some(t => t.id === id)) {
+      otherMultiDayHikes.push(trail);
+    }
+  });
 
   const getTransportIcon = (type: TransportationType) => {
     switch(type) {
