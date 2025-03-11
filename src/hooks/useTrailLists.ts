@@ -1,3 +1,4 @@
+
 import { useMemo } from 'react';
 import { Trail, TrailType } from '../types/trail';
 
@@ -14,6 +15,9 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   const pampLindaTrailIds = ['12', '13', '14', '15', '16'];
   
   const barilochieMultiDayTrailIds = ['17', '11', '7', '18'];
+
+  // Remove Playa Muñoz and Cascada de los Duendes from multi-day sections
+  const excludedFromBarilochieMultiDay = ['Playa Muñoz', 'Cascada de los Duendes'];
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
   
@@ -163,16 +167,22 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   
   const otherMultiDayHikes = useMemo(() => {
     const hikes = multiDayHikes.filter(trail => {
+      // Exclude Pampa Linda trails
       if (trail.id === "14" || trail.id === "15" || trail.id === "16") {
         return false;
       }
       
-      return !pampLindaHikes.some(plTrail => 
-        plTrail.id === trail.id && 
-        plTrail.id !== "14" && 
-        plTrail.id !== "15" && 
-        plTrail.id !== "16"
-      );
+      // Exclude trails that are in pampLindaHikes
+      if (pampLindaHikes.some(plTrail => plTrail.id === trail.id)) {
+        return false;
+      }
+      
+      // Exclude specific trails by name
+      if (excludedFromBarilochieMultiDay.includes(trail.name)) {
+        return false;
+      }
+      
+      return true;
     });
     
     const hasJakobCircuit = hikes.some(trail => 

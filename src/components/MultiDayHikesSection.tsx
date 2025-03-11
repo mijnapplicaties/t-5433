@@ -38,10 +38,16 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
   const hasOttoMeiling = otherMultiDayHikes.find(trail => trail.id === "14");
   const hasLagunaIlon = otherMultiDayHikes.find(trail => trail.id === "15");
   
+  // Check for trails that should be excluded
+  const hasPlayaMunoz = otherMultiDayHikes.find(trail => trail.name === "Playa Muñoz");
+  const hasCascadaDuendes = otherMultiDayHikes.find(trail => trail.name === "Cascada de los Duendes");
+  
   // Log for debugging
   console.log('Agostino Rocca in Bariloche:', hasAgostinoRocca ? 'Yes (ERROR)' : 'No (CORRECT)');
   console.log('Otto Meiling in Bariloche:', hasOttoMeiling ? 'Yes (ERROR)' : 'No (CORRECT)');
   console.log('Laguna Ilón in Bariloche:', hasLagunaIlon ? 'Yes (ERROR)' : 'No (CORRECT)');
+  console.log('Playa Muñoz in Bariloche:', hasPlayaMunoz ? 'Yes (ERROR)' : 'No (CORRECT)');
+  console.log('Cascada de los Duendes in Bariloche:', hasCascadaDuendes ? 'Yes (ERROR)' : 'No (CORRECT)');
   
   return (
     <div className="mb-12">
@@ -69,6 +75,8 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
               <p>Agostino Rocca in Bariloche: {hasAgostinoRocca ? 'Yes (ERROR)' : 'No (CORRECT)'}</p>
               <p>Otto Meiling in Bariloche: {hasOttoMeiling ? 'Yes (ERROR)' : 'No (CORRECT)'}</p>
               <p>Laguna Ilón in Bariloche: {hasLagunaIlon ? 'Yes (ERROR)' : 'No (CORRECT)'}</p>
+              <p>Playa Muñoz in Bariloche: {hasPlayaMunoz ? 'Yes (ERROR)' : 'No (CORRECT)'}</p>
+              <p>Cascada de los Duendes in Bariloche: {hasCascadaDuendes ? 'Yes (ERROR)' : 'No (CORRECT)'}</p>
               <p>Total trails: {otherMultiDayHikes.length}</p>
               <p>Trail IDs: {otherMultiDayHikes.map(t => t.id).join(', ')}</p>
               <p>Trail names: {otherMultiDayHikes.map(t => t.name).join(', ')}</p>
