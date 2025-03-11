@@ -41,7 +41,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     if (isJakobTamboTrail) return "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png";
     if (isJakobRefugioTrail) return "/lovable-uploads/8f08a419-86bc-49e3-8707-015d86806c3e.png";
     if (isRefugioCerroLopez) return "/lovable-uploads/18aa5c8f-d10c-4295-a1d7-665ad54ba5c5.png";
-    if (isTraversiaCerroLopezLagunaNegra) return "/lovable-uploads/4cad17ba-15d6-458c-b6b7-719f6ff7c24a.png";
+    if (isTraversiaCerroLopezLagunaNegra) return "/lovable-uploads/71ab0f77-7fda-459c-9133-732ca835527f.png";
     return "/placeholder.svg";
   };
   
