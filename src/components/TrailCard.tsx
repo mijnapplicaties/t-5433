@@ -1,16 +1,16 @@
+
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
-import { Badge } from './ui/badge';
-import { MapPin, Clock, Mountain, ArrowUpRight, Bus, Car, Users, ThumbsUp, Footprints } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "./ui/dialog";
+import DifficultyBadge from './trail/DifficultyBadge';
+import ReservationBadge from './trail/ReservationBadge';
+import TrailStats from './trail/TrailStats';
+import TrailDescription from './trail/TrailDescription';
+import TransportationInfo from './trail/TransportationInfo';
+import TrailHighlights from './trail/TrailHighlights';
+import TrailDetailDialog from './trail/TrailDetailDialog';
 
 interface TrailCardProps {
   trail: Trail;
@@ -18,154 +18,8 @@ interface TrailCardProps {
 }
 
 const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
-
-  const getDifficultyColor = (difficulty: string) => {
-    const colors = {
-      easy: 'bg-green-500',
-      moderate: 'bg-yellow-500',
-      hard: 'bg-orange-500',
-      expert: 'bg-red-500',
-    };
-    return colors[difficulty as keyof typeof colors] || 'bg-gray-500';
-  };
-
-  const getTranslatedDifficulty = (difficulty: string) => {
-    switch (difficulty) {
-      case 'easy':
-        return t('difficultyEasy');
-      case 'moderate':
-        return t('difficultyModerate');
-      case 'hard':
-        return t('difficultyHard');
-      case 'expert':
-        return t('difficultyExpert');
-      default:
-        return difficulty;
-    }
-  };
-
-  const getTransportationInfo = (type: string) => {
-    const getTimeLabel = (minutes: number) => `(${minutes} ${t('minutes')})`;
-
-    switch (type) {
-      case 'walking':
-        return {
-          icon: <Footprints className="w-4 h-4 flex-shrink-0 text-blue-500" />,
-          label: `${t('walkingDistance')}`
-        };
-      case 'bus':
-        return {
-          icon: <Bus className="w-4 h-4 flex-shrink-0 text-blue-500" />,
-          label: `${t('busService')} - ${trail.busLines || 'Line 20'}`
-        };
-      case 'taxi':
-        return {
-          icon: <Car className="w-4 h-4 flex-shrink-0 text-blue-500" />,
-          label: `${t('taxiService')} ${getTimeLabel(15)}`
-        };
-      case 'private-transfer':
-        return {
-          icon: <Users className="w-4 h-4 flex-shrink-0 text-blue-500" />,
-          label: `${t('privateTransfer')} ${getTimeLabel(Math.round(trail.distanceFromCampsite * 2))}`
-        };
-      case 'hitchhiking':
-        return {
-          icon: <ThumbsUp className="w-4 h-4 flex-shrink-0 text-blue-500" />,
-          label: t('hitchhiking')
-        };
-      default:
-        return null;
-    }
-  };
-
-  const getBusInfo = (trail: Trail) => {
-    if (trail.name === "Refugio Frey from Villa Catedral") {
-      return "Linea 50 (desde Coihues hasta km 8 ruta 82) + Linea 55 (Ruta 82)";
-    }
-    
-    if (!trail.transportation.includes('bus')) return null;
-    
-    switch(trail.id) {
-      case 't1': // Cerro Llao Llao
-        return "Bus 20";
-      case 't2': // Cerro Lopez
-        return "Bus 20, 21";
-      case 't3': // Refugio Frey
-        return "Bus 55";
-      case 't4': // Cerro Campanario
-        return "Bus 20, 21";
-      case 't5': // Laguna Negra
-        return "Bus 55";
-      case 't6': // Cerro Catedral
-        return "Bus 55";
-      case 't7': // Circuito Chico
-        return "Bus 20";
-      case 't8': // Cascada de los Duendes
-        return "Walking distance";
-      case 't9': // Lago Escondido
-        return "Bus 20";
-      case 't10': // Mirador Lago Gutiérrez
-        return "Walking distance";
-      case 't11': // Cerro San Martín
-        return "Walking distance";
-      case 't12': // Refugio Otto Meiling
-        return "Bus 50 + Pampa Linda Transfer";
-      case 't13': // Refugio San Martín
-        return "Bus 50 + Pampa Linda Transfer";
-      case 't14': // Cerro Tronador
-        return "Bus 50 + Pampa Linda Transfer";
-      default:
-        return null;
-    }
-  };
-
-  const formatDistance = (trail: Trail) => {
-    if (trail.name === "Lago Gutiérrez") {
-      return `${trail.distance * 1000} ${t('meters')}`;
-    }
-    return `${trail.distance} ${t('km')}`;
-  };
-
-  const formatDuration = (trail: Trail) => {
-    if (trail.name === "Refugio Frey from Villa Catedral") {
-      return "3 " + t('hours');
-    }
-    
-    if (trail.name === "Lago Gutiérrez") {
-      return `${Math.round(trail.duration * 60)} ${t('minutes')}`;
-    }
-    if (trail.name === "Cascada de los Duendes") {
-      return `${Math.round(trail.duration * 60)} ${t('minutes')}`;
-    }
-    return `${trail.duration} ${t('hours')}`;
-  };
-
-  const getElevation = (trail: Trail) => {
-    if (trail.name === "Refugio Frey from Villa Catedral") {
-      return 1080;
-    }
-    return trail.elevation;
-  };
-
-  const getDescription = (trail: Trail, lang: string) => {
-    if (trail.name === "Refugio Frey from Villa Catedral") {
-      switch(lang) {
-        case 'en':
-          return "We recommend taking an Uber from Camping to the base of Cerro Catedral. The trip takes approximately 15 minutes. Buses often involve a long wait. This trail starts at a higher point than the one from Lake Gutiérrez, saving about 1 hour of hiking. From the base of Cerro Catedral, you can begin your ascent to Refugio Frey, enjoying spectacular views as you progress through the mountainous landscape. The effort is truly worth it when you reach the panoramic views of Lake Gutiérrez, Bariloche, and the valley that extends to the summit of Frey, an impressive landscape that rewards every step of the ascent.";
-        case 'es':
-          return "Recomendamos tomarse un Uber desde el Camping hasta la base del Cerro Catedral. El viaje dura aproximadamente 15 minutos. Los buses muchas veces presentan una gran espera. Este sendero comienza en un punto más alto que el que parte desde el Lago Gutiérrez, lo que permite ahorrar alrededor de 1 hora de caminata. Desde la base del Cerro Catedral, podrás iniciar el ascenso al Refugio Frey, disfrutando de vistas espectaculares mientras avanzas a través del paisaje montañoso. El esfuerzo realmente vale la pena al llegar a las vistas panorámicas del Lago Gutiérrez, Bariloche y el valle que se extiende hasta la cumbre del Frey, un paisaje impresionante que recompensa cada paso del ascenso.";
-        case 'fr':
-          return "Nous vous recommandons de prendre un Uber depuis le Camping jusqu'à la base de Cerro Catedral. Le trajet dure environ 15 minutes. Les bus impliquent souvent une longue attente. Ce sentier commence à un point plus élevé que celui du lac Gutiérrez, ce qui permet d'économiser environ 1 heure de marche. Depuis la base de Cerro Catedral, vous pouvez commencer votre ascension vers le Refugio Frey, en profitant de vues spectaculaires tout en progressant à travers le paysage montagneux. L'effort en vaut vraiment la peine lorsque vous atteignez les vues panoramiques du lac Gutiérrez, de Bariloche et de la vallée qui s'étend jusqu'au sommet du Frey, un paysage impressionnant qui récompense chaque pas de l'ascension.";
-        case 'de':
-          return "Wir empfehlen, einen Uber vom Camping zur Basis des Cerro Catedral zu nehmen. Die Fahrt dauert etwa 15 Minuten. Busse sind oft mit langen Wartezeiten verbunden. Dieser Weg beginnt an einem höheren Punkt als der vom Lago Gutiérrez, was etwa 1 Stunde Wanderzeit spart. Von der Basis des Cerro Catedral aus können Sie Ihren Aufstieg zum Refugio Frey beginnen und dabei spektakuläre Aussichten genießen, während Sie durch die Berglandschaft wandern. Die Anstrengung lohnt sich wirklich, wenn Sie die Panoramablicke auf den Lago Gutiérrez, Bariloche und das Tal erreichen, das sich bis zum Gipfel des Frey erstreckt, eine beeindruckende Landschaft, die jeden Schritt des Aufstiegs belohnt.";
-        default:
-          return trail.description[lang as keyof typeof trail.description] || "";
-      }
-    }
-    return trail.description[lang as keyof typeof trail.description] || "";
-  };
 
   return (
     <>
@@ -180,12 +34,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
             className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute top-4 right-4 flex gap-2">
-            <Badge 
-              variant={trail.requiresReservation ? "destructive" : "secondary"}
-              className="backdrop-blur-sm bg-opacity-90"
-            >
-              {trail.requiresReservation ? t('reservationRequired') : t('noReservation')}
-            </Badge>
+            <ReservationBadge requiresReservation={trail.requiresReservation} />
           </div>
           {transportIcons && transportIcons.length > 0 && (
             <div className="absolute bottom-4 right-4 flex gap-2 bg-white/80 rounded-full px-3 py-1">
@@ -206,195 +55,33 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                 <MapPin className="w-4 h-4 flex-shrink-0" /> {trail.startingPoint}
               </CardDescription>
             </div>
-            <Badge className={`${getDifficultyColor(trail.difficulty)} text-white`}>
-              {getTranslatedDifficulty(trail.difficulty)}
-            </Badge>
+            <DifficultyBadge difficulty={trail.difficulty} />
           </div>
         </CardHeader>
 
         <CardContent>
-          <div className="grid grid-cols-3 gap-4 mb-4">
-            {trail.distance > 0 && (
-              <div className="flex items-center gap-2">
-                <ArrowUpRight className="w-4 h-4 flex-shrink-0 text-blue-500" />
-                <span className="text-sm">{formatDistance(trail)}</span>
-              </div>
-            )}
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 flex-shrink-0 text-blue-500" />
-              <span className="text-sm">
-                {formatDuration(trail)}
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mountain className="w-4 h-4 flex-shrink-0 text-blue-500" />
-              <span className="text-sm">{getElevation(trail)}m</span>
-            </div>
+          <div className="mb-4">
+            <TrailStats trail={trail} />
           </div>
           
-          <p className="text-sm text-gray-600 line-clamp-2">{getDescription(trail, language)}</p>
+          <TrailDescription trail={trail} truncate />
           
           <div className="mt-4">
             <h4 className="text-sm font-semibold mb-2">{t('howToGetThere')}</h4>
-            <div className="space-y-2">
-              {trail.name === "Refugio Frey from Villa Catedral" ? (
-                <>
-                  <div className="flex items-start gap-2 text-sm font-bold text-blue-600">
-                    <Car className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
-                    <span>{t('taxiService')} (15 {t('minutes')})</span>
-                  </div>
-                  <div className="flex items-start gap-2 text-sm font-bold text-blue-600">
-                    <Bus className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
-                    <span>{t('busLines')}: {getBusInfo(trail)}</span>
-                  </div>
-                </>
-              ) : (
-                trail.transportation.map((type, index) => {
-                  const transportInfo = getTransportationInfo(type);
-                  if (!transportInfo) return null;
-                  return (
-                    <div key={index} className="flex items-start gap-2 text-sm font-bold text-blue-600">
-                      <div className="mt-0.5 flex-shrink-0">{transportInfo.icon}</div>
-                      <span>{transportInfo.label}</span>
-                    </div>
-                  );
-                })
-              )}
-            </div>
+            <TransportationInfo trail={trail} compact />
           </div>
 
-          <div className="mt-4 flex flex-wrap gap-2">
-            {trail.highlights.map((highlight, index) => (
-              <Badge key={index} variant="secondary" className="text-xs">
-                {t(highlight)}
-              </Badge>
-            ))}
+          <div className="mt-4">
+            <TrailHighlights highlights={trail.highlights} />
           </div>
         </CardContent>
       </Card>
       
-      <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="text-2xl">{trail.name}</DialogTitle>
-            <DialogDescription className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" /> {trail.startingPoint}
-            </DialogDescription>
-          </DialogHeader>
-          
-          <div className="mt-4">
-            <div className="mb-6 relative h-60 sm:h-80 overflow-hidden rounded-lg">
-              <img 
-                src={trail.imageUrl} 
-                alt={trail.name} 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute top-4 right-4">
-                <Badge 
-                  variant={trail.requiresReservation ? "destructive" : "secondary"}
-                  className="backdrop-blur-sm"
-                >
-                  {trail.requiresReservation ? t('reservationRequired') : t('noReservation')}
-                </Badge>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <div className="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
-                <ArrowUpRight className="w-6 h-6 text-blue-500 mb-1" />
-                <span className="text-sm font-medium">{t('distance')}</span>
-                <span className="text-lg font-bold">{formatDistance(trail)}</span>
-              </div>
-              
-              <div className="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
-                <Clock className="w-6 h-6 text-blue-500 mb-1" />
-                <span className="text-sm font-medium">{t('duration')}</span>
-                <span className="text-lg font-bold">{formatDuration(trail)}</span>
-              </div>
-              
-              <div className="flex flex-col items-center p-3 bg-gray-50 rounded-lg">
-                <Mountain className="w-6 h-6 text-blue-500 mb-1" />
-                <span className="text-sm font-medium">{t('elevation')}</span>
-                <span className="text-lg font-bold">{getElevation(trail)}m</span>
-              </div>
-            </div>
-            
-            <div className="mb-6">
-              <h4 className="text-lg font-semibold mb-2">{t('difficulty')}</h4>
-              <Badge className={`${getDifficultyColor(trail.difficulty)} text-white px-3 py-1`}>
-                {getTranslatedDifficulty(trail.difficulty)}
-              </Badge>
-              <p className="mt-2 text-gray-600">
-                {(() => {
-                  switch(trail.difficulty) {
-                    case 'easy': return t('difficultyEasyDescription');
-                    case 'moderate': return t('difficultyModerateDescription');
-                    case 'hard': return t('difficultyHardDescription');
-                    case 'expert': return t('difficultyExpertDescription');
-                    default: return '';
-                  }
-                })()}
-              </p>
-            </div>
-            
-            <div className="mb-6">
-              <h4 className="text-lg font-semibold mb-2">{t('description')}</h4>
-              <p className="text-gray-600 whitespace-pre-line">
-                {getDescription(trail, language)}
-              </p>
-            </div>
-            
-            <div className="mb-6">
-              <h4 className="text-lg font-semibold mb-2">{t('howToGetThere')}</h4>
-              <div className="space-y-3 bg-gray-50 p-4 rounded-lg">
-                {trail.name === "Refugio Frey from Villa Catedral" ? (
-                  <>
-                    <div className="flex items-start gap-3">
-                      <Car className="w-5 h-5 flex-shrink-0 text-blue-500 mt-0.5" />
-                      <div>
-                        <span className="font-bold block">{t('taxiService')} (15 {t('minutes')})</span>
-                        <span className="text-gray-600">{t('taxiRecommendation')}</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Bus className="w-5 h-5 flex-shrink-0 text-blue-500 mt-0.5" />
-                      <div>
-                        <span className="font-bold block">{t('busLines')}: {getBusInfo(trail)}</span>
-                        <span className="text-gray-600">{t('busScheduleWarning')}</span>
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  trail.transportation.map((type, index) => {
-                    const transportInfo = getTransportationInfo(type);
-                    if (!transportInfo) return null;
-                    return (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="mt-0.5 flex-shrink-0">{transportInfo.icon}</div>
-                        <div>
-                          <span className="font-bold block">{transportInfo.label}</span>
-                          {type === 'bus' && <span className="text-gray-600">{t('busLines')}: {getBusInfo(trail)}</span>}
-                        </div>
-                      </div>
-                    );
-                  })
-                )}
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-2">{t('highlights')}</h4>
-              <div className="flex flex-wrap gap-2">
-                {trail.highlights.map((highlight, index) => (
-                  <Badge key={index} variant="secondary">
-                    {t(highlight)}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
+      <TrailDetailDialog 
+        trail={trail} 
+        open={isOpen} 
+        onOpenChange={setIsOpen} 
+      />
     </>
   );
 };
