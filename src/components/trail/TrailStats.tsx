@@ -64,9 +64,9 @@ const TrailStats: React.FC<TrailStatsProps> = ({
       text: 'text-base',
     },
     lg: {
-      container: 'gap-3',
-      icon: 'w-6 h-6',
-      text: 'text-lg font-bold',
+      container: 'gap-2',
+      icon: 'w-5 h-5',
+      text: 'text-lg',
     },
   };
 
@@ -75,27 +75,27 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     : `flex flex-col items-center gap-2 ${sizeClasses[size].container}`;
 
   const iconClasses = `${sizeClasses[size].icon} flex-shrink-0 text-blue-500`;
-  const textClasses = sizeClasses[size].text;
+  const textClasses = `${sizeClasses[size].text} font-medium`;
 
   return (
-    <div className={containerClass}>
+    <>
       {trail.distance > 0 && (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-center gap-2 bg-blue-50 rounded-lg p-2 shadow-sm">
           <ArrowUpRight className={iconClasses} />
           <span className={textClasses}>{formatDistance(trail)}</span>
         </div>
       )}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center justify-center gap-2 bg-blue-50 rounded-lg p-2 shadow-sm">
         <Clock className={iconClasses} />
         <span className={textClasses}>
           {formatDuration(trail)}
         </span>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center justify-center gap-2 bg-blue-50 rounded-lg p-2 shadow-sm">
         <Mountain className={iconClasses} />
         <span className={textClasses}>{getElevation(trail)}m</span>
       </div>
-    </div>
+    </>
   );
 };
 
