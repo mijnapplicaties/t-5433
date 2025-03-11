@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -396,7 +395,7 @@ export const trails: Trail[] = [
       fr: "Le sentier menant au Refugio Jakob commence à Colonia Suiza et suit un beau chemin à travers des forêts indigènes le long du ruisseau Casa de Piedra. La section initiale est une promenade facile, dont la difficulté augmente progressivement au fur et à mesure que vous montez. Après environ 3 heures de randonnée, vous atteindrez une section plus exigeante avec un terrain plus escarpé connu sous le nom de 'Los Caracoles' (Les Escargots) en raison de son motif en zigzag.\n\nAprès avoir terminé cette partie plus difficile, vous serez récompensé par des vues magnifiques sur les montagnes et les vallées environnantes. Le refuge lui-même est situé à 1 550 mètres d'altitude, sur les rives de la belle Laguna Jakob, entourée d'impressionnantes parois de granit et de forêts indigènes de lengas.\n\nLe Refugio San Martin Jakob propose des hébergements de nuit avec des lits de style dortoir, des repas et des équipements de base. C'est l'un des refuges de montagne les plus confortables de la région, ce qui le rend parfait pour les randonneurs expérimentés et les débutants qui souhaitent vivre leur première aventure nocturne en montagne.",
       de: "Der Weg zum Refugio Jakob beginnt in Colonia Suiza und folgt einem schönen Pfad durch einheimische Wälder entlang des Casa de Piedra-Baches. Der erste Abschnitt ist eine leichte Wanderung, deren Schwierigkeitsgrad allmählich zunimmt, wenn Sie aufsteigen. Nach etwa 3 Stunden Wanderung erreichen Sie einen anspruchsvolleren Abschnitt mit steilerem Gelände, der aufgrund seines Zickzackmusters als 'Los Caracoles' (Die Schnecken) bekannt ist.\n\nNachdem Sie diesen schwierigeren Teil absolviert haben, werden Sie mit atemberaubenden Ausblicken auf die umliegenden Berge und Täler belohnt. Die Schutzhütte selbst liegt auf 1.550 Metern über dem Meeresspiegel, am Ufer der wunderschönen Laguna Jakob, umgeben von beeindruckenden Granitwänden und einheimischen Lenga-Wäldern.\n\nDas Refugio San Martin Jakob bietet Übernachtungsmöglichkeiten mit Schlafsälen, Mahlzeiten und grundlegenden Annehmlichkeiten. Es ist eine der komfortabelsten Berghütten in der Gegend und damit perfekt für erfahrene Wanderer und Anfänger, die ihr erstes Übernachtungsabenteuer in den Bergen erleben möchten."
     },
-    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png",
+    imageUrl: "/lovable-uploads/8f08a419-86bc-49e3-8707-015d86806c3e.png",
     startingPoint: "Tambo Baez (16 min drive from Los Coihues)",
     highlights: ["highlightAlpineLake", "highlightMountainRefuge", "highlightGraniteWalls", "highlightNativeForest"],
     transportation: ["bus", "taxi"],

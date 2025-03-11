@@ -1,4 +1,3 @@
-
 import { useMemo } from 'react';
 import { Trail, TrailType } from '../types/trail';
 
@@ -12,7 +11,6 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     'Playa Muñoz'
   ];
 
-  // Update the Pampa Linda trail IDs, making sure to exclude Laguna Negra
   const pampLindaTrailIds = ['13', '14', '15', '16'];
 
   const barilochieMultiDayTrailIds = ['17', '11', '7', '18', '1'];
@@ -40,7 +38,6 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     };
   }, [freyTrail]);
   
-  // Keep the freyTrailForMultiDay but we won't add it to the result
   const freyTrailForMultiDay = useMemo(() => {
     if (!freyTrail) return null;
     return {
@@ -59,7 +56,6 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     };
   }, [freyTrail]);
   
-  // New trail for Cerro López to Laguna Negra
   const cerroLopezLagunaNegra = useMemo(() => {
     return {
       id: "19",
@@ -140,7 +136,6 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       trail.name.toLowerCase().includes('mirada del doctor') ||
       trail.name.toLowerCase().includes('agostino rocca') ||
       pampLindaTrailIds.includes(trail.id)) &&
-      // Make sure Refugio Laguna Negra is not included here
       !trail.name.toLowerCase().includes('laguna negra')
     );
   }, [multiDayHikes]);
@@ -266,6 +261,15 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     
     if (!hasJakobTambo) {
       result.push(jakobTamboTrail);
+    }
+    
+    // Make sure Refugio San Martin Jakob uses the updated image if it exists in the results
+    const jakobIndex = result.findIndex(trail => trail.id === "17");
+    if (jakobIndex >= 0) {
+      result[jakobIndex] = {
+        ...result[jakobIndex],
+        imageUrl: "/lovable-uploads/8f08a419-86bc-49e3-8707-015d86806c3e.png"
+      };
     }
     
     // Add the Cerro López-Laguna Negra trail to the Bariloche multi-day hikes
