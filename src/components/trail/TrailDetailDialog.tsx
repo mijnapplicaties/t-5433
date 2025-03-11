@@ -15,7 +15,6 @@ import ReservationBadge from './ReservationBadge';
 import TrailStats from './TrailStats';
 import TrailDescription from './TrailDescription';
 import TransportationInfo from './TransportationInfo';
-import TrailHighlights from './TrailHighlights';
 
 interface TrailDetailDialogProps {
   trail: Trail;
@@ -66,14 +65,9 @@ const TrailDetailDialog: React.FC<TrailDetailDialogProps> = ({
             <TrailDescription trail={trail} />
           </div>
           
-          <div className="mb-6">
+          <div>
             <h4 className="text-lg font-semibold mb-2">{t('howToGetThere')}</h4>
             <TransportationInfo trail={trail} />
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-2">{t('highlights')}</h4>
-            <TrailHighlights highlights={trail.highlights} size="md" />
           </div>
         </div>
       </DialogContent>
