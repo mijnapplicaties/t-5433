@@ -1,183 +1,59 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
-import { Badge } from '../components/ui/badge';
-import { Button } from '../components/ui/button';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { useLanguage } from '../context/LanguageContext';
-import { Trail, TrailType, Difficulty, TransportationType, TravelTimeCategory, TrailCategory } from '../types/trail';
-import TrailCard from '../components/TrailCard';
-import BeachCard from '../components/BeachCard';
-import { Bus, Car, Filter, FootprintsIcon, Map, Mountain, ThumbsUp, TreePine, Users, Waves } from 'lucide-react';
 import FiltersDialog from '../components/FiltersDialog';
-
-type TravelTimeCategoryFilter = 'all' | TravelTimeCategory;
-type TrailCategoryFilter = 'all' | TrailCategory;
+import CategoryFilter from '../components/CategoryFilter';
+import DayHikesSection from '../components/DayHikesSection';
+import MultiDayHikesSection from '../components/MultiDayHikesSection';
+import CategorySection from '../components/CategorySection';
+import BeachesSection from '../components/BeachesSection';
+import { useTrailFilters } from '../hooks/useTrailFilters';
+import { useTrailLists } from '../hooks/useTrailLists';
 
 const Index = () => {
   const { t } = useLanguage();
-  const [selectedType, setSelectedType] = useState<TrailType | 'all'>('all');
-  const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | 'all'>('all');
-  const [selectedTravelTime, setSelectedTravelTime] = useState<TravelTimeCategory | 'all'>('all');
-  const [selectedCategory, setSelectedCategory] = useState<TrailCategory | 'all'>('all');
-  const [filtersOpen, setFiltersOpen] = useState(false);
+  
+  // Use custom hooks for filtering and organizing trails
+  const {
+    filters,
+    filteredBeaches,
+    allHikes,
+    dayHikes,
+    multiDayHikes,
+  } = useTrailFilters(trails, beaches);
 
-  const getAccessibilityCategory = (trail: Trail): TravelTimeCategory => {
-    if (trail.distanceFromCampsite <= 2) return 'direct-access';
-    if (trail.travelTime <= 30 && ['bus', 'taxi'].some(t => trail.transportation.includes(t as TransportationType))) {
-      return 'easy-access';
-    }
-    return 'medium-access';
+  const {
+    directAccessHikes,
+    otherDayHikes,
+    pampLindaHikes,
+    otherMultiDayHikes,
+    categoryBarilochieHikes,
+    categoryPampLindaHikes
+  } = useTrailLists(allHikes, dayHikes, multiDayHikes);
+
+  // Determine which sections to show based on filters
+  const shouldShowBeaches = filters.selectedCategory === 'all' || filters.selectedCategory === 'beaches-lakes';
+  const shouldShowDayHikes = filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'day-hike');
+  const shouldShowMultiDayHikes = filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'multi-day');
+  const shouldShowCategorySection = filters.selectedCategory !== 'all' && filters.selectedCategory !== 'beaches-lakes';
+
+  // Filter category hikes by category
+  const categoryHikes = allHikes.filter(trail => 
+    filters.selectedCategory === 'all' || trail.category === filters.selectedCategory
+  );
+
+  // Create region-specific groups for the category section
+  const categoryRegionHikes = {
+    bariloche: categoryBarilochieHikes.filter(trail => 
+      filters.selectedCategory === 'all' || trail.category === filters.selectedCategory
+    ),
+    pampLinda: categoryPampLindaHikes.filter(trail => 
+      filters.selectedCategory === 'all' || trail.category === filters.selectedCategory
+    )
   };
-
-  const filteredTrails = trails.filter(trail => {
-    const typeMatch = selectedType === 'all' || trail.type === selectedType;
-    const difficultyMatch = selectedDifficulty === 'all' || trail.difficulty === selectedDifficulty;
-    const accessibilityMatch = selectedTravelTime === 'all' || getAccessibilityCategory(trail) === selectedTravelTime;
-    const categoryMatch = selectedCategory === 'all' || trail.category === selectedCategory;
-    return typeMatch && difficultyMatch && accessibilityMatch && categoryMatch;
-  });
-
-  const filteredBeaches = beaches.filter(beach => {
-    if (selectedCategory === 'beaches-lakes') return true;
-    
-    const showAllCategories = selectedCategory === 'all';
-    const travelTimeMatch = selectedTravelTime === 'all' || 
-      (selectedTravelTime === 'direct-access' && beach.distanceFromCampsite <= 2) ||
-      (selectedTravelTime === 'easy-access' && beach.travelTime <= 30) ||
-      (selectedTravelTime === 'medium-access' && beach.travelTime > 30);
-    
-    return showAllCategories && travelTimeMatch;
-  });
-
-  const allHikes = filteredTrails;
-  
-  const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
-  const multiDayHikes = filteredTrails.filter(trail => trail.type === 'multi-day');
-  
-  const directAccessTrailNames = [
-    'Refugio Frey',
-    'Cascada de los Duendes',
-    'Mirador Lago Gutiérrez',
-    'Cerro San Martín',
-    'Playa Muñoz',
-    'Lago Gutiérrez'
-  ];
-  
-  const freyTrail = trails.find(trail => trail.id === "1");
-  
-  const freyTrailForDirectAccess = freyTrail ? {
-    ...freyTrail,
-    name: "Refugio Frey desde Lago Gutierrez",
-    imageUrl: "/lovable-uploads/5fd20688-6816-43ff-87bc-fb5b01ab43eb.png"
-  } : null;
-  
-  const freyTrailForBusAccess = freyTrail ? {
-    ...freyTrail,
-    name: "Refugio Frey from Villa Catedral",
-    imageUrl: "/lovable-uploads/5fd20688-6816-43ff-87bc-fb5b01ab43eb.png"
-  } : null;
-  
-  const directAccessHikes = dayHikes.filter(trail => 
-    directAccessTrailNames.includes(trail.name) && trail.id !== "1"
-  );
-  
-  const llaoLlaoIndex = directAccessHikes.findIndex(trail => trail.name === 'Cerro Llao Llao');
-  
-  if (freyTrailForDirectAccess) {
-    if (llaoLlaoIndex !== -1) {
-      directAccessHikes.splice(llaoLlaoIndex, 0, freyTrailForDirectAccess);
-    } else {
-      directAccessHikes.unshift(freyTrailForDirectAccess);
-    }
-  }
-  
-  const otherDayHikes = dayHikes.filter(trail => 
-    (!directAccessTrailNames.includes(trail.name) || trail.name === 'Refugio Frey') && trail.id !== "1"
-  );
-  
-  const otherDayHikesWithModifiedFrey = [...otherDayHikes];
-  
-  if (freyTrailForBusAccess) {
-    const freyIndex = otherDayHikesWithModifiedFrey.findIndex(trail => trail.name === 'Refugio Frey');
-    if (freyIndex !== -1) {
-      otherDayHikesWithModifiedFrey[freyIndex] = freyTrailForBusAccess;
-    } else {
-      otherDayHikesWithModifiedFrey.push(freyTrailForBusAccess);
-    }
-  }
-
-  const pampLindaTrailIds = ['12', '13a', '14a'];
-  
-  const pampLindaHikes = multiDayHikes.filter(trail => 
-    trail.name.toLowerCase().includes('pampa linda') || 
-    trail.name.toLowerCase().includes('meiling') ||
-    trail.name.toLowerCase().includes('tronador') ||
-    trail.startingPoint.toLowerCase().includes('pampa linda') ||
-    trail.name.toLowerCase().includes('5 lagunas') ||
-    trail.name.toLowerCase().includes('laguna ilón') ||
-    trail.name.toLowerCase().includes('mirada del doctor') ||
-    pampLindaTrailIds.includes(trail.id)
-  );
-  
-  const otherMultiDayHikes = multiDayHikes.filter(trail => 
-    !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
-  );
-
-  const trailIdsToInclude = ["13", "14", "15"];
-  
-  trailIdsToInclude.forEach(id => {
-    const trail = trails.find(t => t.id === id);
-    if (trail && !otherMultiDayHikes.some(t => t.id === id)) {
-      otherMultiDayHikes.push(trail);
-    }
-  });
-
-  const getTransportIcon = (type: TransportationType) => {
-    switch(type) {
-      case 'bus':
-        return <Bus className="w-4 h-4" />;
-      case 'taxi':
-        return <Car className="w-4 h-4" />;
-      case 'hitchhiking':
-        return <ThumbsUp className="w-4 h-4" />;
-      case 'private-transfer':
-        return <Users className="w-4 h-4" />;
-      case 'walking':
-        return <FootprintsIcon className="w-4 h-4" />;
-    }
-  };
-
-  const getCategoryIcon = (category: TrailCategory | 'all') => {
-    switch(category) {
-      case 'high-mountain':
-        return <Mountain className="w-4 h-4 mr-1" />;
-      case 'easy-mountain':
-        return <TreePine className="w-4 h-4 mr-1" />;
-      case 'walking-path':
-        return <FootprintsIcon className="w-4 h-4 mr-1" />;
-      case 'beaches-lakes':
-        return <Waves className="w-4 h-4 mr-1" />;
-      default:
-        return <Map className="w-4 h-4 mr-1" />;
-    }
-  };
-
-  const shouldShowBeaches = selectedCategory === 'all' || selectedCategory === 'beaches-lakes';
-
-  const shouldShowRegionSubtitles = selectedCategory !== 'beaches-lakes';
-
-  const categoryFilteredHikes = allHikes.filter(trail => 
-    selectedCategory === 'all' || trail.category === selectedCategory
-  );
-
-  const categoryBarilochieHikes = categoryFilteredHikes.filter(trail => 
-    !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
-  );
-  
-  const categoryPampLindaHikes = categoryFilteredHikes.filter(trail => 
-    pampLindaHikes.some(plTrail => plTrail.id === trail.id)
-  );
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
@@ -199,210 +75,47 @@ const Index = () => {
           </p>
         </header>
 
-        <div className="mb-8 flex flex-col items-center gap-6">
-          <div className="w-full max-w-4xl text-center">
-            <p className="text-xl font-semibold text-gray-600 mb-2">{t('category')}</p>
-            <div className="flex flex-wrap justify-center gap-2 items-center">
-              <Badge 
-                variant={selectedCategory === 'all' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedCategory('all')}
-              >
-                <Map className="w-4 h-4 mr-1" />
-                {t('filterAll')}
-              </Badge>
-              <Badge 
-                variant={selectedCategory === 'high-mountain' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedCategory('high-mountain')}
-              >
-                <Mountain className="w-4 h-4 mr-1" />
-                {t('categoryHighMountain')}
-              </Badge>
-              <Badge 
-                variant={selectedCategory === 'easy-mountain' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedCategory('easy-mountain')}
-              >
-                <TreePine className="w-4 h-4 mr-1" />
-                {t('categoryEasyMountain')}
-              </Badge>
-              <Badge 
-                variant={selectedCategory === 'walking-path' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedCategory('walking-path')}
-              >
-                <FootprintsIcon className="w-4 h-4 mr-1" />
-                {t('categoryWalkingPath')}
-              </Badge>
-              <Badge 
-                variant={selectedCategory === 'beaches-lakes' ? 'default' : 'outline'}
-                className="cursor-pointer text-base"
-                onClick={() => setSelectedCategory('beaches-lakes')}
-              >
-                <Waves className="w-4 h-4 mr-1" />
-                {t('categoryBeachesLakes')}
-              </Badge>
-              
-              <Badge 
-                variant="outline" 
-                className="cursor-pointer text-base border-black"
-                onClick={() => setFiltersOpen(true)}
-              >
-                <Filter className="w-4 h-4 mr-1" />
-                {t('filters')}
-              </Badge>
-            </div>
-          </div>
-        </div>
-
-        <FiltersDialog 
-          open={filtersOpen}
-          onOpenChange={setFiltersOpen}
-          selectedType={selectedType}
-          setSelectedType={setSelectedType}
-          selectedDifficulty={selectedDifficulty}
-          setSelectedDifficulty={setSelectedDifficulty}
-          selectedTravelTime={selectedTravelTime}
-          setSelectedTravelTime={setSelectedTravelTime}
+        <CategoryFilter 
+          selectedCategory={filters.selectedCategory}
+          setSelectedCategory={filters.setSelectedCategory}
+          setFiltersOpen={filters.setFiltersOpen}
         />
 
-        {selectedCategory !== 'all' && selectedCategory !== 'beaches-lakes' && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-forest mb-6">{t(`category${selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`)}</h2>
-            
-            {categoryBarilochieHikes.length > 0 && (
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
-                  {t('bariloche')}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {categoryBarilochieHikes.map((trail) => (
-                    <TrailCard 
-                      key={trail.id} 
-                      trail={trail}
-                      transportIcons={trail.transportation.map(t => getTransportIcon(t))}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-            
-            {categoryPampLindaHikes.length > 0 && (
-              <div>
-                <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
-                  {t('pampLinda')}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {categoryPampLindaHikes.map((trail) => (
-                    <TrailCard 
-                      key={trail.id} 
-                      trail={trail}
-                      transportIcons={trail.transportation.map(t => getTransportIcon(t))}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+        <FiltersDialog 
+          open={filters.filtersOpen}
+          onOpenChange={filters.setFiltersOpen}
+          selectedType={filters.selectedType}
+          setSelectedType={filters.setSelectedType}
+          selectedDifficulty={filters.selectedDifficulty}
+          setSelectedDifficulty={filters.setSelectedDifficulty}
+          selectedTravelTime={filters.selectedTravelTime}
+          setSelectedTravelTime={filters.setSelectedTravelTime}
+        />
+
+        {shouldShowCategorySection && (
+          <CategorySection 
+            categoryHikes={categoryHikes}
+            sectionTitle={t(`category${filters.selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`)}
+            regionHikes={categoryRegionHikes}
+          />
         )}
 
-        {selectedCategory === 'all' && (selectedType === 'all' || selectedType === 'day-hike') && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-forest mb-6">{t('filterDayHike')}</h2>
-            
-            {directAccessHikes.length > 0 && (
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
-                  {t('accessibilityDirect')}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {directAccessHikes.map((trail) => (
-                    <TrailCard 
-                      key={`direct-${trail.id}`} 
-                      trail={trail} 
-                      transportIcons={trail.transportation.map(t => getTransportIcon(t))}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-            
-            {otherDayHikesWithModifiedFrey.length > 0 && (
-              <div>
-                {directAccessHikes.length > 0 && (
-                  <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
-                    {t('nearByBusOrUber')}
-                  </h3>
-                )}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {otherDayHikesWithModifiedFrey.map((trail) => (
-                    <TrailCard 
-                      key={`bus-${trail.id}`} 
-                      trail={trail}
-                      transportIcons={trail.transportation.map(t => getTransportIcon(t))}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
+        <DayHikesSection 
+          directAccessHikes={directAccessHikes}
+          otherDayHikes={otherDayHikes}
+          showSection={shouldShowDayHikes}
+        />
 
-        {selectedCategory === 'all' && (selectedType === 'all' || selectedType === 'multi-day') && (
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-forest mb-6">{t('filterMultiDay')}</h2>
-            
-            {otherMultiDayHikes.length > 0 && (
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
-                  {t('bariloche')}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {otherMultiDayHikes.map((trail) => (
-                    <TrailCard 
-                      key={trail.id} 
-                      trail={trail}
-                      transportIcons={trail.transportation.map(t => getTransportIcon(t))}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-            
-            {pampLindaHikes.length > 0 && (
-              <div>
-                <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
-                  {t('pampLinda')}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {pampLindaHikes.map((trail) => (
-                    <TrailCard 
-                      key={trail.id} 
-                      trail={trail}
-                      transportIcons={trail.transportation.map(t => getTransportIcon(t))}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
+        <MultiDayHikesSection 
+          otherMultiDayHikes={otherMultiDayHikes}
+          pampLindaHikes={pampLindaHikes}
+          showSection={shouldShowMultiDayHikes}
+        />
 
-        {shouldShowBeaches && (
-          <div className="mb-12 mt-16">
-            <h2 className="text-2xl font-bold text-forest mb-6">{t('beaches')}</h2>
-            {filteredBeaches.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredBeaches.map((beach) => (
-                  <BeachCard key={beach.id} beach={beach} />
-                ))}
-              </div>
-            ) : (
-              <p className="text-center text-gray-500 py-8">{t('noBeachesFound')}</p>
-            )}
-          </div>
-        )}
+        <BeachesSection 
+          beaches={filteredBeaches}
+          showSection={shouldShowBeaches}
+        />
       </div>
     </div>
   );

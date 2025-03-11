@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
 import { Beach } from '../types/beach';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { Map, Clock, ThumbsUp, Bus, Car, Users, FootprintsIcon } from 'lucide-react';
+import { Map, Clock } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import {
   Dialog,
@@ -12,6 +11,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "./ui/dialog";
+import { getTransportIcon } from '../utils/transportationIcons';
 
 interface BeachCardProps {
   beach: Beach;
@@ -28,23 +28,6 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
       case 'mixed': return t('mixed');
       case 'pebbly': return t('pebbly');
       default: return type;
-    }
-  };
-
-  const getTransportIcon = (type: string) => {
-    switch(type) {
-      case 'bus':
-        return <Bus className="w-4 h-4" />;
-      case 'taxi':
-        return <Car className="w-4 h-4" />;
-      case 'hitchhiking':
-        return <ThumbsUp className="w-4 h-4" />;
-      case 'private-transfer':
-        return <Users className="w-4 h-4" />;
-      case 'walking':
-        return <FootprintsIcon className="w-4 h-4" />;
-      default:
-        return <Map className="w-4 h-4" />;
     }
   };
 
