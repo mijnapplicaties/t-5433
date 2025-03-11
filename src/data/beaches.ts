@@ -150,7 +150,7 @@ export const beaches: Beach[] = [
       fr: "Une baie magnifique aux eaux claires et aux vues sur les montagnes. Située le long de la célèbre route du Circuito Chico, cette plage offre une combinaison parfaite de forêt et de paysage lacustre.",
       de: "Eine atemberaubende Bucht mit klarem Wasser und Bergblick. An der berühmten Circuito Chico-Route gelegen, bietet dieser Strand eine perfekte Kombination aus Wald- und Seelandschaft."
     },
-    imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+    imageUrl: "/lovable-uploads/69bb7a55-5d7f-47aa-97d9-dba61283b32e.png",
     beachType: "rocky",
     waterTemp: {
       summer: 16,
