@@ -32,6 +32,8 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
     trail.id === "12" || 
     (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('tambo'))
   );
+
+  console.log('Jakob Tambo trail:', hasJakobTambo);
   
   return (
     <div className="mb-12">

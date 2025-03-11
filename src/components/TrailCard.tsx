@@ -21,8 +21,12 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
-  // Special handling for Jakob trail to ensure it's displayed correctly
-  const isJakobTrail = trail.id === "11" || trail.name.toLowerCase().includes('jakob');
+  // Special handling for Jakob trails to ensure they're displayed correctly
+  const isJakobCircuitTrail = trail.id === "11" || 
+    (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('frey'));
+  
+  const isJakobTamboTrail = trail.id === "12" || 
+    (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('tambo'));
   
   return (
     <>
@@ -32,12 +36,17 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
       >
         <div className="relative overflow-hidden rounded-t-lg h-48">
           <img
-            src={trail.imageUrl || (isJakobTrail ? "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png" : "/placeholder.svg")}
+            src={trail.imageUrl || 
+              (isJakobCircuitTrail ? "/lovable-uploads/3b45435b-d0d0-4fb7-ac3b-73c18e21fd50.png" : 
+               isJakobTamboTrail ? "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png" : 
+               "/placeholder.svg")}
             alt={trail.name}
             className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              if (isJakobTrail) {
+              if (isJakobCircuitTrail) {
+                target.src = "/lovable-uploads/3b45435b-d0d0-4fb7-ac3b-73c18e21fd50.png";
+              } else if (isJakobTamboTrail) {
                 target.src = "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png";
               } else {
                 target.src = "/placeholder.svg";
