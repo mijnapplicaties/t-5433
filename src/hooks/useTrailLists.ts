@@ -17,19 +17,8 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
 
   // Trails that should be excluded from multi-day sections
   const excludedFromBarilochieMultiDay = ['Playa Muñoz', 'Cascada de los Duendes'];
-  
-  // List of trail IDs that should be excluded
-  const excludedTrailIds = [];
-
-  // Find IDs for excluded trails by name
-  useMemo(() => {
-    excludedFromBarilochieMultiDay.forEach(name => {
-      const trail = allTrails.find(t => t.name === name);
-      if (trail) {
-        excludedTrailIds.push(trail.id);
-      }
-    });
-  }, [allTrails]);
+  // Hard-code the IDs to ensure proper exclusion regardless of any other logic
+  const excludedTrailIds = ['7', '12']; // 7=Cascada de los Duendes, 12=Playa Muñoz
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
   
@@ -194,7 +183,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
         return false;
       }
       
-      // Also exclude by ID (more reliable)
+      // Exclude specific trails by ID (most reliable method)
       if (excludedTrailIds.includes(trail.id)) {
         return false;
       }
@@ -223,7 +212,8 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     }
     
     barilochieMultiDayTrailIds.forEach(id => {
-      if (id === "11" || id === "12") return;
+      // Skip excluded IDs and the Jakob trails which are added separately
+      if (id === "11" || id === "12" || excludedTrailIds.includes(id)) return;
       
       const alreadyIncluded = result.some(t => t.id === id);
       if (!alreadyIncluded) {
@@ -254,7 +244,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
         return false;
       }
       
-      // Filter out excluded trails by ID
+      // Filter out excluded trails by ID - most reliable method
       if (excludedTrailIds.includes(trail.id)) {
         return false;
       }

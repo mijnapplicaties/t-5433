@@ -15,6 +15,8 @@ import { useTrailLists } from '../hooks/useTrailLists';
 
 // Trails to exclude from category views
 const excludedTrailNames = ['Playa Muñoz', 'Cascada de los Duendes'];
+// Specific IDs to exclude (more reliable than name matching)
+const excludedTrailIds = ['7', '12']; // 7=Cascada de los Duendes, 12=Playa Muñoz
 
 const Index = () => {
   const { t } = useLanguage();
@@ -46,14 +48,16 @@ const Index = () => {
   // Filter category hikes by category, excluding specific trails
   const categoryHikes = allHikes.filter(trail => 
     (filters.selectedCategory === 'all' || trail.category === filters.selectedCategory) &&
-    !excludedTrailNames.includes(trail.name)
+    !excludedTrailNames.includes(trail.name) &&
+    !excludedTrailIds.includes(trail.id)
   );
 
   // Create region-specific groups for the category section
   const categoryRegionHikes = {
     bariloche: categoryBarilochieHikes.filter(trail => 
       (filters.selectedCategory === 'all' || trail.category === filters.selectedCategory) &&
-      !excludedTrailNames.includes(trail.name)
+      !excludedTrailNames.includes(trail.name) &&
+      !excludedTrailIds.includes(trail.id)
     ),
     pampLinda: categoryPampLindaHikes.filter(trail => 
       filters.selectedCategory === 'all' || trail.category === filters.selectedCategory
