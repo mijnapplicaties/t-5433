@@ -372,7 +372,7 @@ export const trails: Trail[] = [
       fr: "El sendero comienza en Pampa Linda, a 80 km de Bariloche.",
       de: "El sendero comienza en Pampa Linda, a 80 km de Bariloche."
     },
-    imageUrl: "/lovable-uploads/5e6c44cc-a8c6-4013-8464-49f82efa40fc.png",
+    imageUrl: "/lovable-uploads/97d3a735-4ca9-469c-ae6e-f35916080c6c.png",
     startingPoint: "Pampa Linda (2 hrs drive from Los Coihues)",
     highlights: ["highlightMountainRefuge", "highlightRiverCrossings", "highlightTronadorMountain"],
     transportation: ["private-transfer", "taxi"],
