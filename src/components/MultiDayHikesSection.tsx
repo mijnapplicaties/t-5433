@@ -33,7 +33,15 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
     (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('tambo'))
   );
 
-  console.log('Jakob Tambo trail:', hasJakobTambo);
+  // Check for the trails that should only be in Pampa Linda
+  const hasAgostinoRocca = otherMultiDayHikes.find(trail => trail.id === "16");
+  const hasOttoMeiling = otherMultiDayHikes.find(trail => trail.id === "14");
+  const hasLagunaIlon = otherMultiDayHikes.find(trail => trail.id === "15");
+  
+  // Log for debugging
+  console.log('Agostino Rocca in Bariloche:', hasAgostinoRocca ? 'Yes (ERROR)' : 'No (CORRECT)');
+  console.log('Otto Meiling in Bariloche:', hasOttoMeiling ? 'Yes (ERROR)' : 'No (CORRECT)');
+  console.log('Laguna Ilón in Bariloche:', hasLagunaIlon ? 'Yes (ERROR)' : 'No (CORRECT)');
   
   return (
     <div className="mb-12">
@@ -58,6 +66,9 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
               <p>Debug - Bariloche multi-day hikes:</p>
               <p>Found Jakob Circuit (id=11): {hasJakobCircuit ? 'Yes' : 'No'}</p>
               <p>Found Jakob Tambo (id=12): {hasJakobTambo ? 'Yes' : 'No'}</p>
+              <p>Agostino Rocca in Bariloche: {hasAgostinoRocca ? 'Yes (ERROR)' : 'No (CORRECT)'}</p>
+              <p>Otto Meiling in Bariloche: {hasOttoMeiling ? 'Yes (ERROR)' : 'No (CORRECT)'}</p>
+              <p>Laguna Ilón in Bariloche: {hasLagunaIlon ? 'Yes (ERROR)' : 'No (CORRECT)'}</p>
               <p>Total trails: {otherMultiDayHikes.length}</p>
               <p>Trail IDs: {otherMultiDayHikes.map(t => t.id).join(', ')}</p>
               <p>Trail names: {otherMultiDayHikes.map(t => t.name).join(', ')}</p>
@@ -85,6 +96,9 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
               <p>Debug - Pampa Linda trails:</p>
               <p>Total trails: {pampLindaHikes.length}</p>
               <p>Trail IDs: {pampLindaHikes.map(t => t.id).join(', ')}</p>
+              <p>Has Agostino Rocca (id=16): {pampLindaHikes.some(t => t.id === "16") ? 'Yes' : 'No'}</p>
+              <p>Has Otto Meiling (id=14): {pampLindaHikes.some(t => t.id === "14") ? 'Yes' : 'No'}</p>
+              <p>Has Laguna Ilón (id=15): {pampLindaHikes.some(t => t.id === "15") ? 'Yes' : 'No'}</p>
             </div>
           )}
         </div>

@@ -11,9 +11,9 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     'Lago Gutiérrez'
   ];
 
-  const pampLindaTrailIds = ['12', '13a', '14a'];
+  const pampLindaTrailIds = ['12', '13', '14', '15', '16'];
   
-  const barilochieMultiDayTrailIds = ['15', '16', '17', '13', '14', '11', '7', '17'];
+  const barilochieMultiDayTrailIds = ['17', '11', '7', '18'];
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
   
@@ -80,7 +80,11 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       trail.name.toLowerCase().includes('5 lagunas') ||
       trail.name.toLowerCase().includes('laguna ilón') ||
       trail.name.toLowerCase().includes('mirada del doctor') ||
-      pampLindaTrailIds.includes(trail.id)
+      trail.name.toLowerCase().includes('agostino rocca') ||
+      pampLindaTrailIds.includes(trail.id) ||
+      trail.id === "14" || // Refugio Otto Meiling
+      trail.id === "15" || // Laguna Ilón
+      trail.id === "16"    // Refugio Agostino Rocca
     );
   }, [multiDayHikes]);
   
@@ -158,12 +162,19 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   }, [allTrails]);
   
   const otherMultiDayHikes = useMemo(() => {
-    // First create a copy of multi-day hikes excluding Pampa Linda hikes
-    const hikes = multiDayHikes.filter(trail => 
-      !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
-    );
+    const hikes = multiDayHikes.filter(trail => {
+      if (trail.id === "14" || trail.id === "15" || trail.id === "16") {
+        return false;
+      }
+      
+      return !pampLindaHikes.some(plTrail => 
+        plTrail.id === trail.id && 
+        plTrail.id !== "14" && 
+        plTrail.id !== "15" && 
+        plTrail.id !== "16"
+      );
+    });
     
-    // Check for both trails
     const hasJakobCircuit = hikes.some(trail => 
       trail.id === "11" || 
       (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('frey'))
@@ -174,22 +185,18 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('tambo'))
     );
     
-    // Create a new array with our modifications
     const result = [...hikes];
     
-    // Add Jakob Circuit if not present
     if (!hasJakobCircuit) {
       result.unshift(jakobCircuitTrail);
     }
     
-    // Add Jakob Tambo trail if not present
     if (!hasJakobTambo) {
       result.push(jakobTamboTrail);
     }
     
-    // Add any additional trails from barilochieMultiDayTrailIds that might be missing
     barilochieMultiDayTrailIds.forEach(id => {
-      if (id === "11" || id === "12") return; // Skip if we already handled it
+      if (id === "11" || id === "12") return;
       
       const alreadyIncluded = result.some(t => t.id === id);
       if (!alreadyIncluded) {
@@ -205,13 +212,15 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
 
   const categoryBarilochieHikes = useMemo(() => {
     return allTrails.filter(trail => 
+      !["14", "15", "16"].includes(trail.id) && 
       !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
     );
   }, [allTrails, pampLindaHikes]);
   
   const categoryPampLindaHikes = useMemo(() => {
     return allTrails.filter(trail => 
-      pampLindaHikes.some(plTrail => plTrail.id === trail.id)
+      pampLindaHikes.some(plTrail => plTrail.id === trail.id) ||
+      ["14", "15", "16"].includes(trail.id)
     );
   }, [allTrails, pampLindaHikes]);
 
