@@ -32,6 +32,7 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
   const hasLopez = findTrail('lópez') || findTrail('lopez');
   const hasJakob = findTrail('jakob');
   const hasTraversia = findTrail('travesía') || findTrail('travesia');
+  const hasLagunaNegra = findTrail('laguna negra');
   
   return (
     <div className="mb-12">
@@ -54,10 +55,11 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
           {/* Debug info - can be removed once confirmed working */}
           {process.env.NODE_ENV === 'development' && (
             <div className="mt-4 p-2 bg-gray-100 text-xs">
-              <p>Debug - Searching for: López, Jakob, Travesía</p>
+              <p>Debug - Searching for: López, Jakob, Travesía, Laguna Negra</p>
               <p>Found López: {hasLopez ? 'Yes' : 'No'}</p>
               <p>Found Jakob: {hasJakob ? 'Yes' : 'No'}</p>
               <p>Found Travesía: {hasTraversia ? 'Yes' : 'No'}</p>
+              <p>Found Laguna Negra: {hasLagunaNegra ? 'Yes' : 'No'}</p>
               <p>Total trails: {otherMultiDayHikes.length}</p>
             </div>
           )}
