@@ -6,18 +6,15 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     'Cascada de los Duendes',
     'Mirador Lago Gutiérrez',
     'Cerro San Martín',
-    'Playa Muñoz',
     'Refugio Frey',
     'Lago Gutiérrez'
   ];
 
-  const pampLindaTrailIds = ['12', '13', '14', '15', '16'];
+  const pampLindaTrailIds = ['12', '13', '14', '15', '16']; // 12 is Playa Muñoz
   
   const barilochieMultiDayTrailIds = ['17', '11', '7', '18'];
 
-  // Trails that should be excluded from multi-day sections
   const excludedFromBarilochieMultiDay = ['Playa Muñoz', 'Cascada de los Duendes'];
-  // Hard-code the IDs to ensure proper exclusion regardless of any other logic
   const excludedTrailIds = ['7', '12']; // 7=Cascada de los Duendes, 12=Playa Muñoz
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
@@ -42,13 +39,15 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   
   const directAccessHikes = useMemo(() => {
     const hikes = dayHikes.filter(trail => 
-      directAccessTrailNames.includes(trail.name) && trail.id !== "1"
+      directAccessTrailNames.includes(trail.name) && 
+      trail.id !== "1" &&
+      !excludedTrailIds.includes(trail.id)
     );
     
     if (freyTrailForDirectAccess) {
-      const playa_munoz_index = hikes.findIndex(trail => trail.name === 'Playa Muñoz');
-      if (playa_munoz_index !== -1) {
-        hikes.splice(playa_munoz_index + 1, 0, freyTrailForDirectAccess);
+      const existingIndex = hikes.findIndex(trail => trail.name === 'Playa Muñoz');
+      if (existingIndex !== -1) {
+        hikes.splice(existingIndex + 1, 0, freyTrailForDirectAccess);
       } else {
         hikes.unshift(freyTrailForDirectAccess);
       }
@@ -168,22 +167,18 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   
   const otherMultiDayHikes = useMemo(() => {
     const hikes = multiDayHikes.filter(trail => {
-      // Exclude Pampa Linda trails
       if (trail.id === "14" || trail.id === "15" || trail.id === "16") {
         return false;
       }
       
-      // Exclude trails that are in pampLindaHikes
       if (pampLindaHikes.some(plTrail => plTrail.id === trail.id)) {
         return false;
       }
       
-      // Exclude specific trails by name
       if (excludedFromBarilochieMultiDay.includes(trail.name)) {
         return false;
       }
       
-      // Exclude specific trails by ID (most reliable method)
       if (excludedTrailIds.includes(trail.id)) {
         return false;
       }
@@ -212,7 +207,6 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     }
     
     barilochieMultiDayTrailIds.forEach(id => {
-      // Skip excluded IDs and the Jakob trails which are added separately
       if (id === "11" || id === "12" || excludedTrailIds.includes(id)) return;
       
       const alreadyIncluded = result.some(t => t.id === id);
@@ -229,30 +223,26 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
 
   const categoryBarilochieHikes = useMemo(() => {
     return allTrails.filter(trail => {
-      // Filter out Pampa Linda trails
-      if (["14", "15", "16"].includes(trail.id)) {
+      if (pampLindaTrailIds.includes(trail.id)) {
         return false;
       }
       
-      // Filter out trails in pampLindaHikes
       if (pampLindaHikes.some(plTrail => plTrail.id === trail.id)) {
         return false;
       }
       
-      // Filter out excluded trails by name
       if (excludedFromBarilochieMultiDay.includes(trail.name)) {
         return false;
       }
       
-      // Filter out excluded trails by ID - most reliable method
       if (excludedTrailIds.includes(trail.id)) {
         return false;
       }
       
       return true;
     });
-  }, [allTrails, pampLindaHikes, excludedTrailIds]);
-  
+  }, [allTrails, pampLindaHikes]);
+
   const categoryPampLindaHikes = useMemo(() => {
     return allTrails.filter(trail => 
       pampLindaHikes.some(plTrail => plTrail.id === trail.id) ||
