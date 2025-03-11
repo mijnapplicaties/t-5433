@@ -15,6 +15,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   const pampLindaTrailIds = ['12', '13a', '14a'];
   
   // Add specific IDs for trails that should be included in Bariloche multi-day hikes
+  // Adding "Jakob" to make sure the Refugio Jakob trail is included
   const barilochieMultiDayTrailIds = ['15', '16', '17', '13', '14', '11', '7'];
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
@@ -114,7 +115,8 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     const missingTrailNames = [
       'Refugio López', 
       'Travesía Cerro López - Laguna Negra',
-      'Refugio Jakob'
+      'Refugio Jakob',
+      'Jakob'
     ];
     
     missingTrailNames.forEach(name => {

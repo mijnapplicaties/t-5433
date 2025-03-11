@@ -43,6 +43,12 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
     trail.name.toLowerCase().includes('agostino rocca')
   );
   
+  // If Jakob is not found, add it to the console for debug
+  if (!hasJakob && process.env.NODE_ENV === 'development') {
+    console.log('Jakob trail not found in otherMultiDayHikes');
+    console.log('Available trails:', otherMultiDayHikes.map(t => t.name));
+  }
+  
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-forest mb-6">{t('filterMultiDay')}</h2>
@@ -70,6 +76,7 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
               <p>Found Travesía: {hasTraversia ? 'Yes' : 'No'}</p>
               <p>Found Laguna Negra: {hasLagunaNegra ? 'Yes' : 'No'}</p>
               <p>Total trails: {otherMultiDayHikes.length}</p>
+              <p>Trail names: {otherMultiDayHikes.map(t => t.name).join(', ')}</p>
             </div>
           )}
         </div>
