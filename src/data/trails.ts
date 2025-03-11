@@ -275,4 +275,12 @@ export const trails: Trail[] = [
       fr: "Une promenade courte et agréable vers une plage isolée sur le Lago Gutiérrez aux eaux cristallines. Le sentier commence directement du Camping Los Coihues et suit le rivage à travers la forêt native. Parfait pour une baignade rafraîchissante en été.",
       de: "Ein kurzer, angenehmer Spaziergang zu einem abgelegenen Strand am Lago Gutiérrez mit kristallklarem Wasser. Der Weg beginnt direkt vom Camping Los Coihues und folgt dem Seeufer durch den heimischen Wald. Perfekt für ein erfrischendes Bad im Sommer."
     },
-    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f
+    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png",
+    startingPoint: "Camping Los Coihues (direct access)",
+    highlights: ["highlightLakeViews", "highlightBeachAccess", "highlightNativeForest"],
+    transportation: ["walking"],
+    distanceFromCampsite: 0,
+    travelTime: 0,
+    category: "walking-path"
+  }
+];
