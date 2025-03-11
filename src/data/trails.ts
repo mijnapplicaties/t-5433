@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -326,6 +327,30 @@ export const trails: Trail[] = [
     imageUrl: "/lovable-uploads/c2cfed37-332c-49bb-8f26-e701a5a11d48.png",
     startingPoint: "Pampa Linda (2 hrs drive from Los Coihues)",
     highlights: ["highlightGlacier", "highlightMountainRefuge", "highlightTronadorMountain"],
+    transportation: ["private-transfer", "taxi"],
+    distanceFromCampsite: 80,
+    travelTime: 120,
+    category: "high-mountain",
+    region: "pampa-linda"
+  },
+  {
+    id: "15",
+    name: "Laguna Ilón",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 14,
+    duration: 4.5,
+    elevation: 1385,
+    requiresReservation: false,
+    description: {
+      en: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda, transitando el mismo sendero que lleva al refugio Otto Meiling. Luego de caminar 300 metros tomar un desvío hacia la derecha y luego de 15 minutos de marcha se llega al río Alerce, que se cruza por un puente colgante. \n\nTodo el camino está bien señalizado e inicia con una pendiente muy pronunciada hasta el cartel \"Laguna Ilón 2 horas\". Luego se continúa por un terreno relativamente plano.\n\nDesde Laguna Ilón, se puede ir hacia Mirada Del Doctor.",
+      es: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda, transitando el mismo sendero que lleva al refugio Otto Meiling. Luego de caminar 300 metros tomar un desvío hacia la derecha y luego de 15 minutos de marcha se llega al río Alerce, que se cruza por un puente colgante. \n\nTodo el camino está bien señalizado e inicia con una pendiente muy pronunciada hasta el cartel \"Laguna Ilón 2 horas\". Luego se continúa por un terreno relativamente plano.\n\nDesde Laguna Ilón, se puede ir hacia Mirada Del Doctor.",
+      fr: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda.",
+      de: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda."
+    },
+    imageUrl: "/lovable-uploads/433086966358-54859d0ed716.png",
+    startingPoint: "Pampa Linda (2 hrs drive from Los Coihues)",
+    highlights: ["highlightAlpineLake", "highlightTronadorMountain", "highlightSuspensionBridge"],
     transportation: ["private-transfer", "taxi"],
     distanceFromCampsite: 80,
     travelTime: 120,
