@@ -309,5 +309,31 @@ export const trails: Trail[] = [
     busLines: "",
     category: "high-mountain",
     region: "pampa-linda"
+  },
+  {
+    id: "14",
+    name: "Laguna Ilón",
+    type: "multi-day",
+    difficulty: "moderate",
+    distance: 12,
+    duration: 4,
+    elevation: 1500,
+    requiresReservation: false,
+    description: {
+      en: "Starting from Pampa Linda, this trail leads to the pristine Laguna Ilón. The path winds through ancient forests and alpine meadows, offering spectacular views of Mount Tronador and its glaciers. This less-traveled route provides a peaceful hiking experience culminating at the beautiful alpine lake.",
+      es: "Comenzando desde Pampa Linda, este sendero conduce a la prístina Laguna Ilón. El camino serpentea a través de bosques antiguos y praderas alpinas, ofreciendo vistas espectaculares del Monte Tronador y sus glaciares. Esta ruta menos transitada proporciona una experiencia de senderismo tranquila que culmina en el hermoso lago alpino.",
+      fr: "Partant de Pampa Linda, ce sentier mène au lac pristine Ilón. Le chemin serpente à travers des forêts anciennes et des prairies alpines, offrant des vues spectaculaires sur le Mont Tronador et ses glaciers. Cette route moins fréquentée offre une expérience de randonnée paisible culminant au magnifique lac alpin.",
+      de: "Von Pampa Linda aus führt dieser Weg zum unberührten Laguna Ilón. Der Pfad schlängelt sich durch alte Wälder und alpine Wiesen und bietet spektakuläre Ausblicke auf den Mount Tronador und seine Gletscher. Diese weniger begangene Route bietet ein friedliches Wandererlebnis, das an dem wunderschönen Alpensee gipfelt."
+    },
+    imageUrl: "/lovable-uploads/3dda568d-50dc-4f15-af17-7744f417603c.png",
+    startingPoint: "Pampa Linda",
+    highlights: ["highlightAlpineLake", "highlightGlaciers", "highlightPristineNature"],
+    transportation: ["private-transfer"],
+    distanceFromCampsite: 120,
+    travelTime: 120,
+    busLines: "",
+    category: "high-mountain",
+    region: "pampa-linda"
   }
 ];
+
