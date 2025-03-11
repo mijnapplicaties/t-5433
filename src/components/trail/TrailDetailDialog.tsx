@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Trail } from '../../types/trail';
 import { MapPin } from 'lucide-react';
@@ -52,8 +51,8 @@ const TrailDetailDialog: React.FC<TrailDetailDialogProps> = ({
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <TrailStats trail={trail} layout="column" size="lg" />
+          <div className="mb-6">
+            <TrailStats trail={trail} size="lg" />
           </div>
           
           <div className="mb-6">
