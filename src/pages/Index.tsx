@@ -59,7 +59,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
       <LanguageSwitcher />
       <div className="container mx-auto px-4 py-8">
-        <header className="text-center mb-12 animate-fadeIn">
+        <header className="text-center mb-12 animate-fadeIn pt-12 sm:pt-0">
           <div className="flex justify-center mb-6">
             <img 
               src="/lovable-uploads/18170e0a-a211-46c5-97e6-3a78c27402e0.png"
