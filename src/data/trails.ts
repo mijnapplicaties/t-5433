@@ -50,7 +50,7 @@ export const trails: Trail[] = [
   },
   {
     id: "3",
-    name: "Refugio Frey-Jakob Circuit",
+    name: "Travesía Frey-Jakob",
     type: "multi-day",
     difficulty: "hard",
     distance: 9,
@@ -381,4 +381,3 @@ export const trails: Trail[] = [
     region: "pampa-linda"
   }
 ];
-
