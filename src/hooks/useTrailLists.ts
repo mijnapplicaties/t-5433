@@ -39,6 +39,7 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     };
   }, [freyTrail]);
   
+  // Keep the freyTrailForMultiDay but we won't add it to the result
   const freyTrailForMultiDay = useMemo(() => {
     if (!freyTrail) return null;
     return {
@@ -245,14 +246,9 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       }
     });
     
-    // Add the multi-day version of Frey to the result set if not already present
-    if (freyTrailForMultiDay && !result.some(trail => trail.id === "1-multi" || trail.name === "Refugio Frey Multi-Day")) {
-      result.unshift(freyTrailForMultiDay);
-    }
-    
     return result.filter(trail => trail.id !== "12" && trail.name !== "Playa Muñoz");
-  }, [multiDayHikes, pampLindaHikes, allTrails, jakobCircuitTrail, jakobTamboTrail, excludedTrailIds, freyTrailForMultiDay]);
-
+  }, [multiDayHikes, pampLindaHikes, allTrails, jakobCircuitTrail, jakobTamboTrail, excludedTrailIds]);
+  
   const categoryBarilochieHikes = useMemo(() => {
     return allTrails.filter(trail => {
       if (pampLindaTrailIds.includes(trail.id)) {
