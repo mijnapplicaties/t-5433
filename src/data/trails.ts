@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -356,5 +355,30 @@ export const trails: Trail[] = [
     travelTime: 120,
     category: "high-mountain",
     region: "pampa-linda"
+  },
+  {
+    id: "16",
+    name: "Refugio Agostino Rocca",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 14,
+    duration: 5,
+    elevation: 1432,
+    requiresReservation: true,
+    description: {
+      en: "A pocos metros de la casa del Guardaparque, verás un cartel, una huella de auto y una tranquera que marcan el inicio del sendero. La picada al refugio comienza en Pampa Linda, a 80 km de Bariloche.\nEl recorrido es muy pintoresco, cruzando ríos y bordeando el río Alerce. La última parte del sendero, conocida como \"El Caracol\", debe su nombre a su trazado zigzagueante y empinado. El camino está bien señalizado y sigue en gran parte el curso del río Alerce.\n\nLos primeros 3 kilómetros transcurren en terreno casi plano hasta llegar al puente que cruza el río Castaño Overa. A partir de allí, comienza el ascenso. Más adelante, se toma un desvío a la derecha con indicaciones hacia el Paso de las Nubes, el Refugio Agostino Rocca y el lago Frías. Luego de 700 metros, el sendero llega a la orilla del río Alerce, que se bordea por unos 5 kilómetros hasta cruzarlo por un puente.\n\nEl camino continúa rodeando un mallín por la izquierda, donde la pendiente se hace más pronunciada hasta llegar a la subida en zigzag. Tras superarla, el sendero se vuelve más suave, atravesando pequeños cañadones de piedra y mallines hasta alcanzar un amplio mallín de pastos verdes. Desde allí, en lo alto, ya se puede divisar el refugio.\nAtravesando el mallín y siguiendo las marcas que ascienden hacia la izquierda, en aproximadamente cinco minutos se llega al refugio.\n\nEl Refugio Agostino Rocca, construido por el Club Andino Bariloche, se encuentra a 1.432 metros sobre el nivel del mar, en la ladera este del cerro Tronador, en la zona conocida como Paso de las Nubes.\nEstá abastecido de energía hidroeléctrica mediante una turbina ubicada en un cauce de agua a 500 metros. Tiene capacidad para 80 personas distribuidas en 10 habitaciones y cuenta con sala de enfermería, área para refugieros, depósitos, duchas y una cocina para visitantes, donde cada caminante puede preparar su propia comida.\n\nDesde el refugio se pueden apreciar vistas imponentes de los cerros Constitución y Parque, el glaciar Frías, los picos Argentino y Chileno del cerro Tronador, y una panorámica del valle atravesado por los ríos Alerce y Frías.",
+      es: "A pocos metros de la casa del Guardaparque, verás un cartel, una huella de auto y una tranquera que marcan el inicio del sendero. La picada al refugio comienza en Pampa Linda, a 80 km de Bariloche.\nEl recorrido es muy pintoresco, cruzando ríos y bordeando el río Alerce. La última parte del sendero, conocida como \"El Caracol\", debe su nombre a su trazado zigzagueante y empinado. El camino está bien señalizado y sigue en gran parte el curso del río Alerce.\n\nLos primeros 3 kilómetros transcurren en terreno casi plano hasta llegar al puente que cruza el río Castaño Overa. A partir de allí, comienza el ascenso. Más adelante, se toma un desvío a la derecha con indicaciones hacia el Paso de las Nubes, el Refugio Agostino Rocca y el lago Frías. Luego de 700 metros, el sendero llega a la orilla del río Alerce, que se bordea por unos 5 kilómetros hasta cruzarlo por un puente.\n\nEl camino continúa rodeando un mallín por la izquierda, donde la pendiente se hace más pronunciada hasta llegar a la subida en zigzag. Tras superarla, el sendero se vuelve más suave, atravesando pequeños cañadones de piedra y mallines hasta alcanzar un amplio mallín de pastos verdes. Desde allí, en lo alto, ya se puede divisar el refugio.\nAtravesando el mallín y siguiendo las marcas que ascienden hacia la izquierda, en aproximadamente cinco minutos se llega al refugio.\n\nEl Refugio Agostino Rocca, construido por el Club Andino Bariloche, se encuentra a 1.432 metros sobre el nivel del mar, en la ladera este del cerro Tronador, en la zona conocida como Paso de las Nubes.\nEstá abastecido de energía hidroeléctrica mediante una turbina ubicada en un cauce de agua a 500 metros. Tiene capacidad para 80 personas distribuidas en 10 habitaciones y cuenta con sala de enfermería, área para refugieros, depósitos, duchas y una cocina para visitantes, donde cada caminante puede preparar su propia comida.\n\nDesde el refugio se pueden apreciar vistas imponentes de los cerros Constitución y Parque, el glaciar Frías, los picos Argentino y Chileno del cerro Tronador, y una panorámica del valle atravesado por los ríos Alerce y Frías.",
+      fr: "El sendero comienza en Pampa Linda, a 80 km de Bariloche.",
+      de: "El sendero comienza en Pampa Linda, a 80 km de Bariloche."
+    },
+    imageUrl: "/lovable-uploads/5e6c44cc-a8c6-4013-8464-49f82efa40fc.png",
+    startingPoint: "Pampa Linda (2 hrs drive from Los Coihues)",
+    highlights: ["highlightMountainRefuge", "highlightRiverCrossings", "highlightTronadorMountain"],
+    transportation: ["private-transfer", "taxi"],
+    distanceFromCampsite: 80,
+    travelTime: 120,
+    category: "high-mountain",
+    region: "pampa-linda"
   }
 ];
+

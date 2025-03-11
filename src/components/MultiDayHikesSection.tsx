@@ -39,6 +39,9 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
   const hasLagunaIlon = pampLindaHikes.find(trail => 
     trail.name.toLowerCase().includes('laguna ilón') || trail.name.toLowerCase().includes('laguna ilon')
   );
+  const hasAgostinoRocca = pampLindaHikes.find(trail => 
+    trail.name.toLowerCase().includes('agostino rocca')
+  );
   
   return (
     <div className="mb-12">
@@ -91,6 +94,7 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
               <p>Debug - Pampa Linda trails:</p>
               <p>Found Otto Meiling: {hasOttoMeiling ? 'Yes' : 'No'}</p>
               <p>Found Laguna Ilón: {hasLagunaIlon ? 'Yes' : 'No'}</p>
+              <p>Found Agostino Rocca: {hasAgostinoRocca ? 'Yes' : 'No'}</p>
               <p>Total trails: {pampLindaHikes.length}</p>
             </div>
           )}
