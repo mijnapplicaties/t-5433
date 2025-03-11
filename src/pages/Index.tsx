@@ -13,6 +13,9 @@ import BeachesSection from '../components/BeachesSection';
 import { useTrailFilters } from '../hooks/useTrailFilters';
 import { useTrailLists } from '../hooks/useTrailLists';
 
+// Trails to exclude from category views
+const excludedTrailNames = ['Playa Muñoz', 'Cascada de los Duendes'];
+
 const Index = () => {
   const { t } = useLanguage();
   
@@ -40,15 +43,17 @@ const Index = () => {
   const shouldShowMultiDayHikes = filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'multi-day');
   const shouldShowCategorySection = filters.selectedCategory !== 'all' && filters.selectedCategory !== 'beaches-lakes';
 
-  // Filter category hikes by category
+  // Filter category hikes by category, excluding specific trails
   const categoryHikes = allHikes.filter(trail => 
-    filters.selectedCategory === 'all' || trail.category === filters.selectedCategory
+    (filters.selectedCategory === 'all' || trail.category === filters.selectedCategory) &&
+    !excludedTrailNames.includes(trail.name)
   );
 
   // Create region-specific groups for the category section
   const categoryRegionHikes = {
     bariloche: categoryBarilochieHikes.filter(trail => 
-      filters.selectedCategory === 'all' || trail.category === filters.selectedCategory
+      (filters.selectedCategory === 'all' || trail.category === filters.selectedCategory) &&
+      !excludedTrailNames.includes(trail.name)
     ),
     pampLinda: categoryPampLindaHikes.filter(trail => 
       filters.selectedCategory === 'all' || trail.category === filters.selectedCategory

@@ -33,14 +33,18 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
     (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('tambo'))
   );
 
-  // Check for the trails that should only be in Pampa Linda
+  // Check for trails that should be in Pampa Linda only
   const hasAgostinoRocca = otherMultiDayHikes.find(trail => trail.id === "16");
   const hasOttoMeiling = otherMultiDayHikes.find(trail => trail.id === "14");
   const hasLagunaIlon = otherMultiDayHikes.find(trail => trail.id === "15");
   
-  // Check for trails that should be excluded
+  // Check for trails that should be excluded completely from multi-day
   const hasPlayaMunoz = otherMultiDayHikes.find(trail => trail.name === "Playa Muñoz");
   const hasCascadaDuendes = otherMultiDayHikes.find(trail => trail.name === "Cascada de los Duendes");
+  
+  // Get IDs of excluded trails for debugging
+  const playaMunozId = otherMultiDayHikes.find(trail => trail.name === "Playa Muñoz")?.id;
+  const cascadaDuendesId = otherMultiDayHikes.find(trail => trail.name === "Cascada de los Duendes")?.id;
   
   // Log for debugging
   console.log('Agostino Rocca in Bariloche:', hasAgostinoRocca ? 'Yes (ERROR)' : 'No (CORRECT)');
@@ -48,6 +52,8 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
   console.log('Laguna Ilón in Bariloche:', hasLagunaIlon ? 'Yes (ERROR)' : 'No (CORRECT)');
   console.log('Playa Muñoz in Bariloche:', hasPlayaMunoz ? 'Yes (ERROR)' : 'No (CORRECT)');
   console.log('Cascada de los Duendes in Bariloche:', hasCascadaDuendes ? 'Yes (ERROR)' : 'No (CORRECT)');
+  console.log('Playa Muñoz ID:', playaMunozId || 'Not found');
+  console.log('Cascada de los Duendes ID:', cascadaDuendesId || 'Not found');
   
   return (
     <div className="mb-12">

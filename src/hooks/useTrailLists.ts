@@ -1,4 +1,3 @@
-
 import { useMemo } from 'react';
 import { Trail, TrailType } from '../types/trail';
 
@@ -16,8 +15,21 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   
   const barilochieMultiDayTrailIds = ['17', '11', '7', '18'];
 
-  // Remove Playa Muñoz and Cascada de los Duendes from multi-day sections
+  // Trails that should be excluded from multi-day sections
   const excludedFromBarilochieMultiDay = ['Playa Muñoz', 'Cascada de los Duendes'];
+  
+  // List of trail IDs that should be excluded
+  const excludedTrailIds = [];
+
+  // Find IDs for excluded trails by name
+  useMemo(() => {
+    excludedFromBarilochieMultiDay.forEach(name => {
+      const trail = allTrails.find(t => t.name === name);
+      if (trail) {
+        excludedTrailIds.push(trail.id);
+      }
+    });
+  }, [allTrails]);
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
   
@@ -182,6 +194,11 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
         return false;
       }
       
+      // Also exclude by ID (more reliable)
+      if (excludedTrailIds.includes(trail.id)) {
+        return false;
+      }
+      
       return true;
     });
     
@@ -218,14 +235,33 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     });
     
     return result;
-  }, [multiDayHikes, pampLindaHikes, allTrails, jakobCircuitTrail, jakobTamboTrail]);
+  }, [multiDayHikes, pampLindaHikes, allTrails, jakobCircuitTrail, jakobTamboTrail, excludedTrailIds]);
 
   const categoryBarilochieHikes = useMemo(() => {
-    return allTrails.filter(trail => 
-      !["14", "15", "16"].includes(trail.id) && 
-      !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
-    );
-  }, [allTrails, pampLindaHikes]);
+    return allTrails.filter(trail => {
+      // Filter out Pampa Linda trails
+      if (["14", "15", "16"].includes(trail.id)) {
+        return false;
+      }
+      
+      // Filter out trails in pampLindaHikes
+      if (pampLindaHikes.some(plTrail => plTrail.id === trail.id)) {
+        return false;
+      }
+      
+      // Filter out excluded trails by name
+      if (excludedFromBarilochieMultiDay.includes(trail.name)) {
+        return false;
+      }
+      
+      // Filter out excluded trails by ID
+      if (excludedTrailIds.includes(trail.id)) {
+        return false;
+      }
+      
+      return true;
+    });
+  }, [allTrails, pampLindaHikes, excludedTrailIds]);
   
   const categoryPampLindaHikes = useMemo(() => {
     return allTrails.filter(trail => 
