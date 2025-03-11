@@ -19,8 +19,12 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     'Laguna Ilón'
   ];
   
-  const barilochieMultiDayTrailIds = ['15', '16', '17', '3', '11', '7'];
-  const jakobTrailIds = ['11', '12'];
+  // Added Refugio San Martin Jakob to ensure it's included
+  const barilochieMultiDayTrailIds = ['15', '16', '17', '3', '11', '7', '8'];
+  const jakobTrailIds = ['11', '12', '8'];
+  
+  // Specific ID for San Martin Jakob to ensure it's included
+  const sanMartinJakobId = '8';
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
   
@@ -204,10 +208,31 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       result.push(jakobTamboTrail);
     }
     
+    // Specifically check for San Martin Jakob
+    const hasSanMartinJakob = result.some(trail => 
+      trail.id === sanMartinJakobId || 
+      trail.name.toLowerCase().includes('san martin jakob') || 
+      (trail.name.toLowerCase().includes('san martin') && trail.name.toLowerCase().includes('jakob'))
+    );
+
+    // If San Martin Jakob is not in the result array, find it in allTrails and add it
+    if (!hasSanMartinJakob) {
+      const sanMartinJakobTrail = allTrails.find(trail => 
+        trail.id === sanMartinJakobId || 
+        trail.name.toLowerCase().includes('san martin jakob') || 
+        (trail.name.toLowerCase().includes('san martin') && trail.name.toLowerCase().includes('jakob'))
+      );
+
+      if (sanMartinJakobTrail) {
+        console.log('Adding San Martin Jakob trail to otherMultiDayHikes:', sanMartinJakobTrail);
+        result.push(sanMartinJakobTrail);
+      }
+    }
+    
     // Ensure other Bariloche multi-day trails are included
     barilochieMultiDayTrailIds.forEach(id => {
       // Skip Jakob trails that were already added above
-      if (jakobTrailIds.includes(id)) return;
+      if (jakobTrailIds.includes(id) && id !== sanMartinJakobId) return;
       
       const alreadyIncluded = result.some(t => t.id === id);
       if (!alreadyIncluded) {
@@ -233,7 +258,8 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     jakobCircuitTrail, 
     jakobTamboTrail, 
     barilochieMultiDayTrailIds,
-    jakobTrailIds
+    jakobTrailIds,
+    sanMartinJakobId
   ]);
 
   const categoryBarilochieHikes = useMemo(() => {
