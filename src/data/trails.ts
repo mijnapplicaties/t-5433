@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -420,7 +421,7 @@ export const trails: Trail[] = [
       fr: "Cette randonnée exigeante de haute montagne offre des vues panoramiques impressionnantes du Parc National Nahuel Huapi et des lacs environnants. Le sentier commence à Villa Tacul et monte abruptement à travers la forêt native avant d'atteindre un terrain rocheux plus exposé à des altitudes plus élevées. Le refuge est perché à 1 620 mètres d'altitude, offrant un abri pour les randonneurs qui passent la nuit et des vues spectaculaires du lever du soleil sur le paysage andin.",
       de: "Diese anspruchsvolle Hochgebirgswanderung bietet atemberaubende Panoramablicke auf den Nahuel Huapi Nationalpark und die umliegenden Seen. Der Weg beginnt in Villa Tacul und steigt steil durch einheimischen Wald an, bevor er in höheren Lagen felsigeres, exponiertes Gelände erreicht. Die Schutzhütte liegt auf 1.620 Metern Höhe und bietet Unterkunft für Übernachtungswanderer und spektakuläre Sonnenaufgangsblicke über die Andenlandschaft."
     },
-    imageUrl: "/lovable-uploads/6d9b3452-7edd-47fa-a936-024b5bf05aa3.png",
+    imageUrl: "/lovable-uploads/18aa5c8f-d10c-4295-a1d7-665ad54ba5c5.png",
     startingPoint: "Villa Tacul (30 min drive from Los Coihues)",
     highlights: ["highlightPanoramicViews", "highlightMountainRefuge", "highlightHighMountainPasses", "highlightNativeForest"],
     transportation: ["bus", "taxi", "private-transfer"],

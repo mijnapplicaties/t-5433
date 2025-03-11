@@ -29,11 +29,15 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   
   const isJakobRefugioTrail = trail.id === "17" || 
     trail.name === "Refugio San Martin Jakob";
+    
+  const isRefugioCerroLopez = trail.id === "18" || 
+    trail.name === "Refugio Cerro López";
   
   const getDefaultImage = () => {
     if (isJakobCircuitTrail) return "/lovable-uploads/3b45435b-d0d0-4fb7-ac3b-73c18e21fd50.png";
     if (isJakobTamboTrail) return "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png";
     if (isJakobRefugioTrail) return "/lovable-uploads/8f08a419-86bc-49e3-8707-015d86806c3e.png";
+    if (isRefugioCerroLopez) return "/lovable-uploads/18aa5c8f-d10c-4295-a1d7-665ad54ba5c5.png";
     return "/placeholder.svg";
   };
   
