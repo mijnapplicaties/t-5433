@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Trail } from '../types/trail';
 import { useLanguage } from '../context/LanguageContext';
@@ -49,8 +50,6 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
           {process.env.NODE_ENV === 'development' && (
             <div className="mt-4 p-2 bg-gray-100 text-xs">
               <p>Debug - Bariloche multi-day hikes:</p>
-              <p>Found Jakob Circuit (id=11): {hasJakobCircuit ? 'Yes' : 'No'}</p>
-              <p>Found Jakob Tambo (id=12): {hasJakobTambo ? 'Yes' : 'No'}</p>
               <p>Total trails: {otherMultiDayHikes.length}</p>
               <p>Trail IDs: {otherMultiDayHikes.map(t => t.id).join(', ')}</p>
               <p>Trail names: {otherMultiDayHikes.map(t => t.name).join(', ')}</p>
