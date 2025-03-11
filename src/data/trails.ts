@@ -282,5 +282,29 @@ export const trails: Trail[] = [
     distanceFromCampsite: 0,
     travelTime: 0,
     category: "walking-path"
+  },
+  {
+    id: "13",
+    name: "Refugio López",
+    type: "day-hike",
+    difficulty: "moderate",
+    distance: 9.5,
+    duration: 2,
+    elevation: 1614,
+    requiresReservation: true,
+    description: {
+      en: "Take bus line 10 from Av. Bustillo or downtown as it sometimes gets full. Alternatively, take bus 20 or any other that leaves you at km 18 of Av. Bustillo, and from there, sharing an Uber is inexpensive. The trail begins at the 'La Panchería' stand in Circuito Chico. The trail offers beautiful panoramic views of Nahuel Huapi lake. The path is easy to follow but steep from the start. Shortly after passing Refugio Roca Negra, the trail joins a road and becomes physically less demanding until just before the refuge, where you'll see an incredible view.",
+      es: "Tenes que tomarte la línea 10 desde Av. Bustillo o el centro porque a veces viene lleno. Sino, tomate el 20 o cualquiera que te deje en el km 18 de Av. Bustillo y desde ahí, compartir un Uber es barato. El sendero comienza donde está el puestito de 'la Panchería' en el Circuito Chico. Sendero con muy lindas vistas panorámicas al Nahuel Huapi. El sendero es fácil de seguir pero empinado de una. Un poco después de pasar por el refugio Roca Negra el sendero se une a un camino y ya no tiene ninguna exigencia física hasta un poquito antes del refugio donde se ve una vista increíble.",
+      fr: "Prenez la ligne de bus 10 depuis Av. Bustillo ou le centre-ville car elle est parfois pleine. Alternativement, prenez le bus 20 ou tout autre qui vous laisse au km 18 de Av. Bustillo, et de là, partager un Uber est peu coûteux. Le sentier commence au stand 'La Panchería' dans le Circuito Chico. Le sentier offre de belles vues panoramiques sur le lac Nahuel Huapi. Le chemin est facile à suivre mais raide dès le début. Peu après avoir passé le Refugio Roca Negra, le sentier rejoint une route et devient physiquement moins exigeant jusqu'à juste avant le refuge, où vous verrez une vue incroyable.",
+      de: "Nehmen Sie die Buslinie 10 von der Av. Bustillo oder dem Stadtzentrum, da sie manchmal voll ist. Alternativ nehmen Sie den Bus 20 oder einen anderen, der Sie am km 18 der Av. Bustillo absetzt, und von dort aus ist das Teilen eines Ubers günstig. Der Weg beginnt am 'La Panchería'-Stand im Circuito Chico. Der Weg bietet schöne Panoramablicke auf den Nahuel Huapi-See. Der Pfad ist leicht zu folgen, aber vom Start an steil. Kurz nach dem Passieren des Refugio Roca Negra verbindet sich der Weg mit einer Straße und wird körperlich weniger anspruchsvoll bis kurz vor der Schutzhütte, wo Sie eine unglaubliche Aussicht haben werden."
+    },
+    imageUrl: "/lovable-uploads/a210f1ff-a5c5-4288-a37a-33d461911db7.png",
+    startingPoint: "La Panchería in Circuito Chico (45 min by bus from Los Coihues)",
+    highlights: ["highlightPanoramicViews", "highlightMountainRefuge", "highlightNativeForest"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 18,
+    travelTime: 45,
+    busLines: "Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8) hasta la Panchería del Circuito Chico (45 min)",
+    category: "high-mountain"
   }
 ]
