@@ -23,7 +23,7 @@ export const translations: Translation = {
   },
   tagline: {
     en: "Discover Patagonia's Wonders",
-    es: "Descubre las Maravillas de la Patagonia",
+    es: "Descubre Patagonia",
     fr: "Découvrez les Merveilles de la Patagonie",
     de: "Entdecken Sie die Wunder Patagoniens",
   },
