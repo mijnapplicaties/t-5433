@@ -4,7 +4,6 @@ import { Badge } from './ui/badge';
 import { Map, Mountain, FootprintsIcon, TreePine, Waves, Filter } from 'lucide-react';
 import { TrailCategory } from '../types/trail';
 import { useLanguage } from '../context/LanguageContext';
-import { Button } from './ui/button';
 
 interface CategoryFilterProps {
   selectedCategory: TrailCategory | 'all';
@@ -80,17 +79,14 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
             {t('categoryBeachesLakes')}
           </Badge>
           
-          {/* Replace Badge with Button for filter button to make it more distinct */}
-          <div className="w-full sm:w-auto mt-3 sm:mt-0">
-            <Button 
-              variant="outline" 
-              className="w-full sm:w-auto cursor-pointer border-forest text-forest hover:bg-forest hover:text-white"
-              onClick={() => setFiltersOpen(true)}
-            >
-              <Filter className="w-4 h-4 mr-2" />
-              {t('filters')}
-            </Button>
-          </div>
+          <Badge 
+            variant="outline" 
+            className="cursor-pointer text-base border-black"
+            onClick={() => setFiltersOpen(true)}
+          >
+            <Filter className="w-4 h-4 mr-1" />
+            {t('filters')}
+          </Badge>
         </div>
       </div>
     </div>
