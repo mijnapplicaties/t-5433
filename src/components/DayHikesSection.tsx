@@ -28,7 +28,7 @@ const DayHikesSection: React.FC<DayHikesSectionProps> = ({
       
       {directAccessHikes.length > 0 && (
         <div className="mb-8">
-          <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+          <h3 className="text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
             {t('accessibilityDirect')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -46,7 +46,7 @@ const DayHikesSection: React.FC<DayHikesSectionProps> = ({
       {otherDayHikes.length > 0 && (
         <div>
           {directAccessHikes.length > 0 && (
-            <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+            <h3 className="text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
               {t('nearByBusOrUber')}
             </h3>
           )}
