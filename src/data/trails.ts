@@ -259,20 +259,5 @@ export const trails: Trail[] = [
     distanceFromCampsite: 0,
     travelTime: 0,
     category: "easy-mountain"
-  },
-  {
-    id: "12",
-    name: "Playa Muñoz",
-    type: "day-hike",
-    difficulty: "easy",
-    distance: 8,
-    duration: 1.5,
-    elevation: 900,
-    requiresReservation: false,
-    description: {
-      en: "A short, pleasant walk to a secluded beach on Lago Gutiérrez with crystal clear waters. The trail starts directly from Camping Los Coihues and follows the lakeshore through the native forest. Perfect for a refreshing swim in summer.",
-      es: "Una caminata corta y agradable a una playa aislada en el Lago Gutiérrez con aguas cristalinas. El sendero comienza directamente desde Camping Los Coihues y sigue la costa del lago a través del bosque nativo. Perfecto para un refrescante baño en verano.",
-      fr: "Une promenade courte et agréable vers une plage isolée sur le Lago Gutiérrez aux eaux cristallines. Le sentier commence directement du Camping Los Coihues et suit le rivage à travers la forêt native. Parfait pour une baignade rafraîchissante en été.",
-      de: "Ein kurzer, angenehmer Spaziergang zu einem abgelegenen Strand am Lago Gutiérrez mit kristallklarem Wasser. Der Weg beginnt direkt vom Camping Los Coihues und folgt dem Seeufer durch den heimischen Wald. Perfekt für ein erfrischendes Bad im Sommer."
-    },
-    imageUrl: "/lovable-uploads/1f998a53-3c5b-4
+  }
+]

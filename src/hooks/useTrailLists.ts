@@ -6,7 +6,6 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     'Cascada de los Duendes',
     'Mirador Lago Gutiérrez',
     'Cerro San Martín',
-    'Playa Muñoz',
     'Refugio Frey',
     'Lago Gutiérrez'
   ];
