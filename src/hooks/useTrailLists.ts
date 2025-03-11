@@ -1,3 +1,4 @@
+
 import { useMemo } from 'react';
 import { Trail, TrailType } from '../types/trail';
 
@@ -7,7 +8,8 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     'Mirador Lago Gutiérrez',
     'Cerro San Martín',
     'Refugio Frey',
-    'Lago Gutiérrez'
+    'Lago Gutiérrez',
+    'Playa Muñoz'
   ];
 
   const pampLindaTrailIds = ['12', '13', '14', '15', '16'];
