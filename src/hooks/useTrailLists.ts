@@ -36,7 +36,8 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   
   const directAccessHikes = useMemo(() => {
     const hikes = dayHikes.filter(trail => 
-      directAccessTrailNames.includes(trail.name) && trail.id !== "1"
+      directAccessTrailNames.includes(trail.name) && trail.id !== "1" && 
+      (trail.name !== "Cascada de los Duendes" || trail.category !== "high-mountain")
     );
     
     if (freyTrailForDirectAccess) {
@@ -165,19 +166,19 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
     );
     
+    // Create a new array with our modifications
+    const result = [...hikes];
+    
     // Check for both trails
-    const hasJakobCircuit = hikes.some(trail => 
+    const hasJakobCircuit = result.some(trail => 
       trail.id === "11" || 
       (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('frey'))
     );
     
-    const hasJakobTambo = hikes.some(trail => 
+    const hasJakobTambo = result.some(trail => 
       trail.id === "12" || 
       (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('tambo'))
     );
-    
-    // Create a new array with our modifications
-    const result = [...hikes];
     
     // Add Jakob Circuit if not present
     if (!hasJakobCircuit) {
