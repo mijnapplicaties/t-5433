@@ -72,6 +72,13 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
               />
             ))}
           </div>
+          {process.env.NODE_ENV === 'development' && (
+            <div className="mt-4 p-2 bg-gray-100 text-xs">
+              <p>Debug - Pampa Linda multi-day hikes:</p>
+              <p>Total trails: {pampLindaHikes.length}</p>
+              <p>Trail IDs: {pampLindaHikes.map(t => t.id).join(', ')}</p>
+            </div>
+          )}
         </div>
       )}
     </div>

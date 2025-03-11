@@ -10,9 +10,9 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
     'Lago Gutiérrez'
   ];
 
-  const pampLindaTrailIds = ['12', '13a', '14a', '13', '14'];
+  const pampLindaTrailIds = ['12', '13', '14'];
   
-  const barilochieMultiDayTrailIds = ['15', '16', '17', '13', '14', '11', '7', '17'];
+  const barilochieMultiDayTrailIds = ['15', '16', '17', '3', '11', '7'];
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
   
@@ -73,19 +73,30 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   ];
 
   const pampLindaHikes = useMemo(() => {
-    return multiDayHikes.filter(trail => 
-      trail.region === 'pampa-linda' ||
-      pampLindaTrailNames.includes(trail.name) ||
-      trail.name.toLowerCase().includes('pampa linda') || 
-      trail.name.toLowerCase().includes('meiling') ||
-      trail.name.toLowerCase().includes('tronador') ||
-      trail.name.toLowerCase().includes('laguna negra') ||
-      trail.startingPoint?.toLowerCase().includes('pampa linda') ||
-      trail.name.toLowerCase().includes('5 lagunas') ||
-      trail.name.toLowerCase().includes('laguna ilón') ||
-      trail.name.toLowerCase().includes('mirada del doctor')
-    );
-  }, [multiDayHikes]);
+    console.log('Filtering for Pampa Linda trails from:', multiDayHikes.length, 'multi-day hikes');
+    
+    return multiDayHikes.filter(trail => {
+      const isPampLinda = 
+        trail.region === 'pampa-linda' ||
+        pampLindaTrailNames.includes(trail.name) ||
+        pampLindaTrailIds.includes(trail.id) ||
+        trail.name.toLowerCase().includes('pampa linda') ||
+
+        trail.name.toLowerCase().includes('meiling') ||
+        trail.name.toLowerCase().includes('tronador') ||
+        trail.name.toLowerCase().includes('laguna negra') ||
+        (trail.startingPoint && trail.startingPoint.toLowerCase().includes('pampa linda')) ||
+        trail.name.toLowerCase().includes('5 lagunas') ||
+        trail.name.toLowerCase().includes('laguna ilón') ||
+        trail.name.toLowerCase().includes('mirada del doctor');
+      
+      if (isPampLinda) {
+        console.log(`Trail ${trail.id} - ${trail.name} matches Pampa Linda criteria`);
+      }
+      
+      return isPampLinda;
+    });
+  }, [multiDayHikes, pampLindaTrailIds]);
   
   const jakobCircuitTrail: Trail = useMemo(() => {
     const existingCircuit = allTrails.find(t => 
@@ -161,15 +172,12 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   }, [allTrails]);
   
   const otherMultiDayHikes = useMemo(() => {
-    // First create a copy of multi-day hikes excluding Pampa Linda hikes
     const hikes = multiDayHikes.filter(trail => 
       !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
     );
     
-    // Create a new array with our modifications
     const result = [...hikes];
     
-    // Check for both trails
     const hasJakobCircuit = result.some(trail => 
       trail.id === "11" || 
       (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('frey'))
@@ -180,19 +188,16 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       (trail.name.toLowerCase().includes('jakob') && trail.name.toLowerCase().includes('tambo'))
     );
     
-    // Add Jakob Circuit if not present
     if (!hasJakobCircuit) {
       result.unshift(jakobCircuitTrail);
     }
     
-    // Add Jakob Tambo trail if not present
     if (!hasJakobTambo) {
       result.push(jakobTamboTrail);
     }
     
-    // Add any additional trails from barilochieMultiDayTrailIds that might be missing
     barilochieMultiDayTrailIds.forEach(id => {
-      if (id === "11" || id === "12") return; // Skip if we already handled it
+      if (id === "11" || id === "12") return;
       
       const alreadyIncluded = result.some(t => t.id === id);
       if (!alreadyIncluded) {

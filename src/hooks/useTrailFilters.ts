@@ -23,6 +23,24 @@ export const useTrailFilters = (trails: Trail[], beaches: Beach[]) => {
     const difficultyMatch = selectedDifficulty === 'all' || trail.difficulty === selectedDifficulty;
     const accessibilityMatch = selectedTravelTime === 'all' || getAccessibilityCategory(trail) === selectedTravelTime;
     const categoryMatch = selectedCategory === 'all' || trail.category === selectedCategory;
+    
+    // Log filtering details for multi-day hikes
+    if (trail.type === 'multi-day' && !typeMatch) {
+      console.log(`Trail ${trail.id} - ${trail.name} filtered out: type doesn't match`);
+    }
+    
+    if (trail.type === 'multi-day' && !difficultyMatch) {
+      console.log(`Trail ${trail.id} - ${trail.name} filtered out: difficulty doesn't match`);
+    }
+    
+    if (trail.type === 'multi-day' && !accessibilityMatch) {
+      console.log(`Trail ${trail.id} - ${trail.name} filtered out: accessibility doesn't match`);
+    }
+    
+    if (trail.type === 'multi-day' && !categoryMatch) {
+      console.log(`Trail ${trail.id} - ${trail.name} filtered out: category doesn't match`);
+    }
+    
     return typeMatch && difficultyMatch && accessibilityMatch && categoryMatch;
   });
 
@@ -37,6 +55,11 @@ export const useTrailFilters = (trails: Trail[], beaches: Beach[]) => {
     
     return showAllCategories && travelTimeMatch;
   });
+
+  // Log counts to help with debugging
+  console.log(`Filtered trails count: ${filteredTrails.length}`);
+  console.log(`Day hikes count: ${filteredTrails.filter(trail => trail.type === 'day-hike').length}`);
+  console.log(`Multi-day hikes count: ${filteredTrails.filter(trail => trail.type === 'multi-day').length}`);
 
   const allHikes = filteredTrails;
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');

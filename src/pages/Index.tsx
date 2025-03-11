@@ -36,8 +36,17 @@ const Index = () => {
 
   // Determine which sections to show based on filters
   const shouldShowBeaches = filters.selectedCategory === 'all' || filters.selectedCategory === 'beaches-lakes';
-  const shouldShowDayHikes = filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'day-hike');
-  const shouldShowMultiDayHikes = filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'multi-day');
+  
+  // Show day hikes if category is 'all' OR if type is 'day-hike' regardless of category
+  const shouldShowDayHikes = 
+    (filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'day-hike')) ||
+    (filters.selectedType === 'day-hike');
+  
+  // Show multi-day hikes if category is 'all' OR if type is 'multi-day' regardless of category
+  const shouldShowMultiDayHikes = 
+    (filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'multi-day')) ||
+    (filters.selectedType === 'multi-day');
+  
   const shouldShowCategorySection = filters.selectedCategory !== 'all' && filters.selectedCategory !== 'beaches-lakes';
 
   // Filter category hikes by category
@@ -54,6 +63,14 @@ const Index = () => {
       filters.selectedCategory === 'all' || trail.category === filters.selectedCategory
     )
   };
+
+  // Debug logs
+  console.log('Index - PampLinda Hikes:', {
+    count: pampLindaHikes.length,
+    names: pampLindaHikes.map(t => t.name)
+  });
+  
+  console.log('Index - MultiDay Section Visible:', shouldShowMultiDayHikes);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
