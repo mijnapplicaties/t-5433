@@ -1,4 +1,3 @@
-
 type Translation = {
   [key: string]: {
     en: string;
@@ -209,7 +208,7 @@ export const translations: Translation = {
   },
   accessibilityDirect: {
     en: "Direct Access (Walking Distance)",
-    es: "Acceso Directo (Distancia a pie)",
+    es: "Acceso Directo desde Los Coihues (Caminando)",
     fr: "Accès Direct (Distance de marche)",
     de: "Direkter Zugang (Gehentfernung)",
   },
