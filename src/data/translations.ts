@@ -494,4 +494,28 @@ export const translations: Translation = {
     fr: "Vues sur le lac",
     de: "Seeblick",
   },
+  difficultyEasyDescription: {
+    en: "Suitable for beginners with minimal elevation gain and well-marked trails.",
+    es: "Adecuado para principiantes con poco desnivel y senderos bien marcados.",
+    fr: "Convient aux débutants avec un dénivelé minimal et des sentiers bien balisés.",
+    de: "Geeignet für Anfänger mit minimaler Höhendifferenz und gut markierten Wegen.",
+  },
+  difficultyModerateDescription: {
+    en: "Some elevation gain and longer distances, suitable for those with some hiking experience.",
+    es: "Algo de desnivel y distancias más largas, adecuado para aquellos con alguna experiencia en senderismo.",
+    fr: "Un certain dénivelé et des distances plus longues, convient à ceux qui ont une certaine expérience de la randonnée.",
+    de: "Etwas Höhenunterschied und längere Strecken, geeignet für Personen mit etwas Wandererfahrung.",
+  },
+  difficultyHardDescription: {
+    en: "Significant elevation gain and challenging terrain, requires good fitness and hiking experience.",
+    es: "Desnivel significativo y terreno desafiante, requiere buena condición física y experiencia en senderismo.",
+    fr: "Dénivelé important et terrain difficile, nécessite une bonne condition physique et de l'expérience en randonnée.",
+    de: "Erheblicher Höhenunterschied und anspruchsvolles Gelände, erfordert gute Fitness und Wandererfahrung.",
+  },
+  difficultyExpertDescription: {
+    en: "Very demanding trails with steep terrain, long distances, and technical sections. For experienced hikers only.",
+    es: "Senderos muy exigentes con terreno empinado, largas distancias y secciones técnicas. Solo para excursionistas experimentados.",
+    fr: "Sentiers très exigeants avec terrain escarpé, longues distances et sections techniques. Pour randonneurs expérimentés uniquement.",
+    de: "Sehr anspruchsvolle Wege mit steilem Gelände, langen Strecken und technischen Abschnitten. Nur für erfahrene Wanderer.",
+  },
 };
