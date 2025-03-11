@@ -43,11 +43,13 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
     trail.name.toLowerCase().includes('agostino rocca')
   );
   
-  // If Jakob is not found, add it to the console for debug
-  if (!hasJakob && process.env.NODE_ENV === 'development') {
-    console.log('Jakob trail not found in otherMultiDayHikes');
-    console.log('Available trails:', otherMultiDayHikes.map(t => t.name));
-  }
+  // Find Jakob trail by ID for more specific debugging
+  const jakobTrailById = otherMultiDayHikes.find(t => t.id === "11");
+  
+  console.log('Jakob trail found by name:', hasJakob);
+  console.log('Jakob trail found by ID:', jakobTrailById);
+  console.log('All other multi-day hikes IDs:', otherMultiDayHikes.map(t => t.id));
+  console.log('All other multi-day hikes names:', otherMultiDayHikes.map(t => t.name));
   
   return (
     <div className="mb-12">
@@ -73,9 +75,11 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
               <p>Debug - Searching for: López, Jakob, Travesía, Laguna Negra</p>
               <p>Found López: {hasLopez ? 'Yes' : 'No'}</p>
               <p>Found Jakob: {hasJakob ? 'Yes' : 'No'}</p>
+              <p>Found Jakob by ID (11): {jakobTrailById ? 'Yes' : 'No'}</p>
               <p>Found Travesía: {hasTraversia ? 'Yes' : 'No'}</p>
               <p>Found Laguna Negra: {hasLagunaNegra ? 'Yes' : 'No'}</p>
               <p>Total trails: {otherMultiDayHikes.length}</p>
+              <p>Trail IDs: {otherMultiDayHikes.map(t => t.id).join(', ')}</p>
               <p>Trail names: {otherMultiDayHikes.map(t => t.name).join(', ')}</p>
             </div>
           )}
@@ -103,6 +107,7 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
               <p>Found Laguna Ilón: {hasLagunaIlon ? 'Yes' : 'No'}</p>
               <p>Found Agostino Rocca: {hasAgostinoRocca ? 'Yes' : 'No'}</p>
               <p>Total trails: {pampLindaHikes.length}</p>
+              <p>Trail IDs: {pampLindaHikes.map(t => t.id).join(', ')}</p>
             </div>
           )}
         </div>

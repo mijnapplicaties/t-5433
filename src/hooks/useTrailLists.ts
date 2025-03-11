@@ -1,3 +1,4 @@
+
 import { useMemo } from 'react';
 import { Trail, TrailType } from '../types/trail';
 
@@ -91,15 +92,26 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
       !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
     );
     
-    // Add specific trails from allTrails if they're not already included
+    // Explicitly check for and add the Jakob trail first
+    const jakobTrail = allTrails.find(t => 
+      t.id === "11" || 
+      t.name.toLowerCase().includes('jakob')
+    );
+    
+    if (jakobTrail && !hikes.some(t => t.id === jakobTrail.id)) {
+      hikes.push(jakobTrail);
+    }
+    
+    // Add the rest of the specific trails from barilochieMultiDayTrailIds
     barilochieMultiDayTrailIds.forEach(id => {
+      if (id === "11") return; // Skip Jakob as we've already handled it
       const trail = allTrails.find(t => t.id === id);
       if (trail && !hikes.some(t => t.id === id)) {
         hikes.push(trail);
       }
     });
     
-    // Add any trails with Jakob in the name that might be missing
+    // Double-check for any trails with Jakob in the name that might be missing
     const jakobTrails = allTrails.filter(t => 
       t.name.toLowerCase().includes('jakob') && 
       !hikes.some(h => h.id === t.id)
