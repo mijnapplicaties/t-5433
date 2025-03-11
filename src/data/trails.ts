@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -58,7 +59,7 @@ export const trails: Trail[] = [
     elevation: 1600,
     requiresReservation: true,
     description: {
-      en: "We recommend taking an Uber from Camping to the base of Cerro Catedral. The trip takes approximately 15 minutes. Buses often involve a long wait. This trail starts at a higher point than the one from Lake Gutiérrez, saving about 1 hour of hiking. From the base of Cerro Catedral, you can begin your ascent to Refugio Frey, enjoying spectacular views as you progress through the mountainous landscape.\n\nFrom the Refugio Frey area, the trail skirts Laguna Toncek to the south, towards the ascent to Laguna Schmoll. This rocky slope is well marked and follows some twists and turns along the stream that descends from Schmoll to Toncek. This climb is significant and has many steps between rocks.\n\nEfforts have been made to protect the lagoon's wetland (mallín). A stone path was built to cross the wetland along a delineated trail without increasing erosion. Please use it carefully and stay on the marked path.\nFrom Laguna Schmoll begins another important step. This section has slightly larger rocks to climb and ends in the \"soccer field\". A few steps later, you reach the edge of Cerro Catedral with panoramic views of the Rucaco valley and Cerro Tronador in the background.\n\nThe descent down the Cathedral slope to the valley must be done with great care. At first, each step is like a large step, and then begins a section of loose stones and sand where your foot sinks and slides.\nAfter four hours of leaving Frey, stepping on firm ground in the forest along the valley's contour is a respite. Shade, water, shelter, rest.\n\nLeaving the Rucaco forest behind is like closing a storybook. Upon leaving the wooded area, you leave the protection from sun and wind, and the trail begins to climb with increasing slope. This is the ascent to Black Breach, and from its edge begins another particular descent.\n\nWith the same care as the previous descent, paying attention to each step and taking into account the paint signals, you re-enter a forest of lengas and then cross the stream that originates in Laguna Jakob. Add four more hours to the journey.\n\nFrom the Jakob area, the Laguna de los Témpanos is only 40 minutes away.\n\nReturning from Laguna Jakob, skirting the Casa de Piedra stream to Tambo Báez near Colonia Suiza usually takes 5 hours.\n\nHours: 6-8 hours.",
+      en: "We recommend taking an Uber from Camping to the base of Cerro Catedral. The trip takes approximately 15 minutes. Buses often involve a long wait. This trail starts at a higher point than the one from Lake Gutiérrez, saving about 1 hour of hiking. From the base of Cerro Catedral, you can begin your ascent to Refugio Frey, enjoying spectacular views as you progress through the mountainous landscape.\n\nFrom the Refugio Frey area, the trail skirts Laguna Toncek to the south, towards the ascent to Laguna Schmoll. This rocky slope is well marked and follows some twists and turns along the stream that descends from Schmoll to Toncek. This climb is significant and has many steps between rocks.\n\nEfforts have been made to protect the lagoon's wetland (mallín). A stone path was built to cross the wetland along a delineated trail without increasing erosion. Please use it carefully and stay on the marked path.\nFrom Laguna Schmoll begins another important step. This section has slightly larger rocks to climb and ends in the \"soccer field\". A few steps later, you reach the edge of Cerro Catedral with panoramic views of the Rucaco valley and Cerro Tronador in the background.\n\nThe descent down the Cathedral slope to the valley must be done with great care. At first, each step is like a large step, and then begins a section of loose stones and sand where your foot sinks and slides.\nAfter four hours of leaving Frey, stepping on firm ground in the forest along the valley's contour is a relief. Shade, water, shelter, rest.\n\nLeaving the Rucaco forest behind is like closing a storybook. Upon leaving the wooded area, you leave the protection from sun and wind, and the trail begins to climb with increasing slope. This is the ascent to Black Breach, and from its edge begins another particular descent.\n\nWith the same care as the previous descent, paying attention to each step and taking into account the paint signals, you re-enter a forest of lengas and then cross the stream that originates in Laguna Jakob. Add four more hours to the journey.\n\nFrom the Jakob area, the Laguna de los Témpanos is only 40 minutes away.\n\nReturning from Laguna Jakob, skirting the Casa de Piedra stream to Tambo Báez near Colonia Suiza usually takes 5 hours.\n\nHours: 6-8 hours.",
       es: "Recomendamos tomarse un Uber desde el Camping hasta la base del Cerro Catedral. El viaje dura aproximadamente 15 minutos. Los buses muchas veces presentan una gran espera. Este sendero comienza en un punto más alto que el que parte desde el Lago Gutiérrez, lo que permite ahorrar alrededor de 1 hora de caminata. Desde la base del Cerro Catedral, podrás iniciar el ascenso al Refugio Frey, disfrutando de vistas espectaculares mientras avanzas a través del paisaje montañoso.\n\nDesde la zona del refugio Frey, se bordea la laguna Toncek hacia el sur, hacia la subida de la laguna Schmoll. Esta pendiente de rocas está bien señalizada y sigue con algunas idas y vueltas el arroyo que baja desde Schmoll a Toncek. Esta subida es importante y tiene muchos escalones entre rocas.\n\nDesde hace un tiempo se está trabajando en proteger el humedal (mallín) de la laguna. Para eso se hizo un trayecto de piedras para atravesar el humedal por un sendero delineado sin aumentar la erosión. Por favor usálo prestando atención a no desviarte.\nDesde laguna Schmoll comienza otro escalón importante. Este sector tiene rocas un poco más grandes para trepar y finaliza en \"cancha de fútbol\". Unos pocos pasos después se llega al filo del cerro Catedral con vistas panorámicas hacia el valle del Rucaco y de fondo el cerro Tronador.\n\nLa bajada por la ladera del Catedral hacia el valle debe hacerse con mucho cuidado. Al principio cada paso es como un gran escalón y después empieza una parte de piedras y arena suelta donde el pie se hunde y se desliza.\nDespués de cuatro horas de haber salido del Frey, pisar el suelo firme en el bosque sobre el contorno del valle es un respiro. Sombra, agua, resguardo, descanso.\n\nDejar el bosque del Rucaco atrás significa cerrar un libro de cuentos. Al salir de la zona boscosa se deja la protección del sol y del viento y el sendero empieza a subir cada vez con más pendiente. Se trata de la subida a Brecha Negra y desde su filo comienza otra bajada algo particular.\n\nCon los mismos cuidados que el descenso anterior, prestando atención a cada paso y teniendo en cuenta las señales de pintura, se vuelve a entrar en un bosque de lengas y después se cruza el arroyo que nace en la laguna Jakob. Sumale cuatro horas más al recorrido.\n\nDesde la zona de Jakob, a sólo 40 minutos está la laguna de los Témpanos.\n\nRegresar desde laguna Jakob, bordeando el arroyo Casa de Piedra hasta el Tambo Báez cerca de Colonia Suiza suele hacerse en 5 horas.\n\nHoras: 6-8 horas.",
       fr: "Nous vous recommandons de prendre un Uber depuis le Camping jusqu'à la base de Cerro Catedral. Le trajet dure environ 15 minutes. Les bus impliquent souvent une longue attente. Ce sentier commence à un point plus élevé que celui du lac Gutiérrez, ce qui permet d'économiser environ 1 heure de marche. Depuis la base de Cerro Catedral, vous pouvez commencer votre ascension vers le Refugio Frey, en profitant de vues spectaculaires tout en progressant à travers le paysage montagneux. L'effort en vaut vraiment la peine lorsque vous atteignez les vues panoramiques du lac Gutiérrez, de Bariloche et de la vallée qui s'étend jusqu'au sommet du Frey, un paysage impressionnant qui récompense chaque pas de l'ascension.",
       de: "Wir empfehlen, einen Uber vom Camping zur Basis des Cerro Catedral zu nehmen. Die Fahrt dauert etwa 15 Minuten. Busse sind oft mit langen Wartezeiten verbunden. Dieser Weg beginnt an einem höheren Punkt als der vom Lago Gutiérrez, was etwa 1 Stunde Wanderzeit spart. Von der Basis des Cerro Catedral aus können Sie Ihren Aufstieg zum Refugio Frey beginnen und dabei spektakuläre Aussichten genießen, während Sie durch die Berglandschaft wandern. Die Anstrengung lohnt sich wirklich, wenn Sie die Panoramablicke auf den Lago Gutiérrez, Bariloche und das Tal erreichen, das sich bis zum Gipfel des Frey erstreckt, eine beeindruckende Landschaft, die jeden Schritt des Aufstiegs belohnt."
@@ -275,4 +276,134 @@ export const trails: Trail[] = [
       fr: "Une promenade courte et agréable vers une plage isolée sur le Lago Gutiérrez aux eaux cristallines. Le sentier commence directement du Camping Los Coihues et suit le rivage à travers la forêt native. Parfait pour une baignade rafraîchissante en été.",
       de: "Ein kurzer, angenehmer Spaziergang zu einem abgelegenen Strand am Lago Gutiérrez mit kristallklarem Wasser. Der Weg beginnt direkt vom Camping Los Coihues und folgt dem Seeufer durch den heimischen Wald. Perfekt für ein erfrischendes Bad im Sommer."
     },
-    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f
+    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png",
+    startingPoint: "Camping Los Coihues (direct access)",
+    highlights: ["highlightLakeViews", "highlightSecludedBeach", "highlightNativeForest"],
+    transportation: ["walking"],
+    distanceFromCampsite: 0,
+    travelTime: 0,
+    category: "walking-path"
+  },
+  {
+    id: "13",
+    name: "Refugio Laguna Negra desde Colonia Suiza",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 11,
+    duration: 5,
+    elevation: 1640,
+    requiresReservation: true,
+    description: {
+      en: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines.\n\nLuego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados \"caracoles\".\n\nAl final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche.",
+      es: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines.\n\nLuego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados \"caracoles\".\n\nAl final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche.",
+      fr: "La senda parte desde Colonia Suiza",
+      de: "La senda parte desde Colonia Suiza"
+    },
+    imageUrl: "/lovable-uploads/67fa31e5-4160-46c9-92fb-86aad3955a56.png",
+    startingPoint: "Colonia Suiza (1 hr from Los Coihues)",
+    highlights: ["highlightAlpineLake", "highlightMountainRefuge", "highlightHighMountainPasses"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 15,
+    travelTime: 60,
+    busLines: "Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8) hasta la Panchería del Circuito Chico (1 hr)",
+    category: "high-mountain",
+    region: "bariloche"
+  },
+  {
+    id: "14",
+    name: "Refugio Otto Meiling",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 14,
+    duration: 6,
+    elevation: 1900,
+    requiresReservation: true,
+    description: {
+      en: "El inicio del sendero está a pocos metros de la parada de autobuses en Pampa Linda, donde también comienza el camino hacia el Refugio Agostino Rocca. Un cartel en la bifurcación indica la dirección de ambos senderos, señalizando claramente el desvío hacia el Refugio Meiling.\n\nLa primera parte de la caminata es tranquila, con muy poco desnivel y completamente señalizada. Atraviesa un bosque nativo de imponentes coihues hasta cruzar el arroyo Castaño Overa. A partir de allí, el sendero comienza a ganar altura de manera progresiva durante un par de horas, ofreciendo las primeras vistas del Cerro Tronador.\n\nEl tramo más exigente inicia en el sector conocido como \"Caracol\", donde la pendiente se vuelve más pronunciada. Al llegar a La Almohadilla, la vegetación comienza a desaparecer y da paso a un paisaje dominado por roca volcánica y, fuera del verano, nieve. Esta última parte del ascenso es la más demandante y puede llevar entre 1 y 2 horas, dependiendo de nuestro estado físico.\n\nFinalmente, alcanzamos el Refugio Meiling, ubicado a 1.900 metros de altitud. Desde allí, se pueden admirar impresionantes vistas de los glaciares Castaño Overa (a la izquierda) y Alerce (a la derecha). El refugio se encuentra sobre el último peñón de roca que Otto Meiling identificó en la década de 1950 antes del inicio del glaciar.\nActividades desde el refugio\n\nDesde el refugio Otto Meiling se pueden realizar varias excursiones, la más popular es la caminata al Filo de la Motte 2400 mts. s.n.m., por la suave pendiente nevada del filo glaciar que divide las cuencas de los glaciares Castaño Overo y Alerce.\n\nLa caminata es de dos horas aprox. hasta el Filo de la Motte, dónde, se puede apreciar la pared Norte del Pico Argentino del Tronador, de 3300 mts de altura. Esta pared consiste en un glaciar colgante de unos 500 mts de desnivel y 50° de inclinación.\n\nEs una de las rutas clásicas de escalada al Pico Argentino. La parte inferior del Glaciar colgante se precipita a la cuenca del Glaciar Casa Pangue, casi mil metros más abajo.",
+      es: "El inicio del sendero está a pocos metros de la parada de autobuses en Pampa Linda, donde también comienza el camino hacia el Refugio Agostino Rocca. Un cartel en la bifurcación indica la dirección de ambos senderos, señalizando claramente el desvío hacia el Refugio Meiling.\n\nLa primera parte de la caminata es tranquila, con muy poco desnivel y completamente señalizada. Atraviesa un bosque nativo de imponentes coihues hasta cruzar el arroyo Castaño Overa. A partir de allí, el sendero comienza a ganar altura de manera progresiva durante un par de horas, ofreciendo las primeras vistas del Cerro Tronador.\n\nEl tramo más exigente inicia en el sector conocido como \"Caracol\", donde la pendiente se vuelve más pronunciada. Al llegar a La Almohadilla, la vegetación comienza a desaparecer y da paso a un paisaje dominado por roca volcánica y, fuera del verano, nieve. Esta última parte del ascenso es la más demandante y puede llevar entre 1 y 2 horas, dependiendo de nuestro estado físico.\n\nFinalmente, alcanzamos el Refugio Meiling, ubicado a 1.900 metros de altitud. Desde allí, se pueden admirar impresionantes vistas de los glaciares Castaño Overa (a la izquierda) y Alerce (a la derecha). El refugio se encuentra sobre el último peñón de roca que Otto Meiling identificó en la década de 1950 antes del inicio del glaciar.\nActividades desde el refugio\n\nDesde el refugio Otto Meiling se pueden realizar varias excursiones, la más popular es la caminata al Filo de la Motte 2400 mts. s.n.m., por la suave pendiente nevada del filo glaciar que divide las cuencas de los glaciares Castaño Overo y Alerce.\n\nLa caminata es de dos horas aprox. hasta el Filo de la Motte, dónde, se puede apreciar la pared Norte del Pico Argentino del Tronador, de 3300 mts de altura. Esta pared consiste en un glaciar colgante de unos 500 mts de desnivel y 50° de inclinación.\n\nEs una de las rutas clásicas de escalada al Pico Argentino. La parte inferior del Glaciar colgante se precipita a la cuenca del Glaciar Casa Pangue, casi mil metros más abajo.",
+      fr: "El inicio del sendero está a pocos metros de la parada",
+      de: "El inicio del sendero está a pocos metros de la parada"
+    },
+    imageUrl: "/lovable-uploads/c2cfed37-332c-49bb-8f26-e701a5a11d48.png",
+    startingPoint: "Pampa Linda (2 hrs drive from Los Coihues)",
+    highlights: ["highlightGlacier", "highlightMountainRefuge", "highlightTronadorMountain"],
+    transportation: ["private-transfer", "taxi"],
+    distanceFromCampsite: 80,
+    travelTime: 120,
+    category: "high-mountain",
+    region: "pampa-linda"
+  },
+  {
+    id: "15",
+    name: "Laguna Ilón",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 14,
+    duration: 4.5,
+    elevation: 1385,
+    requiresReservation: false,
+    description: {
+      en: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda, transitando el mismo sendero que lleva al refugio Otto Meiling. Luego de caminar 300 metros tomar un desvío hacia la derecha y luego de 15 minutos de marcha se llega al río Alerce, que se cruza por un puente colgante. \n\nTodo el camino está bien señalizado e inicia con una pendiente muy pronunciada hasta el cartel \"Laguna Ilón 2 horas\". Luego se continúa por un terreno relativamente plano.\n\nDesde Laguna Ilón, se puede ir hacia Mirada Del Doctor.",
+      es: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda, transitando el mismo sendero que lleva al refugio Otto Meiling. Luego de caminar 300 metros tomar un desvío hacia la derecha y luego de 15 minutos de marcha se llega al río Alerce, que se cruza por un puente colgante. \n\nTodo el camino está bien señalizado e inicia con una pendiente muy pronunciada hasta el cartel \"Laguna Ilón 2 horas\". Luego se continúa por un terreno relativamente plano.\n\nDesde Laguna Ilón, se puede ir hacia Mirada Del Doctor.",
+      fr: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda.",
+      de: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda."
+    },
+    imageUrl: "/lovable-uploads/433086966358-54859d0ed716.png",
+    startingPoint: "Pampa Linda (2 hrs drive from Los Coihues)",
+    highlights: ["highlightAlpineLake", "highlightTronadorMountain", "highlightSuspensionBridge"],
+    transportation: ["private-transfer", "taxi"],
+    distanceFromCampsite: 80,
+    travelTime: 120,
+    category: "high-mountain",
+    region: "pampa-linda"
+  },
+  {
+    id: "16",
+    name: "Refugio Agostino Rocca",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 14,
+    duration: 5,
+    elevation: 1432,
+    requiresReservation: true,
+    description: {
+      en: "A pocos metros de la casa del Guardaparque, verás un cartel, una huella de auto y una tranquera que marcan el inicio del sendero. La picada al refugio comienza en Pampa Linda, a 80 km de Bariloche.\nEl recorrido es muy pintoresco, cruzando ríos y bordeando el río Alerce. La última parte del sendero, conocida como \"El Caracol\", debe su nombre a su trazado zigzagueante y empinado. El camino está bien señalizado y sigue en gran parte el curso del río Alerce.\n\nLos primeros 3 kilómetros transcurren en terreno casi plano hasta llegar al puente que cruza el río Castaño Overa. A partir de allí, comienza el ascenso. Más adelante, se toma un desvío a la derecha con indicaciones hacia el Paso de las Nubes, el Refugio Agostino Rocca y el lago Frías. Luego de 700 metros, el sendero llega a la orilla del río Alerce, que se bordea por unos 5 kilómetros hasta cruzarlo por un puente.\n\nEl camino continúa rodeando un mallín por la izquierda, donde la pendiente se hace más pronunciada hasta llegar a la subida en zigzag. Tras superarla, el sendero se vuelve más suave, atravesando pequeños cañadones de piedra y mallines hasta alcanzar un amplio mallín de pastos verdes. Desde allí, en lo alto, ya se puede divisar el refugio.\nAtravesando el mallín y siguiendo las marcas que ascienden hacia la izquierda, en aproximadamente cinco minutos se llega al refugio.\n\nEl Refugio Agostino Rocca, construido por el Club Andino Bariloche, se encuentra a 1.432 metros sobre el nivel del mar, en la ladera este del cerro Tronador, en la zona conocida como Paso de las Nubes.\nEstá abastecido de energía hidroeléctrica mediante una turbina ubicada en un cauce de agua a 500 metros. Tiene capacidad para 80 personas distribuidas en 10 habitaciones y cuenta con sala de enfermería, área para refugieros, depósitos, duchas y una cocina para visitantes, donde cada caminante puede preparar su propia comida.\n\nDesde el refugio se pueden apreciar vistas imponentes de los cerros Constitución y Parque, el glaciar Frías, los picos Argentino y Chileno del cerro Tronador, y una panorámica del valle atravesado por los ríos Alerce y Frías.",
+      es: "A pocos metros de la casa del Guardaparque, verás un cartel, una huella de auto y una tranquera que marcan el inicio del sendero. La picada al refugio comienza en Pampa Linda, a 80 km de Bariloche.\nEl recorrido es muy pintoresco, cruzando ríos y bordeando el río Alerce. La última parte del sendero, conocida como \"El Caracol\", debe su nombre a su trazado zigzagueante y empinado. El camino está bien señalizado y sigue en gran parte el curso del río Alerce.\n\nLos primeros 3 kilómetros transcurren en terreno casi plano hasta llegar al puente que cruza el río Castaño Overa. A partir de allí, comienza el ascenso. Más adelante, se toma un desvío a la derecha con indicaciones hacia el Paso de las Nubes, el Refugio Agostino Rocca y el lago Frías. Luego de 700 metros, el sendero llega a la orilla del río Alerce, que se bordea por unos 5 kilómetros hasta cruzarlo por un puente.\n\nEl camino continúa rodeando un mallín por la izquierda, donde la pendiente se hace más pronunciada hasta llegar a la subida en zigzag. Tras superarla, el sendero se vuelve más suave, atravesando pequeños cañadones de piedra y mallines hasta alcanzar un amplio mallín de pastos verdes. Desde allí, en lo alto, ya se puede divisar el refugio.\nAtravesando el mallín y siguiendo las marcas que ascienden hacia la izquierda, en aproximadamente cinco minutos se llega al refugio.\n\nEl Refugio Agostino Rocca, construido por el Club Andino Bariloche, se encuentra a 1.432 metros sobre el nivel del mar, en la ladera este del cerro Tronador, en la zona conocida como Paso de las Nubes.\nEstá abastecido de energía hidroeléctrica mediante una turbina ubicada en un cauce de agua a 500 metros. Tiene capacidad para 80 personas distribuidas en 10 habitaciones y cuenta con sala de enfermería, área para refugieros, depósitos, duchas y una cocina para visitantes, donde cada caminante puede preparar su propia comida.\n\nDesde el refugio se pueden apreciar vistas imponentes de los cerros Constitución y Parque, el glaciar Frías, los picos Argentino y Chileno del cerro Tronador, y una panorámica del valle atravesado por los ríos Alerce y Frías.",
+      fr: "El sendero comienza en Pampa Linda, a 80 km de Bariloche.",
+      de: "El sendero comienza en Pampa Linda, a 80 km de Bariloche."
+    },
+    imageUrl: "/lovable-uploads/5e6c44cc-a8c6-4013-8464-49f82efa40fc.png",
+    startingPoint: "Pampa Linda (2 hrs drive from Los Coihues)",
+    highlights: ["highlightMountainRefuge", "highlightRiverCrossings", "highlightTronadorMountain"],
+    transportation: ["private-transfer", "taxi"],
+    distanceFromCampsite: 80,
+    travelTime: 120,
+    category: "high-mountain",
+    region: "pampa-linda"
+  },
+  {
+    id: "17",
+    name: "Refugio San Martin Jakob",
+    type: "multi-day",
+    difficulty: "moderate",
+    distance: 16,
+    duration: 6,
+    elevation: 1550,
+    requiresReservation: true,
+    description: {
+      en: "The trail to Refugio Jakob starts at Colonia Suiza and follows a beautiful path through native forests along the Casa de Piedra Stream. The initial section is an easy walk, gradually increasing in difficulty as you ascend. After about 3 hours of hiking, you'll reach a more demanding section with steeper terrain known as 'Los Caracoles' (The Snails) due to its zigzagging pattern.\n\nAfter completing this more challenging part, you'll be rewarded with stunning views of the surrounding mountains and valleys. The refuge itself is situated at 1,550 meters above sea level, on the shores of the beautiful Laguna Jakob, surrounded by impressive granite walls and native lenga forests.\n\nRefugio San Martin Jakob offers overnight accommodations with dorm-style beds, meals, and basic amenities. It's one of the most comfortable mountain refuges in the area, making it perfect for both experienced hikers and beginners looking to experience their first mountain overnight adventure.",
+      es: "El sendero al Refugio Jakob comienza en Colonia Suiza y sigue un hermoso camino a través de bosques nativos a lo largo del Arroyo Casa de Piedra. La sección inicial es una caminata fácil, que aumenta gradualmente en dificultad a medida que asciendes. Después de aproximadamente 3 horas de caminata, llegarás a una sección más exigente con terreno más empinado conocido como 'Los Caracoles' debido a su patrón zigzagueante.\n\nDespués de completar esta parte más desafiante, serás recompensado con impresionantes vistas de las montañas y valles circundantes. El refugio está situado a 1,550 metros sobre el nivel del mar, a orillas de la hermosa Laguna Jakob, rodeado de impresionantes paredes de granito y bosques nativos de lengas.\n\nEl Refugio San Martín Jakob ofrece alojamiento con camas tipo dormitorio, comidas y servicios básicos. Es uno de los refugios de montaña más cómodos de la zona, lo que lo hace perfecto tanto para excursionistas experimentados como para principiantes que buscan experimentar su primera aventura nocturna en la montaña.",
+      fr: "Le sentier menant au Refugio Jakob commence à Colonia Suiza et suit un beau chemin à travers des forêts indigènes le long du ruisseau Casa de Piedra. La section initiale est une promenade facile, dont la difficulté augmente progressivement au fur et à mesure que vous montez. Après environ 3 heures de randonnée, vous atteindrez une section plus exigeante avec un terrain plus escarpé connu sous le nom de 'Los Caracoles' (Les Escargots) en raison de son motif en zigzag.\n\nAprès avoir terminé cette partie plus difficile, vous serez récompensé par des vues magnifiques sur les montagnes et les vallées environnantes. Le refuge lui-même est situé à 1 550 mètres d'altitude, sur les rives de la belle Laguna Jakob, entourée d'impressionnantes parois de granit et de forêts indigènes de lengas.\n\nLe Refugio San Martin Jakob propose des hébergements de nuit avec des lits de style dortoir, des repas et des équipements de base. C'est l'un des refuges de montagne les plus confortables de la région, ce qui le rend parfait pour les randonneurs expérimentés et les débutants qui souhaitent vivre leur première aventure nocturne en montagne.",
+      de: "Der Weg zum Refugio Jakob beginnt in Colonia Suiza und folgt einem schönen Pfad durch einheimische Wälder entlang des Casa de Piedra-Baches. Der erste Abschnitt ist eine leichte Wanderung, deren Schwierigkeitsgrad allmählich zunimmt, wenn Sie aufsteigen. Nach etwa 3 Stunden Wanderung erreichen Sie einen anspruchsvolleren Abschnitt mit steilerem Gelände, der aufgrund seines Zickzackmusters als 'Los Caracoles' (Die Schnecken) bekannt ist.\n\nNachdem Sie diesen schwierigeren Teil absolviert haben, werden Sie mit atemberaubenden Ausblicken auf die umliegenden Berge und Täler belohnt. Die Schutzhütte selbst liegt auf 1.550 Metern über dem Meeresspiegel, am Ufer der wunderschönen Laguna Jakob, umgeben von beeindruckenden Granitwänden und einheimischen Lenga-Wäldern.\n\nDas Refugio San Martin Jakob bietet Übernachtungsmöglichkeiten mit Schlafsälen, Mahlzeiten und grundlegenden Annehmlichkeiten. Es ist eine der komfortabelsten Berghütten in der Gegend und damit perfekt für erfahrene Wanderer und Anfänger, die ihr erstes Übernachtungsabenteuer in den Bergen erleben möchten."
+    },
+    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png",
+    startingPoint: "Colonia Suiza (1 hr from Los Coihues)",
+    highlights: ["highlightAlpineLake", "highlightMountainRefuge", "highlightGraniteWalls", "highlightNativeForest"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 15,
+    travelTime: 60,
+    busLines: "Linea 50 (Los Coihues) + Linea 10 (desde Centro) hasta Colonia Suiza (1 hr)",
+    category: "high-mountain",
+    region: "bariloche"
+  }
+];
