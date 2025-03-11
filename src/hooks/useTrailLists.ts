@@ -13,6 +13,9 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   ];
 
   const pampLindaTrailIds = ['12', '13a', '14a'];
+  
+  // Add specific IDs for trails that should be included in Bariloche multi-day hikes
+  const barilochieMultiDayTrailIds = ['15', '16', '17', '13', '14', '11', '7'];
 
   const freyTrail = useMemo(() => allTrails.find(trail => trail.id === "1"), [allTrails]);
   
@@ -84,19 +87,43 @@ export const useTrailLists = (allTrails: Trail[], dayHikes: Trail[], multiDayHik
   }, [multiDayHikes]);
   
   const otherMultiDayHikes = useMemo(() => {
-    const trailIdsToInclude = ["13", "14", "15", "11", "7"];
+    // Include the specific Bariloche multi-day trails by ID
+    const specificTrailsToInclude = barilochieMultiDayTrailIds;
     
+    // Filter out the trails that are already in pampLindaHikes
     const hikes = multiDayHikes.filter(trail => 
       !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
     );
     
-    // Ensure specific trails are included
+    // Make sure we include specific multi-day trails that might be missing
+    // especially Refugio López, Travesía Cerro López - Laguna Negra, Refugio Jakob
     const allHikes = [...hikes];
     
-    trailIdsToInclude.forEach(id => {
+    specificTrailsToInclude.forEach(id => {
       const trail = allTrails.find(t => t.id === id);
       if (trail && !allHikes.some(t => t.id === id) && 
-          (trail.type === 'multi-day' || id === "11" || id === "7")) {
+          (trail.type === 'multi-day' || id === "11" || id === "7" || 
+           trail.name.toLowerCase().includes('lópez') || 
+           trail.name.toLowerCase().includes('lopez') ||
+           trail.name.toLowerCase().includes('jakob'))) {
+        allHikes.push(trail);
+      }
+    });
+    
+    // Add missing trails by name if they're not already included
+    const missingTrailNames = [
+      'Refugio López', 
+      'Travesía Cerro López - Laguna Negra',
+      'Refugio Jakob'
+    ];
+    
+    missingTrailNames.forEach(name => {
+      const trail = allTrails.find(t => 
+        t.name === name || 
+        t.name.toLowerCase().includes(name.toLowerCase())
+      );
+      
+      if (trail && !allHikes.some(t => t.id === trail.id)) {
         allHikes.push(trail);
       }
     });

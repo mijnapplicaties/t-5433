@@ -22,6 +22,17 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
     return null;
   }
 
+  // Check if the specific trails we're looking for are in the otherMultiDayHikes array
+  const findTrail = (name: string) => {
+    return otherMultiDayHikes.find(trail => 
+      trail.name.toLowerCase().includes(name.toLowerCase())
+    );
+  };
+
+  const hasLopez = findTrail('lópez') || findTrail('lopez');
+  const hasJakob = findTrail('jakob');
+  const hasTraversia = findTrail('travesía') || findTrail('travesia');
+  
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-forest mb-6">{t('filterMultiDay')}</h2>
@@ -40,6 +51,16 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
               />
             ))}
           </div>
+          {/* Debug info - can be removed once confirmed working */}
+          {process.env.NODE_ENV === 'development' && (
+            <div className="mt-4 p-2 bg-gray-100 text-xs">
+              <p>Debug - Searching for: López, Jakob, Travesía</p>
+              <p>Found López: {hasLopez ? 'Yes' : 'No'}</p>
+              <p>Found Jakob: {hasJakob ? 'Yes' : 'No'}</p>
+              <p>Found Travesía: {hasTraversia ? 'Yes' : 'No'}</p>
+              <p>Total trails: {otherMultiDayHikes.length}</p>
+            </div>
+          )}
         </div>
       )}
       
