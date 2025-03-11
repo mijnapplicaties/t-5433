@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -51,7 +50,6 @@ const Index = () => {
     return showAllCategories && travelTimeMatch;
   });
 
-  // Get all filtered hikes based on the category
   const allHikes = filteredTrails;
   
   const dayHikes = filteredTrails.filter(trail => trail.type === 'day-hike');
@@ -159,18 +157,14 @@ const Index = () => {
     }
   };
 
-  // Determine if beaches section should be visible
   const shouldShowBeaches = selectedCategory === 'all' || selectedCategory === 'beaches-lakes';
 
-  // Determine if we should show region subtitles
   const shouldShowRegionSubtitles = selectedCategory !== 'beaches-lakes';
 
-  // Get the correct filtered trails based on category
   const categoryFilteredHikes = allHikes.filter(trail => 
     selectedCategory === 'all' || trail.category === selectedCategory
   );
 
-  // Get Bariloche and Pampa Linda hikes for the specific category
   const categoryBarilochieHikes = categoryFilteredHikes.filter(trail => 
     !pampLindaHikes.some(plTrail => plTrail.id === trail.id)
   );
@@ -178,6 +172,15 @@ const Index = () => {
   const categoryPampLindaHikes = categoryFilteredHikes.filter(trail => 
     pampLindaHikes.some(plTrail => plTrail.id === trail.id)
   );
+
+  const refugioLopezTrail = trails.find(trail => trail.id === "13");
+  
+  if (refugioLopezTrail) {
+    const refugioLopezIndex = otherMultiDayHikes.findIndex(trail => trail.id === "13");
+    if (refugioLopezIndex === -1) {
+      otherMultiDayHikes.push(refugioLopezTrail);
+    }
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
