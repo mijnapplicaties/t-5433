@@ -173,7 +173,7 @@ export const beaches: Beach[] = [
       fr: "Un joyau caché aux eaux turquoise entouré de cyprès. Cette petite plage offre l'un des cadres les plus pittoresques de la région de Bariloche, avec une eau claire parfaite pour la baignade.",
       de: "Ein verstecktes Juwel mit türkisfarbenem Wasser, umgeben von Zypressen. Dieser kleine Strand bietet eine der malerischsten Kulissen im Gebiet von Bariloche, mit klarem Wasser perfekt zum Schwimmen."
     },
-    imageUrl: "https://images.unsplash.com/photo-1433086966358-54859d0ed716",
+    imageUrl: "/lovable-uploads/photo-1433086966358-54859d0ed716.png",
     beachType: "mixed",
     waterTemp: {
       summer: 17,
