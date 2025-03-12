@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowUpRight, Clock, Mountain } from 'lucide-react';
 import { Trail } from '../../types/trail';
@@ -21,21 +20,15 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     if (trail.name === "Lago Gutiérrez") {
       return `${trail.distance * 1000} ${t('meters')}`;
     }
-    
-    // Special handling for Cerro Otto
-    if (trail.name === "Cerro Otto & Piedra de Habsburgo") {
-      return language === 'es' ? "2 horas ida" : "2 hours one way";
-    }
-    
     return `${trail.distance} ${t('km')}`;
   };
 
   const formatDuration = (trail: Trail) => {
     const oneWayText = language === 'es' ? "ida" : "one way";
     
-    // Skip duration display for Cerro Otto since it's shown in distance
+    // Special handling for Cerro Otto
     if (trail.name === "Cerro Otto & Piedra de Habsburgo") {
-      return "";
+      return language === 'es' ? "2 horas ida" : "2 hours one way";
     }
     
     if (trail.name === "Refugio Frey from Villa Catedral") {
@@ -96,13 +89,13 @@ const TrailStats: React.FC<TrailStatsProps> = ({
 
   return (
     <div className={containerClass}>
-      {(trail.distance > 0 || trail.name === "Cerro Otto & Piedra de Habsburgo") && (
+      {trail.distance > 0 && (
         <div className="flex items-center gap-2">
           <ArrowUpRight className={iconClasses} />
           <span className={textClasses}>{formatDistance(trail)}</span>
         </div>
       )}
-      {formatDuration(trail) && (
+      {(trail.duration > 0 || trail.name === "Cerro Otto & Piedra de Habsburgo") && (
         <div className="flex items-center gap-2">
           <Clock className={iconClasses} />
           <span className={textClasses}>
