@@ -1,4 +1,3 @@
-
 import { Beach } from "../types/beach";
 
 export const beaches: Beach[] = [
@@ -47,7 +46,7 @@ export const beaches: Beach[] = [
   {
     id: "b3",
     name: "Playa Sin Viento",
-    location: "Lago Nahuel Huapi, Km 14 Av. Bustillo",
+    location: "Lago Moreno",
     description: {
       en: "A sheltered beach ('Beach Without Wind') offering calm waters, ideal for families with children and swimming. Located in a protected bay area with beautiful surroundings.",
       es: "Una playa protegida que ofrece aguas tranquilas, ideal para familias con niños y para nadar. Ubicada en un área de bahía protegida con hermosos alrededores."

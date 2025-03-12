@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Beach } from '../types/beach';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -42,7 +41,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
       case 'b2': // Playa Con Viento
         return "Linea 50 (Desde Coihues) conexión en Av. Pioneros y Rotonda + Linea 10 o 13 (desde Av. Bustillo Km 8) (50 min)";
       case 'b3': // Playa Sin Viento
-        return "Bus 20";
+        return "Linea 50 (Desde Coihues) conexión en Av. Pioneros y Rotonda + Linea 10 o 13 (desde Av. Bustillo Km 8) (50 min)";
       case 'b4': // Playa Muñoz
         return "Bus 20, 21";
       case 'b5': // Playa Bonita
