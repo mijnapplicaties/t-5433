@@ -17,7 +17,7 @@ interface TrailCardProps {
 }
 
 const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   // Special handling for Jakob trails to ensure they're displayed correctly

@@ -22,6 +22,20 @@ const DayHikesSection: React.FC<DayHikesSectionProps> = ({
     return null;
   }
 
+  // Function to sort direct access trails with specific trails at the top
+  const sortedDirectAccessHikes = [...directAccessHikes].sort((a, b) => {
+    // First, check if it's Cerro San Martin (ID 4)
+    if (a.id === "4") return -1;
+    if (b.id === "4") return 1;
+    
+    // Then, check if it's Refugio Frey desde Lago Gutierrez (ID 19)
+    if (a.id === "19") return -1;
+    if (b.id === "19") return 1;
+    
+    // For all other trails, maintain original order
+    return 0;
+  });
+
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-forest mb-6">{t('filterDayHike')}</h2>
@@ -32,7 +46,7 @@ const DayHikesSection: React.FC<DayHikesSectionProps> = ({
             {t('accessibilityDirect')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {directAccessHikes.map((trail) => (
+            {sortedDirectAccessHikes.map((trail) => (
               <TrailCard 
                 key={`direct-${trail.id}`} 
                 trail={trail} 
