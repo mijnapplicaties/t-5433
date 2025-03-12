@@ -1,4 +1,3 @@
-
 type Translation = {
   [key: string]: {
     en: string;
@@ -17,7 +16,7 @@ export const translations: Translation = {
   },
   tagline: {
     en: "Discover Patagonia's Wonders",
-    es: "Descubre Patagonia",
+    es: "Descubrí Patagonia",
   },
   distance: {
     en: "Distance",
