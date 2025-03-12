@@ -62,6 +62,23 @@ const TransportationInfo: React.FC<TransportationInfoProps> = ({ trail, compact 
       </div>
     );
   }
+  
+  // Special handling for Pampa Linda trails
+  if (trail.region === "pampa-linda" || 
+      ["14", "15", "16"].includes(trail.id) || 
+      ["Refugio Otto Meiling", "Laguna Ilón", "Refugio Agostino Rocca"].includes(trail.name)) {
+    return (
+      <div className={compact ? "space-y-2" : "space-y-3 bg-gray-50 p-4 rounded-lg"}>
+        <div className="flex items-start gap-2">
+          <Users className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
+          <div>
+            <span className="font-bold block">{t('transferService')} (2 {t('hours')})</span>
+            {!compact && <span className="text-gray-600">{t('transferAvailable')}</span>}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const getTransportationInfo = (type: string) => {
     const getTimeLabel = (minutes: number) => `(${minutes} ${t('minutes')})`;

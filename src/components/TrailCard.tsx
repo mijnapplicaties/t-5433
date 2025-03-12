@@ -32,6 +32,11 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     
   const isRefugioCerroLopez = trail.id === "18" || 
     trail.name === "Refugio Cerro López";
+    
+  // Special handling for Pampa Linda trails
+  const isPampaLindaTrail = trail.region === "pampa-linda" || 
+    ["14", "15", "16"].includes(trail.id) ||
+    ["Refugio Otto Meiling", "Laguna Ilón", "Refugio Agostino Rocca"].includes(trail.name);
   
   const getDefaultImage = () => {
     if (isJakobCircuitTrail) return "/lovable-uploads/3b45435b-d0d0-4fb7-ac3b-73c18e21fd50.png";
