@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -156,8 +157,8 @@ export const trails: Trail[] = [
     name: "Cerro Campanario",
     type: "day-hike",
     difficulty: "easy",
-    distance: 1,
-    duration: 1,
+    distance: 2,
+    duration: 0.75,
     elevation: 1080,
     requiresReservation: false,
     description: {
@@ -440,4 +441,3 @@ export const trails: Trail[] = [
     region: "bariloche"
   }
 ];
-

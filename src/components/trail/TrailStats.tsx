@@ -33,7 +33,8 @@ const TrailStats: React.FC<TrailStatsProps> = ({
       return language === 'es' ? "5-6 horas" : "5-6 " + t('hours');
     }
     
-    if (trail.name === "Lago Gutiérrez" || trail.name === "Cascada de los Duendes") {
+    if (trail.name === "Lago Gutiérrez" || trail.name === "Cascada de los Duendes" || 
+        (trail.name === "Cerro Campanario" && trail.duration === 0.75)) {
       return `${Math.round(trail.duration * 60)} ${t('minutes')}`;
     }
 
