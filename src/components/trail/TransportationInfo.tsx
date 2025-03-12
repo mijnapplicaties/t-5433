@@ -79,6 +79,28 @@ const TransportationInfo: React.FC<TransportationInfoProps> = ({ trail, compact 
       </div>
     );
   }
+  
+  // Special handling for Cerro López-Laguna Negra trail
+  if (trail.id === "19" || trail.name === "Travesía Cerro López – Laguna Negra") {
+    return (
+      <div className={compact ? "space-y-2" : "space-y-3 bg-gray-50 p-4 rounded-lg"}>
+        <div className="flex items-start gap-2">
+          <Bus className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
+          <div>
+            <span className="font-bold block">{t('busService')} - {trail.busLines}</span>
+            {!compact && <span className="text-gray-600">{t('busLines')}: Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8) hasta la Panchería del Circuito Chico (1hr)</span>}
+          </div>
+        </div>
+        <div className="flex items-start gap-2">
+          <Car className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
+          <div>
+            <span className="font-bold block">{t('taxiService')} (40 {t('minutes')})</span>
+            {!compact && <span className="text-gray-600">{t('taxiAvailable')}</span>}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const getTransportationInfo = (type: string) => {
     const getTimeLabel = (minutes: number) => `(${minutes} ${t('minutes')})`;
