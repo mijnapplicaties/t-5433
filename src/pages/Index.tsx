@@ -12,7 +12,6 @@ import CategorySection from '../components/CategorySection';
 import BeachesSection from '../components/BeachesSection';
 import { useTrailFilters } from '../hooks/useTrailFilters';
 import { useTrailLists } from '../hooks/useTrailLists';
-import { useIsMobile } from '../hooks/use-mobile';
 
 // Trails to exclude from category views
 const excludedTrailNames = ['Playa Muñoz', 'Cascada de los Duendes'];
@@ -21,7 +20,6 @@ const excludedTrailIds = ['7', '12']; // 7=Cascada de los Duendes, 12=Playa Muñ
 
 const Index = () => {
   const { t } = useLanguage();
-  const isMobile = useIsMobile();
   
   const {
     filters,
@@ -66,18 +64,18 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
       <LanguageSwitcher />
       <div className="container mx-auto px-4 py-8">
-        <header className={`text-center mb-8 animate-fadeIn ${isMobile ? 'pt-8' : 'pt-12 sm:pt-0'}`}>
-          <div className="flex justify-center mb-4">
+        <header className="text-center mb-12 animate-fadeIn pt-12 sm:pt-0">
+          <div className="flex justify-center mb-6">
             <img 
               src="/lovable-uploads/18170e0a-a211-46c5-97e6-3a78c27402e0.png"
               alt="Camping Los Coihues"
-              className={`${isMobile ? 'h-16' : 'h-24'} w-auto`}
+              className="h-24 w-auto"
             />
           </div>
-          <h1 className={`${isMobile ? 'text-3xl' : 'text-4xl'} font-bold text-forest mb-2`}>
+          <h1 className="text-4xl font-bold text-forest mb-2">
             {t('title')}
           </h1>
-          <p className={`${isMobile ? 'text-lg' : 'text-xl'} text-stone mb-4`}>
+          <p className="text-xl text-stone mb-4">
             {t('tagline')}
           </p>
         </header>
