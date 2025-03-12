@@ -416,5 +416,28 @@ export const trails: Trail[] = [
     busLines: "Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8) hasta la Panchería del Circuito Chico",
     category: "high-mountain",
     region: "bariloche"
+  },
+  {
+    id: "20",
+    name: "Refugio Frey",
+    type: "multi-day",
+    difficulty: "moderate",
+    distance: 12,
+    duration: 4,
+    elevation: 1750,
+    requiresReservation: true,
+    description: {
+      en: "There are two paths. One from Villa Catedral and another from Los Coihues.\n\nThe trail that starts in Villa Los Coihues takes approximately 1 hour longer than if starting from Cerro Catedral.\n\nFrom Villa Catedral, the trail starts from the side of the parking lot. It's 30 minutes on a dirt road, then you walk along Catedral's slope for another 30 minutes until reaching an incredible forest where a gentle ascent begins. After 2 hours, the 'caracol' (spiral) section begins, which is steep and challenging, but doable!\n\nIt's a trail surrounded by forest, with panoramic views of Lake Gutiérrez, which then ascends through the valley until reaching Refugio Frey.\n\nFrom the Lake Gutierrez path, you walk directly from Villa Los Coihues. It's more of a forest hike than a mountain slope walk compared to the Villa Catedral path where you start walking at a higher elevation. It's 4-5 hours from Los Coihues.",
+      es: "Hay dos caminos. Uno desde Villa Catedral y otro, desde Los Coihues.\n\nEl sendero que comienza en Villa Los Coihues toma aproximadamente 1 hora más que si se inicia desde Cerro Catedral.\n\nPor el camino de Villa Catedral el sendero parte desde el costado del estacionamiento. Son 30 minutos de camino de tierra, despues caminas por la ladera del Catedral durante 30 min más hasta llegar al bósque increible donde comienza un leve ascenso. Despues de 2 hs comienza el caracol que es empinado y cuesta, pero se hace!\n\nEs un sendero rodeado de bosque, con vistas panorámicas al Lago Gutiérrez, que luego asciende por el valle hasta alcanzar el Refugio Frey.\n\nPor el camino desde Lago Gutierrez, caminás directo desde Villa Los Coihues. Es más caminata de bósque que de ladera de montaña como desde el camino de Villa Catedral que empezás caminando a más altura. Son 4-5 hs desde Los Coihues."
+    },
+    imageUrl: "/lovable-uploads/5fd20688-6816-43ff-87bc-fb5b01ab43eb.png",
+    startingPoint: "Villa Los Coihues or Cerro Catedral",
+    highlights: ["highlightMountainRefuge", "highlightPanoramicViews", "highlightNativeForest", "highlightAlpineLake"],
+    transportation: ["walking", "taxi"],
+    distanceFromCampsite: 0,
+    travelTime: 15,
+    category: "high-mountain",
+    region: "bariloche"
   }
 ];
+
