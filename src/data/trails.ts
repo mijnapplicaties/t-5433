@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -215,7 +214,7 @@ export const trails: Trail[] = [
     transportation: ["bus", "taxi"],
     distanceFromCampsite: 12,
     travelTime: 30,
-    busLines: "Linea 50 (desde Coihues) + Linea 20 (Av. Bustillo) (1 hr)",
+    busLines: "Linea 50 (desde Coihues hasta Rotonda Av. Pioneros) + Linea 10 (desde Av. Bustillo km 8) (50 min)",
     category: "walking-path"
   },
   {

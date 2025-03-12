@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Bus, Car, Footprints, ThumbsUp, Users } from 'lucide-react';
 import { Trail, TransportationType } from '../../types/trail';
