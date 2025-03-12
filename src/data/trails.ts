@@ -99,8 +99,8 @@ export const trails: Trail[] = [
     elevation: 800,
     requiresReservation: false,
     description: {
-      en: "A scenic lakeside trail that starts directly from Camping Los Coihues. Perfect for a morning walk with beautiful views of Lago Gutiérrez and surrounding mountains.",
-      es: "Un pintoresco sendero junto al lago que comienza directamente desde Camping Los Coihues. Perfecto para una caminata matutina con hermosas vistas del Lago Gutiérrez y las montañas circundantes."
+      en: "Three blocks from the camping site you'll find Lake Gutiérrez. You can walk along the shore to the left, towards the Arelauquen area, or follow the road that borders the lake and leads to the path of the Cascada de los Duendes. Along this route, you'll find some beautiful small beaches on the opposite shore, about a 20-minute walk away.",
+      es: "A tres cuadras del camping se encuentra el Lago Gutiérrez. Podés caminar por la costa hacia la izquierda, en dirección a la zona de Arelauquen, o seguir la calle de autos que bordea el lago y lleva al camino de la Cascada de los Duendes. En este recorrido, encontrarás algunas playitas hermosas en la costa opuesta, a unos 20 minutos de caminata."
     },
     imageUrl: "/lovable-uploads/bdd46388-2e54-44ed-8cb1-f449f800bd97.png",
     startingPoint: "Camping Los Coihues (direct access)",
