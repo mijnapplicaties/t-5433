@@ -51,6 +51,8 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
         return "Linea 50 (Desde Coihues hasta Rotonda Av. Pioneros) + Linea 10 (1 hr)";
       case 'b8': // Villa Tacul
         return "Linea 50 (Desde Coihues hasta Rotonda Av. Pioneros) + Linea 20 hasta Llao Llao (1 hr)";
+      case 'b9': // Playa Melipal
+        return "Linea 50 (Desde Coihues hasta Terminal) + Linea 20 o 21 (km. 4 Av. Bustillo) (25 min)";
       default:
         return null;
     }
