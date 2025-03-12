@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -378,7 +377,7 @@ export const trails: Trail[] = [
     type: "multi-day",
     difficulty: "hard",
     distance: 8,
-    duration: 2, // Changed from 4 to 2 hours
+    duration: 2,
     elevation: 1620,
     requiresReservation: true,
     description: {
@@ -388,10 +387,33 @@ export const trails: Trail[] = [
     imageUrl: "/lovable-uploads/18aa5c8f-d10c-4295-a1d7-665ad54ba5c5.png",
     startingPoint: "Villa Tacul (30 min drive from Los Coihues)",
     highlights: ["highlightPanoramicViews", "highlightMountainRefuge", "highlightHighMountainPasses", "highlightNativeForest"],
-    transportation: ["bus", "taxi"], // Removed "private-transfer"
+    transportation: ["bus", "taxi"],
     distanceFromCampsite: 18,
     travelTime: 30,
     busLines: "Linea 50 (desde Los Coihues hasta Rotonda Av. Pioneros) + Linea 10 o 13 (Av. Bustillo km 8) (50 min)",
+    category: "high-mountain",
+    region: "bariloche"
+  },
+  {
+    id: "19",
+    name: "Travesia Cerro López – Laguna Negra",
+    type: "multi-day",
+    difficulty: "expert",
+    distance: 25,
+    duration: 11,
+    elevation: 2056,
+    requiresReservation: true,
+    description: {
+      en: "The traverse begins at the intersection of Circuito Chico with López stream, where a steep but relatively short ascent of less than 5 km begins to López Refuge. Along the way, you pass by the Roca Negra Refuge before reaching, after approximately 1 hour and 40 minutes, the refuge. From there, you need to register to continue towards Pico Turista or Laguna Negra.\n\nThe ascent continues up the López wall to the ridge, in a demanding and rocky section that takes more than an hour. It's a vertical trail where you advance between rocks, so good footwear and physical condition are essential. Once the pass is reached, a panoramic view opens to the west, where you can see Tronador, Osorno, Puntiagudo, Capilla, and the Tristeza arm of Lake Nahuel Huapi. From there, the trail descends abruptly through loose scree, this being the most technical section of the route. The descent must be done with caution, as stones can move and cause falls. After 40 minutes, more stable ground is reached in the valley.\n\nAfter descending, the trail crosses a forest of lengas and wetlands, where there used to be a rustic camping that was prohibited for environmental reasons. Then, a new ascent begins to the col of Cerro Bailey Willis, where again you get a view of Tronador and de la Laguna CAB. Following to the right, you faldeo the mountain between large rocks to a second col, where you get the first view of Laguna Negra.\n\nThe trail continues along the ridge before beginning the descent to the lagoon. You skirt the lagoon on the left bank, crossing rocky sections with the help of chains and ropes installed to facilitate passage. Depending on the time of year, it's possible to find snow fields in this section. Once on the opposite bank, with the Italia Refuge on the right, the final descent begins along El Caracol trail, which descends in zigzag fashion towards the valley.\n\nAfter crossing the river, the trail becomes flatter and the descent more gradual. This last section is completed more quickly and ends at the old Colonia Suiza route, thus completing the traverse.",
+      es: "La travesía comienza en el cruce de Circuito Chico con el arroyo López, donde se inicia un ascenso empinado pero relativamente corto de menos de 5 km hasta el Refugio López. En el trayecto se pasa por el Refugio Roca Negra antes de llegar, tras aproximadamente 1 hora y 40 minutos, al refugio. Desde allí, es necesario registrarse para continuar hacia Pico Turista o Laguna Negra.\n\nEl ascenso continúa por la pared del López hasta el filo, en un tramo exigente y rocoso que lleva más de una hora. Es un sendero vertical donde se avanza entre piedras, por lo que es imprescindible contar con buen calzado y estado físico. Una vez alcanzado el paso, se abre una vista panorámica hacia el oeste, donde se pueden ver el Tronador, el Osorno, el Puntiagudo, el Capilla y el Brazo Tristeza del lago Nahuel Huapi. Desde allí, el sendero desciende abruptamente por un pedrero suelto, siendo este el tramo más técnico de la ruta. El descenso debe hacerse con precaución, ya que las piedras pueden moverse y provocar caídas. Tras 40 minutos, se alcanza un terreno más estable en el valle.\n\nLuego de descender, el sendero atraviesa un bosque de lengas y mallines, donde antiguamente existía un camping agreste que fue prohibido por razones ambientales. A continuación, se inicia un nuevo ascenso hasta el col del Cerro Bailey Willis, donde nuevamente se obtiene una vista del Tronador y de la Laguna CAB. Siguiendo hacia la derecha, se faldeo la montaña entre grandes rocas hasta un segundo col, donde se tiene la primera vista de la Laguna Negra.\n\nEl sendero continúa por el filo antes de iniciar el descenso hacia la laguna. Se bordea la laguna por la margen izquierda, cruzando sectores rocosos con ayuda de cadenas y sogas instaladas para facilitar el paso. Dependiendo de la época del año, es posible encontrar neveros en este tramo. Una vez en la margen opuesta, con el Refugio Italia a la derecha, se inicia el descenso final por el sendero El Caracol, que desciende en forma de zigzag hacia el valle.\n\nDespués de cruzar el río, el sendero se vuelve más plano y el descenso más gradual. Este último tramo se completa con mayor rapidez y finaliza en la ruta vieja de Colonia Suiza, completando así la travesía."
+    },
+    imageUrl: "/lovable-uploads/1f6daf6e-7023-4399-9b7b-85dee316066e.png",
+    startingPoint: "Circuito Chico (50 min from Los Coihues)",
+    highlights: ["highlightMountainRefuge", "highlightAlpineLake", "highlightTechnicalTerrain", "highlightPanoramicViews"],
+    transportation: ["bus", "taxi"],
+    distanceFromCampsite: 20,
+    travelTime: 50,
+    busLines: "Linea 50 (los Coihues) + Linea 10 (desde Av. Bustillo km 8) hasta la Panchería del Circuito Chico",
     category: "high-mountain",
     region: "bariloche"
   }
