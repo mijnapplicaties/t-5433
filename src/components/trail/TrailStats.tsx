@@ -25,12 +25,14 @@ const TrailStats: React.FC<TrailStatsProps> = ({
   };
 
   const formatDuration = (trail: Trail) => {
+    const oneWayText = language === 'es' ? "ida" : "one way";
+    
     if (trail.name === "Refugio Frey from Villa Catedral") {
-      return language === 'es' ? "3 horas" : "3 " + t('hours');
+      return language === 'es' ? `3 horas ${oneWayText}` : `3 ${t('hours')} ${oneWayText}`;
     }
     
     if (trail.name.includes("Jakob")) {
-      return language === 'es' ? "5-6 horas" : "5-6 " + t('hours');
+      return language === 'es' ? `5-6 horas ${oneWayText}` : `5-6 ${t('hours')} ${oneWayText}`;
     }
     
     if (trail.name === "Lago Gutiérrez" || trail.name === "Cascada de los Duendes" || 
@@ -40,10 +42,10 @@ const TrailStats: React.FC<TrailStatsProps> = ({
 
     // Special handling for Spanish singular/plural
     if (language === 'es') {
-      return `${trail.duration} ${trail.duration === 1 ? 'hora' : 'horas'}`;
+      return `${trail.duration} ${trail.duration === 1 ? 'hora' : 'horas'} ${oneWayText}`;
     }
     
-    return `${trail.duration} ${t('hours')}`;
+    return `${trail.duration} ${t('hours')} ${oneWayText}`;
   };
 
   const getElevation = (trail: Trail) => {
