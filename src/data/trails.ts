@@ -189,10 +189,10 @@ export const trails: Trail[] = [
     imageUrl: "/lovable-uploads/2d1500b3-3ff7-49f4-8523-acf161b6f388.png",
     startingPoint: "Circuito Chico entrance (35 min bus ride)",
     highlights: ["highlightLakeViews", "highlightForestTrail", "highlightPhotographySpots"],
-    transportation: ["bus", "taxi", "private-transfer"],
+    transportation: ["bus", "taxi"],
     distanceFromCampsite: 15,
     travelTime: 35,
-    busLines: "Line 20",
+    busLines: "Linea 50 (desde Coihues) + Linea 10 ó 13 (Av. Bustillo) (50 min)",
     category: "walking-path"
   },
   {
@@ -440,3 +440,4 @@ export const trails: Trail[] = [
     region: "bariloche"
   }
 ];
+
