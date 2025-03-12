@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -269,3 +270,19 @@ export const trails: Trail[] = [
     duration: 1.5,
     elevation: 900,
     requiresReservation: false,
+    description: {
+      en: "A beautiful beach along Lake Gutiérrez accessed via a pleasant forest trail. Perfect for swimming in summer and enjoying the peaceful lakeside scenery. The trail to Playa Muñoz starts from the same point as Cascada de los Duendes but continues further along the lake.",
+      es: "Una hermosa playa junto al Lago Gutiérrez a la que se accede por un agradable sendero boscoso. Perfecta para nadar en verano y disfrutar del tranquilo paisaje lacustre. El sendero a Playa Muñoz comienza en el mismo punto que Cascada de los Duendes pero continúa más lejos a lo largo del lago.",
+      fr: "Une belle plage le long du lac Gutiérrez accessible par un agréable sentier forestier. Parfait pour la baignade en été et pour profiter du paysage paisible au bord du lac. Le sentier de Playa Muñoz commence au même endroit que celui de Cascada de los Duendes mais continue plus loin le long du lac.",
+      de: "Ein schöner Strand am Gutiérrez-See, der über einen angenehmen Waldweg zugänglich ist. Perfekt zum Schwimmen im Sommer und um die friedliche Seelandschaft zu genießen. Der Weg nach Playa Muñoz beginnt am gleichen Punkt wie Cascada de los Duendes, führt aber weiter am See entlang."
+    },
+    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png",
+    startingPoint: "Camping Los Coihues (direct access)",
+    highlights: ["highlightLakeBeaches", "highlightSwimmingSpot", "highlightNativeForest", "highlightFamilyFriendly"],
+    transportation: ["walking"],
+    distanceFromCampsite: 0,
+    travelTime: 0,
+    category: "beaches-lakes",
+    region: "pampa-linda"
+  }
+];
