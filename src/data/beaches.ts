@@ -1,3 +1,4 @@
+
 import { Beach } from "../types/beach";
 
 export const beaches: Beach[] = [
@@ -25,7 +26,7 @@ export const beaches: Beach[] = [
   {
     id: "b2",
     name: "Playa Con Viento",
-    location: "Lago Nahuel Huapi, Km 18 Av. Bustillo",
+    location: "Lago Moreno",
     description: {
       en: "True to its name ('Beach With Wind'), this beach offers consistent winds perfect for sailing and windsurfing activities. It features a mix of sand and pebbles with spectacular mountain views.",
       es: "Fiel a su nombre, esta playa ofrece vientos constantes, perfectos para actividades de vela y windsurf. Presenta una mezcla de arena y guijarros con espectaculares vistas a la montaña."
