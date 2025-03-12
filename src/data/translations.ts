@@ -1,3 +1,4 @@
+
 type Translation = {
   [key: string]: {
     en: string;
@@ -444,6 +445,6 @@ export const translations: Translation = {
   },
   transferService: {
     en: "Private transfer available",
-    es: "Transfer Disponible (2 horas)",
+    es: "Transfer Disponible",
   },
 };
