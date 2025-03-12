@@ -62,17 +62,17 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     sm: {
       container: '',
       icon: 'w-4 h-4',
-      text: 'text-sm font-semibold',
+      text: 'text-base font-semibold',
     },
     md: {
       container: 'gap-3',
       icon: 'w-5 h-5',
-      text: 'text-base font-semibold',
+      text: 'text-lg font-semibold',
     },
     lg: {
       container: 'gap-3',
       icon: 'w-6 h-6',
-      text: 'text-lg font-bold',
+      text: 'text-xl font-bold',
     },
   };
 
