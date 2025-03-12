@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 import { ChevronDown, ChevronUp, Map, Mountain, FootprintsIcon, TreePine, Waves, Filter } from 'lucide-react';
 import { TrailCategory } from '../types/trail';
 import { useLanguage } from '../context/LanguageContext';
-import { useMobile } from '../hooks/use-mobile';
+import { useIsMobile } from '../hooks/use-mobile';
 
 interface CategoryFilterProps {
   selectedCategory: TrailCategory | 'all';
@@ -19,7 +19,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
   setFiltersOpen
 }) => {
   const { t } = useLanguage();
-  const isMobile = useMobile();
+  const isMobile = useIsMobile();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const getCategoryIcon = (category: TrailCategory | 'all') => {
