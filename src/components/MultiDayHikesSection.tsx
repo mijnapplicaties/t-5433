@@ -61,7 +61,7 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
       
       {otherMultiDayHikes.length > 0 && (
         <div className="mb-8">
-          <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+          <h3 className="text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
             {t('bariloche')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -93,7 +93,7 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
       
       {pampLindaHikes.length > 0 && (
         <div>
-          <h3 className="text-xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+          <h3 className="text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
             {t('pampLinda')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
