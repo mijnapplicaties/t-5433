@@ -67,7 +67,7 @@ export const beaches: Beach[] = [
   {
     id: "b4",
     name: "Playa Muñoz",
-    location: "Lago Nahuel Huapi, Km 12 Av. Bustillo",
+    location: "Lago Gutiérrez",
     description: {
       en: "A tranquil beach with pristine blue waters surrounded by mountains, perfect for relaxation and enjoying the peaceful atmosphere. The clear waters invite swimming and the beach offers a great spot for photography.",
       es: "Una playa tranquila con aguas azules prístinas rodeada de montañas, perfecta para relajarse y disfrutar de la atmósfera pacífica. Las aguas cristalinas invitan a nadar y la playa ofrece un gran lugar para la fotografía."
@@ -81,8 +81,8 @@ export const beaches: Beach[] = [
     activities: ["swimming", "picnic", "sunbathing", "viewpoint"],
     facilities: ["parkingAvailable"],
     distanceFromCampsite: 5,
-    travelTime: 20,
-    transportation: ["bus", "taxi"],
+    travelTime: 90,
+    transportation: ["walking"],
     bestTimeToVisit: "December-March"
   },
   {
