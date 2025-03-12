@@ -1,4 +1,3 @@
-
 import { Beach } from "../types/beach";
 
 export const beaches: Beach[] = [
@@ -94,7 +93,7 @@ export const beaches: Beach[] = [
       en: "As its name suggests ('Beautiful Beach'), this is one of the most scenic beaches in Bariloche. It offers crystal clear waters and is surrounded by native forest, providing a picture-perfect setting.",
       es: "Como su nombre lo indica, esta es una de las playas más pintorescas de Bariloche. Ofrece aguas cristalinas y está rodeada de bosque nativo, proporcionando un entorno perfecto para fotografías."
     },
-    imageUrl: "/lovable-uploads/7164284c-d3da-4c2d-8a3a-3608b3b7c455.png", // Updated image
+    imageUrl: "/lovable-uploads/7164284c-d3da-4c2d-8a3a-3608b3b7c455.png",
     beachType: "sandy",
     waterTemp: {
       summer: 17,
@@ -115,7 +114,7 @@ export const beaches: Beach[] = [
       en: "A tranquil beach ('Serene Beach') offering peaceful surroundings and relatively warmer waters. Perfect for a quiet day by the lake with the family.",
       es: "Una playa tranquila que ofrece un entorno pacífico y aguas relativamente más cálidas. Perfecta para un día tranquilo junto al lago con la familia."
     },
-    imageUrl: "/lovable-uploads/ca8e90bd-76e4-4ea6-afba-820b7b457d1e.png",
+    imageUrl: "/lovable-uploads/4efa557c-610b-494e-b344-4d12e15b9324.png",
     beachType: "pebbly",
     waterTemp: {
       summer: 19,
@@ -171,4 +170,3 @@ export const beaches: Beach[] = [
     bestTimeToVisit: "December-February"
   }
 ];
-
