@@ -21,11 +21,22 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     if (trail.name === "Lago Gutiérrez") {
       return `${trail.distance * 1000} ${t('meters')}`;
     }
+    
+    // Special handling for Cerro Otto
+    if (trail.name === "Cerro Otto & Piedra de Habsburgo") {
+      return language === 'es' ? "2 horas ida" : "2 hours one way";
+    }
+    
     return `${trail.distance} ${t('km')}`;
   };
 
   const formatDuration = (trail: Trail) => {
     const oneWayText = language === 'es' ? "ida" : "one way";
+    
+    // Skip duration display for Cerro Otto since it's shown in distance
+    if (trail.name === "Cerro Otto & Piedra de Habsburgo") {
+      return "";
+    }
     
     if (trail.name === "Refugio Frey from Villa Catedral") {
       return language === 'es' ? `3 horas ${oneWayText}` : `3 ${t('hours')} ${oneWayText}`;
@@ -85,18 +96,20 @@ const TrailStats: React.FC<TrailStatsProps> = ({
 
   return (
     <div className={containerClass}>
-      {trail.distance > 0 && (
+      {(trail.distance > 0 || trail.name === "Cerro Otto & Piedra de Habsburgo") && (
         <div className="flex items-center gap-2">
           <ArrowUpRight className={iconClasses} />
           <span className={textClasses}>{formatDistance(trail)}</span>
         </div>
       )}
-      <div className="flex items-center gap-2">
-        <Clock className={iconClasses} />
-        <span className={textClasses}>
-          {formatDuration(trail)}
-        </span>
-      </div>
+      {formatDuration(trail) && (
+        <div className="flex items-center gap-2">
+          <Clock className={iconClasses} />
+          <span className={textClasses}>
+            {formatDuration(trail)}
+          </span>
+        </div>
+      )}
       <div className="flex items-center gap-2">
         <Mountain className={iconClasses} />
         <span className={textClasses}>{getElevation(trail)}m</span>
