@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Beach } from '../types/beach';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -67,9 +68,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
             alt={beach.name}
             className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
           />
-          <div className="absolute bottom-4 right-4 flex gap-2 bg-white/80 rounded-full px-3 py-1">
-            <Badge className="bg-blue-500 text-white">{getBeachTypeTranslation(beach.beachType)}</Badge>
-          </div>
+          {/* Removed the beach type badge here */}
         </div>
         
         <CardHeader>
