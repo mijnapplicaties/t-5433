@@ -1,3 +1,4 @@
+
 type Translation = {
   [key: string]: {
     en: string;
@@ -445,33 +446,5 @@ export const translations: Translation = {
   transferService: {
     en: "Private transfer available",
     es: "Transfer Disponible",
-  },
-  byBus: {
-    en: "by bus",
-    es: "en bus",
-  },
-  byDrive: {
-    en: "drive",
-    es: "en auto",
-  },
-  minBy: {
-    en: "min by",
-    es: "min en",
-  },
-  minDrive: {
-    en: "min drive",
-    es: "min en auto",
-  },
-  minBusRide: {
-    en: "min bus ride",
-    es: "min en bus",
-  },
-  baseOf: {
-    en: "Base of",
-    es: "Base del",
-  },
-  entrance: {
-    en: "entrance",
-    es: "entrada",
   },
 };

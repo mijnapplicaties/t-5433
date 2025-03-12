@@ -17,7 +17,7 @@ interface TrailCardProps {
 }
 
 const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   // Special handling for Jakob trails to ensure they're displayed correctly
@@ -44,15 +44,6 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     if (isJakobRefugioTrail) return "/lovable-uploads/8f08a419-86bc-49e3-8707-015d86806c3e.png";
     if (isRefugioCerroLopez) return "/lovable-uploads/18aa5c8f-d10c-4295-a1d7-665ad54ba5c5.png";
     return "/placeholder.svg";
-  };
-  
-  // Function to localize starting point information
-  const getLocalizedStartingPoint = () => {
-    if (language === 'en' || !trail.startingPointEs) {
-      return trail.startingPoint;
-    } else {
-      return trail.startingPointEs;
-    }
   };
   
   return (
@@ -90,7 +81,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
             <div>
               <CardTitle className="text-xl font-semibold">{trail.name}</CardTitle>
               <CardDescription className="flex items-center gap-2 mt-1">
-                <MapPin className="w-4 h-4 flex-shrink-0" /> {getLocalizedStartingPoint()}
+                <MapPin className="w-4 h-4 flex-shrink-0" /> {trail.startingPoint}
               </CardDescription>
             </div>
             <DifficultyBadge difficulty={trail.difficulty} />
