@@ -130,8 +130,8 @@ export const trails: Trail[] = [
     elevation: 950,
     requiresReservation: false,
     description: {
-      en: "A short but rewarding hike with panoramic views of Lake Gutiérrez. Easy access from Camping Los Coihues.",
-      es: "Una caminata corta pero gratificante con vistas panorámicas del Lago Gutiérrez. Fácil acceso desde Camping Los Coihues.",
+      en: "A short but rewarding hike with panoramic views of Lake Gutiérrez. Easy access from Camping Los Coihues.\n\nThe Mirador (viewpoint) to Lake Gutiérrez is a 1-hour walk from the Camping. You need to walk 25 minutes to the national park entrance, following the road along Lake Gutiérrez until you reach the National Park entrance. From there, you'll find a sign indicating Mirador Lago Gutiérrez, Cascada de los Duendes, Playa Muñoz, and the trail to Refugio Frey all together.\n\nIt's a 20-minute walk from that point with some slightly steep slopes, but doable.",
+      es: "Una caminata corta pero gratificante con vistas panorámicas del Lago Gutiérrez. Fácil acceso desde Camping Los Coihues.\n\nEl Mirador al lago Gutierrez se encuentra a 1hr del Camping caminando. Hay que caminar 25 min hasta la entrada del parque nacional bordeando el Lago Gutierrez por la calle de autos hasta llegar a la entrada del Parque Nacional. De ahí, vas a encontrar un cartel señalizando el Mirador Lago Gutierrez, La Cascada de los Duendes, Playa Muñoz y el Sendero hacia el Refugio Frey. Todo junto.\n\nSon 20 minutos desde ese punto con algunas pendientes un poco empinadas pero factibles.",
       fr: "Une randonnée courte mais récompensante avec des vues panoramiques du Lago Gutiérrez. Accès facile depuis le Camping Los Coihues.",
       de: "Une kurze aber belohnte Wanderung mit schiczen Blicken auf den Lago Gutiérrez. Einfaches Zugang von Camping Los Coihues."
     },
