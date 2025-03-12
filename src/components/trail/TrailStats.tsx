@@ -37,7 +37,7 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     
     if (trail.name === "Lago Gutiérrez" || trail.name === "Cascada de los Duendes" || 
         (trail.name === "Cerro Campanario" && trail.duration === 0.75)) {
-      return `${Math.round(trail.duration * 60)} ${t('minutes')}`;
+      return `${Math.round(trail.duration * 60)} ${t('minutes')} ${oneWayText}`;
     }
 
     // Special handling for Spanish singular/plural
@@ -62,12 +62,12 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     sm: {
       container: '',
       icon: 'w-4 h-4',
-      text: 'text-sm',
+      text: 'text-sm font-semibold',
     },
     md: {
       container: 'gap-3',
       icon: 'w-5 h-5',
-      text: 'text-base',
+      text: 'text-base font-semibold',
     },
     lg: {
       container: 'gap-3',
