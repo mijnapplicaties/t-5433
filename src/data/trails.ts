@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -140,8 +141,8 @@ export const trails: Trail[] = [
     elevation: 900,
     requiresReservation: false,
     description: {
-      en: "A charming waterfall trail with access to beautiful Gutiérrez lake beaches. Perfect starter trail directly from the campsite, following a gentle path through the native forest. Great for families and beginners.",
-      es: "Un encantador sendero a la cascada con acceso a hermosas playas del lago Gutiérrez. Sendero perfecto para comenzar, directamente desde el camping, siguiendo un camino suave a través del bosque nativo. Ideal para familias y principiantes."
+      en: "It's a 30-minute walk from the Camping. You need to walk 20 minutes to the national park entrance, following the road that borders Lake Gutierrez until you reach the National Park entrance. From there, it's 10 more minutes.\n\nA charming waterfall trail with access to beautiful Gutiérrez lake beaches. Perfect starter trail directly from the campsite, following a gentle path through the native forest. Great for families and beginners.",
+      es: "Está a 30 min del Camping caminando. Hay que caminar 20 min hasta la entrada del parque nacional bordeando el Lago Gutierrez por la calle de autos hasta llegar a la entrada del Parque Nacional. De ahí son 10 minutos más.\n\nUn encantador sendero a la cascada con acceso a hermosas playas del lago Gutiérrez. Sendero perfecto para comenzar, directamente desde el camping, siguiendo un camino suave a través del bosque nativo. Ideal para familias y principiantes."
     },
     imageUrl: "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png",
     startingPoint: "Camping Los Coihues (direct access)",
