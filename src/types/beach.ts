@@ -10,8 +10,6 @@ export interface Beach {
   description: {
     en: string;
     es: string;
-    fr: string;
-    de: string;
   };
   imageUrl: string;
   beachType: BeachType;

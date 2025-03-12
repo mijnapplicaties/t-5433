@@ -18,8 +18,6 @@ export interface Trail {
   description: {
     en: string;
     es: string;
-    fr: string;
-    de: string;
   };
   imageUrl: string;
   startingPoint: string;
