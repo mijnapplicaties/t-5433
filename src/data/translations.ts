@@ -1,4 +1,3 @@
-
 type Translation = {
   [key: string]: {
     en: string;
@@ -442,5 +441,9 @@ export const translations: Translation = {
   busScheduleWarning: {
     en: "Bus schedules can be limited - check at the reception",
     es: "Los horarios de bus pueden ser limitados - consulta en recepción",
+  },
+  transferService: {
+    en: "Private transfer available",
+    es: "Transfer Disponible (2 horas)",
   },
 };
