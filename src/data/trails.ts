@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -263,3 +264,24 @@ export const trails: Trail[] = [
   {
     id: "12",
     name: "Playa Muñoz",
+    type: "day-hike",
+    difficulty: "easy",
+    distance: 3.5,
+    duration: 0.75,
+    elevation: 820,
+    requiresReservation: false,
+    description: {
+      en: "A beautiful beach on Lake Gutiérrez that's perfect for a relaxing day. Follow the same trail as Cascada de los Duendes, but continue past the waterfall for about 20 more minutes until you reach the sandy beach area. Great for swimming in summer months.",
+      es: "Una hermosa playa en el Lago Gutiérrez que es perfecta para un día relajante. Sigue el mismo sendero que la Cascada de los Duendes, pero continúa más allá de la cascada durante unos 20 minutos más hasta llegar a la zona de playa arenosa. Excelente para nadar durante los meses de verano.",
+      fr: "Une belle plage sur le lac Gutiérrez qui est parfaite pour une journée de détente. Suivez le même sentier que Cascada de los Duendes, mais continuez au-delà de la cascade pendant environ 20 minutes de plus jusqu'à ce que vous atteigniez la zone de plage de sable. Idéal pour nager pendant les mois d'été.",
+      de: "Ein schöner Strand am Gutiérrez-See, der perfekt für einen entspannten Tag ist. Folgen Sie demselben Weg wie Cascada de los Duendes, aber gehen Sie etwa 20 Minuten über den Wasserfall hinaus, bis Sie den Sandstrandbereich erreichen. Ideal zum Schwimmen in den Sommermonaten."
+    },
+    imageUrl: "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png",
+    startingPoint: "Camping Los Coihues (direct access)",
+    highlights: ["highlightLakeBeaches", "highlightSwimmingArea", "highlightNativeForest", "highlightFamilyFriendly"],
+    transportation: ["walking"],
+    distanceFromCampsite: 0,
+    travelTime: 0,
+    category: "walking-path"
+  }
+];
