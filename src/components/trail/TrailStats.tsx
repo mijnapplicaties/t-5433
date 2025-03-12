@@ -28,24 +28,39 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     const oneWayText = language === 'es' ? "ida" : "one way";
     
     if (trail.name === "Refugio Frey from Villa Catedral") {
-      return language === 'es' ? `3 horas ${oneWayText}` : `3 ${t('hours')} ${oneWayText}`;
+      return {
+        value: language === 'es' ? `3 horas` : `3 ${t('hours')}`,
+        suffix: oneWayText
+      };
     }
     
     if (trail.name.includes("Jakob")) {
-      return language === 'es' ? `5-6 horas ${oneWayText}` : `5-6 ${t('hours')} ${oneWayText}`;
+      return {
+        value: language === 'es' ? `5-6 horas` : `5-6 ${t('hours')}`,
+        suffix: oneWayText
+      };
     }
     
     if (trail.name === "Lago Gutiérrez" || trail.name === "Cascada de los Duendes" || 
         (trail.name === "Cerro Campanario" && trail.duration === 0.75)) {
-      return `${Math.round(trail.duration * 60)} ${t('minutes')} ${oneWayText}`;
+      return {
+        value: `${Math.round(trail.duration * 60)} ${t('minutes')}`,
+        suffix: oneWayText
+      };
     }
 
     // Special handling for Spanish singular/plural
     if (language === 'es') {
-      return `${trail.duration} ${trail.duration === 1 ? 'hora' : 'horas'} ${oneWayText}`;
+      return {
+        value: `${trail.duration} ${trail.duration === 1 ? 'hora' : 'horas'}`,
+        suffix: oneWayText
+      };
     }
     
-    return `${trail.duration} ${t('hours')} ${oneWayText}`;
+    return {
+      value: `${trail.duration} ${t('hours')}`,
+      suffix: oneWayText
+    };
   };
 
   const getElevation = (trail: Trail) => {
@@ -62,17 +77,20 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     sm: {
       container: '',
       icon: 'w-4 h-4',
-      text: 'text-base font-semibold',
+      text: 'text-base font-bold',
+      suffix: 'text-xs',
     },
     md: {
       container: 'gap-3',
       icon: 'w-5 h-5',
-      text: 'text-lg font-semibold',
+      text: 'text-lg font-bold',
+      suffix: 'text-sm',
     },
     lg: {
       container: 'gap-3',
       icon: 'w-6 h-6',
       text: 'text-xl font-bold',
+      suffix: 'text-base',
     },
   };
 
@@ -82,6 +100,9 @@ const TrailStats: React.FC<TrailStatsProps> = ({
 
   const iconClasses = `${sizeClasses[size].icon} flex-shrink-0 text-blue-500`;
   const textClasses = sizeClasses[size].text;
+  const suffixClasses = `${sizeClasses[size].suffix} text-gray-500 block`;
+
+  const duration = formatDuration(trail);
 
   return (
     <div className={containerClass}>
@@ -93,9 +114,10 @@ const TrailStats: React.FC<TrailStatsProps> = ({
       )}
       <div className="flex items-center gap-2">
         <Clock className={iconClasses} />
-        <span className={textClasses}>
-          {formatDuration(trail)}
-        </span>
+        <div>
+          <span className={textClasses}>{duration.value}</span>
+          <span className={suffixClasses}>{duration.suffix}</span>
+        </div>
       </div>
       <div className="flex items-center gap-2">
         <Mountain className={iconClasses} />
