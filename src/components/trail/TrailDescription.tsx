@@ -29,13 +29,7 @@ const TrailDescription: React.FC<TrailDescriptionProps> = ({
           return trail.description[lang as keyof typeof trail.description] || "";
       }
     }
-    
-    // If we don't have a description for the requested language, fallback to Spanish
-    // This prevents showing an empty description when other language descriptions haven't been updated
-    const description = trail.description[lang as keyof typeof trail.description] || 
-                        trail.description['es'] || "";
-                        
-    return description;
+    return trail.description[lang as keyof typeof trail.description] || "";
   };
 
   const description = getDescription(trail, language);
