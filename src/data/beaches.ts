@@ -144,7 +144,7 @@ export const beaches: Beach[] = [
     activities: ["swimming", "kayaking", "viewpoint", "picnic"],
     facilities: ["parkingAvailable"],
     distanceFromCampsite: 18,
-    travelTime: 45,
+    travelTime: 40,
     transportation: ["bus", "taxi"],
     bestTimeToVisit: "December-February"
   },
@@ -165,7 +165,7 @@ export const beaches: Beach[] = [
     activities: ["swimming", "kayaking", "viewpoint", "picnic", "sunbathing"],
     facilities: ["parkingAvailable"],
     distanceFromCampsite: 20,
-    travelTime: 50,
+    travelTime: 30,
     transportation: ["bus", "taxi"],
     bestTimeToVisit: "December-February"
   }
