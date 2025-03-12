@@ -272,7 +272,7 @@ export const trails: Trail[] = [
       en: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines.\n\nLuego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados \"caracoles\".\n\nAl final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche.",
       es: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines.\n\nLuego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados \"caracoles\".\n\nAl final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche."
     },
-    imageUrl: "/lovable-uploads/67fa31e5-4160-46c9-92fb-86aad3955a56.png",
+    imageUrl: "/lovable-uploads/b9aa2dd6-4efa-41fc-aae0-35165399628f.png",
     startingPoint: "Colonia Suiza (1 hr from Los Coihues)",
     highlights: ["highlightAlpineLake", "highlightMountainRefuge", "highlightHighMountainPasses"],
     transportation: ["bus", "taxi"],
