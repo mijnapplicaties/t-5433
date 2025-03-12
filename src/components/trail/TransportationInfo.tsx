@@ -16,17 +16,10 @@ const TransportationInfo: React.FC<TransportationInfoProps> = ({ trail, compact 
     return (
       <div className={compact ? "space-y-2" : "space-y-3 bg-gray-50 p-4 rounded-lg"}>
         <div className="flex items-start gap-2">
-          <Car className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
+          <Footprints className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
           <div>
-            <span className="font-bold block">{t('taxiService')} (16 {t('minutes')})</span>
-            {!compact && <span className="text-gray-600">{t('taxiRecommendation')}</span>}
-          </div>
-        </div>
-        <div className="flex items-start gap-2">
-          <Bus className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
-          <div>
-            <span className="font-bold block">{t('busLines')}: Bus to Colonia Suiza</span>
-            {!compact && <span className="text-gray-600">{t('busScheduleWarning')}</span>}
+            <span className="font-bold block">{t('walkingDistance')}</span>
+            {!compact && <span className="text-gray-600">{t('directAccess')}</span>}
           </div>
         </div>
       </div>
@@ -107,27 +100,6 @@ const TransportationInfo: React.FC<TransportationInfoProps> = ({ trail, compact 
         return null;
     }
   };
-
-  if (trail.name === "Refugio Frey from Villa Catedral") {
-    return (
-      <div className={compact ? "space-y-2" : "space-y-3 bg-gray-50 p-4 rounded-lg"}>
-        <div className="flex items-start gap-2">
-          <Car className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
-          <div>
-            <span className="font-bold block">{t('taxiService')} (15 {t('minutes')})</span>
-            {!compact && <span className="text-gray-600">{t('taxiRecommendation')}</span>}
-          </div>
-        </div>
-        <div className="flex items-start gap-2">
-          <Bus className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
-          <div>
-            <span className="font-bold block">{t('busLines')}: {getBusInfo(trail)}</span>
-            {!compact && <span className="text-gray-600">{t('busScheduleWarning')}</span>}
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className={compact ? "space-y-2" : "space-y-3 bg-gray-50 p-4 rounded-lg"}>
