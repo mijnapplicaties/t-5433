@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -13,15 +12,9 @@ import BeachesSection from '../components/BeachesSection';
 import { useTrailFilters } from '../hooks/useTrailFilters';
 import { useTrailLists } from '../hooks/useTrailLists';
 
-// Trails to exclude from category views
-const excludedTrailNames = ['Playa Muñoz', 'Cascada de los Duendes'];
-// Specific IDs to exclude (more reliable than name matching)
-const excludedTrailIds = ['7', '12']; // 7=Cascada de los Duendes, 12=Playa Muñoz
-
 const Index = () => {
   const { t } = useLanguage();
   
-  // Use custom hooks for filtering and organizing trails
   const {
     filters,
     filteredBeaches,
@@ -39,20 +32,17 @@ const Index = () => {
     categoryPampLindaHikes
   } = useTrailLists(allHikes, dayHikes, multiDayHikes);
 
-  // Determine which sections to show based on filters
   const shouldShowBeaches = filters.selectedCategory === 'all' || filters.selectedCategory === 'beaches-lakes';
   const shouldShowDayHikes = filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'day-hike');
   const shouldShowMultiDayHikes = filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'multi-day');
   const shouldShowCategorySection = filters.selectedCategory !== 'all' && filters.selectedCategory !== 'beaches-lakes';
 
-  // Filter category hikes by category, excluding specific trails
   const categoryHikes = allHikes.filter(trail => 
     (filters.selectedCategory === 'all' || trail.category === filters.selectedCategory) &&
     !excludedTrailNames.includes(trail.name) &&
     !excludedTrailIds.includes(trail.id)
   );
 
-  // Create region-specific groups for the category section
   const categoryRegionHikes = {
     bariloche: categoryBarilochieHikes.filter(trail => 
       (filters.selectedCategory === 'all' || trail.category === filters.selectedCategory) &&

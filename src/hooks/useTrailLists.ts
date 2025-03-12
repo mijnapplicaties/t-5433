@@ -1,14 +1,10 @@
 
-import { useContext } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import { trails } from '../data/trails';
-import { LanguageContext } from '../context/LanguageContext';
 import { Trail, TrailType } from '../types/trail';
 
-/**
- * Custom hook for retrieving filtered trail lists
- */
-export const useTrailLists = () => {
-  const { language } = useContext(LanguageContext);
+export const useTrailLists = (allHikes: Trail[], dayHikes: Trail[], multiDayHikes: Trail[]) => {
+  const { language } = useLanguage();
 
   const getAllTrails = () => {
     return trails.map(trail => ({
@@ -48,10 +44,23 @@ export const useTrailLists = () => {
     return language === 'en' ? trail.description.en : trail.description.es;
   };
 
+  const directAccessHikes = dayHikes.filter(trail => trail.distanceFromCampsite <= 2);
+  const otherDayHikes = dayHikes.filter(trail => trail.distanceFromCampsite > 2);
+  const pampLindaHikes = multiDayHikes.filter(trail => trail.region === 'pampa-linda');
+  const otherMultiDayHikes = multiDayHikes.filter(trail => trail.region !== 'pampa-linda');
+  const categoryBarilochieHikes = allHikes.filter(trail => trail.region === 'bariloche');
+  const categoryPampLindaHikes = allHikes.filter(trail => trail.region === 'pampa-linda');
+
   return {
     getAllTrails,
     getTrailsByType,
     getTrailsByCategory,
-    getLocalizedTrailDescription
+    getLocalizedTrailDescription,
+    directAccessHikes,
+    otherDayHikes,
+    pampLindaHikes,
+    otherMultiDayHikes,
+    categoryBarilochieHikes,
+    categoryPampLindaHikes
   };
 };
