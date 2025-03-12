@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -11,6 +12,11 @@ import CategorySection from '../components/CategorySection';
 import BeachesSection from '../components/BeachesSection';
 import { useTrailFilters } from '../hooks/useTrailFilters';
 import { useTrailLists } from '../hooks/useTrailLists';
+
+// Trails to exclude from category views
+const excludedTrailNames = ['Playa Muñoz', 'Cascada de los Duendes'];
+// Specific IDs to exclude (more reliable than name matching)
+const excludedTrailIds = ['7', '12']; // 7=Cascada de los Duendes, 12=Playa Muñoz
 
 const Index = () => {
   const { t } = useLanguage();
