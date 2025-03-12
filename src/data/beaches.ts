@@ -4,7 +4,7 @@ export const beaches: Beach[] = [
   {
     id: "b1",
     name: "Playa Del Viento",
-    location: "Lago Nahuel Huapi, Villa Los Coihues",
+    location: "Lago Moreno",
     description: {
       en: "A beautiful sandy beach on Nahuel Huapi Lake, known for windy conditions that make it perfect for windsurfing and kitesurfing enthusiasts. Located just minutes from Camping Los Coihues.",
       es: "Desde Playa del Viento, en el lago Moreno, se tienen vistas impresionantes del Cerro López, con sus imponentes paredes rocosas al fondo, y de los densos bosques que rodean el lago. Hacia el otro lado, se pueden ver las suaves laderas de la península San Pedro. Es un lugar muy popular para practicar kitesurf debido a los fuertes vientos que suelen soplar en la zona."
