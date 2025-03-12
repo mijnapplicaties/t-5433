@@ -41,6 +41,28 @@ const TransportationInfo: React.FC<TransportationInfoProps> = ({ trail, compact 
     );
   }
 
+  // Special handling for Refugio Cerro López trail
+  if (trail.id === "18" || trail.name === "Refugio Cerro López") {
+    return (
+      <div className={compact ? "space-y-2" : "space-y-3 bg-gray-50 p-4 rounded-lg"}>
+        <div className="flex items-start gap-2">
+          <Bus className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
+          <div>
+            <span className="font-bold block">{t('busService')} - {trail.busLines}</span>
+            {!compact && <span className="text-gray-600">{t('busLines')}: Linea 50 + Linea 10 o 13</span>}
+          </div>
+        </div>
+        <div className="flex items-start gap-2">
+          <Car className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
+          <div>
+            <span className="font-bold block">{t('taxiService')} (30 {t('minutes')})</span>
+            {!compact && <span className="text-gray-600">{t('taxiAvailable')}</span>}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   const getTransportationInfo = (type: string) => {
     const getTimeLabel = (minutes: number) => `(${minutes} ${t('minutes')})`;
 

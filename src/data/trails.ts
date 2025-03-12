@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -377,7 +378,7 @@ export const trails: Trail[] = [
     type: "multi-day",
     difficulty: "hard",
     distance: 8,
-    duration: 4,
+    duration: 2, // Changed from 4 to 2 hours
     elevation: 1620,
     requiresReservation: true,
     description: {
@@ -387,10 +388,10 @@ export const trails: Trail[] = [
     imageUrl: "/lovable-uploads/18aa5c8f-d10c-4295-a1d7-665ad54ba5c5.png",
     startingPoint: "Villa Tacul (30 min drive from Los Coihues)",
     highlights: ["highlightPanoramicViews", "highlightMountainRefuge", "highlightHighMountainPasses", "highlightNativeForest"],
-    transportation: ["bus", "taxi", "private-transfer"],
+    transportation: ["bus", "taxi"], // Removed "private-transfer"
     distanceFromCampsite: 18,
     travelTime: 30,
-    busLines: "Linea 50 (Los Coihues) + Linea 20 (Av. Bustillo) (45 min)",
+    busLines: "Linea 50 (desde Los Coihues hasta Rotonda Av. Pioneros) + Linea 10 o 13 (Av. Bustillo km 8) (50 min)",
     category: "high-mountain",
     region: "bariloche"
   }
