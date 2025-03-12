@@ -14,6 +14,20 @@ const TransportationInfo: React.FC<TransportationInfoProps> = ({ trail, compact 
 
   // Special handling for Jakob trail
   if (trail.id === "11" || trail.name.toLowerCase().includes("jakob")) {
+    if (trail.id === "17" || trail.name === "Refugio San Martin Jakob") {
+      return (
+        <div className={compact ? "space-y-2" : "space-y-3 bg-gray-50 p-4 rounded-lg"}>
+          <div className="flex items-start gap-2">
+            <Car className="w-4 h-4 flex-shrink-0 text-blue-500 mt-0.5" />
+            <div>
+              <span className="font-bold block">{t('taxiService')} (16 {t('minutes')})</span>
+              {!compact && <span className="text-gray-600">{t('taxiAvailable')}</span>}
+            </div>
+          </div>
+        </div>
+      );
+    }
+    
     return (
       <div className={compact ? "space-y-2" : "space-y-3 bg-gray-50 p-4 rounded-lg"}>
         <div className="flex items-start gap-2">
