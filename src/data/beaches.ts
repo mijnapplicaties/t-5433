@@ -1,4 +1,3 @@
-
 import { Beach } from "../types/beach";
 
 export const beaches: Beach[] = [
@@ -8,7 +7,7 @@ export const beaches: Beach[] = [
     location: "Lago Nahuel Huapi, Villa Los Coihues",
     description: {
       en: "A beautiful sandy beach on Nahuel Huapi Lake, known for windy conditions that make it perfect for windsurfing and kitesurfing enthusiasts. Located just minutes from Camping Los Coihues.",
-      es: "Una hermosa playa de arena en el lago Nahuel Huapi, conocida por sus condiciones de viento que la hacen perfecta para los entusiastas del windsurf y el kitesurf. Ubicada a minutos del Camping Los Coihues."
+      es: "Desde Playa del Viento, en el lago Moreno, se tienen vistas impresionantes del Cerro López, con sus imponentes paredes rocosas al fondo, y de los densos bosques que rodean el lago. Hacia el otro lado, se pueden ver las suaves laderas de la península San Pedro. Es un lugar muy popular para practicar kitesurf debido a los fuertes vientos que suelen soplar en la zona."
     },
     imageUrl: "/lovable-uploads/7cd264e6-e8b5-4596-afba-7ee9212621d5.png",
     beachType: "sandy",
@@ -19,8 +18,8 @@ export const beaches: Beach[] = [
     activities: ["swimming", "kayaking", "sunbathing", "picnic"],
     facilities: ["parkingAvailable"],
     distanceFromCampsite: 1.5,
-    travelTime: 15,
-    transportation: ["walking", "bus"],
+    travelTime: 20,
+    transportation: ["bus", "taxi"],
     bestTimeToVisit: "December-February"
   },
   {

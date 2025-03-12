@@ -38,7 +38,7 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
     // Map beaches to specific bus lines and info
     switch(beach.id) {
       case 'b1': // Playa Del Viento
-        return "Bus 50";
+        return "Linea 50 (Desde Coihues) conexión en Av. Pioneros y Rotonda + Linea 21 (desde Av. Bustillo Km 8) (50 min)";
       case 'b2': // Playa Con Viento
         return "Bus 20, 21";
       case 'b3': // Playa Sin Viento
