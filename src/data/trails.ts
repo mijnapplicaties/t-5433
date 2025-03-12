@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -272,7 +273,64 @@ export const trails: Trail[] = [
     description: {
       en: "A short, pleasant walk to a secluded beach on Lago Gutiérrez with crystal clear waters. The trail starts directly from Camping Los Coihues and follows the lakeshore through the native forest. Perfect for a refreshing swim in summer.",
       es: "Una caminata corta y agradable a una playa aislada en el Lago Gutiérrez con aguas cristalinas. El sendero comienza directamente desde Camping Los Coihues y sigue la costa del lago a través del bosque nativo. Perfecto para un refrescante baño en verano.",
-      fr: "Une promenade courte et agréable vers une plage isolée sur le Lago Gutiérrez aux eaux cristallines. Le sentier commence directement du Camping Los Coihues et suit le rivage à travers la forêt native. Parfait pour une baignade rafraîchissante en été.",
-      de: "Ein kurzer, angenehmer Spaziergang zu einem abgelegenen Strand am Lago Gutiérrez mit kristallklarem Wasser. Der Weg beginnt direkt vom Camping Los Coihues und folgt dem Seeufer durch den heimischen Wald. Perfekt für ein erfrischendes Bad im Sommer."
+      fr: "",
+      de: ""
     },
-    imageUrl: "/lovable-uploads/2669c291-db3b-4115-
+    imageUrl: "/lovable-uploads/2669c291-db3b-4115-a8d9-0003a827de60.png",
+    startingPoint: "Camping Los Coihues (direct access)",
+    highlights: ["highlightLakeViews", "highlightBeachAccess", "highlightSecludedLocation"],
+    transportation: ["walking"],
+    distanceFromCampsite: 0,
+    travelTime: 0,
+    category: "walking-path"
+  },
+  {
+    id: "13",
+    name: "Refugio Laguna Negra desde Colonia Suiza",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 11,
+    duration: 5,
+    elevation: 1640,
+    requiresReservation: true,
+    description: {
+      en: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines.\n\nLuego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados \"caracoles\".\n\nAl final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche.",
+      es: "La senda parte desde Colonia Suiza, con una subida leve y constante, bordeando el arroyo Goye. Continúa a lo largo del valle que presenta algunos sectores con mallines.\n\nLuego de 3 hs. se cruzan dos arroyos, primero el Navidad y luego el Negro o Goye. Aquí el camino en forma de zig-zag se torna muy empinado, son los llamados \"caracoles\".\n\nAl final de la subida hay una impresionante vista panorámica de la Laguna Negra, el Cerro Negro (que se destaca por ser el más alto) y del Refugio Manfredo Segre (también conocido como Italia) del Club Andino Bariloche.",
+      fr: "",
+      de: ""
+    },
+    imageUrl: "/lovable-uploads/a95ff83d-e962-4ca6-8b18-ec0d2608333c.png",
+    startingPoint: "Colonia Suiza (45 min drive from Camping Los Coihues)",
+    highlights: ["highlightAlpineLake", "highlightMountainRefuge", "highlightRockClimbing"],
+    transportation: ["bus", "private-transfer"],
+    distanceFromCampsite: 15,
+    travelTime: 45,
+    busLines: "Linea 50 + Linea 10",
+    category: "high-mountain"
+  },
+  {
+    id: "14",
+    name: "Travesía Cerro López-Laguna Negra",
+    type: "multi-day",
+    difficulty: "hard",
+    distance: 16,
+    duration: 10,
+    elevation: 1700,
+    requiresReservation: true,
+    description: {
+      en: "La travesía comienza en el cruce de Circuito Chico con el arroyo López, donde se inicia un ascenso empinado pero relativamente corto de menos de 5 km hasta el Refugio López. En el trayecto se pasa por el Refugio Roca Negra antes de llegar, tras aproximadamente 1 hora y 40 minutos, al refugio. Desde allí, es necesario registrarse para continuar hacia Pico Turista o Laguna Negra.\n\nEl ascenso continúa por la pared del López hasta el filo, en un tramo exigente y rocoso que lleva más de una hora. Es un sendero vertical donde se avanza entre piedras, por lo que es imprescindible contar con buen calzado y estado físico. Una vez alcanzado el paso, se abre una vista panorámica hacia el oeste, donde se pueden ver el Tronador, el Osorno, el Puntiagudo, el Capilla y el Brazo Tristeza del lago Nahuel Huapi. Desde allí, el sendero desciende abruptamente por un pedrero suelto, siendo este el tramo más técnico de la ruta. El descenso debe hacerse con precaución, ya que las piedras pueden moverse y provocar caídas. Tras 40 minutos, se alcanza un terreno más estable en el valle.\n\nLuego de descender, el sendero atraviesa un bosque de lengas y mallines, donde antiguamente existía un camping agreste que fue prohibido por razones ambientales. A continuación, se inicia un nuevo ascenso hasta el col del Cerro Bailey Willis, donde nuevamente se obtiene una vista del Tronador y de la Laguna CAB. Siguiendo hacia la derecha, se faldea la montaña entre grandes rocas hasta un segundo col, donde se tiene la primera vista de la Laguna Negra.\n\nEl sendero continúa por el filo antes de iniciar el descenso hacia la laguna. Se bordea la laguna por la margen izquierda, cruzando sectores rocosos con ayuda de cadenas y sogas instaladas para facilitar el paso. Dependiendo de la época del año, es posible encontrar neveros en este tramo. Una vez en la margen opuesta, con el Refugio Italia a la derecha, se inicia el descenso final por el sendero El Caracol, que desciende en forma de zigzag hacia el valle.\n\nDespués de cruzar el río, el sendero se vuelve más plano y el descenso más gradual. Este último tramo se completa con mayor rapidez y finaliza en la ruta vieja de Colonia Suiza, completando así la travesía.",
+      es: "La travesía comienza en el cruce de Circuito Chico con el arroyo López, donde se inicia un ascenso empinado pero relativamente corto de menos de 5 km hasta el Refugio López. En el trayecto se pasa por el Refugio Roca Negra antes de llegar, tras aproximadamente 1 hora y 40 minutos, al refugio. Desde allí, es necesario registrarse para continuar hacia Pico Turista o Laguna Negra.\n\nEl ascenso continúa por la pared del López hasta el filo, en un tramo exigente y rocoso que lleva más de una hora. Es un sendero vertical donde se avanza entre piedras, por lo que es imprescindible contar con buen calzado y estado físico. Una vez alcanzado el paso, se abre una vista panorámica hacia el oeste, donde se pueden ver el Tronador, el Osorno, el Puntiagudo, el Capilla y el Brazo Tristeza del lago Nahuel Huapi. Desde allí, el sendero desciende abruptamente por un pedrero suelto, siendo este el tramo más técnico de la ruta. El descenso debe hacerse con precaución, ya que las piedras pueden moverse y provocar caídas. Tras 40 minutos, se alcanza un terreno más estable en el valle.\n\nLuego de descender, el sendero atraviesa un bosque de lengas y mallines, donde antiguamente existía un camping agreste que fue prohibido por razones ambientales. A continuación, se inicia un nuevo ascenso hasta el col del Cerro Bailey Willis, donde nuevamente se obtiene una vista del Tronador y de la Laguna CAB. Siguiendo hacia la derecha, se faldea la montaña entre grandes rocas hasta un segundo col, donde se tiene la primera vista de la Laguna Negra.\n\nEl sendero continúa por el filo antes de iniciar el descenso hacia la laguna. Se bordea la laguna por la margen izquierda, cruzando sectores rocosos con ayuda de cadenas y sogas instaladas para facilitar el paso. Dependiendo de la época del año, es posible encontrar neveros en este tramo. Una vez en la margen opuesta, con el Refugio Italia a la derecha, se inicia el descenso final por el sendero El Caracol, que desciende en forma de zigzag hacia el valle.\n\nDespués de cruzar el río, el sendero se vuelve más plano y el descenso más gradual. Este último tramo se completa con mayor rapidez y finaliza en la ruta vieja de Colonia Suiza, completando así la travesía.",
+      fr: "",
+      de: ""
+    },
+    imageUrl: "/lovable-uploads/3dda568d-50dc-4f15-af17-7744f417603c.png",
+    startingPoint: "Circuito Chico - Arroyo López (50 min drive)",
+    highlights: ["highlightTwoMountainRefuges", "highlightMultiDayHike", "highlightHighMountainPasses", "highlightAlpineLake"],
+    transportation: ["private-transfer", "taxi"],
+    distanceFromCampsite: 18,
+    travelTime: 50,
+    busLines: "",
+    category: "high-mountain",
+    region: "bariloche"
+  }
+];
