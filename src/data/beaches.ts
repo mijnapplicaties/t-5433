@@ -102,14 +102,14 @@ export const beaches: Beach[] = [
     activities: ["swimming", "picnic", "sunbathing", "kayaking", "viewpoint"],
     facilities: ["parkingAvailable", "restrooms", "foodVendors"],
     distanceFromCampsite: 10,
-    travelTime: 30,
+    travelTime: 10,
     transportation: ["bus", "taxi"],
     bestTimeToVisit: "December-March"
   },
   {
     id: "b6",
     name: "Playa Serena",
-    location: "Lago Nahuel Huapi, Villa Los Coihues",
+    location: "Lago Nahuel Huapi, Km 13 Av. Bustillo",
     description: {
       en: "A tranquil beach ('Serene Beach') offering peaceful surroundings and relatively warmer waters. Perfect for a quiet day by the lake with the family.",
       es: "Una playa tranquila que ofrece un entorno pacífico y aguas relativamente más cálidas. Perfecta para un día tranquilo junto al lago con la familia."
@@ -123,7 +123,7 @@ export const beaches: Beach[] = [
     activities: ["swimming", "kayaking", "fishing", "picnic", "sunbathing"],
     facilities: ["parkingAvailable", "restrooms"],
     distanceFromCampsite: 3,
-    travelTime: 20,
+    travelTime: 15,
     transportation: ["walking", "bus", "taxi"],
     bestTimeToVisit: "December-February"
   },

@@ -43,9 +43,9 @@ const BeachCard: React.FC<BeachCardProps> = ({ beach }) => {
       case 'b3': // Playa Sin Viento
         return "Linea 50 (Desde Coihues) conexión en Av. Pioneros y Rotonda + Linea 10 o 13 (desde Av. Bustillo Km 8) (50 min)";
       case 'b5': // Playa Bonita
-        return "Bus 20";
+        return "Linea 50 (Desde Coihues hasta Rotonda Av. Pioneros) (15 min)";
       case 'b6': // Playa Serena
-        return "Bus 50, 51";
+        return "Linea 50 (Desde Coihues hasta Rotonda Av. Pioneros) Linea 20 (km. 13 Av. Bustillo) (30 min)";
       case 'b7': // Bahia Lopez
         return "Bus 20, 21";
       case 'b8': // Villa Tacul
