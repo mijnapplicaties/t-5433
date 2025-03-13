@@ -1,8 +1,10 @@
 
 import React from 'react';
 import { Trail } from '../types/trail';
+import { Beach } from '../types/beach';
 import { useLanguage } from '../context/LanguageContext';
 import TrailCard from './TrailCard';
+import BeachCard from './BeachCard';
 import { getTransportIcon } from '../utils/transportationIcons';
 
 interface CategorySectionProps {
@@ -12,13 +14,21 @@ interface CategorySectionProps {
     bariloche: Trail[];
     pampLinda: Trail[];
   };
+  selectedCategory?: string;
+  beaches?: Beach[];
 }
 
-const CategorySection: React.FC<CategorySectionProps> = ({ categoryHikes, sectionTitle, regionHikes }) => {
+const CategorySection: React.FC<CategorySectionProps> = ({ 
+  categoryHikes, 
+  sectionTitle, 
+  regionHikes, 
+  selectedCategory,
+  beaches = []
+}) => {
   const { t } = useLanguage();
 
-  // If there are no hikes in this category at all, don't show the section
-  if (categoryHikes.length === 0) {
+  // If there are no hikes in this category at all and no beaches, don't show the section
+  if (categoryHikes.length === 0 && beaches.length === 0) {
     return null;
   }
 
@@ -67,13 +77,21 @@ const CategorySection: React.FC<CategorySectionProps> = ({ categoryHikes, sectio
           )}
         </>
       ) : (
-        // If no region-specific hikes, show all category hikes without region grouping
+        // If no region-specific hikes, show all category hikes and beaches without region grouping
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categoryHikes.map((trail) => (
             <TrailCard 
               key={trail.id} 
               trail={trail}
               transportIcons={trail.transportation.map(t => getTransportIcon(t))}
+            />
+          ))}
+          
+          {/* Render beach cards if any are provided */}
+          {beaches && beaches.length > 0 && beaches.map((beach) => (
+            <BeachCard
+              key={beach.id}
+              beach={beach}
             />
           ))}
         </div>

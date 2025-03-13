@@ -13,10 +13,10 @@ import BeachesSection from '../components/BeachesSection';
 import { useTrailFilters } from '../hooks/useTrailFilters';
 import { useTrailLists } from '../hooks/useTrailLists';
 
-// Trails to exclude from category views
+// Trails to exclude from non-walking-path category views
 const excludedTrailNames = ['Playa Muñoz', 'Cascada de los Duendes'];
 // Specific IDs to exclude (more reliable than name matching)
-const excludedTrailIds = ['7', '12']; // 7=Cascada de los Duendes, 12=Playa Muñoz
+const excludedTrailIds = ['12']; // 12=Playa Muñoz - Only exclude from non-walking-path categories
 
 const Index = () => {
   const { t } = useLanguage();
@@ -43,30 +43,39 @@ const Index = () => {
   const shouldShowMultiDayHikes = filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'multi-day');
   const shouldShowCategorySection = filters.selectedCategory !== 'all' && filters.selectedCategory !== 'beaches-lakes';
 
-  // Filter category hikes properly without excluding valid trails in that category
-  const categoryHikes = allHikes.filter(trail => 
-    trail.category === filters.selectedCategory &&
-    !excludedTrailIds.includes(trail.id)
-  );
+  // Special case for walking-path category - include Cascada de los Duendes (ID 7)
+  const categoryHikes = filters.selectedCategory === 'walking-path' 
+    ? allHikes.filter(trail => trail.category === filters.selectedCategory) 
+    : allHikes.filter(trail => 
+        trail.category === filters.selectedCategory &&
+        !excludedTrailIds.includes(trail.id)
+      );
 
   // Filter category region hikes by the selected category
   const categoryRegionHikes = {
     bariloche: categoryBarilochieHikes.filter(trail => 
       trail.category === filters.selectedCategory &&
-      !excludedTrailIds.includes(trail.id)
+      (filters.selectedCategory === 'walking-path' || !excludedTrailIds.includes(trail.id))
     ),
     pampLinda: categoryPampLindaHikes.filter(trail => 
       trail.category === filters.selectedCategory
     )
   };
 
-  // Console logs to debug trail categorization
+  // Debug logs to trace categorization
   console.log(`Cerro Otto in easy-mountain: ${trails.find(t => t.name === "Cerro Otto & Piedra de Habsburgo")?.category === 'easy-mountain'}`);
   console.log(`Cerro Campanario in easy-mountain: ${trails.find(t => t.name === "Cerro Campanario")?.category === 'easy-mountain'}`);
   console.log(`Mirador Lago Gutiérrez in easy-mountain: ${trails.find(t => t.name === "Mirador Lago Gutiérrez")?.category === 'easy-mountain'}`);
   console.log(`Cerro San Martin in easy-mountain: ${trails.find(t => t.name === "Cerro San Martin")?.category === 'easy-mountain'}`);
   console.log(`Cerro Llao Llao in easy-mountain: ${trails.find(t => t.name === "Cerro Llao Llao")?.category === 'easy-mountain'}`);
   console.log(`Category hikes count for ${filters.selectedCategory}: ${categoryHikes.length}`);
+  
+  // Add debug for walking-path specific trails
+  const cascadaTrail = trails.find(t => t.name === "Cascada de los Duendes");
+  const llaoLlaoTrail = trails.find(t => t.name === "Cerro Llao Llao");
+  console.log(`Cascada de los Duendes in walking-path: ${cascadaTrail?.category === 'walking-path'}`);
+  console.log(`Cascada ID: ${cascadaTrail?.id}`);
+  console.log(`Cerro Llao Llao in walking-path: ${llaoLlaoTrail?.category === 'walking-path'}`);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
@@ -110,6 +119,8 @@ const Index = () => {
             categoryHikes={categoryHikes}
             sectionTitle={t(`category${filters.selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`)}
             regionHikes={categoryRegionHikes}
+            selectedCategory={filters.selectedCategory}
+            beaches={filters.selectedCategory === 'walking-path' ? filteredBeaches.filter(beach => beach.name === "Villa Tacul") : []}
           />
         )}
 
