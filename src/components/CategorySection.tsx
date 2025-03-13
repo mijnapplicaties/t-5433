@@ -20,11 +20,11 @@ const CategorySection = ({ trails, sectionTitle, showSection, beaches = [] }: Ca
 
   // Split trails by region (Bariloche vs Pampa Linda)
   const barilocheTrails = trails.filter(trail => 
-    trail.region === "bariloche" || trail.region === ""
+    trail.region === "bariloche" || trail.region === undefined || trail.region === ""
   );
   
   const pampLindaTrails = trails.filter(trail => 
-    trail.region === "pampLinda"
+    trail.region === "pampa-linda"
   );
 
   // Check if we have any Pampa Linda trails
@@ -39,14 +39,14 @@ const CategorySection = ({ trails, sectionTitle, showSection, beaches = [] }: Ca
           {hasPampLindaTrails && (
             <h3 className="text-xl font-semibold text-forest mb-4">{t('bariloche')}</h3>
           )}
-          <TrailGrid trails={barilocheTrails} />
+          <TrailGrid trails={barilocheTrails} type="day-hike" />
         </div>
       )}
       
       {hasPampLindaTrails && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-forest mb-4">{t('pampLinda')}</h3>
-          <TrailGrid trails={pampLindaTrails} />
+          <TrailGrid trails={pampLindaTrails} type="day-hike" />
         </div>
       )}
       
