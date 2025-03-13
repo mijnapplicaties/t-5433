@@ -102,7 +102,7 @@ export const trails: Trail[] = [
       en: "Three blocks from the camping site you'll find Lake Gutiérrez. You can walk along the shore to the left, towards the Arelauquen area, or follow the road that borders the lake and leads to the path of the Cascada de los Duendes. Along this route, you'll find some beautiful small beaches on the opposite shore, about a 20-minute walk away.",
       es: "A tres cuadras del camping se encuentra el Lago Gutiérrez. Podés caminar por la costa hacia la izquierda, en dirección a la zona de Arelauquen, o seguir la calle de autos que bordea el lago y lleva al camino de la Cascada de los Duendes. En este recorrido, encontrarás algunas playitas hermosas en la costa opuesta, a unos 20 minutos de caminata."
     },
-    imageUrl: "/lovable-uploads/bdd46388-2e54-44ed-8cb1-f449f800bd97.png",
+    imageUrl: "/lovable-uploads/cb09422a-2482-4fe6-b577-82a48fc72887.png",
     startingPoint: "Camping Los Coihues (direct access)",
     highlights: ["highlightLakeViews", "highlightBeachAccess", "highlightBirdWatching"],
     transportation: ["walking"],
