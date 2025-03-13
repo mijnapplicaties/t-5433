@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Button } from './ui/button';
-import { Link } from 'lucide-react';
+import { Download, Map } from 'lucide-react';
 
 const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
@@ -14,6 +14,8 @@ const LanguageSwitcher = () => {
         className="text-sm font-bold text-black"
         onClick={() => window.open('https://maps.me/', '_blank', 'noopener,noreferrer')}
       >
+        <Download size={16} />
+        <Map size={16} />
         APP MAPAS
       </Button>
       
