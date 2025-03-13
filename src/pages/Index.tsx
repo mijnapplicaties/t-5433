@@ -124,10 +124,9 @@ const Index = () => {
 
         {shouldShowCategorySection && (
           <CategorySection 
-            categoryHikes={categoryHikes}
+            trails={categoryHikes}
             sectionTitle={t(`category${filters.selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`)}
-            regionHikes={categoryRegionHikes}
-            selectedCategory={filters.selectedCategory}
+            showSection={true}
             beaches={filters.selectedCategory === 'walking-path' ? filteredBeaches : []}
           />
         )}

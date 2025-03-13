@@ -4,6 +4,7 @@ import { Trail } from '../types/trail';
 import { useLanguage } from '../context/LanguageContext';
 import TrailCard from './TrailCard';
 import { getTransportIcon } from '../utils/transportationIcons';
+import { useIsMobile } from '../hooks/use-mobile';
 
 interface MultiDayHikesSectionProps {
   otherMultiDayHikes: Trail[];
@@ -17,6 +18,7 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
   showSection 
 }) => {
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
 
   if (!showSection) {
     return null;
@@ -54,14 +56,22 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
   console.log('Cascada de los Duendes in Bariloche:', hasCascadaDuendes ? 'Yes (ERROR)' : 'No (CORRECT)');
   console.log('Playa Muñoz ID:', playaMunozId || 'Not found');
   console.log('Cascada de los Duendes ID:', cascadaDuendesId || 'Not found');
+
+  const headingClasses = isMobile 
+    ? "text-3xl font-bold text-black mb-6 text-center" 
+    : "text-3xl font-bold text-black mb-6";
+
+  const subheadingClasses = isMobile 
+    ? "text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3 text-center" 
+    : "text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3";
   
   return (
     <div className="mb-12">
-      <h2 className="text-3xl font-playfair font-bold text-black mb-6">{t('filterMultiDay')}</h2>
+      <h2 className={headingClasses}>{t('filterMultiDay')}</h2>
       
       {otherMultiDayHikes.length > 0 && (
         <div className="mb-8">
-          <h3 className="text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+          <h3 className={subheadingClasses}>
             {t('bariloche')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -93,7 +103,7 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
       
       {pampLindaHikes.length > 0 && (
         <div>
-          <h3 className="text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+          <h3 className={subheadingClasses}>
             {t('pampLinda')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

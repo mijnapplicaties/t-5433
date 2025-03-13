@@ -4,6 +4,7 @@ import { Trail } from '../types/trail';
 import { useLanguage } from '../context/LanguageContext';
 import TrailCard from './TrailCard';
 import { getTransportIcon } from '../utils/transportationIcons';
+import { useIsMobile } from '../hooks/use-mobile';
 
 interface DayHikesSectionProps {
   directAccessHikes: Trail[];
@@ -17,6 +18,7 @@ const DayHikesSection: React.FC<DayHikesSectionProps> = ({
   showSection 
 }) => {
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
 
   if (!showSection) {
     return null;
@@ -46,13 +48,21 @@ const DayHikesSection: React.FC<DayHikesSectionProps> = ({
     return 0;
   });
 
+  const headingClasses = isMobile 
+    ? "text-3xl font-bold text-black mb-6 text-center" 
+    : "text-3xl font-bold text-black mb-6";
+
+  const subheadingClasses = isMobile 
+    ? "text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3 text-center" 
+    : "text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3";
+
   return (
     <div className="mb-12">
-      <h2 className="text-3xl font-bold text-black mb-6">{t('filterDayHike')}</h2>
+      <h2 className={headingClasses}>{t('filterDayHike')}</h2>
       
       {directAccessHikes.length > 0 && (
         <div className="mb-8">
-          <h3 className="text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+          <h3 className={subheadingClasses}>
             {t('accessibilityDirect')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -70,7 +80,7 @@ const DayHikesSection: React.FC<DayHikesSectionProps> = ({
       {otherDayHikes.length > 0 && (
         <div>
           {directAccessHikes.length > 0 && (
-            <h3 className="text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
+            <h3 className={subheadingClasses}>
               {t('nearByBusOrUber')}
             </h3>
           )}
