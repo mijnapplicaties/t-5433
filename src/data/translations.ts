@@ -1,4 +1,3 @@
-
 type Translation = {
   [key: string]: {
     en: string;
@@ -450,5 +449,9 @@ export const translations: Translation = {
   oneWay: {
     en: "one way",
     es: "ida",
+  },
+  mapApp: {
+    en: "MAP APP",
+    es: "APP MAPAS",
   },
 };

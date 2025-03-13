@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 import { Download, Map } from 'lucide-react';
 
 const LanguageSwitcher = () => {
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
 
   return (
     <div className="fixed top-4 w-full flex justify-between px-4 z-50">
@@ -16,7 +16,7 @@ const LanguageSwitcher = () => {
       >
         <Download size={16} />
         <Map size={16} />
-        APP MAPAS
+        {t('mapApp')}
       </Button>
       
       <div className="flex gap-2">
