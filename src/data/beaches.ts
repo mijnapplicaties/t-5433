@@ -73,7 +73,7 @@ export const beaches: Beach[] = [
       en: "A tranquil beach with pristine blue waters surrounded by mountains, perfect for relaxation and enjoying the peaceful atmosphere. The clear waters invite swimming and the beach offers a great spot for photography.",
       es: "Una playa tranquila con aguas azules prístinas rodeada de montañas, perfecta para relajarse y disfrutar de la atmósfera pacífica. Las aguas cristalinas invitan a nadar y la playa ofrece un gran lugar para la fotografía."
     },
-    imageUrl: "/lovable-uploads/a0c71abe-f096-41d5-a92c-c9b50cc7752f.png",
+    imageUrl: "/lovable-uploads/07820408-8592-401d-91e6-a1c25deb1cef.png",
     beachType: "sandy",
     waterTemp: {
       summer: 17,
