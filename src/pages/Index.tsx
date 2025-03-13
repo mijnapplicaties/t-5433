@@ -83,7 +83,7 @@ const Index = () => {
   console.log(`Cerro Llao Llao in walking-path: ${llaoLlaoTrail?.category === 'walking-path'}`);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky to-white">
+    <div className="min-h-screen bg-cream">
       <Helmet>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" />
       </Helmet>

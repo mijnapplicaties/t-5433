@@ -1,4 +1,5 @@
 
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -36,6 +37,9 @@ export default {
         sky: {
           DEFAULT: "#E0F2FE",
           dark: "#BAE6FD",
+        },
+        cream: {
+          DEFAULT: "#f8ead8",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -89,3 +93,4 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
