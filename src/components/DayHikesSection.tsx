@@ -48,7 +48,7 @@ const DayHikesSection: React.FC<DayHikesSectionProps> = ({
 
   return (
     <div className="mb-12">
-      <h2 className="text-2xl font-bold text-forest mb-6">{t('filterDayHike')}</h2>
+      <h2 className="text-3xl font-playfair font-bold text-black mb-6">{t('filterDayHike')}</h2>
       
       {directAccessHikes.length > 0 && (
         <div className="mb-8">

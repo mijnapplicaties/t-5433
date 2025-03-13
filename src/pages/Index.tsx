@@ -12,6 +12,7 @@ import CategorySection from '../components/CategorySection';
 import BeachesSection from '../components/BeachesSection';
 import { useTrailFilters } from '../hooks/useTrailFilters';
 import { useTrailLists } from '../hooks/useTrailLists';
+import { Helmet } from 'react-helmet';
 
 // Trails to exclude from non-walking-path category views
 const excludedTrailNames = ['Playa Muñoz']; // Removed 'Cascada de los Duendes' from excluded names
@@ -83,6 +84,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
+      <Helmet>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" />
+      </Helmet>
       <LanguageSwitcher />
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-12 animate-fadeIn pt-12 sm:pt-0">
