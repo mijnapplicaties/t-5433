@@ -1,3 +1,4 @@
+
 import { Beach } from "../types/beach";
 
 export const beaches: Beach[] = [
@@ -72,7 +73,7 @@ export const beaches: Beach[] = [
       en: "A tranquil beach with pristine blue waters surrounded by mountains, perfect for relaxation and enjoying the peaceful atmosphere. The clear waters invite swimming and the beach offers a great spot for photography.",
       es: "Una playa tranquila con aguas azules prístinas rodeada de montañas, perfecta para relajarse y disfrutar de la atmósfera pacífica. Las aguas cristalinas invitan a nadar y la playa ofrece un gran lugar para la fotografía."
     },
-    imageUrl: "/lovable-uploads/a0c71abe-f096-41d5-a92c-c9b50cc7752f.png",
+    imageUrl: "/lovable-uploads/c93744a0-7d29-408c-aeb0-af75b09483c8.png",
     beachType: "sandy",
     waterTemp: {
       summer: 17,
@@ -177,7 +178,7 @@ export const beaches: Beach[] = [
       en: "A convenient beach located at Km 4 of Avenida Bustillo, close to the city center. With easy access and beautiful views of Nahuel Huapi Lake, it's perfect for a quick escape without traveling far from town.",
       es: "Una playa conveniente ubicada en el Km 4 de la Avenida Bustillo, cerca del centro de la ciudad. Con fácil acceso y hermosas vistas del Lago Nahuel Huapi, es perfecta para una escapada rápida sin viajar lejos de la ciudad."
     },
-    imageUrl: "/lovable-uploads/9d067eaf-8ba5-4bf1-a730-0a1f06c0e9c9.png",
+    imageUrl: "/lovable-uploads/d181d892-d3ab-43ec-ade6-31aa9645dcae.png",
     beachType: "sandy",
     waterTemp: {
       summer: 17,
