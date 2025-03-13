@@ -29,7 +29,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   }
 
   // Check if we have any hikes with a region property
-  const hasRegionalHikes = trails.some(trail => trail.region && trail.region !== '');
+  const hasRegionalHikes = trails.some(trail => trail.region && trail.region.trim() !== '');
 
   // Group trails by region
   const trailsByRegion = hasRegionalHikes ? 
