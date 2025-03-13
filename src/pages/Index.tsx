@@ -3,7 +3,6 @@ import React from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
 import LanguageSwitcher from '../components/LanguageSwitcher';
-import MapDownloadButton from '../components/MapDownloadButton';
 import { useLanguage } from '../context/LanguageContext';
 import FiltersDialog from '../components/FiltersDialog';
 import CategoryFilter from '../components/CategoryFilter';
@@ -84,14 +83,11 @@ const Index = () => {
   console.log(`Cerro Llao Llao in walking-path: ${llaoLlaoTrail?.category === 'walking-path'}`);
 
   return (
-    <div className="min-h-screen bg-[#f8ead8]">
+    <div className="min-h-screen bg-gradient-to-b from-sky to-white">
       <Helmet>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" />
       </Helmet>
-      <div className="flex justify-between w-full px-4 pt-4">
-        <MapDownloadButton />
-        <LanguageSwitcher />
-      </div>
+      <LanguageSwitcher />
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-12 animate-fadeIn pt-12 sm:pt-0">
           <div className="flex justify-center mb-6">

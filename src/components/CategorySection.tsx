@@ -2,9 +2,11 @@
 import React from 'react';
 import { Trail } from '../types/trail';
 import { Beach } from '../types/beach';
-import TrailGrid from './TrailGrid';
-import BeachCard from './BeachCard';
 import { useLanguage } from '../context/LanguageContext';
+import TrailCard from './TrailCard';
+import { getTransportIcon } from '../utils/transportationIcons';
+import BeachCard from './BeachCard';
+import { useIsMobile } from '../hooks/use-mobile';
 
 interface CategorySectionProps {
   trails: Trail[];
@@ -13,51 +15,92 @@ interface CategorySectionProps {
   beaches?: Beach[];
 }
 
-const CategorySection = ({ trails, sectionTitle, showSection, beaches = [] }: CategorySectionProps) => {
+const CategorySection: React.FC<CategorySectionProps> = ({ 
+  trails, 
+  sectionTitle, 
+  showSection,
+  beaches = []
+}) => {
   const { t } = useLanguage();
-  
-  if (!showSection) return null;
+  const isMobile = useIsMobile();
 
-  // Split trails by region (Bariloche vs Pampa Linda)
-  const barilocheTrails = trails.filter(trail => 
-    trail.region === "bariloche" || trail.region === undefined || trail.region === ""
-  );
-  
-  const pampLindaTrails = trails.filter(trail => 
-    trail.region === "pampa-linda"
-  );
+  if (!showSection || trails.length === 0) {
+    return null;
+  }
 
-  // Check if we have any Pampa Linda trails
-  const hasPampLindaTrails = pampLindaTrails.length > 0;
+  // Check if we have any hikes with a region property
+  const hasRegionalHikes = trails.some(trail => trail.region && trail.region !== '');
+
+  // Group trails by region
+  const trailsByRegion = hasRegionalHikes ? 
+    trails.reduce((acc, trail) => {
+      const region = trail.region || 'other';
+      if (!acc[region]) acc[region] = [];
+      acc[region].push(trail);
+      return acc;
+    }, {} as Record<string, Trail[]>) : 
+    { all: trails };
+
+  // Sort regions to ensure consistency
+  const sortedRegions = Object.keys(trailsByRegion).sort();
+
+  const headingClasses = isMobile 
+    ? "text-3xl font-bold text-black mb-6 text-center" 
+    : "text-3xl font-bold text-black mb-6";
 
   return (
-    <section className="mb-12 animate-fadeIn">
-      <h2 className="text-2xl font-bold text-forest mb-6">{sectionTitle}</h2>
+    <div className="mb-12">
+      <h2 className={headingClasses}>{sectionTitle}</h2>
       
-      {barilocheTrails.length > 0 && (
-        <div className="mb-8">
-          {hasPampLindaTrails && (
-            <h3 className="text-xl font-semibold text-forest mb-4">{t('bariloche')}</h3>
-          )}
-          <TrailGrid trails={barilocheTrails} type="day-hike" />
-        </div>
-      )}
-      
-      {hasPampLindaTrails && (
-        <div className="mb-8">
-          <h3 className="text-xl font-semibold text-forest mb-4">{t('pampLinda')}</h3>
-          <TrailGrid trails={pampLindaTrails} type="day-hike" />
-        </div>
-      )}
-      
-      {beaches && beaches.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {beaches.map(beach => (
-            <BeachCard key={beach.id} beach={beach} />
+      {/* Show region-specific grouping if we have regional hikes */}
+      {hasRegionalHikes ? (
+        sortedRegions.map(region => (
+          <div key={region} className="mb-8">
+            {region !== 'other' && (
+              <h3 className={isMobile 
+                ? "text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3 text-center" 
+                : "text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3"}>
+                {t(region === 'pampa-linda' ? 'pampLinda' : region)}
+              </h3>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {trailsByRegion[region].map(trail => (
+                <TrailCard 
+                  key={trail.id} 
+                  trail={trail}
+                  transportIcons={trail.transportation.map(t => getTransportIcon(t))}
+                />
+              ))}
+            </div>
+          </div>
+        ))
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {trails.map(trail => (
+            <TrailCard 
+              key={trail.id} 
+              trail={trail}
+              transportIcons={trail.transportation.map(t => getTransportIcon(t))}
+            />
           ))}
         </div>
       )}
-    </section>
+
+      {beaches && beaches.length > 0 && (
+        <div className="mt-8">
+          <h3 className={isMobile 
+            ? "text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3 text-center" 
+            : "text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3"}>
+            {t('beaches')}
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {beaches.map(beach => (
+              <BeachCard key={beach.id} beach={beach} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
