@@ -108,11 +108,11 @@ export const beaches: Beach[] = [
   },
   {
     id: "b6",
-    name: "Playa Serena",
+    name: "Bahía Serena",
     location: "Lago Nahuel Huapi, Km 13 Av. Bustillo",
     description: {
-      en: "A tranquil beach ('Serene Beach') offering peaceful surroundings and relatively warmer waters. Perfect for a quiet day by the lake with the family.",
-      es: "Una playa tranquila que ofrece un entorno pacífico y aguas relativamente más cálidas. Perfecta para un día tranquilo junto al lago con la familia."
+      en: "A tranquil bay offering peaceful surroundings and relatively warmer waters. Perfect for a quiet day by the lake with the family.",
+      es: "Una bahía tranquila que ofrece un entorno pacífico y aguas relativamente más cálidas. Perfecta para un día tranquilo junto al lago con la familia."
     },
     imageUrl: "/lovable-uploads/4efa557c-610b-494e-b344-4d12e15b9324.png",
     beachType: "pebbly",
