@@ -136,7 +136,7 @@ export const beaches: Beach[] = [
       en: "A stunning bay with clear waters and mountain views. Located along the famous Circuito Chico route, this beach offers a perfect combination of forest and lake scenery.",
       es: "Una bahía impresionante con aguas claras y vistas a las montañas. Ubicada a lo largo de la famosa ruta del Circuito Chico, esta playa ofrece una combinación perfecta de bosque y paisaje lacustre."
     },
-    imageUrl: "/lovable-uploads/69bb7a55-5d7f-47aa-97d9-dba61283b32e.png",
+    imageUrl: "/lovable-uploads/a69a606d-fe54-4813-9b77-84e0c718c189.png",
     beachType: "rocky",
     waterTemp: {
       summer: 16,

@@ -2,6 +2,7 @@
 export type BeachType = "sandy" | "rocky" | "mixed" | "pebbly";
 export type Activity = "swimming" | "kayaking" | "fishing" | "picnic" | "viewpoint" | "sunbathing";
 export type Facility = "parkingAvailable" | "restrooms" | "foodVendors";
+export type TrailRegion = "bariloche" | "pampLinda" | "";
 
 export interface Beach {
   id: string;
