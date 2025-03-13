@@ -1,106 +1,74 @@
 
 import React from 'react';
 import { Trail } from '../types/trail';
-import { Beach } from '../types/beach';
 import { useLanguage } from '../context/LanguageContext';
 import TrailCard from './TrailCard';
-import BeachCard from './BeachCard';
 import { getTransportIcon } from '../utils/transportationIcons';
 
 interface CategorySectionProps {
-  categoryHikes: Trail[];
+  trails: Trail[];
   sectionTitle: string;
-  regionHikes: {
-    bariloche: Trail[];
-    pampLinda: Trail[];
-  };
-  selectedCategory?: string;
-  beaches?: Beach[];
+  showSection: boolean;
 }
 
 const CategorySection: React.FC<CategorySectionProps> = ({ 
-  categoryHikes, 
+  trails, 
   sectionTitle, 
-  regionHikes, 
-  selectedCategory,
-  beaches = []
+  showSection 
 }) => {
   const { t } = useLanguage();
 
-  // If there are no hikes in this category at all and no beaches, don't show the section
-  if (categoryHikes.length === 0 && beaches.length === 0) {
+  if (!showSection || trails.length === 0) {
     return null;
   }
 
-  // If there are no region-specific hikes but we have categoryHikes, show all of them
-  const hasRegionalHikes = regionHikes.bariloche.length > 0 || regionHikes.pampLinda.length > 0;
-  
-  // Filter Villa Tacul beach specifically when in walking-path category
-  const filteredBeaches = beaches.filter(beach => {
-    // Only include Villa Tacul (ID b8) in the walking-path category
-    if (selectedCategory === 'walking-path') {
-      return beach.name === "Villa Tacul";
-    }
-    return false;
-  });
+  // Check if we have any hikes with a region property
+  const hasRegionalHikes = trails.some(trail => trail.region && trail.region !== '');
+
+  // Group trails by region
+  const trailsByRegion = hasRegionalHikes ? 
+    trails.reduce((acc, trail) => {
+      const region = trail.region || 'other';
+      if (!acc[region]) acc[region] = [];
+      acc[region].push(trail);
+      return acc;
+    }, {} as Record<string, Trail[]>) : 
+    { all: trails };
+
+  // Sort regions to ensure consistency
+  const sortedRegions = Object.keys(trailsByRegion).sort();
 
   return (
     <div className="mb-12">
-      <h2 className="text-3xl font-playfair font-bold text-black mb-6">{sectionTitle}</h2>
+      <h2 className="text-3xl font-bold text-black mb-6">{sectionTitle}</h2>
       
       {/* Show region-specific grouping if we have regional hikes */}
       {hasRegionalHikes ? (
-        <>
-          {regionHikes.bariloche.length > 0 && (
-            <div className="mb-8">
+        sortedRegions.map(region => (
+          <div key={region} className="mb-8">
+            {region !== 'other' && (
               <h3 className="text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
-                {t('bariloche')}
+                {t(region === 'pampa-linda' ? 'pampLinda' : region)}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {regionHikes.bariloche.map((trail) => (
-                  <TrailCard 
-                    key={trail.id} 
-                    trail={trail}
-                    transportIcons={trail.transportation.map(t => getTransportIcon(t))}
-                  />
-                ))}
-              </div>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {trailsByRegion[region].map(trail => (
+                <TrailCard 
+                  key={trail.id} 
+                  trail={trail}
+                  transportIcons={trail.transportation.map(t => getTransportIcon(t))}
+                />
+              ))}
             </div>
-          )}
-          
-          {regionHikes.pampLinda.length > 0 && (
-            <div>
-              <h3 className="text-2xl font-semibold text-forest-light mb-4 border-l-4 border-forest pl-3">
-                {t('pampLinda')}
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {regionHikes.pampLinda.map((trail) => (
-                  <TrailCard 
-                    key={trail.id} 
-                    trail={trail}
-                    transportIcons={trail.transportation.map(t => getTransportIcon(t))}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
-        </>
+          </div>
+        ))
       ) : (
-        // If no region-specific hikes, show all category hikes and beaches without region grouping
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categoryHikes.map((trail) => (
+          {trails.map(trail => (
             <TrailCard 
               key={trail.id} 
               trail={trail}
               transportIcons={trail.transportation.map(t => getTransportIcon(t))}
-            />
-          ))}
-          
-          {/* Render beach cards if any are provided */}
-          {filteredBeaches.length > 0 && filteredBeaches.map((beach) => (
-            <BeachCard
-              key={beach.id}
-              beach={beach}
             />
           ))}
         </div>
