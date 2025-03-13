@@ -14,7 +14,7 @@ import { useTrailFilters } from '../hooks/useTrailFilters';
 import { useTrailLists } from '../hooks/useTrailLists';
 
 // Trails to exclude from non-walking-path category views
-const excludedTrailNames = ['Playa Muñoz', 'Cascada de los Duendes'];
+const excludedTrailNames = ['Playa Muñoz']; // Removed 'Cascada de los Duendes' from excluded names
 // Specific IDs to exclude (more reliable than name matching)
 const excludedTrailIds = ['12']; // 12=Playa Muñoz - Only exclude from non-walking-path categories
 
@@ -37,6 +37,10 @@ const Index = () => {
     categoryBarilochieHikes,
     categoryPampLindaHikes
   } = useTrailLists(allHikes, dayHikes, multiDayHikes);
+
+  // Get Villa Tacul beach for the walking-path category
+  const villaTaculBeach = beaches.find(beach => beach.name === "Villa Tacul");
+  const walkingPathBeaches = villaTaculBeach ? [villaTaculBeach] : [];
 
   const shouldShowBeaches = filters.selectedCategory === 'all' || filters.selectedCategory === 'beaches-lakes';
   const shouldShowDayHikes = filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'day-hike');
@@ -120,7 +124,7 @@ const Index = () => {
             sectionTitle={t(`category${filters.selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`)}
             regionHikes={categoryRegionHikes}
             selectedCategory={filters.selectedCategory}
-            beaches={filters.selectedCategory === 'walking-path' ? filteredBeaches.filter(beach => beach.name === "Villa Tacul") : []}
+            beaches={filters.selectedCategory === 'walking-path' ? filteredBeaches : []}
           />
         )}
 

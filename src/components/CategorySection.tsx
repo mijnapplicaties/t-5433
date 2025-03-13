@@ -35,6 +35,15 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   // If there are no region-specific hikes but we have categoryHikes, show all of them
   const hasRegionalHikes = regionHikes.bariloche.length > 0 || regionHikes.pampLinda.length > 0;
   
+  // Filter Villa Tacul beach specifically when in walking-path category
+  const filteredBeaches = beaches.filter(beach => {
+    // Only include Villa Tacul (ID b8) in the walking-path category
+    if (selectedCategory === 'walking-path') {
+      return beach.name === "Villa Tacul";
+    }
+    return false;
+  });
+
   return (
     <div className="mb-12">
       <h2 className="text-2xl font-bold text-forest mb-6">{sectionTitle}</h2>
@@ -88,7 +97,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
           ))}
           
           {/* Render beach cards if any are provided */}
-          {beaches && beaches.length > 0 && beaches.map((beach) => (
+          {filteredBeaches.length > 0 && filteredBeaches.map((beach) => (
             <BeachCard
               key={beach.id}
               beach={beach}
