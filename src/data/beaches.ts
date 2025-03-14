@@ -94,7 +94,7 @@ export const beaches: Beach[] = [
       en: "As its name suggests ('Beautiful Beach'), this is one of the most scenic beaches in Bariloche. It offers crystal clear waters and is surrounded by native forest, providing a picture-perfect setting.",
       es: "Como su nombre lo indica, esta es una de las playas más pintorescas de Bariloche. Ofrece aguas cristalinas y está rodeada de bosque nativo, proporcionando un entorno perfecto para fotografías."
     },
-    imageUrl: "/lovable-uploads/7164284c-d3da-4c2d-8a3a-3608b3b7c455.png",
+    imageUrl: "/lovable-uploads/8e60626c-f42a-44a4-b340-02d07588b487.png",
     beachType: "sandy",
     waterTemp: {
       summer: 17,
