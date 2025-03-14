@@ -228,7 +228,7 @@ export const trails: Trail[] = [
     elevation: 1275,
     requiresReservation: false,
     description: {
-      en: "El inicio del sendero esta subiendo la Calle Balcón Lopez hasta al fondo. Ahí te chocas con el Camping Ecologico y tienes que seguir caminando 30 m a la izquierda donde vas a encontrar el inicio del sendero de mano derecha. Es empinado pero se sube rápido.",
+      en: "The trail starts by going up Calle Balcón Lopez until the end. There you'll reach the Ecological Camping and need to continue walking 30 meters to the left where you'll find the beginning of the trail on your right. It's steep but can be climbed quickly.",
       es: "El inicio del sendero esta subiendo la Calle Balcón Lopez hasta al fondo. Ahí te chocas con el Camping Ecologico y tienes que seguir caminando 30 m a la izquierda donde vas a encontrar el inicio del sendero de mano derecha. Es empinado pero se sube rápido."
     },
     imageUrl: "/lovable-uploads/5e7df03e-d176-4498-a3f7-bc5afac27381.png",
