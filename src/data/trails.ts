@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -315,7 +314,7 @@ export const trails: Trail[] = [
     elevation: 1385,
     requiresReservation: false,
     description: {
-      en: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda, transitando el mismo sendero que lleva al refugio Otto Meiling. Luego de caminar 300 metros tomar un desvío hacia la derecha y luego de 15 minutos de marcha se llega al río Alerce, que se cruza por un puente colgante. \n\nTodo el camino está bien señalizado e inicia con una pendiente muy pronunciada hasta el cartel \"Laguna Ilón 2 horas\". Luego se continúa por un terreno relativamente plano.\n\nDesde Laguna Ilón, se puede ir hacia Mirada Del Doctor.",
+      en: "The trail begins a few meters from the Pampa Linda Ranger Station, following the same path that leads to Otto Meiling refuge. After walking 300 meters, take a detour to the right and after 15 minutes of walking, you reach the Alerce river, which is crossed by a suspension bridge.\n\nThe entire path is well marked and begins with a very steep slope until the sign \"Laguna Ilón 2 hours\". Then it continues through relatively flat terrain.\n\nFrom Laguna Ilón, you can go toward Mirada Del Doctor.",
       es: "El sendero comienza a pocos metros de la seccional de Guardaparque de Pampa Linda, transitando el mismo sendero que lleva al refugio Otto Meiling. Luego de caminar 300 metros tomar un desvío hacia la derecha y luego de 15 minutos de marcha se llega al río Alerce, que se cruza por un puente colgante. \n\nTodo el camino está bien señalizado e inicia con una pendiente muy pronunciada hasta el cartel \"Laguna Ilón 2 horas\". Luego se continúa por un terreno relativamente plano.\n\nDesde Laguna Ilón, se puede ir hacia Mirada Del Doctor."
     },
     imageUrl: "/lovable-uploads/ce14ff50-5572-4532-bef3-f198b4593918.png",
