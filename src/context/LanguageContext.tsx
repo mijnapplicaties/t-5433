@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { translations } from '../data/translations';
 
 type Language = 'en' | 'es';
@@ -18,11 +18,6 @@ export const LanguageContext = createContext<LanguageContextType>({
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('es');
-
-  // Add this useEffect to log language changes to help with debugging
-  useEffect(() => {
-    console.log(`Language set to: ${language}`);
-  }, [language]);
 
   const t = (key: string): string => {
     if (!key) return '';

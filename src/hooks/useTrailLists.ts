@@ -1,3 +1,4 @@
+
 import { useLanguage } from '../context/LanguageContext';
 import { trails } from '../data/trails';
 import { Trail, TrailType } from '../types/trail';
@@ -8,7 +9,10 @@ export const useTrailLists = (allHikes: Trail[], dayHikes: Trail[], multiDayHike
   const getAllTrails = () => {
     return trails.map(trail => ({
       ...trail,
-      description: trail.description // Preserve the whole description object for language switching
+      description: {
+        en: trail.description.en,
+        es: trail.description.es
+      }
     }));
   };
 
@@ -17,7 +21,10 @@ export const useTrailLists = (allHikes: Trail[], dayHikes: Trail[], multiDayHike
       .filter(trail => trail.type === type)
       .map(trail => ({
         ...trail,
-        description: trail.description // Preserve the whole description object
+        description: {
+          en: trail.description.en,
+          es: trail.description.es
+        }
       }));
   };
 
@@ -26,17 +33,15 @@ export const useTrailLists = (allHikes: Trail[], dayHikes: Trail[], multiDayHike
       .filter(trail => trail.category === category)
       .map(trail => ({
         ...trail,
-        description: trail.description // Preserve the whole description object
+        description: {
+          en: trail.description.en,
+          es: trail.description.es
+        }
       }));
   };
 
   const getLocalizedTrailDescription = (trail: Trail) => {
-    if (typeof trail.description === 'object') {
-      return language === 'en' 
-        ? (trail.description.en || Object.values(trail.description)[0])
-        : (trail.description.es || Object.values(trail.description)[0]);
-    }
-    return trail.description;
+    return language === 'en' ? trail.description.en : trail.description.es;
   };
 
   const directAccessHikes = dayHikes.filter(trail => trail.distanceFromCampsite <= 2);
