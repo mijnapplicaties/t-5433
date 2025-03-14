@@ -14,7 +14,10 @@ const TrailDescription: React.FC<TrailDescriptionProps> = ({
 }) => {
   const { language } = useLanguage();
 
+  // Ensure we're correctly accessing the description in the selected language
+  // If the specific language isn't available, fall back to the first available language
   const getDescription = (trail: Trail, lang: string) => {
+    // Special handling for trails with hard-coded descriptions
     if (trail.name === "Refugio Frey from Villa Catedral") {
       switch(lang) {
         case 'en':
@@ -35,7 +38,14 @@ const TrailDescription: React.FC<TrailDescriptionProps> = ({
           return trail.description[lang as keyof typeof trail.description] || "";
       }
     }
-    return trail.description[lang as keyof typeof trail.description] || "";
+
+    // Regular description handling
+    if (trail.description && typeof trail.description === 'object') {
+      return trail.description[lang as keyof typeof trail.description] || 
+             trail.description[(Object.keys(trail.description)[0] as keyof typeof trail.description)];
+    }
+    
+    return typeof trail.description === 'string' ? trail.description : "";
   };
 
   const description = getDescription(trail, language);
