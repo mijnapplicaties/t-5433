@@ -72,19 +72,19 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
       <h2 className={headingClasses}>{t('filterMultiDay')}</h2>
       
       {/* Registration Form Section */}
-      <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-md">
-        <p className="text-sm text-amber-800 mb-2">
-          {t('registrationFormText')}
-        </p>
-        <div className="flex justify-center">
+      <div className="mb-6">
+        <div className="flex flex-col items-start">
           <Button
             variant="region"
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 uppercase mb-2"
             onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScL5EuxLZGDb0tOrAsg9Bgm3-C5FFcvpmDncHzSo9NSI3v4sw/viewform', '_blank', 'noopener,noreferrer')}
           >
             {t('registrationFormButton')}
             <ExternalLink size={16} />
           </Button>
+          <p className="text-sm text-amber-800">
+            {t('registrationFormText')}
+          </p>
         </div>
       </div>
       

@@ -134,98 +134,6 @@ export const translations: Translation = {
     en: "min",
     es: "min",
   },
-  filterByAccessibility: {
-    en: "Filter by Accessibility",
-    es: "Filtrar por Accesibilidad",
-  },
-  accessibilityDirect: {
-    en: "Direct Access (Walking Distance)",
-    es: "Acceso Directo desde Los Coihues (Caminando)",
-  },
-  accessibilityEasy: {
-    en: "Easy Access (Short travel time)",
-    es: "Acceso Fácil (Poco tiempo de viaje)",
-  },
-  accessibilityMedium: {
-    en: "Medium Access (Longer travel)",
-    es: "Acceso Medio (Viaje más largo)",
-  },
-  beaches: {
-    en: "Beaches & Lakes",
-    es: "Playas y Lagos",
-  },
-  waterTemp: {
-    en: "Water Temperature",
-    es: "Temperatura del Agua",
-  },
-  facilities: {
-    en: "Facilities",
-    es: "Instalaciones",
-  },
-  beachType: {
-    en: "Beach Type",
-    es: "Tipo de Playa",
-  },
-  activities: {
-    en: "Activities",
-    es: "Actividades",
-  },
-  swimming: {
-    en: "Swimming",
-    es: "Natación",
-  },
-  kayaking: {
-    en: "Kayaking",
-    es: "Kayak",
-  },
-  fishing: {
-    en: "Fishing",
-    es: "Pesca",
-  },
-  picnic: {
-    en: "Picnic Area",
-    es: "Área de Picnic",
-  },
-  viewpoint: {
-    en: "Scenic Viewpoint",
-    es: "Mirador Escénico",
-  },
-  sunbathing: {
-    en: "Sunbathing",
-    es: "Tomar sol",
-  },
-  parkingAvailable: {
-    en: "Parking Available",
-    es: "Estacionamiento Disponible",
-  },
-  restrooms: {
-    en: "Restrooms",
-    es: "Baños",
-  },
-  foodVendors: {
-    en: "Food Vendors",
-    es: "Puestos de Comida",
-  },
-  sandy: {
-    en: "Sandy",
-    es: "Arenosa",
-  },
-  rocky: {
-    en: "Rocky",
-    es: "Rocosa",
-  },
-  mixed: {
-    en: "Mixed",
-    es: "Mixta",
-  },
-  pebbly: {
-    en: "Pebbly",
-    es: "Guijarros",
-  },
-  bestTimeToVisit: {
-    en: "Best Time to Visit",
-    es: "Mejor Época para Visitar",
-  },
   filterByCategory: {
     en: "Filter by Category",
     es: "Filtrar por Categoría",
@@ -293,6 +201,14 @@ export const translations: Translation = {
   checkSchedules: {
     en: "Check schedules at the bus terminal or ask at reception",
     es: "Consulta los horarios en la terminal o pregunta en recepción",
+  },
+  highlightTwoMountainRefuges: {
+    en: "Two mountain refuges",
+    es: "Dos refugios de montaña",
+  },
+  highlightAlpineLakes: {
+    en: "Alpine lakes",
+    es: "Lagos alpinos",
   },
   highlightAlpineLake: {
     en: "Alpine lake",
@@ -455,8 +371,8 @@ export const translations: Translation = {
     es: "APP MAPAS",
   },
   registrationFormButton: {
-    en: "National Park Registration Form",
-    es: "Formulario Registro Parque Nacional",
+    en: "NATIONAL PARK REGISTRATION FORM",
+    es: "FORMULARIO REGISTRO PARQUE NACIONAL",
   },
   registrationFormText: {
     en: "It is mandatory to fill out the park registration form before going to the refuge, in case of any emergency.",
