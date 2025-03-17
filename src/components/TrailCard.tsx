@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
-import { MapPin } from 'lucide-react';
+import { MapPin, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import DifficultyBadge from './trail/DifficultyBadge';
 import ReservationBadge from './trail/ReservationBadge';
@@ -10,6 +10,7 @@ import TrailStats from './trail/TrailStats';
 import TrailDescription from './trail/TrailDescription';
 import TransportationInfo from './trail/TransportationInfo';
 import TrailDetailDialog from './trail/TrailDetailDialog';
+import { Button } from './ui/button';
 
 interface TrailCardProps {
   trail: Trail;
@@ -98,6 +99,23 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
           <div className="mt-4">
             <h4 className="text-sm font-semibold mb-2">{t('howToGetThere')}</h4>
             <TransportationInfo trail={trail} compact />
+            
+            {/* Reservation link for Refugio San Martin Jakob */}
+            {isJakobRefugioTrail && (
+              <div className="mt-4">
+                <Button
+                  variant="region"
+                  className="flex items-center gap-2 uppercase"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering the card click
+                    window.open('https://refugiojakob.com.ar/reservas/', '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  {t('reservationLink')}
+                  <ExternalLink size={16} />
+                </Button>
+              </div>
+            )}
           </div>
         </CardContent>
       </Card>
