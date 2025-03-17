@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -47,6 +46,10 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   // Special handling for Laguna Ilón trail
   const isLagunaIlonTrail = trail.id === "15" || 
     trail.name === "Laguna Ilón";
+  
+  // Special handling for Refugio Otto Meiling trail
+  const isRefugioOttoMeiling = trail.id === "14" || 
+    trail.name === "Refugio Otto Meiling";
   
   // Special handling for Refugio Laguna Negra trail
   const isRefugioLagunaNegra = trail.id === "13" || 
@@ -163,6 +166,23 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                   onClick={(e) => {
                     e.stopPropagation(); // Prevent triggering the card click
                     window.open('https://api.whatsapp.com/send?phone=542944341194', '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  {t('reservationLinkWhatsapp')}
+                  <ExternalLink size={16} />
+                </Button>
+              </div>
+            )}
+            
+            {/* Reservation link (WhatsApp) for Refugio Otto Meiling */}
+            {isRefugioOttoMeiling && !shouldExcludeReservationButton && (
+              <div className="mt-4">
+                <Button
+                  variant="region"
+                  className="flex items-center gap-2 uppercase"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering the card click
+                    window.open('https://api.whatsapp.com/send?phone=5492944213932&text=Contacto%20Web:', '_blank', 'noopener,noreferrer');
                   }}
                 >
                   {t('reservationLinkWhatsapp')}
