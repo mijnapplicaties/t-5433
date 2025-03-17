@@ -382,4 +382,8 @@ export const translations: Translation = {
     en: "RESERVATION LINK",
     es: "LINK RESERVA",
   },
+  reservationLinkWhatsapp: {
+    en: "RESERVATION LINK (Whatsapp)",
+    es: "LINK RESERVA (Whatsapp)",
+  },
 };

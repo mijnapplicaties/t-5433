@@ -138,6 +138,23 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                 </Button>
               </div>
             )}
+            
+            {/* Reservation link (WhatsApp) for Refugio Cerro López */}
+            {isRefugioCerroLopez && (
+              <div className="mt-4">
+                <Button
+                  variant="region"
+                  className="flex items-center gap-2 uppercase"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering the card click
+                    window.open('https://api.whatsapp.com/send?phone=542944341194', '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  {t('reservationLinkWhatsapp')}
+                  <ExternalLink size={16} />
+                </Button>
+              </div>
+            )}
           </div>
         </CardContent>
       </Card>
