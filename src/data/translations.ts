@@ -1,4 +1,3 @@
-
 type Translation = {
   [key: string]: {
     en: string;
@@ -202,6 +201,10 @@ export const translations: Translation = {
   busLines: {
     en: "Bus Lines",
     es: "Líneas de Bus",
+  },
+  beaches: {
+    en: "Beaches & Lakes",
+    es: "Playas y Lagos",
   },
   checkSchedules: {
     en: "Check schedules at the bus terminal or ask at reception",
