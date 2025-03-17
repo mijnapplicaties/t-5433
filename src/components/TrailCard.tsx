@@ -44,6 +44,10 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     ["14", "15", "16"].includes(trail.id) ||
     ["Refugio Otto Meiling", "Laguna Ilón", "Refugio Agostino Rocca"].includes(trail.name);
   
+  // Special handling for Refugio Laguna Negra trail
+  const isRefugioLagunaNegra = trail.id === "13" || 
+    trail.name.toLowerCase().includes('laguna negra');
+  
   const getDefaultImage = () => {
     if (isJakobCircuitTrail) return "/lovable-uploads/3b45435b-d0d0-4fb7-ac3b-73c18e21fd50.png";
     if (isJakobTamboTrail) return "/lovable-uploads/1f998a53-3c5b-429f-8ea5-709a0af96d94.png";
@@ -151,6 +155,23 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                   }}
                 >
                   {t('reservationLinkWhatsapp')}
+                  <ExternalLink size={16} />
+                </Button>
+              </div>
+            )}
+            
+            {/* Reservation link for Refugio Laguna Negra */}
+            {isRefugioLagunaNegra && (
+              <div className="mt-4">
+                <Button
+                  variant="region"
+                  className="flex items-center gap-2 uppercase"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering the card click
+                    window.open('https://refugiolagunanegra.com/reservas/', '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  {t('reservationLink')}
                   <ExternalLink size={16} />
                 </Button>
               </div>
