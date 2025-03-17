@@ -455,8 +455,8 @@ export const translations: Translation = {
     es: "APP MAPAS",
   },
   registrationFormButton: {
-    en: "NATIONAL PARK REGISTRATION FORM",
-    es: "FORMULARIO REGISTRO PARQUE NACIONAL",
+    en: "National Park Registration Form",
+    es: "Formulario Registro Parque Nacional",
   },
   registrationFormText: {
     en: "It is mandatory to fill out the park registration form before going to the refuge, in case of any emergency.",
