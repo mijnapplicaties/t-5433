@@ -2,6 +2,8 @@
 import React from 'react';
 import { Trail } from '../types/trail';
 import { useLanguage } from '../context/LanguageContext';
+import { Button } from './ui/button';
+import { ExternalLink } from 'lucide-react';
 import TrailCard from './TrailCard';
 import { getTransportIcon } from '../utils/transportationIcons';
 import { useIsMobile } from '../hooks/use-mobile';
@@ -67,7 +69,20 @@ const MultiDayHikesSection: React.FC<MultiDayHikesSectionProps> = ({
   
   return (
     <div className="mb-12">
-      <h2 className={headingClasses}>{t('filterMultiDay')}</h2>
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
+        <h2 className={isMobile ? "text-3xl font-bold text-black text-center" : "text-3xl font-bold text-black"}>
+          {t('filterMultiDay')}
+        </h2>
+        <Button
+          variant="region"
+          size="sm"
+          className="mt-2 sm:mt-0 animate-fadeIn"
+          onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScL5EuxLZGDb0tOrAsg9Bgm3-C5FFcvpmDncHzSo9NSI3v4sw/viewform', '_blank')}
+        >
+          <ExternalLink className="w-4 h-4 mr-1" />
+          {t('refugiosForm') || 'Refugio Form'}
+        </Button>
+      </div>
       
       {otherMultiDayHikes.length > 0 && (
         <div className="mb-8">
