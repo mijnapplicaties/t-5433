@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';

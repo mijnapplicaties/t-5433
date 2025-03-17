@@ -1,8 +1,7 @@
 
 import React from 'react';
 import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import { Map, Mountain, FootprintsIcon, TreePine, Waves, Filter, ExternalLink } from 'lucide-react';
+import { Map, Mountain, FootprintsIcon, TreePine, Waves, Filter } from 'lucide-react';
 import { TrailCategory } from '../types/trail';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -89,20 +88,6 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
             {t('filters')}
           </Badge>
         </div>
-        
-        {selectedCategory === 'high-mountain' && (
-          <div className="mt-4">
-            <Button
-              variant="region"
-              size="sm"
-              className="animate-fadeIn"
-              onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScL5EuxLZGDb0tOrAsg9Bgm3-C5FFcvpmDncHzSo9NSI3v4sw/viewform', '_blank')}
-            >
-              <ExternalLink className="w-4 h-4" />
-              {t('refugiosForm') || 'Refugio Form'}
-            </Button>
-          </div>
-        )}
       </div>
     </div>
   );
