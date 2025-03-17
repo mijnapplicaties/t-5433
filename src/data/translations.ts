@@ -1,3 +1,4 @@
+
 type Translation = {
   [key: string]: {
     en: string;
@@ -134,6 +135,10 @@ export const translations: Translation = {
     en: "min",
     es: "min",
   },
+  accessibilityDirect: {
+    en: "Direct Access from Camping Los Coihues (Walking Distance)",
+    es: "Acceso Directo desde Camping Los Coihues (Caminando)",
+  },
   filterByCategory: {
     en: "Filter by Category",
     es: "Filtrar por Categoría",
@@ -201,14 +206,6 @@ export const translations: Translation = {
   checkSchedules: {
     en: "Check schedules at the bus terminal or ask at reception",
     es: "Consulta los horarios en la terminal o pregunta en recepción",
-  },
-  highlightTwoMountainRefuges: {
-    en: "Two mountain refuges",
-    es: "Dos refugios de montaña",
-  },
-  highlightAlpineLakes: {
-    en: "Alpine lakes",
-    es: "Lagos alpinos",
   },
   highlightAlpineLake: {
     en: "Alpine lake",
