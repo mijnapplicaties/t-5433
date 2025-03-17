@@ -7,6 +7,8 @@ import TrailCard from './TrailCard';
 import { getTransportIcon } from '../utils/transportationIcons';
 import BeachCard from './BeachCard';
 import { useIsMobile } from '../hooks/use-mobile';
+import { Button } from './ui/button';
+import { ExternalLink } from 'lucide-react';
 
 interface CategorySectionProps {
   trails: Trail[];
@@ -47,10 +49,32 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   const headingClasses = isMobile 
     ? "text-3xl font-bold text-black mb-6 text-center" 
     : "text-3xl font-bold text-black mb-6";
+    
+  // Check if this is the high-mountain category section
+  const isHighMountainCategory = sectionTitle === t('refugios') || sectionTitle === t('categoryHighMountain');
 
   return (
     <div className="mb-12">
       <h2 className={headingClasses}>{sectionTitle}</h2>
+      
+      {/* Registration Form Button for High Mountain category */}
+      {isHighMountainCategory && (
+        <div className="mb-6">
+          <div className="flex flex-col items-start">
+            <Button
+              variant="region"
+              className="flex items-center gap-2 uppercase mb-2"
+              onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScL5EuxLZGDb0tOrAsg9Bgm3-C5FFcvpmDncHzSo9NSI3v4sw/viewform', '_blank', 'noopener,noreferrer')}
+            >
+              {t('registrationFormButton')}
+              <ExternalLink size={16} />
+            </Button>
+            <p className="text-sm text-gray-700">
+              {t('registrationFormText')}
+            </p>
+          </div>
+        </div>
+      )}
       
       {/* Show region-specific grouping if we have regional hikes */}
       {hasRegionalHikes ? (
