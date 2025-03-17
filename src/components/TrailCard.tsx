@@ -44,6 +44,10 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
     ["14", "15", "16"].includes(trail.id) ||
     ["Refugio Otto Meiling", "Laguna Ilón", "Refugio Agostino Rocca"].includes(trail.name);
   
+  // Special handling for Laguna Ilón trail
+  const isLagunaIlonTrail = trail.id === "15" || 
+    trail.name === "Laguna Ilón";
+  
   // Special handling for Refugio Laguna Negra trail
   const isRefugioLagunaNegra = trail.id === "13" || 
     trail.name.toLowerCase().includes('laguna negra');
@@ -176,6 +180,23 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                   onClick={(e) => {
                     e.stopPropagation(); // Prevent triggering the card click
                     window.open('https://refugiolagunanegra.com/reservas/', '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  {t('reservationLink')}
+                  <ExternalLink size={16} />
+                </Button>
+              </div>
+            )}
+            
+            {/* Reservation link for Laguna Ilón */}
+            {isLagunaIlonTrail && !shouldExcludeReservationButton && (
+              <div className="mt-4">
+                <Button
+                  variant="region"
+                  className="flex items-center gap-2 uppercase"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering the card click
+                    window.open('https://www.refugioilon.com.ar/reservas', '_blank', 'noopener,noreferrer');
                   }}
                 >
                   {t('reservationLink')}
