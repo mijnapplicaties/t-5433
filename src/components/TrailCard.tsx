@@ -48,8 +48,12 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   const isRefugioLagunaNegra = trail.id === "13" || 
     trail.name.toLowerCase().includes('laguna negra');
   
-  // Identify Cerro San Martín trail explicitly to exclude it from reservation buttons
+  // Identify trails to exclude from reservation buttons
   const isCerroSanMartin = trail.id === "t11" || trail.name === "Cerro San Martín";
+  const isTraversiaLopezNegra = trail.name === "Travesía Cerro López - Laguna Negra";
+  
+  // Combined check for trails that should not show reservation buttons
+  const shouldExcludeReservationButton = isCerroSanMartin || isTraversiaLopezNegra;
   
   const getDefaultImage = () => {
     if (isJakobCircuitTrail) return "/lovable-uploads/3b45435b-d0d0-4fb7-ac3b-73c18e21fd50.png";
@@ -113,7 +117,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
             <TransportationInfo trail={trail} compact />
             
             {/* Reservation link for Refugio San Martin Jakob */}
-            {isJakobRefugioTrail && !isCerroSanMartin && (
+            {isJakobRefugioTrail && !shouldExcludeReservationButton && (
               <div className="mt-4">
                 <Button
                   variant="region"
@@ -130,7 +134,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
             )}
             
             {/* Reservation link for Refugio Frey */}
-            {isRefugioFreyTrail && !isCerroSanMartin && (
+            {isRefugioFreyTrail && !shouldExcludeReservationButton && (
               <div className="mt-4">
                 <Button
                   variant="region"
@@ -147,7 +151,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
             )}
             
             {/* Reservation link (WhatsApp) for Refugio Cerro López */}
-            {isRefugioCerroLopez && !isCerroSanMartin && (
+            {isRefugioCerroLopez && !shouldExcludeReservationButton && (
               <div className="mt-4">
                 <Button
                   variant="region"
@@ -164,7 +168,7 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
             )}
             
             {/* Reservation link for Refugio Laguna Negra */}
-            {isRefugioLagunaNegra && !isCerroSanMartin && (
+            {isRefugioLagunaNegra && !shouldExcludeReservationButton && (
               <div className="mt-4">
                 <Button
                   variant="region"
