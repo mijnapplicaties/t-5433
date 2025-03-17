@@ -34,6 +34,11 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   const isRefugioCerroLopez = trail.id === "18" || 
     trail.name === "Refugio Cerro López";
     
+  // Special handling for Refugio Frey trail
+  const isRefugioFreyTrail = trail.id === "11" || 
+    trail.name.toLowerCase().includes('refugio frey') || 
+    (trail.name.toLowerCase().includes('frey') && !trail.name.toLowerCase().includes('jakob'));
+  
   // Special handling for Pampa Linda trails
   const isPampaLindaTrail = trail.region === "pampa-linda" || 
     ["14", "15", "16"].includes(trail.id) ||
@@ -109,6 +114,23 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                   onClick={(e) => {
                     e.stopPropagation(); // Prevent triggering the card click
                     window.open('https://refugiojakob.com.ar/reservas/', '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  {t('reservationLink')}
+                  <ExternalLink size={16} />
+                </Button>
+              </div>
+            )}
+            
+            {/* Reservation link for Refugio Frey */}
+            {isRefugioFreyTrail && (
+              <div className="mt-4">
+                <Button
+                  variant="region"
+                  className="flex items-center gap-2 uppercase"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering the card click
+                    window.open('https://refugiofreybariloche.com/reservas/', '_blank', 'noopener,noreferrer');
                   }}
                 >
                   {t('reservationLink')}
