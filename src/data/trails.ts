@@ -1,4 +1,3 @@
-
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -10,6 +9,7 @@ export const trails: Trail[] = [
     distance: 10,
     duration: 5,
     elevation: 1800,
+    elevationGain: 975,
     requiresReservation: true,
     description: {
       en: "The trail starts in Villa Los Coihues and takes approximately 1 hour longer than starting from Cerro Catedral. It shares the same route with the trails to Playa Muñoz and Cascada de los Duendes, before continuing to the refuge. It's a trail surrounded by forest, with panoramic views of Lake Gutiérrez, which then ascends through the valley until reaching Refugio Frey. Distance: 10 km. Estimated duration: 4-5 hours. How to get there from Camping Los Coihues: On foot: You can access it by walking from the camping, following the marked trail.",
@@ -31,6 +31,7 @@ export const trails: Trail[] = [
     distance: 2.6,
     duration: 1,
     elevation: 1080,
+    elevationGain: 340,
     requiresReservation: false,
     description: {
       en: "Taking bus 20, get off at the last stop at Hotel Llao Llao. From there, walk along route 20 for 20 minutes to the beginning of the trail. From there it's a 1-hour hike with gentle climbing through a forest of coihues and cypresses for 2.6 km. The effort is rewarded with a spectacular view from the summit, where you can admire Lake Moreno, Nahuel Huapi, and the Andes Mountains. After enjoying the viewpoint, the trail descends and allows you to complete the circuit in a circular manner, passing through more stretches of forest and small beaches on the shores of the lake.",
@@ -53,6 +54,7 @@ export const trails: Trail[] = [
     distance: 9,
     duration: 6,
     elevation: 1600,
+    elevationGain: 676,
     requiresReservation: true,
     description: {
       en: "We recommend taking an Uber from Camping to the base of Cerro Catedral. The trip takes approximately 15 minutes. Buses often involve a long wait. This trail starts at a higher point than the one from Lake Gutiérrez, saving about 1 hour of hiking. From the base of Cerro Catedral, you can begin your ascent to Refugio Frey, enjoying spectacular views as you progress through the mountainous landscape.\n\nFrom the Refugio Frey area, the trail skirts Laguna Toncek to the south, towards the ascent to Laguna Schmoll. This rocky slope is well marked and follows some twists and turns along the stream that descends from Schmoll to Toncek. This climb is significant and has many steps between rocks.\n\nEfforts have been made to protect the lagoon's wetland (mallín). A stone path was built to cross the wetland along a delineated trail without increasing erosion. Please use it carefully and stay on the marked path.\nFrom Laguna Schmoll begins another important step. This section has slightly larger rocks to climb and ends in the \"soccer field\". A few steps later, you reach the edge of Cerro Catedral with panoramic views of the Rucaco valley and Cerro Tronador in the background.\n\nThe descent down the Cathedral slope to the valley must be done with great care. At first, each step is like a large step, and then begins a section of loose stones and sand where your foot sinks and slides.\nAfter four hours of leaving Frey, stepping on firm ground in the forest along the valley's contour is a relief. Shade, water, shelter, rest.\n\nLeaving the Rucaco forest behind is like closing a storybook. Upon leaving the wooded area, you leave the protection from sun and wind, and the trail begins to climb with increasing slope. This is the ascent to Black Breach, and from its edge begins another particular descent.\n\nWith the same care as the previous descent, paying attention to each step and taking into account the paint signals, you re-enter a forest of lengas and then cross the stream that originates in Laguna Jakob. Add four more hours to the journey.\n\nFrom the Jakob area, the Laguna de los Témpanos is only 40 minutes away.\n\nReturning from Laguna Jakob, skirting the Casa de Piedra stream to Tambo Báez near Colonia Suiza usually takes 5 hours.\n\nHours: 6-8 hours.",
@@ -75,6 +77,7 @@ export const trails: Trail[] = [
     distance: 3,
     duration: 1,
     elevation: 1405,
+    elevationGain: 621,
     requiresReservation: false,
     description: {
       en: "To reach Cerro Otto from Camping Los Coihues, you can take bus 50 on the main avenue and get off at the stop near the Lower Cable Car Station, at kilometer 5 of Avenida de los Pioneros. From there, you can go up by cable car or walk to the summit. If you go by car, follow Route 82 and then take Avenida de los Pioneros to the cable car access, where you can leave the vehicle or continue to the summit along the gravel road.",
@@ -97,6 +100,7 @@ export const trails: Trail[] = [
     distance: 0.3,
     duration: 0.08,
     elevation: 800,
+    elevationGain: 0,
     requiresReservation: false,
     description: {
       en: "Three blocks from the camping site you'll find Lake Gutiérrez. You can walk along the shore to the left, towards the Arelauquen area, or follow the road that borders the lake and leads to the path of the Cascada de los Duendes. Along this route, you'll find some beautiful small beaches on the opposite shore, about a 20-minute walk away.",
@@ -118,6 +122,7 @@ export const trails: Trail[] = [
     distance: 3.9,
     duration: 1,
     elevation: 950,
+    elevationGain: 408,
     requiresReservation: false,
     description: {
       en: "The Gutierrez Lake Viewpoint is a 1-hour walk from the Camping. You need to walk 25 minutes along the road bordering Lake Gutierrez until you reach the National Park entrance. There, you'll find a sign indicating the Gutierrez Lake Viewpoint, Los Duendes Waterfall, Muñoz Beach, and the trail to Frey Refuge, all together. From this point, it's a 20-minute walk with some steep but manageable slopes.",
@@ -139,6 +144,7 @@ export const trails: Trail[] = [
     distance: 3.1,
     duration: 0.75,
     elevation: 900,
+    elevationGain: 0,
     requiresReservation: false,
     description: {
       en: "It's a 30-minute walk from the Camping. You need to walk 20 minutes to the national park entrance, following the road that borders Lake Gutierrez until you reach the National Park entrance. From there, it's 10 more minutes.\n\nA charming waterfall trail with access to beautiful Gutiérrez lake beaches. Perfect starter trail directly from the campsite, following a gentle path through the native forest. Great for families and beginners.",
@@ -160,6 +166,7 @@ export const trails: Trail[] = [
     distance: 2,
     duration: 0.75,
     elevation: 1080,
+    elevationGain: 280,
     requiresReservation: false,
     description: {
       en: "Tienes que tomar el bus 50 desde los Coihues hasta la rotonda de Av. Pioneros y luego, conectar con el bus 20 en Av. Bustillo en el km 8. Luego, bajate en el km 17.5 donde se encuentra la aerosilla al cerro campanario. En la cumbre hay una confitería, sanitarios, y un mirador desde el cual se pueden observar los lagos Nahuel Huapi y Moreno, la laguna El Trébol, la península San Pedro, la Isla Victoria, los cerros Otto, López, Goye, Bella Vista, Catedral, Capilla, el Hotel Llao Llao y las arboledas de Colonia Suiza.",
@@ -182,6 +189,7 @@ export const trails: Trail[] = [
     distance: 8,
     duration: 3,
     elevation: 150,
+    elevationGain: 150,
     requiresReservation: false,
     description: {
       en: "A scenic lakeside trail following the famous Circuito Chico route. Beautiful views of Lago Moreno and surrounding mountains.",
@@ -204,6 +212,7 @@ export const trails: Trail[] = [
     distance: 0,
     duration: 1,
     elevation: 850,
+    elevationGain: 0,
     requiresReservation: false,
     description: {
       en: "To reach Colonia Suiza from Camping Los Coihues, you can take bus 50 to downtown Bariloche and then transfer to bus 10, which takes you directly to Colonia Suiza. If going by car, follow Route 82 until connecting with Provincial Route 79, a gravel road that will take you to your destination in about 7 km. You can also go by bicycle or walking along the Old Road to Colonia Suiza, a forest-surrounded path that crosses the slope of Cerro López. Colonia Suiza is a picturesque village on the shores of Lake Moreno, known for its history, its gastronomy and its natural surroundings. Founded by Swiss immigrants in the late 19th century, it preserves rustic architecture and a traditional atmosphere. It's famous for its craft fair and its typical gastronomy, especially curanto, an ancestral dish cooked underground.",
@@ -226,6 +235,7 @@ export const trails: Trail[] = [
     distance: 2.6,
     duration: 1,
     elevation: 1275,
+    elevationGain: 450,
     requiresReservation: false,
     description: {
       en: "The trail starts by going up Calle Balcón Lopez until the end. There you'll reach the Ecological Camping and need to continue walking 30 meters to the left where you'll find the beginning of the trail on your right. It's steep but can be climbed quickly.",
@@ -247,6 +257,7 @@ export const trails: Trail[] = [
     distance: 8,
     duration: 1.5,
     elevation: 900,
+    elevationGain: 100,
     requiresReservation: false,
     description: {
       en: "A short, pleasant walk to a secluded beach on Lago Gutiérrez with crystal clear waters. The trail starts directly from Camping Los Coihues and follows the lakeshore through the native forest. Perfect for a refreshing swim in summer.",
@@ -268,6 +279,7 @@ export const trails: Trail[] = [
     distance: 11,
     duration: 5,
     elevation: 1640,
+    elevationGain: 913,
     requiresReservation: true,
     description: {
       en: "The trail starts from Colonia Suiza, with a gentle and constant ascent, bordering the Goye stream. It continues along the valley which presents some sections with wetlands (mallines).\n\nAfter 3 hours, you cross two streams, first the Navidad and then the Negro or Goye. Here the path turns into a zig-zag pattern and becomes very steep, these are called \"caracoles\" (snails).\n\nAt the end of the climb, there is an impressive panoramic view of Laguna Negra, Cerro Negro (which stands out as the highest), and the Manfredo Segre Refuge (also known as Italia) of the Bariloche Andean Club.",
@@ -291,6 +303,7 @@ export const trails: Trail[] = [
     distance: 14,
     duration: 6,
     elevation: 1900,
+    elevationGain: 1050,
     requiresReservation: true,
     description: {
       en: "The trail begins just a few meters from the bus stop in Pampa Linda, where the path to Refugio Agostino Rocca also starts. A sign at the fork indicates the direction of both trails, clearly marking the detour to Refugio Meiling.\n\nThe first part of the hike is peaceful, with very little elevation change and completely marked. It crosses a native forest of imposing coihues until crossing the Castaño Overa stream. From there, the trail begins to gradually gain altitude over a couple of hours, offering the first views of Cerro Tronador.\n\nThe most demanding section begins in the area known as \"Caracol\" (Snail), where the slope becomes steeper. Upon reaching La Almohadilla, the vegetation begins to disappear, giving way to a landscape dominated by volcanic rock and, outside of summer, snow. This last part of the ascent is the most demanding and can take between 1 and 2 hours, depending on your physical condition.\n\nFinally, we reach Refugio Meiling, located at 1,900 meters altitude. From there, you can admire impressive views of the Castaño Overa (to the left) and Alerce (to the right) glaciers. The refuge is located on the last rocky outcrop that Otto Meiling identified in the 1950s before the start of the glacier.\n\nActivities from the refuge:\n\nFrom Otto Meiling refuge, several excursions can be made, the most popular being the hike to Filo de la Motte at 2400 meters above sea level, along the gentle snowy slope of the glacier ridge that divides the basins of the Castaño Overo and Alerce glaciers.\n\nThe hike takes approximately two hours to Filo de la Motte, where you can appreciate the North wall of the Argentine Peak of Tronador, 3300 meters high. This wall consists of a hanging glacier with about 500 meters of vertical drop and a 50° inclination.\n\nIt is one of the classic climbing routes to the Argentine Peak. The lower part of the hanging glacier falls into the Casa Pangue Glacier basin, almost a thousand meters below.",
@@ -313,6 +326,7 @@ export const trails: Trail[] = [
     distance: 14,
     duration: 4.5,
     elevation: 1385,
+    elevationGain: 600,
     requiresReservation: false,
     description: {
       en: "The trail begins a few meters from the Pampa Linda Ranger Station, following the same path that leads to Otto Meiling refuge. After walking 300 meters, take a detour to the right and after 15 minutes of walking, you reach the Alerce river, which is crossed by a suspension bridge.\n\nThe entire path is well marked and begins with a very steep slope until the sign \"Laguna Ilón 2 hours\". Then it continues through relatively flat terrain.\n\nFrom Laguna Ilón, you can go toward Mirada Del Doctor.",
@@ -335,6 +349,7 @@ export const trails: Trail[] = [
     distance: 14,
     duration: 5,
     elevation: 1432,
+    elevationGain: 680,
     requiresReservation: true,
     description: {
       en: "A few meters from the Park Ranger's house, you'll see a sign, a car track, and a gate that mark the beginning of the trail. The path to the refuge begins in Pampa Linda, 80 km from Bariloche.\nThe route is very picturesque, crossing rivers and bordering the Alerce River. The last part of the trail, known as \"El Caracol\" (The Snail), gets its name from its zigzagging and steep layout. The path is well-marked and largely follows the course of the Alerce River.\n\nThe first 3 kilometers run over almost flat terrain until reaching the bridge that crosses the Castaño Overa River. From there, the ascent begins. Further on, take a right turn with signs towards Paso de las Nubes, Refugio Agostino Rocca, and Lake Frías. After 700 meters, the trail reaches the shore of the Alerce River, which is followed for about 5 kilometers until crossing it via a bridge.\n\nThe path continues around a wetland (mallín) on the left, where the slope becomes steeper until reaching the zigzag climb. After overcoming it, the trail becomes gentler, crossing small stone canyons and wetlands until reaching a wide wetland of green grasses. From there, high up, you can already see the refuge.\nCrossing the wetland and following the marks that ascend to the left, in approximately five minutes you reach the refuge.\n\nThe Agostino Rocca Refuge, built by the Bariloche Andean Club, is located at 1,432 meters above sea level, on the eastern slope of Cerro Tronador, in the area known as Paso de las Nubes.\nIt is supplied with hydroelectric power through a turbine located in a water channel 500 meters away. It has capacity for 80 people distributed in 10 rooms and features an infirmary, an area for refuge keepers, storage areas, showers, and a kitchen for visitors, where each hiker can prepare their own food.\n\nFrom the refuge, you can appreciate impressive views of Cerros Constitución and Parque, the Frías Glacier, the Argentine and Chilean peaks of Cerro Tronador, and a panoramic view of the valley crossed by the Alerce and Frías rivers.",
@@ -357,6 +372,7 @@ export const trails: Trail[] = [
     distance: 14,
     duration: 6,
     elevation: 1550,
+    elevationGain: 800,
     requiresReservation: true,
     description: {
       en: "The trail to Refugio Jakob starts at Colonia Suiza and follows a beautiful path through native forests along the Casa de Piedra Stream. The initial section is an easy walk, gradually increasing in difficulty as you ascend. After about 3 hours of hiking, you'll reach a more demanding section with steeper terrain known as 'Los Caracoles' (The Snails) due to its zigzagging pattern.\n\nAfter completing this more challenging part, you'll be rewarded with stunning views of the surrounding mountains and valleys. The refuge itself is situated at 1,550 meters above sea level, on the shores of the beautiful Laguna Jakob, surrounded by impressive granite walls and native lenga forests.\n\nRefugio San Martin Jakob offers overnight accommodations with dorm-style beds, meals, and basic amenities. It's one of the most comfortable mountain refuges in the area, making it perfect for both experienced hikers and beginners looking to experience their first mountain overnight adventure.",
@@ -380,6 +396,7 @@ export const trails: Trail[] = [
     distance: 8,
     duration: 2,
     elevation: 1620,
+    elevationGain: 1260,
     requiresReservation: true,
     description: {
       en: "This challenging high mountain hike offers stunning panoramic views of the Nahuel Huapi National Park and the surrounding lakes. The trail starts at Villa Tacul and climbs steeply through native forest before reaching more exposed rocky terrain at higher elevations. The refuge is perched at 1,620 meters above sea level, providing shelter for overnight hikers and spectacular sunrise views over the Andean landscape.",
@@ -403,6 +420,7 @@ export const trails: Trail[] = [
     distance: 25,
     duration: 11,
     elevation: 2056,
+    elevationGain: 500,
     requiresReservation: true,
     description: {
       en: "The traverse begins at the intersection of Circuito Chico with López stream, where a steep but relatively short ascent of less than 5 km begins to López Refuge. Along the way, you pass by the Roca Negra Refuge before reaching, after approximately 1 hour and 40 minutes, the refuge. From there, you need to register to continue towards Pico Turista or Laguna Negra.\n\nThe ascent continues up the López wall to the ridge, in a demanding and rocky section that takes more than an hour. It's a vertical trail where you advance between rocks, so good footwear and physical condition are essential. Once the pass is reached, a panoramic view opens to the west, where you can see Tronador, Osorno, Puntiagudo, Capilla, and the Tristeza arm of Lake Nahuel Huapi. From there, the trail descends abruptly through loose scree, this being the most technical section of the route. The descent must be done with caution, as stones can move and cause falls. After 40 minutes, more stable ground is reached in the valley.\n\nAfter descending, the trail crosses a forest of lengas and wetlands, where there used to be a rustic camping that was prohibited for environmental reasons. Then, a new ascent begins to the col of Cerro Bailey Willis, where again you get a view of Tronador and de la Laguna CAB. Following to the right, you faldeo the mountain between large rocks to a second col, where you get the first view of Laguna Negra.\n\nThe trail continues along the ridge before beginning the descent to the lagoon. You skirt the lagoon on the left bank, crossing rocky sections with the help of chains and ropes installed to facilitate passage. Depending on the time of year, it's possible to find snow fields in this section. Once on the opposite bank, with the Italia Refuge on the right, the final descent begins along El Caracol trail, which descends in zigzag fashion towards the valley.\n\nAfter crossing the river, the trail becomes flatter and the descent more gradual. This last section is completed more quickly and ends at the old Colonia Suiza route, thus completing the traverse.",
@@ -426,6 +444,7 @@ export const trails: Trail[] = [
     distance: 12,
     duration: 4,
     elevation: 1750,
+    elevationGain: 700,
     requiresReservation: true,
     description: {
       en: "There are two paths. One from Villa Catedral and another from Los Coihues.\n\nThe trail that starts in Villa Los Coihues takes approximately 1 hour longer than if starting from Cerro Catedral.\n\nFrom Villa Catedral, the trail starts from the side of the parking lot. It's 30 minutes on a dirt road, then you walk along Catedral's slope for another 30 minutes until reaching an incredible forest where a gentle ascent begins. After 2 hours, the 'caracol' (spiral) section begins, which is steep and challenging, but doable!\n\nIt's a trail surrounded by forest, with panoramic views of Lake Gutiérrez, which then ascends through the valley until reaching Refugio Frey.\n\nFrom the Lake Gutierrez path, you walk directly from Villa Los Coihues. It's more of a forest hike than a mountain slope walk compared to the Villa Catedral path where you start walking at a higher elevation. It's 4-5 hours from Los Coihues.",

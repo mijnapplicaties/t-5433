@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowUpRight, Clock, Mountain, TrendingUp } from 'lucide-react';
 import { Trail } from '../../types/trail';
