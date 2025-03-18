@@ -386,4 +386,8 @@ export const translations: Translation = {
     en: "RESERVATION LINK (Whatsapp)",
     es: "LINK RESERVA (Whatsapp)",
   },
+  elevationGain: {
+    en: "Elevation Gain",
+    es: "Desnivel",
+  },
 };

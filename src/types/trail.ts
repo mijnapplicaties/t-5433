@@ -14,6 +14,7 @@ export interface Trail {
   distance: number;
   duration: number;
   elevation: number;
+  elevationGain?: number; // Adding the new property as optional to maintain compatibility
   requiresReservation: boolean;
   description: {
     en: string;

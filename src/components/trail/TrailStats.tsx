@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { ArrowUpRight, Clock, Mountain } from 'lucide-react';
+import { ArrowUpRight, Clock, Mountain, TrendingUp } from 'lucide-react';
 import { Trail } from '../../types/trail';
 import { useLanguage } from '../../context/LanguageContext';
 
@@ -62,6 +63,13 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     return trail.elevation;
   };
 
+  const getElevationGain = (trail: Trail) => {
+    if (trail.name === "Refugio Frey desde Lago Gutierrez" || trail.name === "Refugio Frey from Lago Gutierrez") {
+      return 975;
+    }
+    return trail.elevationGain || 0;
+  };
+
   const sizeClasses = {
     sm: {
       container: '',
@@ -80,8 +88,19 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     },
   };
 
+  // Calculate the number of grid columns based on which data points are available
+  const getGridCols = () => {
+    let count = 0;
+    if (trail.distance > 0) count++;
+    if (trail.duration > 0 || trail.name === "Cerro Otto & Piedra de Habsburgo") count++;
+    if (trail.elevation > 0) count++;
+    if (getElevationGain(trail) > 0) count++;
+    
+    return `grid-cols-${count}`;
+  };
+
   const containerClass = layout === 'grid' 
-    ? `grid grid-cols-3 gap-4 ${sizeClasses[size].container}`
+    ? `grid ${getGridCols()} gap-4 ${sizeClasses[size].container}`
     : `flex flex-col items-center gap-2 ${sizeClasses[size].container}`;
 
   const iconClasses = `${sizeClasses[size].icon} flex-shrink-0 text-blue-500`;
@@ -107,6 +126,12 @@ const TrailStats: React.FC<TrailStatsProps> = ({
         <Mountain className={iconClasses} />
         <span className={textClasses}>{getElevation(trail)}m</span>
       </div>
+      {getElevationGain(trail) > 0 && (
+        <div className="flex items-center gap-2">
+          <TrendingUp className={iconClasses} />
+          <span className={textClasses}>{getElevationGain(trail)}m↑</span>
+        </div>
+      )}
     </div>
   );
 };
