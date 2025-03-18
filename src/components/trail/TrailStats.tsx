@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowUpRight, Clock, Mountain, TrendingUp } from 'lucide-react';
 import { Trail } from '../../types/trail';
@@ -27,7 +26,6 @@ const TrailStats: React.FC<TrailStatsProps> = ({
   const formatDuration = (trail: Trail) => {
     const oneWayText = language === 'es' ? "ida" : "one way";
     
-    // Special handling for Cerro Otto
     if (trail.name === "Cerro Otto & Piedra de Habsburgo") {
       return language === 'es' ? "2 horas ida" : "2 hours one way";
     }
@@ -45,7 +43,6 @@ const TrailStats: React.FC<TrailStatsProps> = ({
       return `${Math.round(trail.duration * 60)} ${t('minutes')} ${oneWayText}`;
     }
 
-    // Special handling for Spanish singular/plural
     if (language === 'es') {
       return `${trail.duration} ${trail.duration === 1 ? 'hora' : 'horas'} ${oneWayText}`;
     }
@@ -88,19 +85,25 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     },
   };
 
-  // Calculate the number of grid columns based on which data points are available
-  const getGridCols = () => {
+  const calculateVisibleStats = () => {
     let count = 0;
     if (trail.distance > 0) count++;
     if (trail.duration > 0 || trail.name === "Cerro Otto & Piedra de Habsburgo") count++;
     if (trail.elevation > 0) count++;
     if (getElevationGain(trail) > 0) count++;
+    return count;
+  };
+
+  const getGridLayout = () => {
+    const visibleStats = calculateVisibleStats();
     
-    return `grid-cols-${count}`;
+    if (visibleStats <= 2) return 'grid-cols-2';
+    
+    return 'grid-cols-2';
   };
 
   const containerClass = layout === 'grid' 
-    ? `grid ${getGridCols()} gap-4 ${sizeClasses[size].container}`
+    ? `grid ${getGridLayout()} gap-x-4 gap-y-3 ${sizeClasses[size].container}`
     : `flex flex-col items-center gap-2 ${sizeClasses[size].container}`;
 
   const iconClasses = `${sizeClasses[size].icon} flex-shrink-0 text-blue-500`;
