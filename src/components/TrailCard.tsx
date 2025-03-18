@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Trail } from '../types/trail';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card';
@@ -54,6 +55,10 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
   // Special handling for Refugio Laguna Negra trail
   const isRefugioLagunaNegra = trail.id === "13" || 
     trail.name.toLowerCase().includes('laguna negra');
+  
+  // Special handling for Refugio Agostino Rocca trail
+  const isRefugioAgostinoRocca = trail.id === "16" || 
+    trail.name === "Refugio Agostino Rocca";
   
   // Identify trails to exclude from reservation buttons
   const isCerroSanMartin = trail.id === "t11" || trail.name === "Cerro San Martín";
@@ -220,6 +225,23 @@ const TrailCard: React.FC<TrailCardProps> = ({ trail, transportIcons }) => {
                   }}
                 >
                   {t('reservationLink')}
+                  <ExternalLink size={16} />
+                </Button>
+              </div>
+            )}
+            
+            {/* Reservation link (WhatsApp) for Refugio Agostino Rocca */}
+            {isRefugioAgostinoRocca && !shouldExcludeReservationButton && (
+              <div className="mt-4">
+                <Button
+                  variant="region"
+                  className="flex items-center gap-2 uppercase"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering the card click
+                    window.open('https://api.whatsapp.com/send/?phone=%2B5492944655903&text&type=phone_number&app_absent=0', '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  {t('reservationLinkWhatsapp')}
                   <ExternalLink size={16} />
                 </Button>
               </div>
