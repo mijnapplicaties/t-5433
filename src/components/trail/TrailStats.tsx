@@ -91,7 +91,8 @@ const TrailStats: React.FC<TrailStatsProps> = ({
     if (trail.distance > 0) count++;
     if (trail.duration > 0 || trail.name === "Cerro Otto & Piedra de Habsburgo") count++;
     if (trail.elevation > 0) count++;
-    if (getElevationGain(trail) > 0) count++;
+    // Always count elevation gain now
+    count++;
     return count;
   };
 
@@ -109,6 +110,16 @@ const TrailStats: React.FC<TrailStatsProps> = ({
 
   const iconClasses = `${sizeClasses[size].icon} flex-shrink-0 text-blue-500`;
   const textClasses = sizeClasses[size].text;
+
+  // Define trails that should always show elevation gain even when it's 0
+  const alwaysShowElevationGainTrails = [
+    "Lago Gutiérrez",
+    "Cascada de los Duendes",
+    "Colonia Suiza"
+  ];
+
+  // Check if the current trail should always show elevation gain
+  const shouldShowElevationGain = getElevationGain(trail) > 0 || alwaysShowElevationGainTrails.includes(trail.name);
 
   return (
     <div className={containerClass}>
@@ -130,7 +141,7 @@ const TrailStats: React.FC<TrailStatsProps> = ({
         <Mountain className={iconClasses} />
         <span className={textClasses}>{getElevation(trail)}m</span>
       </div>
-      {getElevationGain(trail) > 0 && (
+      {shouldShowElevationGain && (
         <div className="flex items-center gap-2">
           <TrendingUp className={iconClasses} />
           <span className={textClasses}>{getElevationGain(trail)}m↑</span>
