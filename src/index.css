@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,49 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Mountain background and separator styles */
+.mountain-backdrop {
+  background-color: #E0F2FE;
+  position: relative;
+  overflow: hidden;
+}
+
+.mountain-backdrop::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background-image: url('/lovable-uploads/c4742e9b-f761-4b4d-ac89-27ad68159236.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.separator-container {
+  position: relative;
+  height: 12px;
+  margin-bottom: 2rem;
+}
+
+.separator-line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #CBD5E1;
+}
+
+.separator-line-1 {
+  top: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.separator-line-2 {
+  bottom: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
