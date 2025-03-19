@@ -90,7 +90,7 @@ const Index = () => {
       </Helmet>
       <LanguageSwitcher />
       <div className="container mx-auto px-4 py-8">
-        <header className="text-center mb-12 animate-fadeIn pt-12 sm:pt-0">
+        <header className="text-center mb-10 animate-fadeIn pt-12 sm:pt-0">
           <div className="flex justify-center mb-6">
             <img 
               src="/lovable-uploads/18170e0a-a211-46c5-97e6-3a78c27402e0.png"
@@ -106,7 +106,7 @@ const Index = () => {
           </p>
         </header>
 
-        <Separator className="my-6 bg-gray-200 h-[1px] w-full shadow-sm" />
+        <Separator className="my-4 bg-[#B8BCC2] h-[1px] w-full shadow-sm" />
 
         <CategoryFilter 
           selectedCategory={filters.selectedCategory}
@@ -114,7 +114,7 @@ const Index = () => {
           setFiltersOpen={filters.setFiltersOpen}
         />
 
-        <Separator className="my-6 bg-gray-200 h-[1px] w-full shadow-sm" />
+        <Separator className="my-4 bg-[#B8BCC2] h-[1px] w-full shadow-sm" />
 
         <FiltersDialog 
           open={filters.filtersOpen}
