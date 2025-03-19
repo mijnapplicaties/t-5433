@@ -13,6 +13,7 @@ import BeachesSection from '../components/BeachesSection';
 import { useTrailFilters } from '../hooks/useTrailFilters';
 import { useTrailLists } from '../hooks/useTrailLists';
 import { Helmet } from 'react-helmet';
+import { Separator } from '../components/ui/separator';
 
 // Trails to exclude from non-walking-path category views
 const excludedTrailNames = ['Playa Muñoz']; // Removed 'Cascada de los Duendes' from excluded names
@@ -105,11 +106,15 @@ const Index = () => {
           </p>
         </header>
 
+        <Separator className="my-6 bg-gray-200 h-[1px] w-full shadow-sm" />
+
         <CategoryFilter 
           selectedCategory={filters.selectedCategory}
           setSelectedCategory={filters.setSelectedCategory}
           setFiltersOpen={filters.setFiltersOpen}
         />
+
+        <Separator className="my-6 bg-gray-200 h-[1px] w-full shadow-sm" />
 
         <FiltersDialog 
           open={filters.filtersOpen}
