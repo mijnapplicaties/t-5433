@@ -13,7 +13,6 @@ import BeachesSection from '../components/BeachesSection';
 import { useTrailFilters } from '../hooks/useTrailFilters';
 import { useTrailLists } from '../hooks/useTrailLists';
 import { Helmet } from 'react-helmet';
-import { Separator } from '../components/ui/separator';
 
 // Trails to exclude from non-walking-path category views
 const excludedTrailNames = ['Playa Muñoz']; // Removed 'Cascada de los Duendes' from excluded names
@@ -84,38 +83,28 @@ const Index = () => {
   console.log(`Cerro Llao Llao in walking-path: ${llaoLlaoTrail?.category === 'walking-path'}`);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-sky to-white">
       <Helmet>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" />
       </Helmet>
       <LanguageSwitcher />
-      
-      <div className="mountain-background relative">
-        <div className="container mx-auto px-4 py-12 pt-6 sm:py-16">
-          <header className="text-center mb-12 animate-fadeIn relative z-10">
-            <div className="flex justify-center mb-6">
-              <img 
-                src="/lovable-uploads/18170e0a-a211-46c5-97e6-3a78c27402e0.png"
-                alt="Camping Los Coihues"
-                className="h-24 w-auto"
-              />
-            </div>
-            <h1 className="text-4xl font-bold text-forest mb-2">
-              {t('title')}
-            </h1>
-            <p className="text-xl text-stone mb-4">
-              {t('tagline')}
-            </p>
-          </header>
-        </div>
-        
-        <div className="separator-container">
-          <div className="separator-line"></div>
-          <div className="separator-shadow"></div>
-        </div>
-      </div>
-      
-      <div className="container mx-auto px-4 pb-8">
+      <div className="container mx-auto px-4 py-8">
+        <header className="text-center mb-12 animate-fadeIn pt-12 sm:pt-0">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/lovable-uploads/18170e0a-a211-46c5-97e6-3a78c27402e0.png"
+              alt="Camping Los Coihues"
+              className="h-24 w-auto"
+            />
+          </div>
+          <h1 className="text-4xl font-bold text-forest mb-2">
+            {t('title')}
+          </h1>
+          <p className="text-xl text-stone mb-4">
+            {t('tagline')}
+          </p>
+        </header>
+
         <CategoryFilter 
           selectedCategory={filters.selectedCategory}
           setSelectedCategory={filters.setSelectedCategory}
