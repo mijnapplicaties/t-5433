@@ -95,12 +95,12 @@ const Index = () => {
         <header className={`text-center ${isMobile ? 'mb-4 pt-6' : 'mb-10 pt-12 sm:pt-0'} animate-fadeIn`}>
           <div className={`flex justify-center ${isMobile ? 'mb-3' : 'mb-6'}`}>
             <img 
-              src="/lovable-uploads/18170e0a-a211-46c5-97e6-3a78c27402e0.png"
+              src="/lovable-uploads/b0b87b4b-57b0-4a6e-8314-b8c65cfded98.png"
               alt="Camping Los Coihues"
               className={`${isMobile ? 'h-16' : 'h-24'} w-auto`}
             />
           </div>
-          <h1 className={`text-4xl font-bold text-forest ${isMobile ? 'mb-1' : 'mb-2'}`}>
+          <h1 className={`text-4xl font-bold text-black ${isMobile ? 'mb-1' : 'mb-2'}`}>
             {t('title')}
           </h1>
           <p className={`text-xl text-stone ${isMobile ? 'mb-2' : 'mb-4'}`}>
