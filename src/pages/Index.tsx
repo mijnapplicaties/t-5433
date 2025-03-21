@@ -14,6 +14,7 @@ import { useTrailFilters } from '../hooks/useTrailFilters';
 import { useTrailLists } from '../hooks/useTrailLists';
 import { Helmet } from 'react-helmet';
 import { Separator } from '../components/ui/separator';
+import { useIsMobile } from '../hooks/use-mobile';
 
 // Trails to exclude from non-walking-path category views
 const excludedTrailNames = ['Playa Muñoz']; // Removed 'Cascada de los Duendes' from excluded names
@@ -22,6 +23,7 @@ const excludedTrailIds = ['12']; // 12=Playa Muñoz - Only exclude from non-walk
 
 const Index = () => {
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
   
   const {
     filters,
@@ -90,23 +92,23 @@ const Index = () => {
       </Helmet>
       <LanguageSwitcher />
       <div className="container mx-auto px-4 py-8">
-        <header className="text-center mb-10 animate-fadeIn pt-12 sm:pt-0">
-          <div className="flex justify-center mb-6">
+        <header className={`text-center ${isMobile ? 'mb-4 pt-6' : 'mb-10 pt-12 sm:pt-0'} animate-fadeIn`}>
+          <div className={`flex justify-center ${isMobile ? 'mb-3' : 'mb-6'}`}>
             <img 
               src="/lovable-uploads/18170e0a-a211-46c5-97e6-3a78c27402e0.png"
               alt="Camping Los Coihues"
-              className="h-24 w-auto"
+              className={`${isMobile ? 'h-16' : 'h-24'} w-auto`}
             />
           </div>
-          <h1 className="text-4xl font-bold text-forest mb-2">
+          <h1 className={`text-4xl font-bold text-forest ${isMobile ? 'mb-1' : 'mb-2'}`}>
             {t('title')}
           </h1>
-          <p className="text-xl text-stone mb-4">
+          <p className={`text-xl text-stone ${isMobile ? 'mb-2' : 'mb-4'}`}>
             {t('tagline')}
           </p>
         </header>
 
-        <Separator className="my-4 bg-[#B8BCC2] h-[1px] w-full shadow-sm" />
+        <Separator className={`${isMobile ? 'my-2' : 'my-4'} bg-[#B8BCC2] h-[1px] w-full shadow-sm`} />
 
         <CategoryFilter 
           selectedCategory={filters.selectedCategory}
@@ -114,7 +116,7 @@ const Index = () => {
           setFiltersOpen={filters.setFiltersOpen}
         />
 
-        <Separator className="my-4 bg-[#B8BCC2] h-[1px] w-full shadow-sm" />
+        <Separator className={`${isMobile ? 'my-2' : 'my-4'} bg-[#B8BCC2] h-[1px] w-full shadow-sm`} />
 
         <FiltersDialog 
           open={filters.filtersOpen}

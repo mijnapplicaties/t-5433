@@ -109,3 +109,9 @@
   width: 100%;
   margin: 1.25rem 0;
 }
+
+@media (max-width: 768px) {
+  .separator-line {
+    margin: 0.75rem 0;
+  }
+}
