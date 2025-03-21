@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -473,7 +474,7 @@ export const trails: Trail[] = [
       en: "The trail starts from the Bahía López parking lot (Km 32 of the \"Circuito Chico\") located next to the Hotel Alun Nehuen, belonging to the Luz y Fuerza Union. The entire path runs through the forest and has a gentle slope. After walking for about 40 minutes, you reach a natural promontory from which you can see the Tristeza Arm of Lake Nahuel Huapi and Cerro Capilla. At the viewpoint, stay away from the cliff area and pay special attention to children. Return to the starting point by the same trail.",
       es: "El sendero parte desde el estacionamiento de Bahía López (Km 32 del \"Circuito Chico\") ubicado junto al Hotel Alun Nehuen, perteneciente al Sindicato de Luz y Fuerza. Todo el camino transita por el bosque y presenta una leve pendiente. Después de caminar unos 40 minutos, se llega a un promontorio natural desde el cual se observa el Brazo Tristeza del Lago Nahuel Huapi y el Cerro Capilla. En el mirador, hay que mantenerse alejados de la zona de acantilado y prestar especial atención a los niños. Se regresa al lugar de inicio por el mismo sendero."
     },
-    imageUrl: "/lovable-uploads/93c2508f-ddf6-4b0b-bf08-0fc63590f9ae.png",
+    imageUrl: "/lovable-uploads/57c8b30f-1d60-4eda-b748-834262a3a463.png",
     startingPoint: "Bahía López parking lot (40 min drive from Los Coihues)",
     highlights: ["highlightPanoramicViews", "highlightLakeViews", "highlightFamilyFriendly", "highlightEasyAccess"],
     transportation: ["bus", "taxi"],
