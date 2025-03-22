@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { trails } from '../data/trails';
 import { beaches } from '../data/beaches';
@@ -51,7 +50,7 @@ const Index = () => {
   const shouldShowMultiDayHikes = filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'multi-day');
   const shouldShowCategorySection = filters.selectedCategory !== 'all' && filters.selectedCategory !== 'beaches-lakes';
 
-  // Special case for walking-path category - include Cascada de los Duendes (ID 7)
+  // Special case for walking-path category - include trails with walking-path category
   const categoryHikes = filters.selectedCategory === 'walking-path' 
     ? allHikes.filter(trail => trail.category === filters.selectedCategory) 
     : allHikes.filter(trail => 
@@ -81,9 +80,11 @@ const Index = () => {
   // Add debug for walking-path specific trails
   const cascadaTrail = trails.find(t => t.name === "Cascada de los Duendes");
   const llaoLlaoTrail = trails.find(t => t.name === "Cerro Llao Llao");
+  const brazotristezaTrail = trails.find(t => t.name === "Mirador Brazo Tristeza, Lago Escondido & Bahía López");
   console.log(`Cascada de los Duendes in walking-path: ${cascadaTrail?.category === 'walking-path'}`);
   console.log(`Cascada ID: ${cascadaTrail?.id}`);
   console.log(`Cerro Llao Llao in walking-path: ${llaoLlaoTrail?.category === 'walking-path'}`);
+  console.log(`Mirador Brazo Tristeza in walking-path: ${brazotristezaTrail?.category === 'walking-path'}`);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky to-white">
