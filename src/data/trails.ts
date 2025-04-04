@@ -277,7 +277,7 @@ export const trails: Trail[] = [
     type: "multi-day",
     difficulty: "hard",
     distance: 11,
-    duration: 5,
+    duration: 3,
     elevation: 1640,
     elevationGain: 913,
     requiresReservation: true,
