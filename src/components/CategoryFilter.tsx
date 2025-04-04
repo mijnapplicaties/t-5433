@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Badge } from './ui/badge';
-import { Map, Mountain, FootprintsIcon, TreePine, Waves, Filter } from 'lucide-react';
+import { Map, Mountain, FootprintsIcon, TreePine, Waves, Filter, Home } from 'lucide-react';
 import { TrailCategory } from '../types/trail';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -28,6 +28,8 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
         return <FootprintsIcon className="w-4 h-4 mr-1" />;
       case 'beaches-lakes':
         return <Waves className="w-4 h-4 mr-1" />;
+      case 'nearby':
+        return <Home className="w-4 h-4 mr-1" />;
       default:
         return <Map className="w-4 h-4 mr-1" />;
     }
@@ -53,6 +55,14 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
           >
             <Mountain className="w-4 h-4 mr-1" />
             {t('refugios')}
+          </Badge>
+          <Badge 
+            variant={selectedCategory === 'nearby' ? 'default' : 'outline'}
+            className="cursor-pointer text-base"
+            onClick={() => setSelectedCategory('nearby')}
+          >
+            <Home className="w-4 h-4 mr-1" />
+            {t('nearby')}
           </Badge>
           <Badge 
             variant={selectedCategory === 'easy-mountain' ? 'default' : 'outline'}

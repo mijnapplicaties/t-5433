@@ -51,13 +51,22 @@ const Index = () => {
   const shouldShowMultiDayHikes = filters.selectedCategory === 'all' && (filters.selectedType === 'all' || filters.selectedType === 'multi-day');
   const shouldShowCategorySection = filters.selectedCategory !== 'all' && filters.selectedCategory !== 'beaches-lakes';
 
+  // For nearby category
+  const nearbyTrailsIds = ['1', '5', '6', '7', '11', '12']; // IDs for the specified trails
+  
   // Special case for walking-path category - include Cascada de los Duendes (ID 7)
-  const categoryHikes = filters.selectedCategory === 'walking-path' 
-    ? allHikes.filter(trail => trail.category === filters.selectedCategory) 
-    : allHikes.filter(trail => 
-        trail.category === filters.selectedCategory &&
-        !excludedTrailIds.includes(trail.id)
-      );
+  let categoryHikes;
+  
+  if (filters.selectedCategory === 'nearby') {
+    categoryHikes = allHikes.filter(trail => nearbyTrailsIds.includes(trail.id));
+  } else if (filters.selectedCategory === 'walking-path') {
+    categoryHikes = allHikes.filter(trail => trail.category === filters.selectedCategory);
+  } else {
+    categoryHikes = allHikes.filter(trail => 
+      trail.category === filters.selectedCategory &&
+      !excludedTrailIds.includes(trail.id)
+    );
+  }
 
   // Filter category region hikes by the selected category
   const categoryRegionHikes = {
@@ -74,7 +83,7 @@ const Index = () => {
   console.log(`Cerro Otto in easy-mountain: ${trails.find(t => t.name === "Cerro Otto & Piedra de Habsburgo")?.category === 'easy-mountain'}`);
   console.log(`Cerro Campanario in easy-mountain: ${trails.find(t => t.name === "Cerro Campanario")?.category === 'easy-mountain'}`);
   console.log(`Mirador Lago Gutiérrez in easy-mountain: ${trails.find(t => t.name === "Mirador Lago Gutiérrez")?.category === 'easy-mountain'}`);
-  console.log(`Cerro San Martin in easy-mountain: ${trails.find(t => t.name === "Cerro San Martin")?.category === 'easy-mountain'}`);
+  console.log(`Cerro San Martin in easy-mountain: ${trails.find(t => t.name === "Cerro San Martín")?.category === 'easy-mountain'}`);
   console.log(`Cerro Llao Llao in easy-mountain: ${trails.find(t => t.name === "Cerro Llao Llao")?.category === 'easy-mountain'}`);
   console.log(`Category hikes count for ${filters.selectedCategory}: ${categoryHikes.length}`);
   
@@ -132,7 +141,9 @@ const Index = () => {
         {shouldShowCategorySection && (
           <CategorySection 
             trails={categoryHikes}
-            sectionTitle={t(`category${filters.selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`)}
+            sectionTitle={filters.selectedCategory === 'nearby' ? 
+              t('nearby') : 
+              t(`category${filters.selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`)}
             showSection={true}
             beaches={filters.selectedCategory === 'walking-path' ? filteredBeaches : []}
           />
