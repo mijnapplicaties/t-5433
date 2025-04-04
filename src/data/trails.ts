@@ -1,3 +1,4 @@
+
 import { Trail } from '../types/trail';
 
 export const trails: Trail[] = [
@@ -418,7 +419,7 @@ export const trails: Trail[] = [
     type: "multi-day",
     difficulty: "expert",
     distance: 25,
-    duration: 11,
+    duration: 7,
     elevation: 2056,
     elevationGain: 500,
     requiresReservation: true,
