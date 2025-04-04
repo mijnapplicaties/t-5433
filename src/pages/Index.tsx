@@ -79,17 +79,6 @@ const Index = () => {
     )
   };
 
-  // Get appropriate section title for the nearby category
-  const getCategorySectionTitle = () => {
-    if (filters.selectedCategory === 'nearby') {
-      return t('caminandoDesdeCoihues'); // Use a new translation key for "Caminando desde Los Coihues"
-    } else {
-      return filters.selectedCategory === 'high-mountain' ? 
-        t('refugios') : 
-        t(`category${filters.selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`);
-    }
-  };
-
   // Debug logs to trace categorization
   console.log(`Cerro Otto in easy-mountain: ${trails.find(t => t.name === "Cerro Otto & Piedra de Habsburgo")?.category === 'easy-mountain'}`);
   console.log(`Cerro Campanario in easy-mountain: ${trails.find(t => t.name === "Cerro Campanario")?.category === 'easy-mountain'}`);
@@ -152,7 +141,9 @@ const Index = () => {
         {shouldShowCategorySection && (
           <CategorySection 
             trails={categoryHikes}
-            sectionTitle={getCategorySectionTitle()}
+            sectionTitle={filters.selectedCategory === 'nearby' ? 
+              t('nearby') : 
+              t(`category${filters.selectedCategory.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}`)}
             showSection={true}
             beaches={filters.selectedCategory === 'walking-path' ? filteredBeaches : []}
           />
