@@ -3,9 +3,15 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Button } from './ui/button';
 import { Download, Map } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const LanguageSwitcher = () => {
-  const { language, setLanguage, t } = useLanguage();
+  const { language, t } = useLanguage();
+  const navigate = useNavigate();
+
+  const handleLanguageChange = (newLanguage: 'en' | 'es') => {
+    navigate(`/${newLanguage}`, { replace: true });
+  };
 
   return (
     <div className="fixed top-4 w-full flex justify-between px-4 z-50">
@@ -22,14 +28,14 @@ const LanguageSwitcher = () => {
       <div className="flex gap-2">
         <Button
           variant={language === 'es' ? 'default' : 'outline'}
-          onClick={() => setLanguage('es')}
+          onClick={() => handleLanguageChange('es')}
           className="text-sm"
         >
           ES
         </Button>
         <Button
           variant={language === 'en' ? 'default' : 'outline'}
-          onClick={() => setLanguage('en')}
+          onClick={() => handleLanguageChange('en')}
           className="text-sm"
         >
           EN
