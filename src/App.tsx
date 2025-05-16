@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider, useLanguage } from "./context/LanguageContext";
+import "./App.css";
 
 // Language wrapper component to handle URL parameters
 const LanguageWrapper = ({ language }: { language: 'en' | 'es' }) => {

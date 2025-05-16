@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +18,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'roobert': ['Roobert', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -38,6 +40,10 @@ export default {
           dark: "#BAE6FD",
         },
         black: "#000000",
+        purple: {
+          600: "#9b87f5",
+          800: "#7E69AB",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

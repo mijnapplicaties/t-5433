@@ -32,10 +32,10 @@ const LanguageSwitcher = () => {
           href="https://www.linkedin.com/in/alan-chismechian/" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="flex items-center gap-1 text-sm text-stone hover:text-black transition-colors"
+          className="flex items-center gap-1.5 text-base sm:text-lg font-bold text-purple-600 hover:text-purple-800 transition-colors"
         >
-          <span className="hidden sm:inline">Design by Alan</span>
-          <Linkedin size={18} className="text-blue-600" />
+          <span className="hidden sm:inline font-roobert">Design by Alan</span>
+          <Linkedin size={20} className="text-blue-600" />
         </a>
       </div>
       
