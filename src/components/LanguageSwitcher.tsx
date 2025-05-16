@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Button } from './ui/button';
-import { Download, Map } from 'lucide-react';
+import { Download, Map, Linkedin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const LanguageSwitcher = () => {
@@ -15,15 +15,27 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="fixed top-4 w-full flex justify-between px-4 z-50">
-      <Button
-        variant="outline"
-        className="text-sm font-bold text-black"
-        onClick={() => window.open('https://maps.me/', '_blank', 'noopener,noreferrer')}
-      >
-        <Download size={16} />
-        <Map size={16} />
-        {t('mapApp')}
-      </Button>
+      <div className="flex items-center gap-2">
+        <Button
+          variant="outline"
+          className="text-sm font-bold text-black"
+          onClick={() => window.open('https://maps.me/', '_blank', 'noopener,noreferrer')}
+        >
+          <Download size={16} />
+          <Map size={16} />
+          {t('mapApp')}
+        </Button>
+        
+        <a 
+          href="https://www.linkedin.com/in/alan-chismechian/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 text-sm text-stone hover:text-black transition-colors"
+        >
+          <span className="hidden sm:inline">Design by Alan</span>
+          <Linkedin size={18} className="text-blue-600" />
+        </a>
+      </div>
       
       <div className="flex gap-2">
         <Button
