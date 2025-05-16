@@ -4,10 +4,12 @@ import { useLanguage } from '../context/LanguageContext';
 import { Button } from './ui/button';
 import { Download, Map, Linkedin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const LanguageSwitcher = () => {
   const { language, t } = useLanguage();
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
 
   const handleLanguageChange = (newLanguage: 'en' | 'es') => {
     navigate(`/${newLanguage}`, { replace: true });
@@ -15,7 +17,7 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="fixed top-4 w-full flex justify-between px-4 z-50">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 flex-wrap">
         <Button
           variant="outline"
           className="text-sm font-bold text-black"
@@ -23,7 +25,7 @@ const LanguageSwitcher = () => {
         >
           <Download size={16} />
           <Map size={16} />
-          {t('mapApp')}
+          {isMobile ? '' : t('mapApp')}
         </Button>
         
         <a 
