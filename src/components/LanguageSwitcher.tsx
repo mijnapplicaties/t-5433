@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Button } from './ui/button';
-import { Download, Map, Linkedin } from 'lucide-react';
+import { Download, Map } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useIsMobile } from '../hooks/use-mobile';
 
@@ -32,10 +32,14 @@ const LanguageSwitcher = () => {
           href="https://www.linkedin.com/in/alan-chismechian/" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="flex items-center gap-1.5 text-lg sm:text-xl font-bold text-black hover:text-black transition-colors"
+          className="flex items-center gap-1.5 text-xl sm:text-2xl font-bold text-black hover:text-black transition-colors"
         >
           <span className="hidden sm:inline font-roobert">Design by Alan</span>
-          <Linkedin size={20} className="text-blue-600" />
+          <img 
+            src="/lovable-uploads/a525cc36-d78f-4c39-be3b-3f68660d6278.png" 
+            alt="LinkedIn" 
+            className="w-7 h-7" 
+          />
         </a>
       </div>
       
